@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const socials = [
-  { icon: Github, label: "GitHub", href: "https://github.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Mail, label: "Email", href: "mailto:your@email.com" },
+  { icon: Github, label: "GitHub", href: "https://github.com/Rouxxel" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/sebastian-russo-a552602a0" },
+  { icon: Mail, label: "Email", href: "https://mail.google.com/mail/?view=cm&to=sebasruse03@gmail.com" },
 ];
 
 const Contact = () => {

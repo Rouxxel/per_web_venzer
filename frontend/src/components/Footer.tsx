@@ -9,7 +9,7 @@ const Footer = () => {
         </p>
         <div className="flex gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/Rouxxel"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -17,7 +17,7 @@ const Footer = () => {
             <Github className="h-4 w-4" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/sebastian-russo-a552602a0"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -25,7 +25,9 @@ const Footer = () => {
             <Linkedin className="h-4 w-4" />
           </a>
           <a
-            href="mailto:your@email.com"
+            href="https://mail.google.com/mail/?view=cm&to=sebasruse03@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <Mail className="h-4 w-4" />
