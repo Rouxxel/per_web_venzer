@@ -1,0 +1,60 @@
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
+
+const socials = [
+  { icon: Github, label: "GitHub", href: "https://github.com" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
+  { icon: Mail, label: "Email", href: "mailto:your@email.com" },
+];
+
+const Contact = () => {
+  return (
+    <section id="contact" className="py-24 px-6">
+      <div className="container mx-auto max-w-5xl text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl sm:text-4xl font-bold font-heading text-foreground mb-4"
+        >
+          Get In Touch
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-muted-foreground max-w-md mx-auto mb-10 leading-relaxed"
+        >
+          I'm always open to new opportunities and interesting conversations.
+          Feel free to reach out!
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex justify-center gap-6"
+        >
+          {socials.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-3 rounded-lg border border-border text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-accent transition-all"
+            >
+              <s.icon className="h-5 w-5" />
+              <span className="text-sm font-medium">{s.label}</span>
+            </a>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
