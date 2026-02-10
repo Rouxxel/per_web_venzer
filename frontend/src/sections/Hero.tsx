@@ -31,8 +31,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
         >
-          A passionate developer crafting beautiful, performant web experiences.
-          I turn complex problems into elegant solutions.
+          A developer that enjoys crafting beautiful, high-performing and scalable code.
         </motion.p>
 
         <motion.div
