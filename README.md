@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my software engineering projects, professional experience, and technical skills. Built with React, TypeScript, and Tailwind CSS, featuring smooth animations and a clean, professional design.
 
-🌐 **Live Demo**: [View Portfolio](https://your-domain.com)
+🌐 **Live Demo**: [View Portfolio](...)
 
 ---
 
@@ -91,7 +91,7 @@ per_web_venzer/
 - **Langdrill**: AI-enhanced educational platform with React TypeScript frontend and Python FastAPI backend
 - **TuneTools**: Pipeline that turns daily context into personalized songs using LLM and YuE model
 - **Bachelor Thesis**: Comparative study of ML classification models for diabetes detection
-- **Drone Sound Detection**: ML project for detecting and classifying drone audio using CNN and traditional ML
+- **Drone Sound Detection ML models**: ML project for detecting and classifying drone audio using CNN and traditional ML
 - **Emotional Detection**: Deep learning model for detecting 7 emotions from face images
 
 ### Web Development

@@ -10,15 +10,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Langdrill (Stealth starptup)",
-    image: "/images/langdrill/logo.png",
-    description:
-      "AI-enhanced educational platform with React TypeScript frontend and Python FastAPI backend. Features role-based access for teachers/students, AI-powered exercise generation (writing, reading, listening with TTS), classroom management, assignment tracking, student analytics, and template system. Designed high-fidelity UI/UX in Figma with component-based architecture.",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Python", "FastAPI", "OpenAI API", "Supabase", "PostgreSQL", "shadcn/ui", "Radix UI", "TanStack Query", "React Router", "Figma", "UX/UI Design", "REST API", "JWT", "Render", "Vercel"],
-    github: "https://github.com/Rouxxel/langdrill",
-    live_demo: "https://langdrill.vercel.app",
-  },
-  {
     title: "Simple Chat",
     image: "/images/simple_chat/ic_launcher.png",
     description:
@@ -54,15 +45,15 @@ export const projects: Project[] = [
     github: "https://github.com/Rouxxel/thesis-bachelor",
   },
   {
-    title: "Machine Learning Models",
-    image: "/images/ml_various/ml_various.png",
+    title: "Emotional Detection DL model",
+    image: "/images/deep_learning/deep_learning.png",
     description:
-      "Portfolio of ML projects: classification (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit), and clustering (customer segmentation with K-Means and Hierarchical), using Python and scikit-learn.",
-    tags: ["Python", "scikit-learn", "pandas", "numpy", "Machine Learning", "Classification", "Regression", "Clustering", "Decision Tree", "Logistic Regression", "KNN", "Random Forest", "SVM", "K-Means", "Hierarchical Clustering", "Linear Regression", "matplotlib", "seaborn", "SMOTE"],
-    github: "https://github.com/Rouxxel/ai_general",
+      "Deep learning project for detecting 7 emotions from grayscale face images using transfer learning (DenseNet121) and a custom CNN, with CLI, webcam UI, FER dataset from Kaggle, and optional TFLite/TensorRT/ONNX optimization.",
+    tags: ["Python", "TensorFlow", "Deep Learning", "CNN", "DenseNet121", "Transfer Learning", "Emotion Detection", "Computer Vision", "OpenCV", "FER", "Kaggle", "pandas", "numpy", "matplotlib", "Docker", "pytest"],
+    github: "https://github.com/Rouxxel/Emotion_detection_DL_model_from_images",
   },
   {
-    title: "Drone sound detection",
+    title: "Drone sound detection ML models",
     image: "/images/drone_detection/drone.png",
     description:
       "ML project for detecting and classifying drone, helicopter and background audio using CNN (Tiny and Robust) and traditional ML (Random Forest, SVM, XGBoost, Gradient Boosting) on MFCC features; target use case is to embedd it as a bulletproof vest add-on for directional drone detection.",
@@ -70,12 +61,12 @@ export const projects: Project[] = [
     github: "https://github.com/Rouxxel/drone_sound_profile_detection",
   },
   {
-    title: "Emotional Detection DL model",
-    image: "/images/deep_learning/deep_learning.png",
+    title: "Machine Learning Models",
+    image: "/images/ml_various/ml_various.png",
     description:
-      "Deep learning project for detecting 7 emotions from grayscale face images using transfer learning (DenseNet121) and a custom CNN, with CLI, webcam UI, FER dataset from Kaggle, and optional TFLite/TensorRT/ONNX optimization.",
-    tags: ["Python", "TensorFlow", "Deep Learning", "CNN", "DenseNet121", "Transfer Learning", "Emotion Detection", "Computer Vision", "OpenCV", "FER", "Kaggle", "pandas", "numpy", "matplotlib", "Docker", "pytest"],
-    github: "https://github.com/Rouxxel/Emotion_detection_DL_model_from_images",
+      "Portfolio of ML projects: classification (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit), and clustering (customer segmentation with K-Means and Hierarchical), using Python and scikit-learn.",
+    tags: ["Python", "scikit-learn", "pandas", "numpy", "ML", "Clustering", "Decision Tree", "Logistic Regression", "KNN", "Random Forest", "SVM", "K-Means", "Hierarchical Clustering", "Linear Regression", "matplotlib", "seaborn"],
+    github: "https://github.com/Rouxxel/ai_general",
   },
   {
     title: "MaxxWatt Energy Management Platform",
@@ -85,6 +76,15 @@ export const projects: Project[] = [
     tags: ["Python", "FastAPI", "React", "TypeScript", "Vite", "shadcn-ui", "Tailwind CSS", "Pandas", "SSE", "BESS", "Energy Management", "Anomaly Detection", "Draw.io"],
     github: "https://github.com/Rouxxel/maxxwatt_hackathon",
     demo: "https://www.loom.com/share/cc96c4b830e947ff919d3910525a2384?sid=8c8c50da-bc06-47db-bb79-8650f1cb143f",
+  },
+  {
+    title: "Langdrill (Stealth starptup)",
+    image: "/images/langdrill/logo.png",
+    description:
+      "AI-enhanced educational platform with React TypeScript frontend and Python FastAPI backend. Features role-based access for teachers/students, AI-powered exercise generation (writing, reading, listening with TTS), classroom management, assignment tracking, student analytics, and template system.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Python", "FastAPI", "OpenAI API", "Supabase", "PostgreSQL", "shadcn/ui", "Radix UI", "TanStack Query", "React Router", "Figma", "UX/UI Design", "REST API", "JWT", "Render", "Vercel"],
+    github: "https://github.com/Rouxxel/langdrill",
+    live_demo: "https://langdrill.vercel.app",
   },
   {
     title: "Nothingness 2D arcade game",

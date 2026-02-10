@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-6 bg-muted/30">
+    <section id="projects" className="py-24 px-6 bg-muted/70">
       <div className="container mx-auto max-w-5xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
