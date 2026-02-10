@@ -10,6 +10,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Langdrill (Stealth starptup)",
+    image: "/images/langdrill/logo.png",
+    description:
+      "AI-enhanced educational platform with React TypeScript frontend and Python FastAPI backend. Features role-based access for teachers/students, AI-powered exercise generation (writing, reading, listening with TTS), classroom management, assignment tracking, student analytics, and template system. Designed high-fidelity UI/UX in Figma with component-based architecture.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Python", "FastAPI", "OpenAI API", "Supabase", "PostgreSQL", "shadcn/ui", "Radix UI", "TanStack Query", "React Router", "Figma", "UX/UI Design", "REST API", "JWT", "Render", "Vercel"],
+    github: "https://github.com/Rouxxel/langdrill",
+    live_demo: "https://langdrill.vercel.app",
+  },
+  {
     title: "Simple Chat",
     image: "/images/simple_chat/ic_launcher.png",
     description:
@@ -76,5 +85,13 @@ export const projects: Project[] = [
     tags: ["Python", "FastAPI", "React", "TypeScript", "Vite", "shadcn-ui", "Tailwind CSS", "Pandas", "SSE", "BESS", "Energy Management", "Anomaly Detection", "Draw.io"],
     github: "https://github.com/Rouxxel/maxxwatt_hackathon",
     demo: "https://www.loom.com/share/cc96c4b830e947ff919d3910525a2384?sid=8c8c50da-bc06-47db-bb79-8650f1cb143f",
+  },
+  {
+    title: "Nothingness 2D arcade game",
+    image: "/images/nothingness/deepspace.png",
+    description:
+      "Unity 2D space shooter with 8-directional movement, dynamic difficulty scaling, and buff/debuff system. Features two enemy types, asteroids, comets, power-ups (shield, speed boost/reduction), persistent high score tracking with JSON serialization, and comprehensive audio system.",
+    tags: ["Unity", "C#", "2D Game", "Game Development", "Unity 2D Physics", "Data Persistence", "JSON", "Singleton Pattern", "Component Pattern", "Audio System", "Dynamic Difficulty", "Collision Detection"],
+    github: "https://github.com/Rouxxel/Nothingness",
   },
 ];
