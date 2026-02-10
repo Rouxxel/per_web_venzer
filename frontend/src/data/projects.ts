@@ -32,8 +32,32 @@ export const projects: Project[] = [
     image: "/images/tune_tools/logo-disk.png",
     description:
       "Pipeline that turns daily context (news, weather, calendar) into personalized songs: an LLM generates music specs and lyrics, the YuE model synthesizes audio on RunPod and Gemini API creates album artwork.",
-    tags: ["React", "TypeScript", "FastAPI", "REST API", "Gemini API", "Python", "Supabase", "YuE", "RunPod", "LLM", "Docker", "Vercel", "Railway", "Google Auth"],
+    tags: ["React", "TypeScript", "Kiro","FastAPI", "REST API", "Gemini API", "Python", "Supabase", "YuE", "RunPod", "LLM", "Docker", "Vercel", "Railway", "Google Auth"],
     github: "https://github.com/peres84/TuneTools",
     demo: "https://vimeo.com/1143501418?fl=pl&fe=vl",
+  },
+  {
+    title: "Bachelor Thesis (Machine Learning)",
+    image: "/images/thesis/graduation.png",
+    description:
+      "Comparative study of ML classification models for early diabetes detection on BRFSS 2015 health indicators: modular Python pipeline with Decision Tree, Logistic Regression, Random Forest, and SVM, plus EDA, SMOTE resampling, JSON config and centralized logging and results.",
+    tags: ["Python", "scikit-learn", "pandas", "numpy", "Machine Learning", "Classification", "Decision Tree", "Logistic Regression", "Random Forest", "SVM", "SMOTE", "EDA", "matplotlib", "seaborn", "Data science"],
+    github: "https://github.com/Rouxxel/thesis-bachelor",
+  },
+  {
+    title: "Machine Learning Models",
+    image: "/images/ml_various/ml_various.png",
+    description:
+      "Portfolio of ML projects: classification (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit), and clustering (customer segmentation with K-Means and Hierarchical), using Python and scikit-learn.",
+    tags: ["Python", "scikit-learn", "pandas", "numpy", "Machine Learning", "Classification", "Regression", "Clustering", "Decision Tree", "Logistic Regression", "KNN", "Random Forest", "SVM", "K-Means", "Hierarchical Clustering", "Linear Regression", "matplotlib", "seaborn", "SMOTE"],
+    github: "https://github.com/Rouxxel/ai_general",
+  },
+  {
+    title: "Drone sound detection",
+    image: "/images/drone_detection/drone.png",
+    description:
+      "ML project for detecting and classifying drone, helicopter and background audio using CNN (Tiny and Robust) and traditional ML (Random Forest, SVM, XGBoost, Gradient Boosting) on MFCC features; target use case is to embedd it as a bulletproof vest add-on for directional drone detection.",
+    tags: ["Python", "TensorFlow", "Keras", "scikit-learn", "Machine Learning", "Deep Learning", "CNN", "Audio Classification", "MFCC", "Librosa", "Random Forest", "SVM", "XGBoost", "Gradient Boosting", "pandas", "numpy", "matplotlib"],
+    github: "https://github.com/Rouxxel/drone_sound_profile_detection",
   },
 ];
