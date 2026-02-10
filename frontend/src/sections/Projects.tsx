@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
-import { ExternalLink, Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const Projects = () => {
@@ -28,8 +28,20 @@ const Projects = () => {
               whileHover={{ y: -4 }}
               className="group rounded-xl border border-border bg-card p-6 flex flex-col transition-shadow hover:shadow-lg"
             >
-              {/* Image: use /images/ project screenshot when available */}
-              <div className="aspect-video rounded-lg bg-muted mb-4" />
+              {/* Project image or placeholder */}
+              <div className="aspect-square rounded-lg bg-muted mb-4 overflow-hidden">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-muted-foreground/50 text-sm">
+                    No image
+                  </div>
+                )}
+              </div>
 
               <h3 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors">
                 {project.title}
@@ -46,23 +58,38 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Github className="h-4 w-4" />
+                  <span className="text-sm font-medium">GitHub</span>
                 </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                </a>
+                {project.demo != null && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    <span className="text-sm font-medium">Showcase</span>
+                  </a>
+                )}
+                {project.live_demo != null && (
+                  <a
+                    href={project.live_demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    <span className="text-sm font-medium">Live demo</span>
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
