@@ -60,4 +60,21 @@ export const projects: Project[] = [
     tags: ["Python", "TensorFlow", "Keras", "scikit-learn", "Machine Learning", "Deep Learning", "CNN", "Audio Classification", "MFCC", "Librosa", "Random Forest", "SVM", "XGBoost", "Gradient Boosting", "pandas", "numpy", "matplotlib"],
     github: "https://github.com/Rouxxel/drone_sound_profile_detection",
   },
+  {
+    title: "Emotional Detection DL model",
+    image: "/images/deep_learning/deep_learning.png",
+    description:
+      "Deep learning project for detecting 7 emotions from grayscale face images using transfer learning (DenseNet121) and a custom CNN, with CLI, webcam UI, FER dataset from Kaggle, and optional TFLite/TensorRT/ONNX optimization.",
+    tags: ["Python", "TensorFlow", "Deep Learning", "CNN", "DenseNet121", "Transfer Learning", "Emotion Detection", "Computer Vision", "OpenCV", "FER", "Kaggle", "pandas", "numpy", "matplotlib", "Docker", "pytest"],
+    github: "https://github.com/Rouxxel/Emotion_detection_DL_model_from_images",
+  },
+  {
+    title: "MaxxWatt Energy Management Platform",
+    image: "/images/maxxwatt/lightning.png",
+    description:
+      "Berlin Energy Hackathon 2025 submission: BESS monitoring and management platform with real-time analytics, anomaly detection, and energy forecasting. System architecture and component design were modeled in Draw.io. FastAPI backend with SSE streaming and React dashboard (Vite, shadcn-ui, Tailwind).",
+    tags: ["Python", "FastAPI", "React", "TypeScript", "Vite", "shadcn-ui", "Tailwind CSS", "Pandas", "SSE", "BESS", "Energy Management", "Anomaly Detection", "Draw.io"],
+    github: "https://github.com/Rouxxel/maxxwatt_hackathon",
+    demo: "https://www.loom.com/share/cc96c4b830e947ff919d3910525a2384?sid=8c8c50da-bc06-47db-bb79-8650f1cb143f",
+  },
 ];
