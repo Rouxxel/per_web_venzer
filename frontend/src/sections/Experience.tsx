@@ -13,7 +13,7 @@ const Experience = () => {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-4xl font-bold font-heading text-foreground mb-12"
         >
-          Experience
+          Experience/Road
         </motion.h2>
 
         <div className="relative">
@@ -57,14 +57,17 @@ const Experience = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12"
+          className="mt-12 w-full"
         >
           <a
-            href="/resume.pdf"
-            className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium border border-border rounded-lg text-foreground hover:bg-accent transition-colors"
+            href="/pdfs/CVRng.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium border border-border rounded-lg text-foreground hover:bg-accent transition-colors"
           >
-            <Download className="h-4 w-4" />
-            Download Resume
+            <Download className="h-4 w-4 shrink-0" />
+            <span>Download CV / Resume</span>
           </a>
         </motion.div>
       </div>

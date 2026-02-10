@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { skillSections } from "@/data/skills";
-import { User } from "lucide-react";
 
 /* Bio beside the image (short intro) – each string is its own paragraph */
 const bioIntro = [
@@ -31,15 +30,19 @@ const About = () => {
 
         {/* Row: photo left, intro bio right */}
         <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-start">
-          {/* Photo placeholder - use /images/profile.jpg when available */}
+          {/* Profile photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="aspect-square rounded-2xl bg-muted flex items-center justify-center shrink-0"
+            className="aspect-square rounded-2xl overflow-hidden shrink-0"
           >
-            <User className="h-20 w-20 text-muted-foreground/40" />
+            <img
+              src="/images/portray_alt.png"
+              alt="Sebastian Russo"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
 
           <div className="space-y-4">
