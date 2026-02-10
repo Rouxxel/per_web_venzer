@@ -13,7 +13,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="text-primary font-medium mb-4 tracking-wide uppercase text-sm"
         >
-          Hello, I'm
+          Greetings, I am
         </motion.p>
 
         <motion.h1
@@ -22,7 +22,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="text-5xl sm:text-6xl lg:text-7xl font-bold font-heading tracking-tight text-foreground mb-6"
         >
-          Your Name
+          Sebastian Russo
         </motion.h1>
 
         <motion.p

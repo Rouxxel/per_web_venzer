@@ -55,9 +55,10 @@ const Navbar = () => {
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between max-w-5xl">
         <button
           onClick={() => handleClick("#hero")}
-          className="text-xl font-bold font-heading tracking-tight text-foreground hover:text-primary transition-colors"
+          className="flex items-center gap-2 text-xl font-bold font-heading tracking-tight text-foreground hover:text-primary transition-colors"
         >
-          Your Name
+          <img src="/images/logo.png" alt="" className="h-8 w-8 rounded-full object-cover" />
+          Sebastian Russo
         </button>
 
         {/* Desktop nav */}
