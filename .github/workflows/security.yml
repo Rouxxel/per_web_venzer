@@ -1,0 +1,29 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 1'  # Weekly on Monday
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: cd frontend && npm ci
+        
+      - name: Run npm audit
+        run: cd frontend && npm audit --audit-level=moderate
+        
+      - name: Check for outdated packages
+        run: cd frontend && npm outdated || true
