@@ -94,4 +94,12 @@ export const projects: Project[] = [
     tags: ["Unity", "C#", "2D Game", "Game Development", "Unity 2D Physics", "Data Persistence", "JSON", "Singleton Pattern", "Component Pattern", "Audio System", "Dynamic Difficulty", "Collision Detection"],
     github: "https://github.com/Rouxxel/Nothingness",
   },
+  {
+    title: "Atryon Chrome Extension",
+    image: "/images/atryon_extension/logo.png",
+    description:
+      "Chrome extension for virtual try-on: pick a garment from the page or by drag-and-drop, add your photo and get an AI-generated try-on result. Side panel UI with content script for \"select from page\"; FastAPI backend runs Black Forest Labs FLUX for multi-image composition (MIC), with polling and download endpoints. Extra endpoints for future projects feat Text-To-Image (TTI) and Image Edit With Mask (IDWM) generation.",
+    tags: ["Chrome Extension", "Manifest V3", "JavaScript", "HTML", "CSS", "Python", "FastAPI", "Uvicorn", "Black Forest Labs", "FLUX", "Virtual Try-On", "AI", "Docker", "SlowAPI", "Chrome APIs"],
+    github: "https://github.com/Rouxxel/atryon_chrome_extension",
+  },
 ];
