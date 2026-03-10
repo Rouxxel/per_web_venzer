@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
+import SectionInner from "@/components/SectionInner";
 
 const socials = [
   { icon: Github, label: "GitHub", href: "https://github.com/Rouxxel" },
@@ -9,8 +10,8 @@ const socials = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 px-6 bg-muted/1500">
-      <div className="container mx-auto max-w-5xl text-center">
+    <section id="contact" className="py-24 bg-muted/1500">
+      <SectionInner className="text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +38,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex justify-center gap-6"
+          className="flex flex-wrap justify-center gap-4 sm:gap-6"
         >
           {socials.map((s) => (
             <a
@@ -52,7 +53,7 @@ const Contact = () => {
             </a>
           ))}
         </motion.div>
-      </div>
+      </SectionInner>
     </section>
   );
 };

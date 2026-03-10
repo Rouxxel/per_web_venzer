@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 import { Github, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import SectionInner from "@/components/SectionInner";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-6 bg-muted/70">
-      <div className="container mx-auto max-w-5xl">
+    <section id="projects" className="py-24 bg-muted/70">
+      <SectionInner>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +95,7 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </SectionInner>
     </section>
   );
 };

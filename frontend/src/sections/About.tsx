@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { skillSections } from "@/data/skills";
+import SectionInner from "@/components/SectionInner";
 
 /* Bio beside the image (short intro) – each string is its own paragraph */
 const bioIntro = [
@@ -16,8 +17,8 @@ const bioBelow = [
 
 const About = () => {
   return (
-    <section id="about" className="py-24 px-6">
-      <div className="container mx-auto max-w-5xl">
+    <section id="about" className="py-24">
+      <SectionInner>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +111,7 @@ const About = () => {
             ))}
           </div>
         </motion.div>
-      </div>
+      </SectionInner>
     </section>
   );
 };

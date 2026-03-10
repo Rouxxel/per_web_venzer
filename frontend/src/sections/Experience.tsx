@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { experience } from "@/data/experience";
 import { Briefcase, GraduationCap, Download } from "lucide-react";
+import SectionInner from "@/components/SectionInner";
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6">
-      <div className="container mx-auto max-w-5xl">
+    <section id="experience" className="py-24">
+      <SectionInner>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +71,7 @@ const Experience = () => {
             <span>Download CV / Resume</span>
           </a>
         </motion.div>
-      </div>
+      </SectionInner>
     </section>
   );
 };
