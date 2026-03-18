@@ -102,4 +102,13 @@ export const projects: Project[] = [
     tags: ["Chrome Extension", "Manifest V3", "JavaScript", "HTML", "CSS", "Python", "FastAPI", "Uvicorn", "Black Forest Labs", "FLUX", "Virtual Try-On", "AI", "Docker", "SlowAPI", "Chrome APIs"],
     github: "https://github.com/Rouxxel/atryon_chrome_extension",
   },
+  {
+    title: "Personal portfolio website",
+    image: "/images/logo.png",
+    description:
+      "The website you are currently on: a responsive portfolio built with React + TypeScript (Vite), Tailwind CSS, and shadcn/ui (Radix UI). Uses Framer Motion animations, React Router, TanStack Query, and forms with React Hook Form + Zod; tested with Vitest/React Testing Library, linted with ESLint, and deployed on Vercel with GitHub Actions security auditing.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Radix UI", "Framer Motion", "lucide-react", "React Router", "TanStack Query", "React Hook Form", "Zod", "Vitest", "React Testing Library", "ESLint", "Vercel", "GitHub Actions", "Responsive Design", "UX/UI Design", "HTML5"],
+    live_demo: "https://per-web-venzer.vercel.app",
+    github: "https://github.com/Rouxxel/per_web_venzer",
+  },
 ];
