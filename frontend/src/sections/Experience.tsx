@@ -44,7 +44,9 @@ const Experience = () => {
                   {entry.period}
                 </p>
                 <h3 className="text-lg font-semibold text-foreground">{entry.title}</h3>
-                <p className="text-sm text-muted-foreground mb-2">{entry.company}</p>
+                <p className="text-sm text-muted-foreground mb-2">
+                  {entry.company}; {entry.location}
+                </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {entry.description}
                 </p>
