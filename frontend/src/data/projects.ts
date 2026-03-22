@@ -2,6 +2,7 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
+  classification: string[];
   github?: string;
   demo?: string;
   live_demo?: string;
@@ -29,13 +30,35 @@ export const projects: Project[] = [
       "CI/CD",
       "Industrial",
     ],
+    classification: ["backend","professional","data_analysis"],
   },
   {
     title: "Langdrill (Stealth starptup)",
     image: "/images/langdrill/logo.png",
     description:
       "As a frontend developer, I worked on an AI-enhanced educational platform built on a React+TS frontend framework and Python-based FastAPI backend. It features role-based access for teachers/students, AI-powered exercise generation (writing, reading, listening with TTS and coversation with AI/voice agent), classroom management, assignment tracking, student analytics and template system. It was also connected to a Supabase database (PostgreSQL) for user authentication and data storage.",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Python", "FastAPI", "OpenAI API", "Supabase", "PostgreSQL", "shadcn/ui", "Radix UI", "TanStack Query", "React Router", "Figma", "UX/UI Design", "REST API", "JWT", "Render", "Vercel"],
+    tags: [
+      "React", 
+      "TypeScript", 
+      "Vite", 
+      "Tailwind CSS", 
+      "Python", 
+      "FastAPI", 
+      "OpenAI API", 
+      "Supabase", 
+      "PostgreSQL", 
+      "shadcn/ui", 
+      "Radix UI", 
+      "TanStack Query", 
+      "React Router", 
+      "Figma", 
+      "UX/UI Design", 
+      "REST API", 
+      "JWT", 
+      "Render", 
+      "Vercel"
+    ],
+    classification: ["frontend","web","ai","professional","database"],
     github: "https://github.com/Rouxxel/langdrill",
     live_demo: "https://langdrill.vercel.app",
   },
@@ -58,6 +81,7 @@ export const projects: Project[] = [
       "Docker", 
       "Android Studio"
     ],
+    classification: ["fullstack","mobile","database","ai","personal"],
     github: "https://github.com/Rouxxel/simple-chat",
   },
   {
@@ -79,6 +103,7 @@ export const projects: Project[] = [
       "Render", 
       "Vercel"
     ],
+    classification: ["fullstack","web","ai","hackathon"],
     github: "https://github.com/Rouxxel/rift_rewind_hckthn_frontnd",
     //demo: "https://www.youtube.com/watch?v=uXalS69hPrE",
     live_demo: "https://rift-rewind-hckthn-frontnd.vercel.app",
@@ -105,6 +130,7 @@ export const projects: Project[] = [
       "Railway", 
       "Google Auth"
     ],
+    classification: ["fullstack","web","hackathon","database","ai"],
     github: "https://github.com/peres84/TuneTools",
     demo: "https://vimeo.com/1143501418?fl=pl&fe=vl",
   },
@@ -130,6 +156,7 @@ export const projects: Project[] = [
       "seaborn", 
       "Data science"
     ],
+    classification: ["ai","educational","data_analysis"],
     github: "https://github.com/Rouxxel/thesis-bachelor",
   },
   {
@@ -155,6 +182,7 @@ export const projects: Project[] = [
       "Docker", 
       "pytest"
     ],
+    classification: ["ai","backend","data_analysis"],
     github: "https://github.com/Rouxxel/Emotion_detection_DL_model_from_images",
   },
   {
@@ -181,6 +209,7 @@ export const projects: Project[] = [
       "numpy", 
       "matplotlib"
     ],
+    classification: ["ai","backend","data_analysis"],
     github: "https://github.com/Rouxxel/drone_sound_profile_detection",
   },
   {
@@ -206,6 +235,7 @@ export const projects: Project[] = [
       "matplotlib", 
       "seaborn"
     ],
+    classification: ["ai","educational","data_analysis"],
     github: "https://github.com/Rouxxel/ai_general",
   },
   {
@@ -228,6 +258,7 @@ export const projects: Project[] = [
       "Anomaly Detection", 
       "Draw.io"
     ],
+    classification: ["fullstack","web","hackathon","database","data_analysis"],
     github: "https://github.com/Rouxxel/maxxwatt_hackathon",
     demo: "https://www.loom.com/share/cc96c4b830e947ff919d3910525a2384?sid=8c8c50da-bc06-47db-bb79-8650f1cb143f",
   },
@@ -248,7 +279,10 @@ export const projects: Project[] = [
       "Component Pattern", 
       "Audio System", 
       "Dynamic Difficulty", 
-      "Collision Detection"],
+      "Collision Detection",
+      "Sprite painting"
+    ],
+    classification: ["fullstack","personal","gaming"],
     github: "https://github.com/Rouxxel/Nothingness",
   },
   {
@@ -273,6 +307,7 @@ export const projects: Project[] = [
       "SlowAPI", 
       "Chrome APIs"
     ],
+    classification: ["fullstack","personal","ai","web"],
     github: "https://github.com/Rouxxel/atryon_chrome_extension",
   },
   {
@@ -300,6 +335,7 @@ export const projects: Project[] = [
       "Responsive Design", 
       "UX/UI Design", 
       "HTML5"],
+    classification: ["frontend","personal","web"],
     live_demo: "https://per-web-venzer.vercel.app",
     github: "https://github.com/Rouxxel/per_web_venzer",
   },
