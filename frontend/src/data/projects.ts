@@ -70,7 +70,7 @@ export const projects: Project[] = [
     title: "Simple Chat",
     image: "/images/simple_chat/ic_launcher.png",
     description:
-      "AI-powered chat app with a Flutter mobile client and Python-based FastAPI backend deployed on Render, using Gemini 2.5 Flash API and Supabase for auth and persistent chat history.",
+      "AI-powered chatbot app built with a Flutter mobile client and Python-based FastAPI backend deployed on Render, using Gemini 2.5 Flash API and Supabase for user authentication, persistent chat history and user preferences and log in. The app is designed to be a way for users to converse with an AI chatbot with a personality of their choosing and maintain somewhat lasting conversation with it, although context and longterm memory remains a problem.",
     tags: [
       "Flutter", 
       "Dart", 
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     title: "Rift Rewind",
     image: "/images/rift_rewind/logo_helmet.png",
     description:
-      "League of Legends coaching dashboard with a React frontend and FastAPI backend that interfaces with the Riot Games API for match history, champion data and performance analytics.",
+      "League of Legends coaching dashboard with a React frontend and FastAPI backend that interfaces with the Riot Games API for match history, champion data and performance analytics. The webapp features a selection of pages for the user to go into detail about their match history, heroes sinergy, predictions among other things, always with a floating bubble to open a chatbot assistant that contains the context of the current page they are so they can obtain more precise insights.",
     tags: [
       "React", 
       "TypeScript", 
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     title: "TuneTools",
     image: "/images/tune_tools/logo-disk.png",
     description:
-      "Pipeline that turns daily context (news, weather, calendar) into personalized songs: an LLM generates music specs and lyrics, the YuE model synthesizes audio on RunPod and Gemini API creates album artwork.",
+      "Pipeline that turns daily context (news, weather, calendar) into personalized songs: an LLM generates music specs and lyrics, the YuE model synthesizes audio on RunPod and Gemini API creates album artwork to end up with a song for the user. Frontend is deployed on Vercel, Backed on Railway and it is connected to a Supabase database for user authentication, data collection and output (audio and artwork) preservation.",
     tags: [
       "React", 
       "TypeScript", 
@@ -170,7 +170,7 @@ export const projects: Project[] = [
     title: "Emotional Detection DL model",
     image: "/images/deep_learning/deep_learning.png",
     description:
-      "Deep learning project for detecting 7 emotions from grayscale face images using transfer learning (DenseNet121) and a custom CNN, with CLI, webcam UI, FER dataset from Kaggle, and optional TFLite/TensorRT/ONNX optimization.",
+      "Deep learning project for detecting 7 emotions from grayscale face images using transfer learning (DenseNet121) and a custom CNN, with CLI, webcam UI so it is possible to test the trained model live with their own faces, FER dataset from Kaggle, and optional TFLite/TensorRT/ONNX optimization.",
     tags: [
       "Python", 
       "TensorFlow", 
@@ -197,7 +197,7 @@ export const projects: Project[] = [
     title: "Drone sound detection ML models",
     image: "/images/drone_detection/drone.png",
     description:
-      "ML project for detecting and classifying drone, helicopter and background audio using CNN (Tiny and Robust) and traditional ML (Random Forest, SVM, XGBoost, Gradient Boosting) on MFCC features; target use case is to embedd it as a bulletproof vest add-on for directional drone detection.",
+      "ML project for detecting and classifying the sound profile of a drone, a helicopter and background audio using CNN (Tiny and Robust) and traditional ML (Random Forest, SVM, XGBoost, Gradient Boosting) with MFCC features; target use case is to embedd it as a bulletproof vest add-on for omindirectional drone detection for preemptive alert to individual soldiers in the field.",
     tags: [
       "Python", 
       "TensorFlow", 
@@ -226,7 +226,7 @@ export const projects: Project[] = [
     title: "Machine Learning Models",
     image: "/images/ml_various/ml_various.png",
     description:
-      "Portfolio of ML projects: classifications (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit), and clustering (customer segmentation with K-Means and Hierarchical), using Python and scikit-learn.",
+      "Portfolio of ML projects: classifications (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit), and clustering (customer segmentation with K-Means and Hierarchical), using Python notebooks, scikist/-learn and other related libraries.",
     tags: [
       "Python", 
       "scikit-learn", 
@@ -277,7 +277,7 @@ export const projects: Project[] = [
     title: "Nothingness 2D arcade game",
     image: "/images/nothingness/deepspace.png",
     description:
-      "Unity 2D space shooter with 8-directional movement, dynamic difficulty scaling, and buff/debuff system. Features two enemy types, asteroids, comets, power-ups (shield, speed boost/reduction), persistent high score tracking with JSON serialization, and comprehensive audio system.",
+      "Unity/C# 2D space shooter with 8-directional movement, dynamic difficulty scaling and a buff/debuff system. Features two enemy types (asteroids, comet), several power-ups (shield, speed boost/reduction), persistent high score tracking with JSON serialization, and comprehensive audio system with custom sprites made from scratch.",
     tags: [
       "Unity", 
       "C#", 
