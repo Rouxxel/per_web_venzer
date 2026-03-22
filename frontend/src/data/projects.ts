@@ -2,7 +2,7 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  classification: string[];
+  classifications: string[];
   github?: string;
   demo?: string;
   live_demo?: string;
@@ -30,7 +30,7 @@ export const projects: Project[] = [
       "CI/CD",
       "Industrial",
     ],
-    classification: ["backend","professional","data_analysis"],
+    classifications: ["backend","professional","data_analysis","industrial"],
   },
   {
     title: "Langdrill (Stealth starptup)",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
       "Render", 
       "Vercel"
     ],
-    classification: ["frontend","web","ai","professional","database"],
+    classifications: ["frontend","web","ai","professional","database","educational"],
     github: "https://github.com/Rouxxel/langdrill",
     live_demo: "https://langdrill.vercel.app",
   },
@@ -81,7 +81,7 @@ export const projects: Project[] = [
       "Docker", 
       "Android Studio"
     ],
-    classification: ["fullstack","mobile","database","ai","personal"],
+    classifications: ["fullstack","mobile","database","ai","personal"],
     github: "https://github.com/Rouxxel/simple-chat",
   },
   {
@@ -103,7 +103,7 @@ export const projects: Project[] = [
       "Render", 
       "Vercel"
     ],
-    classification: ["fullstack","web","ai","hackathon"],
+    classifications: ["fullstack","web","ai","hackathon","gaming"],
     github: "https://github.com/Rouxxel/rift_rewind_hckthn_frontnd",
     //demo: "https://www.youtube.com/watch?v=uXalS69hPrE",
     live_demo: "https://rift-rewind-hckthn-frontnd.vercel.app",
@@ -125,12 +125,13 @@ export const projects: Project[] = [
       "YuE", 
       "RunPod", 
       "LLM", 
+      "Generative AI",
       "Docker", 
       "Vercel", 
       "Railway", 
       "Google Auth"
     ],
-    classification: ["fullstack","web","hackathon","database","ai"],
+    classifications: ["fullstack","web","hackathon","database","ai"],
     github: "https://github.com/peres84/TuneTools",
     demo: "https://vimeo.com/1143501418?fl=pl&fe=vl",
   },
@@ -138,14 +139,14 @@ export const projects: Project[] = [
     title: "Bachelor Thesis (Machine Learning)",
     image: "/images/thesis/graduation.png",
     description:
-      "Comparative study of ML classification models for early diabetes detection on BRFSS 2015 health indicators: modular Python pipeline with Decision Tree, Logistic Regression, Random Forest, and SVM, plus EDA, SMOTE resampling, JSON config and centralized logging and results.",
+      "Comparative study of ML classifications models for early diabetes detection on BRFSS 2015 health indicators: modular Python pipeline with Decision Tree, Logistic Regression, Random Forest, and SVM, plus EDA, SMOTE resampling, JSON config and centralized logging and results.",
     tags: [
       "Python", 
       "scikit-learn", 
       "pandas", 
       "numpy", 
       "ML", 
-      "Classification", 
+      "Classifications", 
       "Decision Tree", 
       "Logistic Regression", 
       "Random Forest", 
@@ -156,7 +157,7 @@ export const projects: Project[] = [
       "seaborn", 
       "Data science"
     ],
-    classification: ["ai","educational","data_analysis"],
+    classifications: ["ai","university","data_analysis","research"],
     github: "https://github.com/Rouxxel/thesis-bachelor",
   },
   {
@@ -182,7 +183,7 @@ export const projects: Project[] = [
       "Docker", 
       "pytest"
     ],
-    classification: ["ai","backend","data_analysis"],
+    classifications: ["ai","backend","data_analysis"],
     github: "https://github.com/Rouxxel/Emotion_detection_DL_model_from_images",
   },
   {
@@ -198,7 +199,8 @@ export const projects: Project[] = [
       "ML", 
       "DL", 
       "CNN", 
-      "Audio Classification", 
+      "Audio Classifications", 
+      "Audio Recognition",
       "MFCC", 
       "Librosa", 
       "Random Forest", 
@@ -209,14 +211,14 @@ export const projects: Project[] = [
       "numpy", 
       "matplotlib"
     ],
-    classification: ["ai","backend","data_analysis"],
+    classifications: ["ai","backend","data_analysis"],
     github: "https://github.com/Rouxxel/drone_sound_profile_detection",
   },
   {
     title: "Machine Learning Models",
     image: "/images/ml_various/ml_various.png",
     description:
-      "Portfolio of ML projects: classification (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit), and clustering (customer segmentation with K-Means and Hierarchical), using Python and scikit-learn.",
+      "Portfolio of ML projects: classifications (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit), and clustering (customer segmentation with K-Means and Hierarchical), using Python and scikit-learn.",
     tags: [
       "Python", 
       "scikit-learn", 
@@ -235,7 +237,7 @@ export const projects: Project[] = [
       "matplotlib", 
       "seaborn"
     ],
-    classification: ["ai","educational","data_analysis"],
+    classifications: ["ai","university","data_analysis","research"],
     github: "https://github.com/Rouxxel/ai_general",
   },
   {
@@ -258,7 +260,7 @@ export const projects: Project[] = [
       "Anomaly Detection", 
       "Draw.io"
     ],
-    classification: ["fullstack","web","hackathon","database","data_analysis"],
+    classifications: ["fullstack","web","hackathon","database","data_analysis","industrial"],
     github: "https://github.com/Rouxxel/maxxwatt_hackathon",
     demo: "https://www.loom.com/share/cc96c4b830e947ff919d3910525a2384?sid=8c8c50da-bc06-47db-bb79-8650f1cb143f",
   },
@@ -282,7 +284,7 @@ export const projects: Project[] = [
       "Collision Detection",
       "Sprite painting"
     ],
-    classification: ["fullstack","personal","gaming"],
+    classifications: ["fullstack","personal","gaming"],
     github: "https://github.com/Rouxxel/Nothingness",
   },
   {
@@ -307,7 +309,7 @@ export const projects: Project[] = [
       "SlowAPI", 
       "Chrome APIs"
     ],
-    classification: ["fullstack","personal","ai","web"],
+    classifications: ["fullstack","personal","ai","web","augmented_reality"],
     github: "https://github.com/Rouxxel/atryon_chrome_extension",
   },
   {
@@ -335,7 +337,7 @@ export const projects: Project[] = [
       "Responsive Design", 
       "UX/UI Design", 
       "HTML5"],
-    classification: ["frontend","personal","web"],
+    classifications: ["frontend","personal","web"],
     live_demo: "https://per-web-venzer.vercel.app",
     github: "https://github.com/Rouxxel/per_web_venzer",
   },
