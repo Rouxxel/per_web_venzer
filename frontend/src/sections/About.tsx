@@ -4,15 +4,15 @@ import SectionInner from "@/components/SectionInner";
 
 /* Bio beside the image (short intro) – each string is its own paragraph */
 const bioIntro = [
-  "Software engineer based in Germany with a strong academic foundation and hands-on industry experience building backend and frontend systems connected to databases and AI implementation.",
-  "Completed the Software Engineering B.Sc. program at the University of Europe for Applied Sciences, where I worked extensively with Python, Java, C/C++, JavaScript and SQL across AI (ML and DL), web, mobile and backend projects, applying OOP design, parallel programming and Agile development practices like Scrum and SQA. My thesis consisted on a comparative study between 4 Machine learning models to determine which of them is the best suited for predicting Diabetes before it becomes obvious.",
+  "Software engineer based in Germany with a strong academic foundation and hands-on industry experience building backend, frontend and fullstack systems connected to databases and AI implementation/integration.", 
+  "Completed the Software Engineering B.Sc. program at the University of Europe for Applied Sciences (Potsdam Campus), where I learned extensively with Python, Java, C/C++, JavaScript and SQL across AI (ML and DL), web, mobile, backend and frontend projects, applying OOP design, parallel programming and Agile development practices like Scrum and SQA. My final thesis was focused on a comparative study between 4 Machine learning models to determine which of them is the best suited for predicting Diabetes on patients before obvious symptoms arise and for easy integration.", 
 ];
 
 /* Bio below the photo row – each string is its own paragraph */
 const bioBelow = [
-  "During my internship at Siemens AG in Munich, I contributed to the SRS, design, development, test, refactor and deployment of a production-grade real-time high frequency monitoring system. I developed Python-based backend software for processing high-frequency sensor data using Pandas, NumPy, Matplotlib and multithreading, focusing on performance, reliability and maintainability, adding Docker for deployment, Git-based workflows for version control and created/designed system architecture diagrams with draw.io.",
-  "Alongside backend development, I have experience building modern, user-facing applications. At a stealth startup called Langdrill I worked as a Frontend Engineer, designing low and high fidelity wireframes in Figma and implementing them in a React + TypeScript frontend for an AI-enhanced language learning platform. I focused on scalable component architecture, performance and clean integration with backend services to support concurrent users.",
-  "Beyond professional and academical work, I actively pursue personal projects to expand my skill set. These include developing 2D games in Unity with C#, building and deploying full-stack web applications with React and Python backends, particularly an AI-powered chatbot using Flutter/Dart, the Gemini API and a Supabase database. I am driven by curiosity, continuous learning and a desire to build scalable, impactful software.",
+  "Workd profesionally as a backend developer for a production-grade real-time monitoring systems at Siemens. Also worked as a frontend developer for a stealth startup called Langdrill based in Berlin, Germany. Both experiences allowed me to work on a variety of technologies and understand both the corporate and startup environments.",
+  "Beyond professional and academical work, I actively pursue personal projects to expand my skill set. Including the development of 2D games in Unity, building and deploying full-stack web applications, my favorite personal project being an AI-powered chatbot using Flutter/Dart.",
+  "Lastly, I regularly attend hackathons, workshops and seminars to expand my knowledge on the newest technologies and network, because Iam driven by curiosity, continuous learning and a desire to build scalable, impactful software.",
 ];
 
 const About = () => {

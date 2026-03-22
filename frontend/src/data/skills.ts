@@ -26,7 +26,7 @@ export const skillSections: SkillSection[] = [
   },
   {
     title: "Team & development practices",
-    skills: ["Git / GitHub", "Atlassian (Jira, Confluence)", "Agile/Scrum", "SQA"],
+    skills: ["Git / GitHub", "OOP", "Atlassian (Jira, Confluence)", "Agile/Scrum", "SQA"],
   },
   {
     title: "DevOps & infrastructure",
@@ -49,6 +49,16 @@ export const skillSections: SkillSection[] = [
   },
   {
     title: "Service providers",
-    skills: ["Render", "Vercel", "Railway", "Supabase", "RunPod", "AWS", "Google Cloud","Black forest API","Lyceum"],
+    skills: [
+      "Render", 
+      "Vercel", 
+      "Railway", 
+      "Supabase", 
+      "RunPod", 
+      "AWS", 
+      "Google Cloud",
+      "Black forest API",
+      "Lyceum"
+    ],
   }
 ];
