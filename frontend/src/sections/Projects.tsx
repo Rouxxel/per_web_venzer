@@ -200,6 +200,7 @@ const Projects = () => {
                   aria-expanded={descriptionOpenByTitle[project.title] === true}
                   className={cn(
                     "mb-4 flex-1 w-full text-left text-sm leading-relaxed rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                    //"mt-1.5 mb-4 w-full text-left text-sm leading-relaxed rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                     descriptionOpenByTitle[project.title]
                       ? "text-muted-foreground cursor-pointer hover:text-foreground"
                       : "text-primary font-medium underline decoration-primary/60 underline-offset-2 hover:decoration-primary",
