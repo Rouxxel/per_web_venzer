@@ -11,6 +11,7 @@ import {
 import { Github, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Label } from "@/components/ui/label";
 import {
   Select,
@@ -45,6 +46,15 @@ const Projects = () => {
   const [domainFilter, setDomainFilter] = useState<string>(NONE_FILTER_VALUE);
   const [contextFilter, setContextFilter] = useState<string>(NONE_FILTER_VALUE);
   const [industryFilter, setIndustryFilter] = useState<string>(NONE_FILTER_VALUE);
+  /** When true for a title, the full project description is shown; otherwise "Display description". */
+  const [descriptionOpenByTitle, setDescriptionOpenByTitle] = useState<Record<string, boolean>>({});
+
+  const toggleProjectDescription = (title: string) => {
+    setDescriptionOpenByTitle((prev) => ({
+      ...prev,
+      [title]: !prev[title],
+    }));
+  };
 
   const filteredProjects = useMemo(
     () => filterProjectsBySelections(domainFilter, contextFilter, industryFilter),
@@ -184,9 +194,19 @@ const Projects = () => {
                 <h3 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
-                  {project.description}
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleProjectDescription(project.title)}
+                  aria-expanded={descriptionOpenByTitle[project.title] === true}
+                  className={cn(
+                    "mb-4 flex-1 w-full text-left text-sm leading-relaxed rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                    descriptionOpenByTitle[project.title]
+                      ? "text-muted-foreground cursor-pointer hover:text-foreground"
+                      : "text-primary font-medium underline decoration-primary/60 underline-offset-2 hover:decoration-primary",
+                  )}
+                >
+                  {descriptionOpenByTitle[project.title] ? project.description : "Display description"}
+                </button>
 
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.tags.map((tag) => (
