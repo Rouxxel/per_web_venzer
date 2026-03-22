@@ -1,8 +1,16 @@
 import { motion } from "framer-motion";
-import { projects } from "@/data/projects";
+import { projects, type Project } from "@/data/projects";
 import { Github, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import SectionInner from "@/components/SectionInner";
+
+/** True if at least one of github / demo / live_demo is set to a non-empty value. */
+function hasExternalLinks(project: Project): boolean {
+  if (project.github?.trim()) return true;
+  if (project.demo != null && project.demo.trim() !== "") return true;
+  if (project.live_demo != null && project.live_demo.trim() !== "") return true;
+  return false;
+}
 
 const Projects = () => {
   return (
@@ -60,16 +68,18 @@ const Projects = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-3">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Github className="h-4 w-4" />
-                  <span className="text-sm font-medium">GitHub</span>
-                </a>
-                {project.demo != null && (
+                {project.github != null && project.github.trim() !== "" && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Github className="h-4 w-4" />
+                    <span className="text-sm font-medium">GitHub</span>
+                  </a>
+                )}
+                {project.demo != null && project.demo.trim() !== "" && (
                   <a
                     href={project.demo}
                     target="_blank"
@@ -80,7 +90,7 @@ const Projects = () => {
                     <span className="text-sm font-medium">Showcase</span>
                   </a>
                 )}
-                {project.live_demo != null && (
+                {project.live_demo != null && project.live_demo.trim() !== "" && (
                   <a
                     href={project.live_demo}
                     target="_blank"
@@ -90,6 +100,17 @@ const Projects = () => {
                     <ExternalLink className="h-4 w-4" />
                     <span className="text-sm font-medium">Live demo</span>
                   </a>
+                )}
+                {!hasExternalLinks(project) && (
+                  <span
+                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground"
+                    title="No public repository or demo for this project"
+                  >
+                    <span className="font-semibold leading-none" aria-hidden="true">
+                      !
+                    </span>
+                    <span>not available</span>
+                  </span>
                 )}
               </div>
             </motion.div>
