@@ -5,14 +5,14 @@ import SectionInner from "@/components/SectionInner";
 /* Bio beside the image (short intro) – each string is its own paragraph */
 const bioIntro = [
   "Software engineer based in Germany with a strong academic foundation and hands-on industry experience building backend, frontend and fullstack systems connected to databases and AI implementation/integration.", 
-  "Completed the Software Engineering B.Sc. program at the University of Europe for Applied Sciences (Potsdam Campus), where I learned extensively with Python, Java, C/C++, JavaScript and SQL across AI (ML and DL), web, mobile, backend and frontend projects, applying OOP design, parallel programming and Agile development practices like Scrum and SQA. My final thesis was focused on a comparative study between 4 Machine learning models to determine which of them is the best suited for predicting Diabetes on patients before obvious symptoms arise and for easy integration.", 
+  "Completed a Software Engineering B.Sc. degree at the University of Europe for Applied Sciences (Potsdam Campus), where I learned extensively about languages like Python, Java, C/C++, JavaScript and SQL across AI (ML and DL), web, mobile, backend and frontend projects, applying OOP design, parallel programming and Agile development practices like Scrum and SQA. My final thesis was focused on a comparative study between 4 Machine learning models to determine which of them is the best suited for predicting Diabetes on patients before obvious symptoms arise and for easy integration.", 
 ];
 
 /* Bio below the photo row – each string is its own paragraph */
 const bioBelow = [
-  "Workd profesionally as a backend developer for a production-grade real-time monitoring systems at Siemens. Also worked as a frontend developer for a stealth startup called Langdrill based in Berlin, Germany. Both experiences allowed me to work on a variety of technologies and understand both the corporate and startup environments.",
-  "Beyond professional and academical work, I actively pursue personal projects to expand my skill set. Including the development of 2D games in Unity, building and deploying full-stack web applications, my favorite personal project being an AI-powered chatbot using Flutter/Dart.",
-  "Lastly, I regularly attend hackathons, workshops and seminars to expand my knowledge on the newest technologies and network, because Iam driven by curiosity, continuous learning and a desire to build scalable, impactful software.",
+  "Worked profesionally as a backend developer for a production-grade real-time monitoring systems at Siemens. Also as a frontend developer for a stealth startup called Langdrill based in Berlin, Germany. Both experiences allowed me to work on a variety of technologies and understand both corporate and startup environments.",
+  "Beyond professional and academical work, I actively pursue personal projects to expand my skill set. Including the development of 2D games in Unity, building and deploying full-stack web applications and my favorite personal project being an AI-powered chatbot using Flutter/Dart.",
+  "I enjoy regularly attending hackathons, workshops and seminars to expand my knowledge on the newest technologies and network, because Iam driven by curiosity, continuous learning and a desire to build scalable, impactful software.",
 ];
 
 const About = () => {

@@ -45,7 +45,20 @@ const Experience = () => {
                 </p>
                 <h3 className="text-lg font-semibold text-foreground">{entry.title}</h3>
                 <p className="text-sm text-muted-foreground mb-2">
-                  {entry.company}; {entry.location}
+                  {entry.link != null && entry.link.trim() !== "" ? (
+                    <a
+                      href={entry.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-border underline-offset-4 text-muted-foreground hover:text-foreground transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      aria-label={`${entry.company} (opens in new tab)`}
+                    >
+                      {entry.company}
+                    </a>
+                  ) : (
+                    <span className="underline decoration-border underline-offset-4">{entry.company}</span>
+                  )}
+                  ; {entry.location}
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {entry.description}
