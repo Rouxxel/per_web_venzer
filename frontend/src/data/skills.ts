@@ -6,15 +6,15 @@ export type SkillSection = {
 export const skillSections: SkillSection[] = [
   {
     title: "Programming languages",
-    skills: ["Python", "JavaScript", "TypeScript", "C/C++", "C#", "Dart", "HTML5", "CSS3"],
+    skills: ["Python", "Java", "JavaScript", "TypeScript", "C/C++", "C#", "Dart", "HTML5", "CSS3"],
   },
   {
     title: "Frameworks & libraries",
-    skills: ["React", "Tailwind", "Flutter", "Unity"],
+    skills: ["React", "Vite", "Tailwind CSS", "Flutter", "Unity", "FastAPI"],
   },
   {
     title: "Prototyping & design",
-    skills: ["Figma", "draw.io"],
+    skills: ["Figma", "draw.io", "Pixel Art Studio"],
   },
   {
     title: "Databases",
@@ -34,6 +34,21 @@ export const skillSections: SkillSection[] = [
   },
   {
     title: "AI & data",
-    skills: ["Machine Learning", "AI", "Deep Learning", "EDA", "Data science/analysis"],
+    skills: [
+      "Machine Learning",
+      "AI",
+      "Deep Learning",
+      "EDA",
+      "Data science/analysis",
+      "Pandas",
+      "NumPy",
+      "scikit-learn",
+      "Keras",
+      "TensorFlow",
+    ],
   },
+  {
+    title: "Service providers",
+    skills: ["Render", "Vercel", "Railway", "Supabase", "RunPod", "AWS", "Google Cloud","Black forest API","Lyceum"],
+  }
 ];

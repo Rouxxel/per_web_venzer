@@ -86,7 +86,7 @@ const About = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-6">
-            Technologies I Work With
+            Technologies I Worked With
           </h3>
           <div className="grid sm:grid-cols-2 gap-6">
             {skillSections.map((section) => (
