@@ -1,8 +1,10 @@
+import type { ProjectClassification } from "./projectClassifications";
+
 export interface Project {
   title: string;
   description: string;
   tags: string[];
-  classifications: string[];
+  classifications: ProjectClassification[];
   github?: string;
   demo?: string;
   live_demo?: string;
@@ -21,6 +23,7 @@ export const projects: Project[] = [
       "Real-time",
       "Pandas",
       "NumPy",
+      "Data analysis",
       "Matplotlib",
       "SciPy",
       "Multithreading",
@@ -30,7 +33,7 @@ export const projects: Project[] = [
       "CI/CD",
       "Industrial",
     ],
-    classifications: ["backend","professional","data_analysis","industrial"],
+    classifications: ["Backend", "Professional", "Industrial"],
   },
   {
     title: "Langdrill (Stealth starptup)",
@@ -41,6 +44,7 @@ export const projects: Project[] = [
       "React", 
       "TypeScript", 
       "Vite", 
+      "Generative AI",
       "Tailwind CSS", 
       "Python", 
       "FastAPI", 
@@ -58,7 +62,7 @@ export const projects: Project[] = [
       "Render", 
       "Vercel"
     ],
-    classifications: ["frontend","web","ai","professional","database","educational"],
+    classifications: ["Frontend", "Database", "Web", "AI / Data", "Professional", "Educational"],
     github: "https://github.com/Rouxxel/langdrill",
     live_demo: "https://langdrill.vercel.app",
   },
@@ -74,6 +78,7 @@ export const projects: Project[] = [
       "FastAPI", 
       "Supabase", 
       "PostgreSQL", 
+      "Generative AI",
       "Gemini API", 
       "REST API", 
       "JWT", 
@@ -81,7 +86,7 @@ export const projects: Project[] = [
       "Docker", 
       "Android Studio"
     ],
-    classifications: ["fullstack","mobile","database","ai","personal"],
+    classifications: ["Fullstack", "Mobile", "Database", "AI / Data", "Personal"],
     github: "https://github.com/Rouxxel/simple-chat",
   },
   {
@@ -103,7 +108,7 @@ export const projects: Project[] = [
       "Render", 
       "Vercel"
     ],
-    classifications: ["fullstack","web","ai","hackathon","gaming"],
+    classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Gaming"],
     github: "https://github.com/Rouxxel/rift_rewind_hckthn_frontnd",
     //demo: "https://www.youtube.com/watch?v=uXalS69hPrE",
     live_demo: "https://rift-rewind-hckthn-frontnd.vercel.app",
@@ -131,7 +136,7 @@ export const projects: Project[] = [
       "Railway", 
       "Google Auth"
     ],
-    classifications: ["fullstack","web","hackathon","database","ai"],
+    classifications: ["Fullstack", "Web", "Database", "AI / Data", "Hackathon"],
     github: "https://github.com/peres84/TuneTools",
     demo: "https://vimeo.com/1143501418?fl=pl&fe=vl",
   },
@@ -139,13 +144,14 @@ export const projects: Project[] = [
     title: "Bachelor Thesis (Machine Learning)",
     image: "/images/thesis/graduation.png",
     description:
-      "Comparative study of ML classifications models for early diabetes detection on BRFSS 2015 health indicators: modular Python pipeline with Decision Tree, Logistic Regression, Random Forest, and SVM, plus EDA, SMOTE resampling, JSON config and centralized logging and results.",
+      "Comparative study of ML classification models for early diabetes detection on BRFSS 2015 health indicators: modular Python pipeline with Decision Tree, Logistic Regression, Random Forest, and SVM, plus EDA, SMOTE resampling, JSON config and centralized logging and results.",
     tags: [
       "Python", 
       "scikit-learn", 
       "pandas", 
       "numpy", 
       "ML", 
+      "Data analysis",
       "Classifications", 
       "Decision Tree", 
       "Logistic Regression", 
@@ -157,7 +163,7 @@ export const projects: Project[] = [
       "seaborn", 
       "Data science"
     ],
-    classifications: ["ai","university","data_analysis","research"],
+    classifications: ["AI / Data", "University", "Research"],
     github: "https://github.com/Rouxxel/thesis-bachelor",
   },
   {
@@ -169,6 +175,7 @@ export const projects: Project[] = [
       "Python", 
       "TensorFlow", 
       "Deep Learning", 
+      "Data analysis",
       "CNN", 
       "DenseNet121", 
       "Transfer Learning", 
@@ -183,7 +190,7 @@ export const projects: Project[] = [
       "Docker", 
       "pytest"
     ],
-    classifications: ["ai","backend","data_analysis"],
+    classifications: ["AI / Data", "University", "Research"],
     github: "https://github.com/Rouxxel/Emotion_detection_DL_model_from_images",
   },
   {
@@ -199,6 +206,7 @@ export const projects: Project[] = [
       "ML", 
       "DL", 
       "CNN", 
+      "Data analysis",
       "Audio Classifications", 
       "Audio Recognition",
       "MFCC", 
@@ -211,7 +219,7 @@ export const projects: Project[] = [
       "numpy", 
       "matplotlib"
     ],
-    classifications: ["ai","backend","data_analysis"],
+    classifications: ["AI / Data", "Backend", "Hackathon", "Military", "Research"],
     github: "https://github.com/Rouxxel/drone_sound_profile_detection",
   },
   {
@@ -224,6 +232,7 @@ export const projects: Project[] = [
       "scikit-learn", 
       "pandas", 
       "numpy", 
+      "Data analysis",
       "ML", 
       "Clustering", 
       "Decision Tree", 
@@ -237,7 +246,7 @@ export const projects: Project[] = [
       "matplotlib", 
       "seaborn"
     ],
-    classifications: ["ai","university","data_analysis","research"],
+    classifications: ["AI / Data", "University", "Research"],
     github: "https://github.com/Rouxxel/ai_general",
   },
   {
@@ -247,7 +256,6 @@ export const projects: Project[] = [
       "Berlin Energy Hackathon 2025 submission: BESS monitoring and management platform with real-time analytics, anomaly detection, and energy forecasting. System architecture and component design were modeled in Draw.io. FastAPI backend with SSE streaming and React dashboard (Vite, shadcn-ui, Tailwind).",
     tags: [
       "Python", 
-      "FastAPI", 
       "React", 
       "TypeScript", 
       "Vite", 
@@ -258,9 +266,10 @@ export const projects: Project[] = [
       "BESS", 
       "Energy Management", 
       "Anomaly Detection", 
+      "Data analysis",
       "Draw.io"
     ],
-    classifications: ["fullstack","web","hackathon","database","data_analysis","industrial"],
+    classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Industrial"],
     github: "https://github.com/Rouxxel/maxxwatt_hackathon",
     demo: "https://www.loom.com/share/cc96c4b830e947ff919d3910525a2384?sid=8c8c50da-bc06-47db-bb79-8650f1cb143f",
   },
@@ -284,7 +293,7 @@ export const projects: Project[] = [
       "Collision Detection",
       "Sprite painting"
     ],
-    classifications: ["fullstack","personal","gaming"],
+    classifications: ["Fullstack", "Personal", "Gaming"],
     github: "https://github.com/Rouxxel/Nothingness",
   },
   {
@@ -309,7 +318,7 @@ export const projects: Project[] = [
       "SlowAPI", 
       "Chrome APIs"
     ],
-    classifications: ["fullstack","personal","ai","web","augmented_reality"],
+    classifications: ["Fullstack", "Web", "AI / Data", "Personal", "AR"],
     github: "https://github.com/Rouxxel/atryon_chrome_extension",
   },
   {
@@ -337,7 +346,7 @@ export const projects: Project[] = [
       "Responsive Design", 
       "UX/UI Design", 
       "HTML5"],
-    classifications: ["frontend","personal","web"],
+    classifications: ["Frontend", "Web", "Personal"],
     live_demo: "https://per-web-venzer.vercel.app",
     github: "https://github.com/Rouxxel/per_web_venzer",
   },
