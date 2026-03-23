@@ -74,6 +74,11 @@
             },
             "projects_entries": {
                 "not_here": "See frontend/src/data/project.ts for the full list of projects."
+            },
+            "project_specifics":{
+                "display_description_btn": "Display description",
+                "live_demo_btn": "Live demo",
+                "showcase_btn": "Showcase"
             }
         },
         "experience_section": {

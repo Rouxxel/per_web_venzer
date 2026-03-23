@@ -31,13 +31,51 @@ export const INDUSTRY_THEME_OPTIONS = [
   "Military",
 ] as const;
 
-/** Runtime UI metadata for filter controls (non-translated, source of truth). */
+/** Runtime UI metadata for filter controls (default English). */
 export const PROJECT_FILTER_LABELS = {
   defaultOption: "None",
   domainTitle: "Domain / Technical",
   contextTitle: "Context / Origin",
   industryTitle: "Industry / Theme",
 } as const;
+
+/** Spanish labels for filter UI. */
+export const PROJECT_FILTER_LABELS_ES = {
+  defaultOption: "Ninguno",
+  domainTitle: "Dominio / Técnico",
+  contextTitle: "Contexto / Origen",
+  industryTitle: "Industria / Temática",
+} as const;
+
+/** Spanish display labels mapped by index to canonical DOMAIN_TECH_OPTIONS values. */
+export const DOMAIN_TECH_OPTIONS_ES = [
+  "Backend",
+  "Frontend",
+  "Fullstack",
+  "Móvil",
+  "Base de datos",
+  "Web",
+  "IA / Datos",
+  "RA",
+] as const;
+
+/** Spanish display labels mapped by index to canonical CONTEXT_OPTIONS values. */
+export const CONTEXT_OPTIONS_ES = [
+  "Profesional",
+  "Personal",
+  "Universidad",
+  "Hackatón",
+  "Investigación",
+] as const;
+
+/** Spanish display labels mapped by index to canonical INDUSTRY_THEME_OPTIONS values. */
+export const INDUSTRY_THEME_OPTIONS_ES = [
+  "Videojuegos",
+  "Educación",
+  "Industrial",
+  "RA",
+  "Militar",
+] as const;
 
 export type DomainTechClassification = (typeof DOMAIN_TECH_OPTIONS)[number];
 export type ContextClassification = (typeof CONTEXT_OPTIONS)[number];
@@ -58,3 +96,21 @@ export const ALL_CLASSIFICATIONS: ProjectClassification[] = Array.from(
 );
 
 export const NONE_FILTER_VALUE = "__none__" as const;
+
+/** Returns localized filter labels/options while preserving canonical classification values. */
+export const getProjectFilterLocalization = (languageCode: string) => {
+  if (languageCode === "es") {
+    return {
+      labels: PROJECT_FILTER_LABELS_ES,
+      domainOptions: DOMAIN_TECH_OPTIONS_ES,
+      contextOptions: CONTEXT_OPTIONS_ES,
+      industryOptions: INDUSTRY_THEME_OPTIONS_ES,
+    } as const;
+  }
+  return {
+    labels: PROJECT_FILTER_LABELS,
+    domainOptions: DOMAIN_TECH_OPTIONS,
+    contextOptions: CONTEXT_OPTIONS,
+    industryOptions: INDUSTRY_THEME_OPTIONS,
+  } as const;
+};

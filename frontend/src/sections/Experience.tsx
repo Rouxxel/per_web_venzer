@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { experience } from "@/data/experience";
+import { getExperienceByLanguage } from "@/data/experience";
 import { Briefcase, GraduationCap, Download } from "lucide-react";
 import SectionInner from "@/components/SectionInner";
 import { useLanguage } from "@/languages/language_invoker";
 
 const Experience = () => {
-  const { language } = useLanguage();
+  const { language, currentLanguageCode } = useLanguage();
+  const experienceEntries = getExperienceByLanguage(currentLanguageCode);
 
   return (
     <section id="experience" className="py-24">
@@ -25,7 +26,7 @@ const Experience = () => {
           <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-border" />
 
           <div className="space-y-10">
-            {experience.map((entry, i) => (
+            {experienceEntries.map((entry, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -20 }}

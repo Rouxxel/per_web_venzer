@@ -8,7 +8,7 @@ export interface ExperienceEntry {
   type: "work" | "education";
 }
 
-export const experience: ExperienceEntry[] = [
+export const experience_en: ExperienceEntry[] = [
   {
     title: "UX/UI and Frontend developer (React + TS)",
     company: "Langdrill (Stealth Startup)",
@@ -36,7 +36,46 @@ export const experience: ExperienceEntry[] = [
     link: "https://www.ue-germany.com/",
     period: "09.2022 — 08.2025",
     description:
-      "Graduated with 180 credits, 88.64/100 grade points (1.7 in German grading system) and a near perfect Thesis focused on machine learning. The program focused on languages/algorithms (Python, Java, C/C++, JS), OOP, deployment (Docker, APIs and VMs), development practices (CI/CD,Agile, Scrum and SQA) and tools (Jira, Confluence), parallel programming, databases (SQL) UX/UI design (Figma) and Artificial Intelligence (ML, DL and data science). Bachelorkunde and transcript of records available on request.",
+      "Graduated with 180 credits, 88.64/100 grade points (1.7 in German grading system) and a Thesis focused on machine learning. The program focused on languages/algorithms (Python, Java, C/C++, JS), OOP, deployment (Docker, APIs and VMs), development practices (CI/CD,Agile, Scrum and SQA) and tools (Jira, Confluence), parallel programming, databases (SQL) UX/UI design (Figma) and Artificial Intelligence (ML, DL and data science). Bachelorkunde and transcript of records available on request.",
     type: "education",
   },
 ];
+
+export const experience_es: ExperienceEntry[] = [
+  {
+    title: "Desarrollador UX/UI y Frontend (React + TS)",
+    company: "Langdrill (Startup stealth)",
+    location: "Berlín, Alemania",
+    link: "https://www.langdrill.com/",
+    period: "06.2025 — 07.2025",
+    description:
+      "Diseñé wireframes de baja y alta fidelidad en Figma y los implementé en un frontend de React + TypeScript conectado a un backend en Python con FastAPI desplegado en Render. Mantuve una arquitectura basada en componentes y una integración limpia con los servicios REST para soportar usuarios concurrentes y funciones de IA integrada.",
+    type: "work",
+  },
+  {
+    title: "Desarrollador backend para sistemas de monitoreo en tiempo real",
+    company: "Siemens AG",
+    location: "Múnich, Alemania",
+    link: "https://www.siemens.com/",
+    period: "10.2024 — 04.2025",
+    description:
+      "Diseñé, desarrollé, testeé, refactoricé y desplegué software backend en Python de nivel productivo para procesar datos de sensores de alta frecuencia usando Pandas, NumPy, Matplotlib y multithreading, enfocado en POO, rendimiento, fiabilidad y mantenibilidad. Añadí Docker para despliegue, un logger personalizado para registro de largo plazo y depuración, flujos con Git y pipeline CI/CD, linting para calidad de código y diagramas de arquitectura en draw.io para investigación y planificación. Zeugnis disponible bajo solicitud.",
+    type: "work",
+  },
+  {
+    title: "Licenciatura en Ingeniería de Software",
+    company: "University of Europe for Applied Sciences",
+    location: "Potsdam, Alemania",
+    link: "https://www.ue-germany.com/",
+    period: "09.2022 — 08.2025",
+    description:
+      "Graduado con 180 créditos, 88.64/100 puntos (1.7 en el sistema de calificación alemán) y una tesis enfocada en Machine Learning. El programa de licenciatura se centró en lenguajes/algoritmos (Python, Java, C/C++, JS), OOP, despliegue (Docker, APIs y VMs), prácticas de desarrollo (CI/CD, Agile, Scrum y SQA), herramientas (Jira, Confluence), programación paralela, bases de datos (SQL), diseño UX/UI (Figma) e inteligencia artificial (ML, DL y ciencia de datos). Bachelorkunde y transcript of records disponibles bajo solicitud.",
+    type: "education",
+  },
+];
+
+/** Returns language-specific experience entries, with English fallback. */
+export const getExperienceByLanguage = (languageCode: string): ExperienceEntry[] => {
+  if (languageCode === "es") return experience_es;
+  return experience_en;
+};

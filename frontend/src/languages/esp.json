@@ -1,0 +1,108 @@
+{
+    "language":"Español",
+    "logo_text": "Portafolio personal",
+    "nav_bar": {
+        "about": "Sobre mí",
+        "projects": "Proyectos",
+        "experience": "Experiencia",
+        "contact": "Contacto"
+    },
+    "sections": {
+        "hero_section": {
+            "greet_txt": "Saludos, soy",
+            "slogan_txt": "Un desarrollador que disfruta de crear código organizado, de alto rendimiento y escalable.",
+            "view_work_btn": "Ver mi trabajo",
+            "get_in_touch_btn": "Contáctame"
+        },
+        "about_section": {
+            "section_title": "Sobre mí",
+            "bio_intro_txts": [
+                "Ingeniero de software radicado en Alemania, con una sólida base académica y experiencia en la industria construyendo sistemas backend, frontend y fullstack conectados a bases de datos y con implementación/integración de IAs.",
+                "Completé una licenciatura en Ingeniería de Software en la University of Europe for Applied Sciences (campus de Potsdam), donde aprendí ampliamente lenguajes como Python, Java, C/C++, JavaScript y SQL en proyectos de IA (ML y DL), web, móvil, backend y frontend, aplicando diseño orientado a objetos, programación paralela y prácticas Agile como Scrum y SQA. Mi tesis final se centró en un estudio comparativo entre 4 modelos de Machine Learning para determinar cuál se adapta mejor a la predicción de diabetes en pacientes antes de que aparezcan síntomas evidentes y sea de fácil integración."
+            ],
+            "bio_below_txts": [
+                "Trabajé profesionalmente como desarrollador backend en sistemas de monitoreo en tiempo real de nivel de producción en Siemens. También como desarrollador frontend en una startup stealth llamada Langdrill, con sede en Berlín, Alemania. Ambas experiencias me permitieron trabajar con una gran variedad de tecnologías y entender tanto entornos corporativos como de startup.",
+                "Además del trabajo profesional y académico, desarrollo activamente proyectos personales para ampliar mis habilidades. Entre ellos, el desarrollo de juegos 2D en Unity, la creación y despliegue de aplicaciones web fullstack y, mi proyecto personal favorito, un chatbot que integra la API de un proveedor de IA y desarrollado en Flutter/Dart.",
+                "Disfruto asistir regularmente a hackathons, workshops y seminarios para ampliar mi conocimiento sobre las tecnologías más recientes y hacer networking, porque me impulsa la curiosidad, el aprendizaje continuo y el deseo de construir software escalable e impactante."
+            ],
+            "tech_stack_title": "Tecnologías con las que he trabajado",
+            "tech_subsections": {
+                "program_langs": {
+                    "section":"languages",
+                    "title":"Lenguajes de programación"
+                },
+                "frameworks_libs": {
+                    "section":"frameworks",
+                    "title":"Frameworks y librerías"
+                },
+                "proto_design": {
+                    "section":"prototyping",
+                    "title":"Prototipado y diseño"
+                },
+                "dbs": {
+                    "section":"database",
+                    "title":"Bases de datos"
+                },
+                "apis_integr": {
+                    "section":"integration",
+                    "title":"APIs e integración"
+                },
+                "team_dev_pract": {
+                    "section":"team",
+                    "title":"Trabajo en equipo y prácticas de desarrollo"
+                },
+                "devops_infrastr": {
+                    "section":"infrastructure",
+                    "title":"DevOps e infraestructura"
+                },
+                "ai_data": {
+                    "section":"ai",
+                    "title":"IA y datos"
+                },
+                "service_prov": {
+                    "section":"providers",
+                    "title":"Proveedores de servicios"
+                }
+            }
+        },
+        "projects_section": {
+            "section_title": "Proyectos",
+            "filters":{
+                "filter_explanation_txt": "Muestra proyectos que coinciden con TODOS los filtros seleccionados (o todos los proyectos cuando cada filtro está en Ninguno).",
+                "clear_filters_btn": "Limpiar filtros",
+                "no_projects_txt": "Ningún proyecto coincide con estos filtros. Prueba limpiar los filtros o elegir opciones diferentes."
+            },
+            "projects_entries": {
+                "not_here": "Consulta frontend/src/data/project.ts para ver la lista completa de proyectos."
+            },
+            "project_specifics":{
+                "display_description_btn": "Mostrar descripción",
+                "live_demo_btn": "Demo vivo",
+                "showcase_btn": "Video"
+            }
+        },
+        "experience_section": {
+            "section_title": "Experiencia/Trayectoria",
+            "experience_entries": {
+                "not_here": "Consulta frontend/src/data/experience.ts para ver la lista completa de entradas de experiencia."
+            },
+            "download_cv_btn": "Descargar CV / Currículum"
+        },
+        "contact_section": {
+            "contact_title": "Contáctame",
+            "contact_txt": "Siempre estoy abierto a nuevas oportunidades y conversaciones interesantes. No dudes en escribirme."
+        }
+    },
+    "footer": {
+        "copyright_txt": "© 2026 Sebastian Russo. Todos los derechos reservados.",
+        "mentions": [
+            {
+                "icon_provider": {
+                    "name": "Flaticon",
+                    "prefix_txt": "Algunos íconos por ",
+                    "link": "https://www.flaticon.com/"
+                }
+            }
+        ]
+    }
+}

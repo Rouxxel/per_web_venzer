@@ -11,7 +11,7 @@ export interface Project {
   image?: string;
 }
 
-export const projects: Project[] = [
+export const projects_en: Project[] = [
   {
     title: "High-Frequency Real Time Monitoring System",
     image: "/images/siemens/siemens_logo.png",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     classifications: ["Backend", "Professional", "Industrial"],
   },
   {
-    title: "Langdrill (Stealth starptup)",
+    title: "Langdrill (Stealth startup)",
     image: "/images/langdrill/logo.png",
     description:
       "As a frontend developer, I worked on an AI-enhanced educational platform built on a React+TS frontend framework and Python-based FastAPI backend. It features role-based access for teachers/students, AI-powered exercise generation (writing, reading, listening with TTS and coversation with AI/voice agent), classroom management, assignment tracking, student analytics and template system. It was also connected to a Supabase database (PostgreSQL) for user authentication and data storage.",
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     title: "Rift Rewind",
     image: "/images/rift_rewind/logo_helmet.png",
     description:
-      "League of Legends coaching dashboard with a React frontend and FastAPI backend that interfaces with the Riot Games API for match history, champion data and performance analytics. The webapp features a selection of pages for the user to go into detail about their match history, heroes sinergy, predictions among other things, always with a floating bubble to open a chatbot assistant that contains the context of the current page they are so they can obtain more precise insights.",
+      "League of Legends coaching dashboard with a React+TS frontend and FastAPI backend that interfaces with the Riot Games API for match history, champion data and performance analytics. The webapp features a selection of pages for the user to go into detail about their match history, heroes sinergy, predictions among other things, always with a floating bubble to open a chatbot assistant that contains the context of the current page they are so they can obtain more precise insights.",
     tags: [
       "React", 
       "TypeScript", 
@@ -226,7 +226,7 @@ export const projects: Project[] = [
     title: "Machine Learning Models",
     image: "/images/ml_various/ml_various.png",
     description:
-      "Portfolio of ML projects: classifications (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit), and clustering (customer segmentation with K-Means and Hierarchical), using Python notebooks, scikist/-learn and other related libraries.",
+      "Compilation of ML projects: classifications (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit), and clustering (customer segmentation with K-Means and Hierarchical), using Python notebooks, scikist/-learn and other related libraries.",
     tags: [
       "Python", 
       "scikit-learn", 
@@ -253,7 +253,7 @@ export const projects: Project[] = [
     title: "MaxxWatt Energy Management Platform",
     image: "/images/maxxwatt/lightning.png",
     description:
-      "Berlin Energy Hackathon 2025 submission: BESS monitoring and management platform with real-time analytics, anomaly detection, and energy forecasting. System architecture and component design were modeled in Draw.io. FastAPI backend with SSE streaming and React dashboard (Vite, shadcn-ui, Tailwind).",
+      "Berlin Energy Hackathon 2025 submission: BESS monitoring and management platform with real-time analytics, anomaly detection and energy forecasting for Li-Ion Batteries used in Solar Panel systems for energy storage and management. System architecture and component design were modeled in Draw.io. FastAPI backend with SSE streaming and React dashboard (Vite, shadcn-ui, Tailwind).",
     tags: [
       "Python", 
       "React", 
@@ -300,7 +300,7 @@ export const projects: Project[] = [
     title: "Atryon Chrome Extension",
     image: "/images/atryon_extension/logo.png",
     description:
-      "Chrome extension for virtual try-on: pick a garment from the page or by drag-and-drop, add your photo and get an AI-generated try-on result. Side panel UI with content script for \"select from page\"; FastAPI backend runs Black Forest Labs FLUX for multi-image composition (MIC), with polling and download endpoints. Extra endpoints for future projects feat Text-To-Image (TTI) and Image Edit With Mask (IDWM) generation.",
+      "Chrome extension for virtual try-on: pick a garment from the page or by drag-and-drop, add your photo and get an AI-generated try-on result. Side panel UI with content script for \"select from page\"; FastAPI backend that performs calls to the Black Forest Labs API for their FLUX model for multi-image composition (MIC), with polling and download endpoints. Extra endpoints for future projects feat Text-To-Image (TTI) and Image Edit With Mask (IDWM) generation.",
     tags: [
       "Chrome Extension", 
       "Manifest V3", 
@@ -325,7 +325,7 @@ export const projects: Project[] = [
     title: "Personal portfolio website",
     image: "/images/logo.png",
     description:
-      "The website you are currently on: a responsive portfolio built with React + TypeScript (Vite), Tailwind CSS, and shadcn/ui (Radix UI). Uses Framer Motion animations, React Router, TanStack Query, and forms with React Hook Form + Zod; tested with Vitest/React Testing Library, linted with ESLint, and deployed on Vercel with GitHub Actions security auditing.",
+      "The website you are currently on: a responsive portfolio built with React + TypeScript (Vite), Tailwind CSS, and shadcn/ui (Radix UI). Uses Framer Motion animations, React Router, TanStack Query, and forms with React Hook Form + Zod; tested with Vitest/React Testing Library, linted with ESLint, and deployed on Vercel with GitHub Actions security auditing. Supports multiple languages.",
     tags: [
       "React", 
       "TypeScript", 
@@ -351,3 +351,50 @@ export const projects: Project[] = [
     github: "https://github.com/Rouxxel/per_web_venzer",
   },
 ];
+
+/**
+ * Spanish projects dataset.
+ * Keep all other properties unchanged for filtering and tech labels but
+ * Descriptions are localized by title while tags/classifications stay canonical.
+ */
+const projectDescriptionsEs: Record<string, string> = {
+  "High-Frequency Real Time Monitoring System":
+    "Como desarrollador backend en Siemens AG, arquitecté, desarrollé, probé y desplegué un backend de monitoreo en tiempo real y alta frecuencia, multihilo y de nivel productivo para un proyecto conjunto con RWTH Aachen y Weiss Spindletechnologies. El sistema en Python admite grandes volúmenes de datos de sensores mediante un message broker, monitorea y analiza el comportamiento de la máquinas, exporta resultados en CSV y gráficos	con Pandas/Matplotlib para análisis post-test. El código fuente y demos no son públicos (propiedad de Siemens).",
+  "Langdrill (Stealth startup)":
+    "Como desarrollador frontend, trabajé en una plataforma educativa mejorada con IA construida con React+TS en frontend y FastAPI en backend. Incluye acceso por roles para profesores/estudiantes, generación de ejercicios con IA (escritura, lectura, escucha con TTS y conversación con agente de voz/IA), gestión de clases, seguimiento de tareas, analíticas de estudiantes y sistema de plantillas. También estaba conectada a Supabase (PostgreSQL) para autenticación y almacenamiento de datos.",
+  "Simple Chat":
+    "Aplicación de chatbot que implementa una API de IA y fue construida con cliente móvil Flutter y backend FastAPI en Python desplegado en Render, usando la API Gemini 2.5 Flash y Supabase para autenticación, historial persistente y preferencias de usuario. La app está diseñada para conversar con un chatbot con personalidad configurable y mantener conversaciones más duraderas, aunque el contexto y la memoria a largo plazo siguen siendo un reto.",
+  "Rift Rewind":
+    "Dashboard de coaching para League of Legends con frontend en React+TS y backend en FastAPI que se integra con la API de Riot Games para historial de partidas, datos de campeones y analíticas de rendimiento. La web ofrece varias páginas para profundizar en historial, sinergias y predicciones, además de una burbuja flotante para abrir un asistente conversacional con contexto de la página actual y obtener insights más precisos.",
+  "TuneTools":
+    "Pipeline que convierte contexto diario (noticias, clima, calendario) en canciones personalizadas: un LLM genera especificaciones y letras, el modelo YuE sintetiza audio en RunPod y la API de Gemini crea el arte del álbum para entregar una canción al usuario. El frontend está desplegado en Vercel, el backend en Railway, conectado a Supabase para autenticación y almacenamiento de audios/arte generados.",
+  "Bachelor Thesis (Machine Learning)":
+    "Estudio comparativo de modelos de clasificación de ML para detección temprana de diabetes en indicadores de salud BRFSS 2015: pipeline modular en Python con Decision Tree, Logistic Regression, Random Forest y SVM, además de EDA, remuestreo SMOTE, configuración JSON y logging centralizado de resultados.",
+  "Emotional Detection DL model":
+    "Proyecto de deep learning para detectar 7 emociones a partir de imágenes faciales en escala de grises usando transfer learning (DenseNet121) y una CNN personalizada, con CLI, interfaz de webcam para pruebas en vivo, dataset FER de Kaggle y optimización opcional con TFLite/TensorRT/ONNX.",
+  "Drone sound detection ML models":
+    "Proyecto de ML para detectar y clasificar el perfil sonoro de drones, helicópteros y audio de fondo usando CNN (Tiny y Robust) y ML tradicional (Random Forest, SVM, XGBoost, Gradient Boosting) con características MFCC; el caso de uso objetivo es integrarlo como accesorio en el chaleco antibalas para detección omnidireccional de drones y alerta preventiva para los soldados en el campo.",
+  "Machine Learning Models":
+    "Recopilación de proyectos de ML: clasificaciones (Iris, cáncer de mama, Titanic, diabetes con Decision Tree, Logistic Regression, KNN, Random Forest y SVM), regresión (beneficio empresarial) y clustering (segmentación de clientes con K-Means y Hierarchical), usando notebooks en Python, scikit-learn y otras librerías relacionadas.",
+  "MaxxWatt Energy Management Platform":
+    "Proyecto presentado en Berlin Energy Hackathon 2025: plataforma de monitoreo y gestión BESS con analíticas en tiempo real, detección de anomalías y pronóstico energético para baterias Li-Ion usadas en sistemas de Paneles Solares para manejo y almacenamiento de energía. La arquitectura del sistema y diseño de componentes se modelaron en Draw.io. Backend FastAPI con streaming SSE y dashboard en React (Vite, shadcn-ui, Tailwind).",
+  "Nothingness 2D arcade game":
+    "Juego 2D estilo arcade en Unity/C# con movimiento en 8 direcciones, escalado dinámico de dificultad y sistema de buffs/debuffs. Incluye dos tipos de enemigos (asteroides, cometas), varios power-ups (escudo, aumento/reducción de velocidad), persistencia de puntuación con serialización JSON y sistema de audio integral con sprites creados desde cero.",
+  "Atryon Chrome Extension":
+    "Extensión de Chrome como probador virtual: permite seleccionar una prenda desde la página o mediante arrastrar y soltar, subir una selfie y generar un resultado de prueba virtual con IA. Tiene interfaz en panel lateral con content script para 'seleccionar desde la página'; backend FastAPI que ejecuta llamados API de FLUX de Black Forest Labs para composición multi-imagen (MIC), con endpoints de sondeo y descarga. Incluye endpoints extra para futuras funciones de Text-To-Image (TTI) e Image Edit With Mask (IDWM).",
+  "Personal portfolio website":
+    "El sitio web en el que estás ahora: portafolio responsivo construido con React + TypeScript (Vite), Tailwind CSS y shadcn/ui (Radix UI). Usa animaciones con Framer Motion, React Router, TanStack Query y formularios con React Hook Form + Zod; probado con Vitest/React Testing Library, linting con ESLint y desplegado en Vercel con auditorías de seguridad en GitHub Actions. Tiene soporte para varios lenguajes",
+};
+
+export const projects_es: Project[] = projects_en.map((project) => ({
+  ...project,
+  description: projectDescriptionsEs[project.title] ?? project.description,
+  tags: [...project.tags],
+  classifications: [...project.classifications],
+}));
+
+/** Returns language-specific projects, with English fallback. */
+export const getProjectsByLanguage = (languageCode: string): Project[] => {
+  if (languageCode === "es") return projects_es;
+  return projects_en;
+};

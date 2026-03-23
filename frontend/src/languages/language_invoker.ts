@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from "react";
 import englishLanguage from "./eng.json";
-// import spanishLanguage from "./es.json";
+import spanishLanguage from "./esp.json";
 // import germanLanguage from "./de.json";
 
 /**
@@ -15,7 +15,7 @@ export type LanguageData = typeof englishLanguage;
  */
 const languageRegistry: Record<string, LanguageData> = {
   en: englishLanguage,
-  // es: spanishLanguage,
+  es: spanishLanguage,
   // de: germanLanguage,
 };
 

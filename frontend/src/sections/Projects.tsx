@@ -1,12 +1,12 @@
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { projects, type Project } from "@/data/projects";
+import { getProjectsByLanguage, type Project } from "@/data/projects";
 import {
   CONTEXT_OPTIONS,
   DOMAIN_TECH_OPTIONS,
   INDUSTRY_THEME_OPTIONS,
+  getProjectFilterLocalization,
   NONE_FILTER_VALUE,
-  PROJECT_FILTER_LABELS,
   type ProjectClassification,
 } from "@/data/projectClassifications";
 import { Github, ExternalLink } from "lucide-react";
@@ -33,20 +33,26 @@ function hasExternalLinks(project: Project): boolean {
 }
 
 function filterProjectsBySelections(
+  sourceProjects: Project[],
   domain: string,
   context: string,
   industry: string,
 ): Project[] {
   const active = [domain, context, industry].filter((v) => v !== NONE_FILTER_VALUE);
-  if (active.length === 0) return projects;
-  return projects.filter((p) =>
+  if (active.length === 0) return sourceProjects;
+  return sourceProjects.filter((p) =>
     active.every((sel) => p.classifications.includes(sel as ProjectClassification)),
   );
 }
 
 const Projects = () => {
-  const { language } = useLanguage();
+  const { language, currentLanguageCode } = useLanguage();
   const projectsLanguage = language.sections.projects_section;
+  const projects = useMemo(() => getProjectsByLanguage(currentLanguageCode), [currentLanguageCode]);
+  const filterUi = useMemo(
+    () => getProjectFilterLocalization(currentLanguageCode),
+    [currentLanguageCode],
+  );
 
   const [domainFilter, setDomainFilter] = useState<string>(NONE_FILTER_VALUE);
   const [contextFilter, setContextFilter] = useState<string>(NONE_FILTER_VALUE);
@@ -62,8 +68,8 @@ const Projects = () => {
   };
 
   const filteredProjects = useMemo(
-    () => filterProjectsBySelections(domainFilter, contextFilter, industryFilter),
-    [domainFilter, contextFilter, industryFilter],
+    () => filterProjectsBySelections(projects, domainFilter, contextFilter, industryFilter),
+    [projects, domainFilter, contextFilter, industryFilter],
   );
 
   const clearFilters = () => {
@@ -94,17 +100,17 @@ const Projects = () => {
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-end">
             <div className="flex min-w-0 flex-1 flex-col gap-2 sm:min-w-[12rem]">
               <Label htmlFor="filter-domain" className="text-muted-foreground">
-                {PROJECT_FILTER_LABELS.domainTitle}
+                {filterUi.labels.domainTitle}
               </Label>
               <Select value={domainFilter} onValueChange={setDomainFilter}>
                 <SelectTrigger id="filter-domain" className="w-full">
-                  <SelectValue placeholder={PROJECT_FILTER_LABELS.defaultOption} />
+                  <SelectValue placeholder={filterUi.labels.defaultOption} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value={NONE_FILTER_VALUE}>{PROJECT_FILTER_LABELS.defaultOption}</SelectItem>
-                  {DOMAIN_TECH_OPTIONS.map((opt) => (
+                  <SelectItem value={NONE_FILTER_VALUE}>{filterUi.labels.defaultOption}</SelectItem>
+                  {DOMAIN_TECH_OPTIONS.map((opt, index) => (
                     <SelectItem key={opt} value={opt}>
-                      {opt}
+                      {filterUi.domainOptions[index] ?? opt}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -113,17 +119,17 @@ const Projects = () => {
 
             <div className="flex min-w-0 flex-1 flex-col gap-2 sm:min-w-[12rem]">
               <Label htmlFor="filter-context" className="text-muted-foreground">
-                {PROJECT_FILTER_LABELS.contextTitle}
+                {filterUi.labels.contextTitle}
               </Label>
               <Select value={contextFilter} onValueChange={setContextFilter}>
                 <SelectTrigger id="filter-context" className="w-full">
-                  <SelectValue placeholder={PROJECT_FILTER_LABELS.defaultOption} />
+                  <SelectValue placeholder={filterUi.labels.defaultOption} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value={NONE_FILTER_VALUE}>{PROJECT_FILTER_LABELS.defaultOption}</SelectItem>
-                  {CONTEXT_OPTIONS.map((opt) => (
+                  <SelectItem value={NONE_FILTER_VALUE}>{filterUi.labels.defaultOption}</SelectItem>
+                  {CONTEXT_OPTIONS.map((opt, index) => (
                     <SelectItem key={opt} value={opt}>
-                      {opt}
+                      {filterUi.contextOptions[index] ?? opt}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -132,17 +138,17 @@ const Projects = () => {
 
             <div className="flex min-w-0 flex-1 flex-col gap-2 sm:min-w-[12rem]">
               <Label htmlFor="filter-industry" className="text-muted-foreground">
-                {PROJECT_FILTER_LABELS.industryTitle}
+                {filterUi.labels.industryTitle}
               </Label>
               <Select value={industryFilter} onValueChange={setIndustryFilter}>
                 <SelectTrigger id="filter-industry" className="w-full">
-                  <SelectValue placeholder={PROJECT_FILTER_LABELS.defaultOption} />
+                  <SelectValue placeholder={filterUi.labels.defaultOption} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value={NONE_FILTER_VALUE}>{PROJECT_FILTER_LABELS.defaultOption}</SelectItem>
-                  {INDUSTRY_THEME_OPTIONS.map((opt) => (
+                  <SelectItem value={NONE_FILTER_VALUE}>{filterUi.labels.defaultOption}</SelectItem>
+                  {INDUSTRY_THEME_OPTIONS.map((opt, index) => (
                     <SelectItem key={opt} value={opt}>
-                      {opt}
+                      {filterUi.industryOptions[index] ?? opt}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -210,7 +216,7 @@ const Projects = () => {
                       : "text-primary font-medium underline decoration-primary/60 underline-offset-2 hover:decoration-primary",
                   )}
                 >
-                  {descriptionOpenByTitle[project.title] ? project.description : "Display description"}
+                  {descriptionOpenByTitle[project.title] ? project.description : language.sections.projects_section.project_specifics.display_description_btn}
                 </button>
 
                 <div className="flex flex-wrap gap-1.5 mb-4">
@@ -241,7 +247,7 @@ const Projects = () => {
                       className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <ExternalLink className="h-4 w-4" />
-                      <span className="text-sm font-medium">Showcase</span>
+                      <span className="text-sm font-medium">{language.sections.projects_section.project_specifics.showcase_btn}</span>
                     </a>
                   )}
                   {project.live_demo != null && project.live_demo.trim() !== "" && (
@@ -252,7 +258,7 @@ const Projects = () => {
                       className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <ExternalLink className="h-4 w-4" />
-                      <span className="text-sm font-medium">Live demo</span>
+                      <span className="text-sm font-medium">{language.sections.projects_section.project_specifics.live_demo_btn}</span>
                     </a>
                   )}
                   {!hasExternalLinks(project) && (
