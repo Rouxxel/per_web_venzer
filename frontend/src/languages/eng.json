@@ -127,10 +127,12 @@
     "footer": {
         "copyright_txt": "© 2026 Sebastian Russo. All rights reserved.",
         "mentions": [
-            "icon_provider": {
-                "name": "Flaticon",
-                "prefix_txt": "Some icons by ",
-                "link": "https://www.flaticon.com/"
+            {
+                "icon_provider": {
+                    "name": "Flaticon",
+                    "prefix_txt": "Some icons by ",
+                    "link": "https://www.flaticon.com/"
+                }
             }
         ]
     }
