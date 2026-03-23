@@ -2,7 +2,6 @@ export interface ExperienceEntry {
   title: string;
   company: string;
   location: string;
-  /** Company or institution website (opens in new tab from Experience section). */
   link: string;
   period: string;
   description: string;
