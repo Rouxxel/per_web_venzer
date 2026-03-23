@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import SectionInner from "@/components/SectionInner";
+import { useLanguage } from "@/languages/language_invoker";
 
 const socials = [
   { icon: Github, label: "GitHub", href: "https://github.com/Rouxxel" },
@@ -9,6 +10,8 @@ const socials = [
 ];
 
 const Contact = () => {
+  const { language } = useLanguage();
+
   return (
     <section id="contact" className="py-24 bg-muted/70">
       <SectionInner className="text-center">
@@ -19,7 +22,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-4xl font-bold font-heading text-foreground mb-4"
         >
-          Get In Touch
+          {language.sections.contact_section.contact_title}
         </motion.h2>
 
         <motion.p
@@ -29,8 +32,7 @@ const Contact = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-muted-foreground max-w-md mx-auto mb-10 leading-relaxed"
         >
-          I'm always open to new opportunities and interesting conversations.
-          Feel free to reach out!
+          {language.sections.contact_section.contact_txt}
         </motion.p>
 
         <motion.div
