@@ -31,6 +31,14 @@ export const INDUSTRY_THEME_OPTIONS = [
   "Military",
 ] as const;
 
+/** Runtime UI metadata for filter controls (non-translated, source of truth). */
+export const PROJECT_FILTER_LABELS = {
+  defaultOption: "None",
+  domainTitle: "Domain / Technical",
+  contextTitle: "Context / Origin",
+  industryTitle: "Industry / Theme",
+} as const;
+
 export type DomainTechClassification = (typeof DOMAIN_TECH_OPTIONS)[number];
 export type ContextClassification = (typeof CONTEXT_OPTIONS)[number];
 export type IndustryThemeClassification = (typeof INDUSTRY_THEME_OPTIONS)[number];

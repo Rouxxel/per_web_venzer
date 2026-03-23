@@ -68,42 +68,6 @@
         "projects_section": {
             "section_title": "Projects",
             "filters":{
-                "dropdowns":{
-                    "default_option":"None",
-                    "domain_dropdown":{
-                        "dropdown_title": "Domain / Technical",
-                        "options": [
-                            "Backend",
-                            "Frontend",
-                            "Fullstack",
-                            "Mobile",
-                            "Database",
-                            "Web",
-                            "AI / Data",
-                            "AR"
-                        ]
-                    },
-                    "context_dropdown":{
-                        "dropdown_title": "Context / Origin",
-                        "options": [
-                            "Professional",
-                            "Personal",
-                            "University",
-                            "Hackathon",
-                            "Research"
-                        ]
-                    },
-                    "industry_dropdown":{
-                        "dropdown_title": "Industry / Theme",
-                        "options": [
-                            "Gaming",
-                            "Educational",
-                            "Industrial",
-                            "AR",
-                            "Military"
-                        ]
-                    }
-                },
                 "filter_explanation_txt": "Showing projects that match ALL selected filters (or all projects when every dropdown is None).",
                 "clear_filters_btn": "Clear filters",
                 "no_projects_txt": "No projects match these filters. Try clearing filters or choosing different options."

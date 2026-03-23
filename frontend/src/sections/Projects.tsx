@@ -6,6 +6,7 @@ import {
   DOMAIN_TECH_OPTIONS,
   INDUSTRY_THEME_OPTIONS,
   NONE_FILTER_VALUE,
+  PROJECT_FILTER_LABELS,
   type ProjectClassification,
 } from "@/data/projectClassifications";
 import { Github, ExternalLink } from "lucide-react";
@@ -21,6 +22,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import SectionInner from "@/components/SectionInner";
+import { useLanguage } from "@/languages/language_invoker";
 
 /** True if at least one of github / demo / live_demo is set to a non-empty value. */
 function hasExternalLinks(project: Project): boolean {
@@ -43,6 +45,9 @@ function filterProjectsBySelections(
 }
 
 const Projects = () => {
+  const { language } = useLanguage();
+  const projectsLanguage = language.sections.projects_section;
+
   const [domainFilter, setDomainFilter] = useState<string>(NONE_FILTER_VALUE);
   const [contextFilter, setContextFilter] = useState<string>(NONE_FILTER_VALUE);
   const [industryFilter, setIndustryFilter] = useState<string>(NONE_FILTER_VALUE);
@@ -82,21 +87,21 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-4xl font-bold font-heading text-foreground mb-8"
         >
-          Projects
+          {projectsLanguage.section_title}
         </motion.h2>
 
         <div className="mb-10 flex flex-col gap-4">
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-end">
             <div className="flex min-w-0 flex-1 flex-col gap-2 sm:min-w-[12rem]">
               <Label htmlFor="filter-domain" className="text-muted-foreground">
-                Domain / Technical
+                {PROJECT_FILTER_LABELS.domainTitle}
               </Label>
               <Select value={domainFilter} onValueChange={setDomainFilter}>
                 <SelectTrigger id="filter-domain" className="w-full">
-                  <SelectValue placeholder="None" />
+                  <SelectValue placeholder={PROJECT_FILTER_LABELS.defaultOption} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value={NONE_FILTER_VALUE}>None</SelectItem>
+                  <SelectItem value={NONE_FILTER_VALUE}>{PROJECT_FILTER_LABELS.defaultOption}</SelectItem>
                   {DOMAIN_TECH_OPTIONS.map((opt) => (
                     <SelectItem key={opt} value={opt}>
                       {opt}
@@ -108,14 +113,14 @@ const Projects = () => {
 
             <div className="flex min-w-0 flex-1 flex-col gap-2 sm:min-w-[12rem]">
               <Label htmlFor="filter-context" className="text-muted-foreground">
-                Context / Origin
+                {PROJECT_FILTER_LABELS.contextTitle}
               </Label>
               <Select value={contextFilter} onValueChange={setContextFilter}>
                 <SelectTrigger id="filter-context" className="w-full">
-                  <SelectValue placeholder="None" />
+                  <SelectValue placeholder={PROJECT_FILTER_LABELS.defaultOption} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value={NONE_FILTER_VALUE}>None</SelectItem>
+                  <SelectItem value={NONE_FILTER_VALUE}>{PROJECT_FILTER_LABELS.defaultOption}</SelectItem>
                   {CONTEXT_OPTIONS.map((opt) => (
                     <SelectItem key={opt} value={opt}>
                       {opt}
@@ -127,14 +132,14 @@ const Projects = () => {
 
             <div className="flex min-w-0 flex-1 flex-col gap-2 sm:min-w-[12rem]">
               <Label htmlFor="filter-industry" className="text-muted-foreground">
-                Industry / Theme
+                {PROJECT_FILTER_LABELS.industryTitle}
               </Label>
               <Select value={industryFilter} onValueChange={setIndustryFilter}>
                 <SelectTrigger id="filter-industry" className="w-full">
-                  <SelectValue placeholder="None" />
+                  <SelectValue placeholder={PROJECT_FILTER_LABELS.defaultOption} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value={NONE_FILTER_VALUE}>None</SelectItem>
+                  <SelectItem value={NONE_FILTER_VALUE}>{PROJECT_FILTER_LABELS.defaultOption}</SelectItem>
                   {INDUSTRY_THEME_OPTIONS.map((opt) => (
                     <SelectItem key={opt} value={opt}>
                       {opt}
@@ -151,18 +156,17 @@ const Projects = () => {
               onClick={clearFilters}
               disabled={!hasActiveFilters}
             >
-              Clear filters
+              {projectsLanguage.filters.clear_filters_btn}
             </Button>
           </div>
           <p className="text-xs text-muted-foreground">
-            Showing projects that match <span className="font-medium text-foreground">all</span> selected
-            filters (or all projects when every dropdown is None).
+            {projectsLanguage.filters.filter_explanation_txt}
           </p>
         </div>
 
         {filteredProjects.length === 0 ? (
           <p className="rounded-lg border border-dashed border-border bg-card/50 px-4 py-8 text-center text-sm text-muted-foreground">
-            No projects match these filters. Try clearing filters or choosing different options.
+            {projectsLanguage.filters.no_projects_txt}
           </p>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
