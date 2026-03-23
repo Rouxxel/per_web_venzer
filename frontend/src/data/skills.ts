@@ -1,11 +1,11 @@
 export type SkillSection = {
-  title: string;
+  section: string;
   skills: string[];
 };
 
 export const skillSections: SkillSection[] = [
   {
-    title: "Programming languages",
+    section: "languages",
     skills: [
       "Python", 
       "Java", 
@@ -19,7 +19,7 @@ export const skillSections: SkillSection[] = [
     ],
   },
   {
-    title: "Frameworks & libraries",
+    section: "frameworks",
     skills: [
       "React", 
       "Vite", 
@@ -30,7 +30,7 @@ export const skillSections: SkillSection[] = [
     ],
   },
   {
-    title: "Prototyping & design",
+    section: "prototyping",
     skills: [
       "Figma", 
       "draw.io", 
@@ -38,14 +38,14 @@ export const skillSections: SkillSection[] = [
     ],
   },
   {
-    title: "Databases",
+    section: "database",
     skills: [
       "PostgreSQL", 
       "MySQL"
     ],
   },
   {
-    title: "APIs & integration",
+    section: "integration",
     skills: [
       "REST API", 
       "GraphQL", 
@@ -53,7 +53,7 @@ export const skillSections: SkillSection[] = [
     ],
   },
   {
-    title: "Team & development practices",
+    section: "team",
     skills: [
       "Git / GitHub", 
       "OOP", 
@@ -63,7 +63,7 @@ export const skillSections: SkillSection[] = [
     ],
   },
   {
-    title: "DevOps & infrastructure",
+    section: "infrastructure",
     skills: [
       "Docker", 
       "CI/CD", 
@@ -71,7 +71,7 @@ export const skillSections: SkillSection[] = [
     ],
   },
   {
-    title: "AI & data",
+    section: "ai",
     skills: [
       "Machine Learning",
       "AI",
@@ -86,7 +86,7 @@ export const skillSections: SkillSection[] = [
     ],
   },
   {
-    title: "Service providers",
+    section: "providers",
     skills: [
       "Render", 
       "Vercel", 
