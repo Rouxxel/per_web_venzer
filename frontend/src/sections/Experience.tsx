@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { experience } from "@/data/experience";
 import { Briefcase, GraduationCap, Download } from "lucide-react";
 import SectionInner from "@/components/SectionInner";
+import { useLanguage } from "@/languages/language_invoker";
 
 const Experience = () => {
+  const { language } = useLanguage();
+
   return (
     <section id="experience" className="py-24">
       <SectionInner>
@@ -14,7 +17,7 @@ const Experience = () => {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-4xl font-bold font-heading text-foreground mb-12"
         >
-          Experience/Road
+          {language.sections.experience_section.section_title}
         </motion.h2>
 
         <div className="relative">
@@ -83,7 +86,7 @@ const Experience = () => {
             className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium border border-border rounded-lg text-foreground hover:bg-accent transition-colors"
           >
             <Download className="h-4 w-4 shrink-0" />
-            <span>Download CV / Resume</span>
+            <span>{language.sections.experience_section.download_cv_btn}</span>
           </a>
         </motion.div>
       </SectionInner>
