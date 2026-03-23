@@ -1,0 +1,137 @@
+{
+    "language":"English",
+    "logo_text": "Personal portfolio",
+    "nav_bar": {
+        "about": "About",
+        "projects": "Projects",
+        "experience": "Experience",
+        "contact": "Contact"
+    },
+    "sections": {
+        "hero_section": {
+            "greet_txt": "Greetings, I am",
+            "slogan_txt": "A developer that enjoys crafting beautiful, high-performing and scalable code.",
+            "view_work_btn": "View My Work",
+            "get_in_touch_btn": "Get in Touch"
+        },
+        "about_section": {
+            "section_title": "About Me",
+            "bio_intro_txts": [
+                "Software engineer based in Germany with a strong academic foundation and hands-on industry experience building backend, frontend and fullstack systems connected to databases and AI implementation/integration.",
+                "Completed a Software Engineering B.Sc. degree at the University of Europe for Applied Sciences (Potsdam Campus), where I learned extensively about languages like Python, Java, C/C++, JavaScript and SQL across AI (ML and DL), web, mobile, backend and frontend projects, applying OOP design, parallel programming and Agile development practices like Scrum and SQA. My final thesis was focused on a comparative study between 4 Machine learning models to determine which of them is the best suited for predicting Diabetes on patients before obvious symptoms arise and for easy integration."
+            ],
+            "bio_below_txts": [
+                "Worked profesionally as a backend developer for a production-grade real-time monitoring systems at Siemens. Also as a frontend developer for a stealth startup called Langdrill based in Berlin, Germany. Both experiences allowed me to work on a variety of technologies and understand both corporate and startup environments.",
+                "Beyond professional and academical work, I actively pursue personal projects to expand my skill set. Including the development of 2D games in Unity, building and deploying full-stack web applications and my favorite personal project being an AI-powered chatbot using Flutter/Dart.",
+                "I enjoy regularly attending hackathons, workshops and seminars to expand my knowledge on the newest technologies and network, because Iam driven by curiosity, continuous learning and a desire to build scalable, impactful software."
+            ],
+            "tech_stack_title": "Technologies I Worked With",
+            "tech_subsections": {
+                "program_langs": {
+                    "section":"languages",
+                    "title":"Programming languages"
+                },
+                "frameworks_libs": {
+                    "section":"frameworks",
+                    "title":"Frameworks & libraries"
+                },
+                "proto_design": {
+                    "section":"prototyping",
+                    "title":"Prototyping & design"
+                },
+                "dbs": {
+                    "section":"database",
+                    "title":"Databases"
+                },
+                "apis_integr": {
+                    "section":"integration",
+                    "title":"APIs & integration"
+                },
+                "team_dev_pract": {
+                    "section":"team",
+                    "title":"Team & development practices"
+                },
+                "devops_infrastr": {
+                    "section":"infrastructure",
+                    "title":"DevOps & infrastructure"
+                },
+                "ai_data": {
+                    "section":"ai",
+                    "title":"AI & data"
+                },
+                "service_prov": {
+                    "section":"providers",
+                    "title":"Service providers"
+                }
+            }
+        },
+        "projects_section": {
+            "section_title": "Projects",
+            "filters":{
+                "dropdowns":{
+                    "default_option":"None",
+                    "domain_dropdown":{
+                        "dropdown_title": "Domain / Technical",
+                        "options": [
+                            "Backend",
+                            "Frontend",
+                            "Fullstack",
+                            "Mobile",
+                            "Database",
+                            "Web",
+                            "AI / Data",
+                            "AR"
+                        ]
+                    },
+                    "context_dropdown":{
+                        "dropdown_title": "Context / Origin",
+                        "options": [
+                            "Professional",
+                            "Personal",
+                            "University",
+                            "Hackathon",
+                            "Research"
+                        ]
+                    },
+                    "industry_dropdown":{
+                        "dropdown_title": "Industry / Theme",
+                        "options": [
+                            "Gaming",
+                            "Educational",
+                            "Industrial",
+                            "AR",
+                            "Military"
+                        ]
+                    }
+                },
+                "filter_explanation_txt": "Showing projects that match ALL selected filters (or all projects when every dropdown is None).",
+                "clear_filters_btn": "Clear filters",
+                "no_projects_txt": "No projects match these filters. Try clearing filters or choosing different options."
+            },
+            "projects_entries": {
+                "not_here": "See frontend/src/data/project.ts for the full list of projects."
+            }
+        },
+        "experience_section": {
+            "section_title": "Experience/Road",
+            "experience_entries": {
+                "not_here": "See frontend/src/data/experience.ts for the full list of experience entries."
+            },
+            "download_cv_btn": "Download CV / Resume"
+        },
+        "contact_section": {
+            "contact_title": "Get In Touch",
+            "contact_txt": "I'm always open to new opportunities and interesting conversations. Feel free to reach out!"
+        }
+    },
+    "footer": {
+        "copyright_txt": "© 2026 Sebastian Russo. All rights reserved.",
+        "mentions": {
+            "icon_provider": {
+                "name": "Flaticon",
+                "prefix_txt": "Some icons by ",
+                "link": "https://www.flaticon.com/"
+            }
+        }
+    }
+}
