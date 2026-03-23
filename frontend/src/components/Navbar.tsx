@@ -2,18 +2,27 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
-];
+import { useLanguage } from "@/languages/language_invoker";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { language, currentLanguageCode, setLanguage, getLanguageOptions } = useLanguage();
+
+  const navItems = [
+    { label: language.nav_bar.about, href: "#about" },
+    { label: language.nav_bar.projects, href: "#projects" },
+    { label: language.nav_bar.experience, href: "#experience" },
+    { label: language.nav_bar.contact, href: "#contact" },
+  ];
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
@@ -58,7 +67,7 @@ const Navbar = () => {
           className="flex items-center gap-2 text-xl font-bold font-heading tracking-tight text-foreground hover:text-primary transition-colors"
         >
           <img src="/images/logo.png" alt="" className="h-8 w-8 rounded-full object-cover" />
-          Personal portfolio
+          {language.logo_text}
         </button>
 
         {/* Desktop nav */}
@@ -75,6 +84,18 @@ const Navbar = () => {
           <Button variant="ghost" size="icon" onClick={toggleTheme} className="ml-2">
             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
+          <Select value={currentLanguageCode} onValueChange={setLanguage}>
+            <SelectTrigger className="h-9 w-[132px] text-sm">
+              <SelectValue placeholder="Language" />
+            </SelectTrigger>
+            <SelectContent align="end">
+              {getLanguageOptions.map((option) => (
+                <SelectItem key={option.code} value={option.code}>
+                  {option.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
 
         {/* Mobile toggle */}
@@ -82,6 +103,18 @@ const Navbar = () => {
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
+          <Select value={currentLanguageCode} onValueChange={setLanguage}>
+            <SelectTrigger className="h-9 w-[124px] text-sm">
+              <SelectValue placeholder="Language" />
+            </SelectTrigger>
+            <SelectContent align="end">
+              {getLanguageOptions.map((option) => (
+                <SelectItem key={option.code} value={option.code}>
+                  {option.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
