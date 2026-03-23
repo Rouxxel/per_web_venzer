@@ -6,31 +6,69 @@ export type SkillSection = {
 export const skillSections: SkillSection[] = [
   {
     title: "Programming languages",
-    skills: ["Python", "Java", "JavaScript", "TypeScript", "C/C++", "C#", "Dart", "HTML5", "CSS3"],
+    skills: [
+      "Python", 
+      "Java", 
+      "JavaScript", 
+      "TypeScript", 
+      "C/C++", 
+      "C#", 
+      "Dart", 
+      "HTML5", 
+      "CSS3"
+    ],
   },
   {
     title: "Frameworks & libraries",
-    skills: ["React", "Vite", "Tailwind CSS", "Flutter", "Unity", "FastAPI"],
+    skills: [
+      "React", 
+      "Vite", 
+      "Tailwind CSS", 
+      "Flutter", 
+      "Unity", 
+      "FastAPI"
+    ],
   },
   {
     title: "Prototyping & design",
-    skills: ["Figma", "draw.io", "Pixel Art Studio"],
+    skills: [
+      "Figma", 
+      "draw.io", 
+      "Pixel Art Studio"
+    ],
   },
   {
     title: "Databases",
-    skills: ["PostgreSQL", "MySQL"],
+    skills: [
+      "PostgreSQL", 
+      "MySQL"
+    ],
   },
   {
     title: "APIs & integration",
-    skills: ["REST API", "GraphQL", "WebSocket"],
+    skills: [
+      "REST API", 
+      "GraphQL", 
+      "WebSocket"
+    ],
   },
   {
     title: "Team & development practices",
-    skills: ["Git / GitHub", "OOP", "Atlassian (Jira, Confluence)", "Agile/Scrum", "SQA"],
+    skills: [
+      "Git / GitHub", 
+      "OOP", 
+      "Atlassian (Jira, Confluence)", 
+      "Agile/Scrum", 
+      "SQA"
+    ],
   },
   {
     title: "DevOps & infrastructure",
-    skills: ["Docker", "CI/CD", "Oracle/VMs"],
+    skills: [
+      "Docker", 
+      "CI/CD", 
+      "Oracle/VMs"
+    ],
   },
   {
     title: "AI & data",
