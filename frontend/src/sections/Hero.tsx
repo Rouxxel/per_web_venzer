@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/languages/language_invoker";
 
 const Hero = () => {
+  const { language } = useLanguage();
+
   return (
     <section
       id="hero"
@@ -13,7 +16,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="text-primary font-medium mb-4 tracking-wide uppercase text-sm"
         >
-          Greetings, I am
+          {language.sections.hero_section.greet_txt}
         </motion.p>
 
         <motion.h1
@@ -31,7 +34,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
         >
-          A developer that enjoys crafting beautiful, high-performing and scalable code.
+          {language.sections.hero_section.slogan_txt}
         </motion.p>
 
         <motion.div
@@ -48,7 +51,7 @@ const Hero = () => {
             }
             className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
           >
-            View My Work
+            {language.sections.hero_section.view_work_btn}
           </button>
           <button
             onClick={() =>
@@ -58,7 +61,7 @@ const Hero = () => {
             }
             className="px-6 py-3 border border-border text-foreground rounded-lg font-medium hover:bg-accent transition-colors"
           >
-            Get in Touch
+            {language.sections.hero_section.get_in_touch_btn}
           </button>
         </motion.div>
       </div>
