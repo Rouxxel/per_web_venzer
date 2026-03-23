@@ -10,7 +10,7 @@ const socials = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-muted/1500">
+    <section id="contact" className="py-24 bg-muted/70">
       <SectionInner className="text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
