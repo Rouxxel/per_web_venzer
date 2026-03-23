@@ -38,7 +38,7 @@ function filterProjectsBySelections(
   const active = [domain, context, industry].filter((v) => v !== NONE_FILTER_VALUE);
   if (active.length === 0) return projects;
   return projects.filter((p) =>
-    active.some((sel) => p.classifications.includes(sel as ProjectClassification)),
+    active.every((sel) => p.classifications.includes(sel as ProjectClassification)),
   );
 }
 
@@ -155,8 +155,8 @@ const Projects = () => {
             </Button>
           </div>
           <p className="text-xs text-muted-foreground">
-            Showing projects that match <span className="font-medium text-foreground">any</span> of the
-            selected filters (or all projects when every dropdown is None).
+            Showing projects that match <span className="font-medium text-foreground">all</span> selected
+            filters (or all projects when every dropdown is None).
           </p>
         </div>
 
