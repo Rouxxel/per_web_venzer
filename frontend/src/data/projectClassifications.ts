@@ -1,9 +1,11 @@
+//-------------------------------------------------------------------------
+//---------------------------------ENGLISH---------------------------------
+//-------------------------------------------------------------------------
 /**
- * Three-layer classification vocabulary for portfolio projects.
+ * Canonical three-layer classification vocabulary for portfolio projects.
  * Domain / Technical, Context / Origin, and Industry / Theme share no duplicate
  * option labels except "Industrial" (appears in both Context and Industry lists for filtering).
  */
-
 export const DOMAIN_TECH_OPTIONS = [
   "Backend",
   "Frontend",
@@ -39,6 +41,9 @@ export const PROJECT_FILTER_LABELS = {
   industryTitle: "Industry / Theme",
 } as const;
 
+//-------------------------------------------------------------------------
+//---------------------------------SPANISH---------------------------------
+//-------------------------------------------------------------------------
 /** Spanish labels for filter UI. */
 export const PROJECT_FILTER_LABELS_ES = {
   defaultOption: "Ninguno",
@@ -77,6 +82,59 @@ export const INDUSTRY_THEME_OPTIONS_ES = [
   "Militar",
 ] as const;
 
+//-------------------------------------------------------------------------
+//---------------------------------FRENCH----------------------------------
+//-------------------------------------------------------------------------
+/** French labels for filter UI. */
+export const PROJECT_FILTER_LABELS_FR = {
+  defaultOption: "Aucun",
+  domainTitle: "Domaine / Technique",
+  contextTitle: "Contexte / Origine",
+  industryTitle: "Industrie / Thématique",
+} as const;
+
+/** French display labels mapped by index to canonical DOMAIN_TECH_OPTIONS values. */
+export const DOMAIN_TECH_OPTIONS_FR = [
+  "Backend",
+  "Frontend",
+  "Fullstack",
+  "Mobile",
+  "Base de données",
+  "Web",
+  "IA / Données",
+  "RA"
+] as const;
+
+/** French display labels mapped by index to canonical CONTEXT_OPTIONS values. */
+export const CONTEXT_OPTIONS_FR = [
+  "Profesionelle",
+  "Personelle",
+  "Université",
+  "Hackathon",
+  "Recherche",
+] as const;
+
+/** French display labels mapped by index to canonical INDUSTRY_THEME_OPTIONS values. */
+export const INDUSTRY_THEME_OPTIONS_FR = [
+  "Jeux vidéo",
+  "Éducation",
+  "Industrielle",
+  "RA",
+  "Militaire",
+] as const;
+
+//-------------------------------------------------------------------------
+//---------------------------------GERMAN----------------------------------
+//-------------------------------------------------------------------------
+// Add German labels/options here when ready:
+// - PROJECT_FILTER_LABELS_DE
+// - DOMAIN_TECH_OPTIONS_DE
+// - CONTEXT_OPTIONS_DE
+// - INDUSTRY_THEME_OPTIONS_DE
+
+//-------------------------------------------------------------------------
+//---------------------------------Exports---------------------------------
+//-------------------------------------------------------------------------
 export type DomainTechClassification = (typeof DOMAIN_TECH_OPTIONS)[number];
 export type ContextClassification = (typeof CONTEXT_OPTIONS)[number];
 export type IndustryThemeClassification = (typeof INDUSTRY_THEME_OPTIONS)[number];
@@ -99,6 +157,22 @@ export const NONE_FILTER_VALUE = "__none__" as const;
 
 /** Returns localized filter labels/options while preserving canonical classification values. */
 export const getProjectFilterLocalization = (languageCode: string) => {
+    //if (languageCode === "languagecodehere") {
+    //  return {
+    //    labels: PROJECT_FILTER_LABELS_language,
+    //    domainOptions: DOMAIN_TECH_OPTIONS_language,
+    //    contextOptions: CONTEXT_OPTIONS_language,
+    //    industryOptions: INDUSTRY_THEME_OPTIONS_language,
+    //  } as const;
+    //}
+  if (languageCode === "fr") {
+    return {
+      labels: PROJECT_FILTER_LABELS_FR,
+      domainOptions: DOMAIN_TECH_OPTIONS_FR,
+      contextOptions: CONTEXT_OPTIONS_FR,
+      industryOptions: INDUSTRY_THEME_OPTIONS_FR,
+    } as const;
+  }
   if (languageCode === "es") {
     return {
       labels: PROJECT_FILTER_LABELS_ES,

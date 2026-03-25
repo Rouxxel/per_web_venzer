@@ -74,8 +74,42 @@ export const experience_es: ExperienceEntry[] = [
   },
 ];
 
+export const experience_fr: ExperienceEntry[] = [
+  {
+    title: "Développeur UX/UI et Frontend (React + TS)",
+    company: "Langdrill (Startup stealth)",
+    location: "Berlin, Allemagne",
+    link: "https://www.langdrill.com/",
+    period: "06.2025 — 07.2025",
+    description: 
+      "Conception de wireframes basse et haute fidélité sur Figma et implémentation dans un frontend React + TypeScript connecté à un backend Python avec FastAPI, déployé sur Render. Maintien d’une architecture basée sur des composants et intégration propre avec les services REST pour supporter des utilisateurs concurrents et des fonctionnalités d’IA intégrées.",
+    type: "work",
+  },
+  {
+    title: "Développeur backend pour système de surveillance en temps réel",
+    company: "Siemens AG",
+    location: "Munich, Allemagne",
+    link: "https://www.siemens.com/",
+    period: "10.2024 — 04.2025",
+    description: 
+      "Conception, développement, tests, refactoring et déploiement d’un logiciel backend Python de niveau production pour traiter des données de capteurs haute fréquence (Pandas, NumPy, Matplotlib, multithreading), avec focus sur POO, performance, fiabilité et maintenabilité. Ajout de Docker pour le déploiement, logger personnalisé pour suivi long terme et débogage, workflows Git et pipeline CI/CD, linting pour qualité du code, et diagrammes d’architecture sur draw.io pour recherche et planification. Zeugnis disponible sur demande.",
+    type: "work",
+  },
+  {
+    title: "Licence en sciences de l’ingénierie logicielle",
+    company: "University of Europe for Applied Sciences",
+    location: "Potsdam, Allemagne",
+    link: "https://www.ue-germany.com/",
+    period: "09.2022 — 08.2025",
+    description:
+      "Titulaire d’une Licence en sciences de l’ingénierie logicielle (180 crédits, 88,64/100 points ou 1,7 dans le système de notation allemand) avec mémoire axé sur le Machine Learning. Programme centré sur langages et algorithmes (Python, Java, C/C++, JS), POO, déploiement (Docker, API, VM), pratiques de développement (CI/CD, Agile, Scrum, SQA), outils (Jira, Confluence), programmation parallèle, bases de données (SQL), design UX/UI (Figma) et intelligence artificielle (ML, DL, data science). Bachelorkunde et transcript of records disponibles sur demande.",
+    type: "education",
+  },
+];
+
 /** Returns language-specific experience entries, with English fallback. */
 export const getExperienceByLanguage = (languageCode: string): ExperienceEntry[] => {
+  if (languageCode === "fr") return experience_fr;
   if (languageCode === "es") return experience_es;
   return experience_en;
 };

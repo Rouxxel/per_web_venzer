@@ -352,11 +352,9 @@ export const projects_en: Project[] = [
   },
 ];
 
-/**
- * Spanish projects dataset.
- * Keep all other properties unchanged for filtering and tech labels but
- * Descriptions are localized by title while tags/classifications stay canonical.
- */
+//-------------------------------------------------------------------------
+//------------------------SPANISH DESCRIPTIONS-----------------------------
+//-------------------------------------------------------------------------
 const projectDescriptionsEs: Record<string, string> = {
   "High-Frequency Real Time Monitoring System":
     "Como desarrollador backend en Siemens AG, arquitecté, desarrollé, probé y desplegué un backend de monitoreo en tiempo real y alta frecuencia, multihilo y de nivel productivo para un proyecto conjunto con RWTH Aachen y Weiss Spindletechnologies. El sistema en Python admite grandes volúmenes de datos de sensores mediante un message broker, monitorea y analiza el comportamiento de la máquinas, exporta resultados en CSV y gráficos	con Pandas/Matplotlib para análisis post-test. El código fuente y demos no son públicos (propiedad de Siemens).",
@@ -386,6 +384,58 @@ const projectDescriptionsEs: Record<string, string> = {
     "El sitio web en el que estás ahora: portafolio responsivo construido con React + TypeScript (Vite), Tailwind CSS y shadcn/ui (Radix UI). Usa animaciones con Framer Motion, React Router, TanStack Query y formularios con React Hook Form + Zod; probado con Vitest/React Testing Library, linting con ESLint y desplegado en Vercel con auditorías de seguridad en GitHub Actions. Tiene soporte para varios lenguajes",
 };
 
+//-------------------------------------------------------------------------
+//------------------------FRENCH DESCRIPTIONS------------------------------
+//-------------------------------------------------------------------------
+const projectDescriptionsFr: Record<string, string> = {
+  "High-Frequency Real Time Monitoring System":
+    "En tant que développeur backend chez Siemens AG, j’ai architecturé, développé, testé et déployé un backend de surveillance a temps réel et haute fréquence, multithread et de niveau production pour un projet conjoint avec RWTH Aachen et Weiss Spindletechnologies. Le système Python ingère de grands volumes de données de capteurs via un message broker, surveille et analyse le comportement des machines, et exporte des résultats en CSV et graphiques avec Pandas/Matplotlib pour analyse post-test. Le code source et les démonstrations sont pas publics (propriété de Siemens).",
+  "Langdrill (Stealth startup)":
+    "En tant que développeur frontend, j’ai travaillé sur une plateforme éducative améliorée par IA, construite avec React+TS pour le frontend et FastAPI pour le backend. Elle inclut un accès par rôle pour enseignants/étudiants, génération d’exercices IA (écriture, lecture, écoute avec TTS et conversation avec agent IA/voix), gestion de classes, suivi des devoirs, analyses des étudiants et système de templates. Elle était également connectée à Supabase (PostgreSQL) pour l’authentification et le stockage des données.",
+  "Simple Chat":
+    "Application de chatbot alimentée par une API IA, construite avec un client mobile Flutter et un backend FastAPI en Python déployé sur Render, utilisant l’API Gemini 2.5 Flash et Supabase pour l’authentification, l’historique persistant et les préférences utilisateur. L’application permet de converser avec un chatbot à personnalité configurable et de maintenir des conversations relativement longues, bien que le contexte et la mémoire à long terme restent un défi.",
+  "Rift Rewind":
+    "Tableau de bord de coaching pour League of Legends avec frontend en React+TS et backend FastAPI intégré à l’API Riot Games pour l’historique des matchs, les données des champions et les analyses de performance. Le site propose plusieurs pages pour explorer l’historique, les synergies et les prédictions, avec une bulle flottante ouvrant un assistant conversationnel contextualisé pour obtenir des insights précis.",
+  "TuneTools":
+    "Pipeline transformant le contexte quotidien (actualités, météo, calendrier) en chansons personnalisées : un LLM génère les spécifications et les paroles, le modèle YuE synthétise l’audio sur RunPod, et l’API Gemini crée la pochette de l’album pour livrer la chanson à l’utilisateur. Le frontend est déployé sur Vercel, le backend sur Railway, connecté à Supabase pour l’authentification et le stockage des fichiers audio et images générés.",
+  "Bachelor Thesis (Machine Learning)":
+    "Étude comparative de modèles de classification ML pour la détection précoce du diabète sur les indicateurs de santé BRFSS 2015 : pipeline Python modulaire avec Decision Tree, Logistic Regression, Random Forest et SVM, plus EDA, suréchantillonnage SMOTE, configuration JSON et journalisation centralisée des résultats.",
+  "Emotional Detection DL model":
+    "Projet de deep learning pour détecter 7 émotions à partir d’images faciales en niveaux de gris, utilisant transfer learning (DenseNet121) et un CNN personnalisé, avec CLI, interface webcam pour tests en direct, dataset FER de Kaggle, et optimisation optionnelle TFLite/TensorRT/ONNX.",
+  "Drone sound detection ML models":
+    "Projet ML pour détecter et classifier le profil sonore de drones, hélicoptères et sons de fond en utilisant CNN (Tiny et Robust) et ML traditionnel (Random Forest, SVM, XGBoost, Gradient Boosting) avec caractéristiques MFCC ; cas d’usage cible : intégrer le système comme accessoire sur un gilet pare-balles pour détection omnidirectionnelle de drones et alertes préventives pour les soldats sur le terrain.",
+  "Machine Learning Models":
+    "Portfolio de projets ML : classifications (Iris, cancer du sein, Titanic, diabète avec Decision Tree, Logistic Regression, KNN, Random Forest, SVM), régressions (profits d’entreprise) et clustering (segmentation clients avec K-Means et Hierarchical), utilisant des notebooks Python, scikit-learn et autres librairies associées.",
+  "MaxxWatt Energy Management Platform":
+    "Projet présenté au Berlin Energy Hackathon 2025 : plateforme de monitoring et gestion BESS avec analytics temps réel, détection d’anomalies et prévisions énergétiques pour batteries Li-Ion utilisées dans des systèmes de panneaux solaires. Architecture système et design des composants modélisés sur Draw.io. Backend FastAPI avec streaming SSE et dashboard React (Vite, shadcn-ui, Tailwind).",
+  "Nothingness 2D arcade game":
+    "Jeu arcade 2D Unity/C# avec mouvement sur 8 directions, scaling dynamique de la difficulté et système de buffs/debuffs. Comprend deux types d’ennemis (astéroïdes, comètes), plusieurs power-ups (bouclier, augmentation/diminution de vitesse), persistance du score via sérialisation JSON et système audio complet avec sprites faits maison.",
+  "Atryon Chrome Extension":
+    "Extension Chrome de try-on virtuel : permet de sélectionner un vêtement depuis la page ou par glisser-déposer, ajouter un selfie et obtenir un résultat IA. UI en panneau latéral avec content script pour « sélectionner depuis la page » ; backend FastAPI exécutant l’API FLUX de Black Forest Labs pour composition multi-images (MIC), avec endpoints de polling et téléchargement. Endpoints supplémentaires pour futures fonctionnalités Text-To-Image (TTI) et Image Edit With Mask (IDWM).",
+  "Personal portfolio website":
+    "Le site que vous consultez actuellement : portfolio responsive construit avec React + TypeScript (Vite), Tailwind CSS et shadcn/ui (Radix UI). Utilise Framer Motion, React Router, TanStack Query et formulaires avec React Hook Form + Zod ; testé avec Vitest/React Testing Library, linté avec ESLint et déployé sur Vercel avec audits de sécurité GitHub Actions. Prise en charge multilingue incluse.",
+};
+
+//-------------------------------------------------------------------------
+//------------------------GERMAN DESCRIPTIONS------------------------------
+//-------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------
+//---------------------------------Exports---------------------------------
+//-------------------------------------------------------------------------
+//export const projects_language: Project[] = projects_en.map((project) => ({
+//  ...project,
+//  description: projectDescriptionslanguage[project.title] ?? project.description,
+//  tags: [...project.tags],
+//  classifications: [...project.classifications],
+//}));
+export const projects_fr: Project[] = projects_en.map((project) => ({
+  ...project,
+  description: projectDescriptionsFr[project.title] ?? project.description,
+  tags: [...project.tags],
+  classifications: [...project.classifications],
+}));
+
 export const projects_es: Project[] = projects_en.map((project) => ({
   ...project,
   description: projectDescriptionsEs[project.title] ?? project.description,
@@ -395,6 +445,8 @@ export const projects_es: Project[] = projects_en.map((project) => ({
 
 /** Returns language-specific projects, with English fallback. */
 export const getProjectsByLanguage = (languageCode: string): Project[] => {
+  //if (languageCode === "languagecode") return projects_language;
+  if (languageCode === "fr") return projects_fr;
   if (languageCode === "es") return projects_es;
   return projects_en;
 };
