@@ -61,13 +61,13 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 py-4 flex items-center justify-between max-w-5xl">
+      <nav className="container mx-auto px-6 py-4 flex items-center justify-between gap-3 max-w-5xl">
         <button
           onClick={() => handleClick("#hero")}
-          className="flex items-center gap-2 text-xl font-bold font-heading tracking-tight text-foreground hover:text-primary transition-colors"
+          className="flex items-center gap-2 text-xl font-bold font-heading tracking-tight text-foreground hover:text-primary transition-colors min-w-0"
         >
           <img src="/images/logo.png" alt="" className="h-8 w-8 rounded-full object-cover" />
-          {language.logo_text}
+          <span className="truncate hidden [@media(min-width:354px)]:inline">{language.logo_text}</span>
         </button>
 
         {/* Desktop nav */}
@@ -85,8 +85,8 @@ const Navbar = () => {
             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
           <Select value={currentLanguageCode} onValueChange={setLanguage}>
-            <SelectTrigger className="h-9 w-[132px] text-sm">
-              <SelectValue placeholder="Language" />
+            <SelectTrigger className="h-9 w-[72px] text-sm">
+              <span className="font-medium">{currentLanguageCode.toUpperCase()}</span>
             </SelectTrigger>
             <SelectContent align="end">
               {getLanguageOptions.map((option) => (
@@ -104,8 +104,8 @@ const Navbar = () => {
             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
           <Select value={currentLanguageCode} onValueChange={setLanguage}>
-            <SelectTrigger className="h-9 w-[124px] text-sm">
-              <SelectValue placeholder="Language" />
+            <SelectTrigger className="h-9 w-[72px] text-sm">
+              <span className="font-medium">{currentLanguageCode.toUpperCase()}</span>
             </SelectTrigger>
             <SelectContent align="end">
               {getLanguageOptions.map((option) => (
