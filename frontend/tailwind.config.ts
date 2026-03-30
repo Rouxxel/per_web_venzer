@@ -15,8 +15,25 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        heading: ["Space Grotesk", "system-ui", "sans-serif"],
+        //og
+        //sans: ["Inter", "system-ui", "sans-serif"],
+        //heading: ["Space Grotesk", "system-ui", "sans-serif"],
+        //subtitle: ["Manrope", "system-ui", "sans-serif"],
+
+        //smau
+        //sans: ["Figtree", "system-ui", "sans-serif"],
+        //heading: ["Sora", "system-ui", "sans-serif"],
+        //subtitle: ["Monserrat", "system-ui", "sans-serif"],
+
+        //experimental
+        sans: ["Work Sans", "system-ui", "sans-serif"],
+        heading: ["Oxanium", "system-ui", "sans-serif"],
+        subtitle: ["Urbanist", "system-ui", "sans-serif"],
+
+        //Accents
+        //accent: ["Anton", "system-ui", "sans-serif"],
+        //accent: ["Bebas Neue", "system-ui", "sans-serif"],
+        accent: ["Poppins", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

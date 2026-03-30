@@ -44,10 +44,10 @@ const Experience = () => {
                   )}
                 </div>
 
-                <p className="text-xs font-medium text-primary uppercase tracking-wider mb-1">
+                <p className="text-xs font-medium font-subtitle text-primary uppercase tracking-wider mb-1">
                   {entry.period}
                 </p>
-                <h3 className="text-lg font-semibold text-foreground">{entry.title}</h3>
+                <h3 className="text-lg font-semibold font-subtitle text-foreground">{entry.title}</h3>
                 <p className="text-sm text-muted-foreground mb-2">
                   {entry.link != null && entry.link.trim() !== "" ? (
                     <a

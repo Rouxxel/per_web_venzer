@@ -9,7 +9,8 @@ import {
   NONE_FILTER_VALUE,
   type ProjectClassification,
 } from "@/data/projectClassifications";
-import { Github, ExternalLink } from "lucide-react";
+import { SiGithub } from "@icons-pack/react-simple-icons";
+import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -201,7 +202,7 @@ const Projects = () => {
                   )}
                 </div>
 
-                <h3 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold font-subtitle text-card-foreground mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
                 <button
@@ -235,8 +236,8 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      <Github className="h-4 w-4" />
-                      <span className="text-sm font-medium">GitHub</span>
+                      <SiGithub className="h-4 w-4" />
+                      <span className="text-sm font-medium font-accent">GitHub</span>
                     </a>
                   )}
                   {project.demo != null && project.demo.trim() !== "" && (
@@ -247,7 +248,7 @@ const Projects = () => {
                       className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <ExternalLink className="h-4 w-4" />
-                      <span className="text-sm font-medium">{language.sections.projects_section.project_specifics.showcase_btn}</span>
+                      <span className="text-sm font-medium font-accent">{language.sections.projects_section.project_specifics.showcase_btn}</span>
                     </a>
                   )}
                   {project.live_demo != null && project.live_demo.trim() !== "" && (
@@ -258,7 +259,7 @@ const Projects = () => {
                       className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <ExternalLink className="h-4 w-4" />
-                      <span className="text-sm font-medium">{language.sections.projects_section.project_specifics.live_demo_btn}</span>
+                      <span className="text-sm font-medium font-accent">{language.sections.projects_section.project_specifics.live_demo_btn}</span>
                     </a>
                   )}
                   {!hasExternalLinks(project) && (
@@ -269,7 +270,7 @@ const Projects = () => {
                       <span className="font-semibold leading-none" aria-hidden="true">
                         !
                       </span>
-                      <span>not available</span>
+                      <span className="text-sm font-semibold font-accent">Not Available</span>
                     </span>
                   )}
                 </div>

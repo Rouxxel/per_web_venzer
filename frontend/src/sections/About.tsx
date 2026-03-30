@@ -83,7 +83,7 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-6">
+          <h3 className="text-sm font-semibold font-subtitle text-foreground uppercase tracking-wider mb-6">
             {aboutLanguage.tech_stack_title}
           </h3>
           <div className="grid sm:grid-cols-2 gap-6">
