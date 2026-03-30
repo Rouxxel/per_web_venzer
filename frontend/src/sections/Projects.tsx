@@ -182,7 +182,7 @@ const Projects = () => {
                 className="group rounded-xl border border-border bg-card p-6 flex flex-col transition-shadow hover:shadow-xl"
               >
                 {/* Project image or placeholder */}
-                <div className="aspect-square rounded-lg bg-muted mb-4 overflow-hidden">
+                <div className="rounded-lg bg-muted mb-4 overflow-hidden h-40 sm:h-52 md:aspect-square md:h-auto">
                   {project.image ? (
                     <img
                       src={project.image}
