@@ -3,6 +3,7 @@ import { getExperienceByLanguage } from "@/data/experience";
 import { Briefcase, GraduationCap, Download } from "lucide-react";
 import SectionInner from "@/components/SectionInner";
 import { useLanguage } from "@/languages/language_invoker";
+import TypewriterText from "@/components/TypewriterText";
 
 const Experience = () => {
   const { language, currentLanguageCode } = useLanguage();
@@ -64,9 +65,11 @@ const Experience = () => {
                   )}
                   ; {entry.location}
                 </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {entry.description}
-                </p>
+                <TypewriterText
+                  text={entry.description}
+                  className="text-sm text-muted-foreground leading-relaxed"
+                  initialDelay={0.3 + i * 0.15}
+                />
               </motion.div>
             ))}
           </div>

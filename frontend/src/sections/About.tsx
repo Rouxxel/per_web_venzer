@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { skillSections } from "@/data/skills";
 import SectionInner from "@/components/SectionInner";
 import { useLanguage } from "@/languages/language_invoker";
+import TypewriterText, { CHAR_DELAY } from "@/components/TypewriterText";
 
 // ─── Add your portrait images here ───────────────────────────────────────────
 // To add more: just append entries to this array, e.g.:
@@ -95,18 +96,28 @@ const About = () => {
           </motion.div>
 
           <div className="space-y-4">
-            {aboutLanguage.bio_intro_txts.map((paragraph, i) => (
-              <motion.p
-                key={i}
-                initial={{ opacity: 0, y: 30, x: 20 }}
-                whileInView={{ opacity: 1, y: 0, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.55, delay: 0.08 * i, ease: "easeOut" }}
-                className="text-muted-foreground leading-relaxed"
-              >
-                {paragraph}
-              </motion.p>
-            ))}
+            {aboutLanguage.bio_intro_txts.map((paragraph, i) => {
+              // Each paragraph starts after all previous ones finish typing
+              const prevChars = aboutLanguage.bio_intro_txts
+                .slice(0, i)
+                .reduce((sum, p) => sum + p.length, 0);
+              const startDelay = 0.2 + prevChars * CHAR_DELAY;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30, x: 20 }}
+                  whileInView={{ opacity: 1, y: 0, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.55, delay: 0.08 * i, ease: "easeOut" }}
+                >
+                  <TypewriterText
+                    text={paragraph}
+                    className="text-muted-foreground leading-relaxed"
+                    initialDelay={startDelay}
+                  />
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
