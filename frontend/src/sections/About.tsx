@@ -18,10 +18,10 @@ const About = () => {
     <section id="about" className="py-24">
       <SectionInner>
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-3xl sm:text-4xl font-bold font-heading text-foreground mb-12"
         >
           {aboutLanguage.section_title}
@@ -31,10 +31,10 @@ const About = () => {
         <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-start">
           {/* Profile photo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.85, x: -30 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.65, ease: "easeOut" }}
             className="aspect-square rounded-2xl overflow-hidden shrink-0"
           >
             <img
@@ -48,10 +48,10 @@ const About = () => {
             {aboutLanguage.bio_intro_txts.map((paragraph, i) => (
               <motion.p
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, x: 20 }}
+                whileInView={{ opacity: 1, y: 0, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.05 * i }}
+                transition={{ duration: 0.55, delay: 0.08 * i, ease: "easeOut" }}
                 className="text-muted-foreground leading-relaxed"
               >
                 {paragraph}
@@ -65,10 +65,10 @@ const About = () => {
           {aboutLanguage.bio_below_txts.map((paragraph, i) => (
             <motion.p
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 * i }}
+              transition={{ duration: 0.55, delay: 0.12 * i, ease: "easeOut" }}
               className="text-muted-foreground leading-relaxed"
             >
               {paragraph}
@@ -78,18 +78,31 @@ const About = () => {
 
         {/* Skills: 2 sections per row */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
         >
           <h3 className="text-sm font-semibold font-subtitle text-foreground uppercase tracking-wider mb-6">
             {aboutLanguage.tech_stack_title}
           </h3>
-          <div className="grid sm:grid-cols-2 gap-6">
+          <motion.div
+            className="grid sm:grid-cols-2 gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.13 } },
+            }}
+          >
             {skillSections.map((section) => (
-              <div
+              <motion.div
                 key={section.section}
+                variants={{
+                  hidden: { opacity: 0, y: 28, scale: 0.97 },
+                  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.55, ease: "easeOut" } },
+                }}
                 className="rounded-xl border border-border bg-card p-4"
               >
                 <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3">
@@ -105,9 +118,9 @@ const About = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
       </SectionInner>
     </section>

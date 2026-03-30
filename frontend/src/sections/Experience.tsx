@@ -12,10 +12,10 @@ const Experience = () => {
     <section id="experience" className="py-24">
       <SectionInner>
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-3xl sm:text-4xl font-bold font-heading text-foreground mb-12"
         >
           {language.sections.experience_section.section_title}
@@ -29,10 +29,10 @@ const Experience = () => {
             {experienceEntries.map((entry, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
+                transition={{ duration: 0.5, delay: i * 0.15, ease: "easeOut" }}
                 className="relative pl-12 md:pl-20"
               >
                 {/* Icon dot */}
@@ -73,10 +73,10 @@ const Experience = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
           className="mt-12 w-full"
         >
           <a

@@ -88,88 +88,82 @@ const Projects = () => {
     <section id="projects" className="py-24 bg-muted/70">
       <SectionInner>
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-3xl sm:text-4xl font-bold font-heading text-foreground mb-8"
         >
           {projectsLanguage.section_title}
         </motion.h2>
 
-        <div className="mb-10 flex flex-col gap-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
+          className="mb-10 flex flex-col gap-4"
+        >
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-end">
-            <div className="flex min-w-0 flex-1 flex-col gap-2 sm:min-w-[12rem]">
-              <Label htmlFor="filter-domain" className="text-muted-foreground">
-                {filterUi.labels.domainTitle}
-              </Label>
-              <Select value={domainFilter} onValueChange={setDomainFilter}>
-                <SelectTrigger id="filter-domain" className="w-full">
-                  <SelectValue placeholder={filterUi.labels.defaultOption} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value={NONE_FILTER_VALUE}>{filterUi.labels.defaultOption}</SelectItem>
-                  {DOMAIN_TECH_OPTIONS.map((opt, index) => (
-                    <SelectItem key={opt} value={opt}>
-                      {filterUi.domainOptions[index] ?? opt}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
+            {[
+              { id: "filter-domain", label: filterUi.labels.domainTitle, value: domainFilter, onChange: setDomainFilter, options: DOMAIN_TECH_OPTIONS, localized: filterUi.domainOptions },
+              { id: "filter-context", label: filterUi.labels.contextTitle, value: contextFilter, onChange: setContextFilter, options: CONTEXT_OPTIONS, localized: filterUi.contextOptions },
+              { id: "filter-industry", label: filterUi.labels.industryTitle, value: industryFilter, onChange: setIndustryFilter, options: INDUSTRY_THEME_OPTIONS, localized: filterUi.industryOptions },
+            ].map((filter, i) => (
+              <motion.div
+                key={filter.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: 0.1 + i * 0.1, ease: "easeOut" }}
+                className="flex min-w-0 flex-1 flex-col gap-2 sm:min-w-[12rem]"
+              >
+                <Label htmlFor={filter.id} className="text-muted-foreground">
+                  {filter.label}
+                </Label>
+                <Select value={filter.value} onValueChange={filter.onChange}>
+                  <SelectTrigger id={filter.id} className="w-full">
+                    <SelectValue placeholder={filterUi.labels.defaultOption} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value={NONE_FILTER_VALUE}>{filterUi.labels.defaultOption}</SelectItem>
+                    {filter.options.map((opt, index) => (
+                      <SelectItem key={opt} value={opt}>
+                        {filter.localized[index] ?? opt}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </motion.div>
+            ))}
 
-            <div className="flex min-w-0 flex-1 flex-col gap-2 sm:min-w-[12rem]">
-              <Label htmlFor="filter-context" className="text-muted-foreground">
-                {filterUi.labels.contextTitle}
-              </Label>
-              <Select value={contextFilter} onValueChange={setContextFilter}>
-                <SelectTrigger id="filter-context" className="w-full">
-                  <SelectValue placeholder={filterUi.labels.defaultOption} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value={NONE_FILTER_VALUE}>{filterUi.labels.defaultOption}</SelectItem>
-                  {CONTEXT_OPTIONS.map((opt, index) => (
-                    <SelectItem key={opt} value={opt}>
-                      {filterUi.contextOptions[index] ?? opt}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="flex min-w-0 flex-1 flex-col gap-2 sm:min-w-[12rem]">
-              <Label htmlFor="filter-industry" className="text-muted-foreground">
-                {filterUi.labels.industryTitle}
-              </Label>
-              <Select value={industryFilter} onValueChange={setIndustryFilter}>
-                <SelectTrigger id="filter-industry" className="w-full">
-                  <SelectValue placeholder={filterUi.labels.defaultOption} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value={NONE_FILTER_VALUE}>{filterUi.labels.defaultOption}</SelectItem>
-                  {INDUSTRY_THEME_OPTIONS.map((opt, index) => (
-                    <SelectItem key={opt} value={opt}>
-                      {filterUi.industryOptions[index] ?? opt}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <Button
-              type="button"
-              variant="outline"
-              className="shrink-0 sm:mb-0"
-              onClick={clearFilters}
-              disabled={!hasActiveFilters}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: 0.4, ease: "easeOut" }}
             >
-              {projectsLanguage.filters.clear_filters_btn}
-            </Button>
+              <Button
+                type="button"
+                variant="outline"
+                className="shrink-0 sm:mb-0"
+                onClick={clearFilters}
+                disabled={!hasActiveFilters}
+              >
+                {projectsLanguage.filters.clear_filters_btn}
+              </Button>
+            </motion.div>
           </div>
-          <p className="text-xs text-muted-foreground">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+            className="text-xs text-muted-foreground"
+          >
             {projectsLanguage.filters.filter_explanation_txt}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {filteredProjects.length === 0 ? (
           <p className="rounded-lg border border-dashed border-border bg-card/50 px-4 py-8 text-center text-sm text-muted-foreground">
@@ -180,12 +174,12 @@ const Projects = () => {
             {filteredProjects.map((project, i) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                whileHover={{ y: -4 }}
-                className="group rounded-xl border border-border bg-card p-6 flex flex-col transition-shadow hover:shadow-lg"
+                transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
+                whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.12, ease: "easeOut" } }}
+                className="group rounded-xl border border-border bg-card p-6 flex flex-col transition-shadow hover:shadow-xl"
               >
                 {/* Project image or placeholder */}
                 <div className="aspect-square rounded-lg bg-muted mb-4 overflow-hidden">

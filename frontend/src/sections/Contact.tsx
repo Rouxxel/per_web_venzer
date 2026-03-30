@@ -24,45 +24,44 @@ const Contact = () => {
     <section id="contact" className="py-24 bg-muted/70">
       <SectionInner className="text-center">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-3xl sm:text-4xl font-bold font-heading text-foreground mb-4"
         >
           {language.sections.contact_section.contact_title}
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.55, delay: 0.15, ease: "easeOut" }}
           className="text-muted-foreground max-w-md mx-auto mb-10 leading-relaxed"
         >
           {language.sections.contact_section.contact_txt}
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 sm:gap-6"
-        >
-          {socials.map((s) => (
-            <a
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+          {socials.map((s, i) => (
+            <motion.a
               key={s.label}
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: 0.25 + i * 0.1, ease: "easeOut" }}
+              whileHover={{ y: -4, scale: 1.05 }}
               className="flex items-center gap-2 px-5 py-3 rounded-lg border border-border text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-accent transition-all"
             >
               <s.icon className="h-5 w-5" />
               <span className="text-sm font-medium font-accent">{s.label}</span>
-            </a>
+            </motion.a>
           ))}
-        </motion.div>
+        </div>
       </SectionInner>
     </section>
   );
