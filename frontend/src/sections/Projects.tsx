@@ -15,6 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Label } from "@/components/ui/label";
+import TypewriterText from "@/components/TypewriterText";
 import {
   Select,
   SelectContent,
@@ -60,12 +61,11 @@ const Projects = () => {
   const [industryFilter, setIndustryFilter] = useState<string>(NONE_FILTER_VALUE);
   /** When true for a title, the full project description is shown; otherwise "Display description". */
   const [descriptionOpenByTitle, setDescriptionOpenByTitle] = useState<Record<string, boolean>>({});
+  const [descriptionClickCount, setDescriptionClickCount] = useState<Record<string, number>>({});
 
   const toggleProjectDescription = (title: string) => {
-    setDescriptionOpenByTitle((prev) => ({
-      ...prev,
-      [title]: !prev[title],
-    }));
+    setDescriptionOpenByTitle((prev) => ({ ...prev, [title]: !prev[title] }));
+    setDescriptionClickCount((prev) => ({ ...prev, [title]: (prev[title] ?? 0) + 1 }));
   };
 
   const filteredProjects = useMemo(
@@ -205,13 +205,20 @@ const Projects = () => {
                   aria-expanded={descriptionOpenByTitle[project.title] === true}
                   className={cn(
                     "mb-4 flex-1 w-full text-left text-sm leading-relaxed rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-                    //"mt-1.5 mb-4 w-full text-left text-sm leading-relaxed rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                     descriptionOpenByTitle[project.title]
                       ? "text-muted-foreground cursor-pointer hover:text-foreground"
                       : "text-primary font-medium underline decoration-primary/60 underline-offset-2 hover:decoration-primary",
                   )}
                 >
-                  {descriptionOpenByTitle[project.title] ? project.description : language.sections.projects_section.project_specifics.display_description_btn}
+                  {descriptionOpenByTitle[project.title] ? (
+                    <TypewriterText
+                      key={`${project.title}-${descriptionClickCount[project.title] ?? 0}`}
+                      text={project.description}
+                      tag="span"
+                    />
+                  ) : (
+                    language.sections.projects_section.project_specifics.display_description_btn
+                  )}
                 </button>
 
                 <div className="flex flex-wrap gap-1.5 mb-4">
