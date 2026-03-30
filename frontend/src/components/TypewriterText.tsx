@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 // ─── Tweak this to change typing speed globally ───────────────────────────────
-export const CHAR_DELAY = 0.006; // seconds per character — lower = faster
+export const CHAR_DELAY = 0.004; // seconds per character — lower = faster
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface TypewriterTextProps {
