@@ -322,6 +322,37 @@ export const projects_en: Project[] = [
     github: "https://github.com/Rouxxel/atryon_chrome_extension",
   },
   {
+    title: "CorpuScan",
+    image: "/images/corpus_scan/logo.png",
+    description:
+      "Collaborated on a Big Berlin Hack project: CorpuScan turns dense financial documents into short executive video briefings. Users upload a PDF, paste a URL, or type a query; a multi-agent pipeline (Gemini 2.5 Pro) extracts key financials, writes a 4-scene script, generates voiceover via ElevenLabs TTS, renders motion graphics with the Hera API in parallel, and stitches everything into a playable MP4 with ffmpeg.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Radix UI",
+      "Python",
+      "FastAPI",
+      "Gemini API",
+      "Generative AI",
+      "ElevenLabs",
+      "Hera API",
+      "Tavily",
+      "ffmpeg",
+      "LLM",
+      "Multi-agent",
+      "REST API",
+      "Docker",
+      "Vercel",
+      "Railway",
+    ],
+    classifications: ["Fullstack", "Web", "AI / Data", "Hackathon"],
+    github: "https://github.com/peres84/corpuscan",
+    demo: "https://youtu.be/U5_TvHi1b0w",
+  },
+  {
     title: "Personal portfolio website",
     image: "/images/logo.png",
     description:
@@ -380,6 +411,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Juego 2D estilo arcade en Unity/C# con movimiento en 8 direcciones, escalado dinámico de dificultad y sistema de buffs/debuffs. Incluye dos tipos de enemigos (asteroides, cometas), varios power-ups (escudo, aumento/reducción de velocidad), persistencia de puntuación con serialización JSON y sistema de audio integral con sprites creados desde cero.",
   "Atryon Chrome Extension":
     "Extensión de Chrome como probador virtual: permite seleccionar una prenda desde la página o mediante arrastrar y soltar, subir una selfie y generar un resultado de prueba virtual con IA. Tiene interfaz en panel lateral con content script para 'seleccionar desde la página'; backend FastAPI que ejecuta llamados API de FLUX de Black Forest Labs para composición multi-imagen (MIC), con endpoints de sondeo y descarga. Incluye endpoints extra para futuras funciones de Text-To-Image (TTI) e Image Edit With Mask (IDWM).",
+  "CorpuScan":
+    "Colaboré en un proyecto para el Big Berlin Hack: CorpuScan convierte documentos financieros densos en breves briefings ejecutivos en video. Usuarios suben un PDF, pegan una URL o una query; el pipeline multi-agente (Gemini 2.5 Pro) extrae los datos financieros clave, redacta un guion de 4 escenas, genera la narración con ElevenLabs TTS, renderiza gráficos en movimiento con la API de Hera en paralelo y ensambla todo en un MP4 reproducible con ffmpeg.",
   "Personal portfolio website":
     "El sitio web en el que estás ahora: portafolio responsivo construido con React + TypeScript (Vite), Tailwind CSS y shadcn/ui (Radix UI). Usa animaciones con Framer Motion, React Router, TanStack Query y formularios con React Hook Form + Zod; probado con Vitest/React Testing Library, linting con ESLint y desplegado en Vercel con auditorías de seguridad en GitHub Actions. Tiene soporte para varios lenguajes",
 };
@@ -412,6 +445,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "Jeu arcade 2D Unity/C# avec mouvement sur 8 directions, scaling dynamique de la difficulté et système de buffs/debuffs. Comprend deux types d’ennemis (astéroïdes, comètes), plusieurs power-ups (bouclier, augmentation/diminution de vitesse), persistance du score via sérialisation JSON et système audio complet avec sprites faits maison.",
   "Atryon Chrome Extension":
     "Extension Chrome de try-on virtuel : permet de sélectionner un vêtement depuis la page ou par glisser-déposer, ajouter un selfie et obtenir un résultat IA. UI en panneau latéral avec content script pour « sélectionner depuis la page » ; backend FastAPI exécutant l’API FLUX de Black Forest Labs pour composition multi-images (MIC), avec endpoints de polling et téléchargement. Endpoints supplémentaires pour futures fonctionnalités Text-To-Image (TTI) et Image Edit With Mask (IDWM).",
+  "CorpuScan":
+    "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête ; un pipeline multi-agents (Gemini 2.5 Pro) extrait les données financières clés, rédige un script en 4 scènes, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera en parallèle, et assemble le tout en un MP4 lisible avec ffmpeg.",
   "Personal portfolio website":
     "Le site que vous consultez actuellement : portfolio responsive construit avec React + TypeScript (Vite), Tailwind CSS et shadcn/ui (Radix UI). Utilise Framer Motion, React Router, TanStack Query et formulaires avec React Hook Form + Zod ; testé avec Vitest/React Testing Library, linté avec ESLint et déployé sur Vercel avec audits de sécurité GitHub Actions. Prise en charge multilingue incluse.",
 };
