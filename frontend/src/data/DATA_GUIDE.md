@@ -197,7 +197,7 @@ Insert it at the position you want it to appear in the grid (top = first card).
 ```ts
 {
   title: "My New Project",
-  image: "/images/my-project/logo.png",
+  image: "/images/my-project/image.png",
   description:
     "One or two sentences describing what the project does, the tech used, and your role.",
   tags: [
