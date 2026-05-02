@@ -13,6 +13,7 @@ export const DOMAIN_TECH_OPTIONS = [
   "Mobile",
   "Database",
   "Web",
+  "MLOps",
   "AI / Data",
   "AR",
 ] as const;
@@ -60,6 +61,7 @@ export const DOMAIN_TECH_OPTIONS_ES = [
   "Móvil",
   "Base de datos",
   "Web",
+  "MLOps",
   "IA / Datos",
   "RA",
 ] as const;
@@ -101,6 +103,7 @@ export const DOMAIN_TECH_OPTIONS_FR = [
   "Mobile",
   "Base de données",
   "Web",
+  "MLOps",
   "IA / Données",
   "RA"
 ] as const;
