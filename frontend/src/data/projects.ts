@@ -16,7 +16,7 @@ export const projects_en: Project[] = [
     title: "High-Frequency Real Time Monitoring System",
     image: "/images/siemens/siemens_logo.png",
     description:
-      "As a backend developer at Siemens AG, I architected, developed, tested and deployed a production-grade, multi-threaded real-time high-frequency monitoring backend for a joint project with RWTH Aachen and Weiss Spindletechnologies. The Python system ingests high-volume sensor data via a message broker, monitors and analyzes machine runtime behavior, and exports CSV outputs and Pandas/Matplotlib visualizations for further analysis. Source code and demos are not public (Siemens proprietary).",
+      "This is a joint project between RWTH Aachen university, Weiss spindletechnologies and Siemens; I architected, developed, tested and deployed a production-grade, multi-threaded real-time high-frequency monitoring backend system. The Python-based system ingests high-volume sensor data via a message broker (MQTT), monitors and analyzes machine runtime behavior and exports CSV outputs and Pandas/Matplotlib visualizations for further analysis. Source code and demos are not public (Siemens proprietary).",
     tags: [
       "Python",
       "Backend",
@@ -163,7 +163,7 @@ export const projects_en: Project[] = [
       "seaborn", 
       "Data science"
     ],
-    classifications: ["AI / Data", "University", "Research"],
+    classifications: ["AI / Data", "MLOps", "University", "Research"],
     github: "https://github.com/Rouxxel/thesis-bachelor",
   },
   {
@@ -190,7 +190,7 @@ export const projects_en: Project[] = [
       "Docker", 
       "pytest"
     ],
-    classifications: ["AI / Data", "University", "Research"],
+    classifications: ["AI / Data", "MLOps", "University", "Research"],
     github: "https://github.com/Rouxxel/Emotion_detection_DL_model_from_images",
   },
   {
@@ -219,7 +219,7 @@ export const projects_en: Project[] = [
       "numpy", 
       "matplotlib"
     ],
-    classifications: ["AI / Data", "Backend", "Hackathon", "Military", "Research"],
+    classifications: ["AI / Data", "MLOps", "Hackathon", "Military", "Research"],
     github: "https://github.com/Rouxxel/drone_sound_profile_detection",
   },
   {
@@ -246,7 +246,7 @@ export const projects_en: Project[] = [
       "matplotlib", 
       "seaborn"
     ],
-    classifications: ["AI / Data", "University", "Research"],
+    classifications: ["AI / Data", "MLOps", "University", "Research"],
     github: "https://github.com/Rouxxel/ai_general",
   },
   {
@@ -388,7 +388,7 @@ export const projects_en: Project[] = [
 //-------------------------------------------------------------------------
 const projectDescriptionsEs: Record<string, string> = {
   "High-Frequency Real Time Monitoring System":
-    "Como desarrollador backend en Siemens AG, arquitecté, desarrollé, probé y desplegué un backend de monitoreo en tiempo real y alta frecuencia, multihilo y de nivel productivo para un proyecto conjunto con RWTH Aachen y Weiss Spindletechnologies. El sistema en Python admite grandes volúmenes de datos de sensores mediante un message broker, monitorea y analiza el comportamiento de la máquinas, exporta resultados en CSV y gráficos	con Pandas/Matplotlib para análisis post-test. El código fuente y demos no son públicos (propiedad de Siemens).",
+    "Este es un proyecto conjunto entre la universidad RWTH Aachen, Weiss spindletechnologies y Siemens. Yo arquitecté, desarrollé, probé y desplegué un backend de monitoreo en tiempo real y alta frecuencia, multihilo y de nivel productivo para un proyecto conjunto con RWTH Aachen y Weiss Spindletechnologies. El sistema en Python admite grandes volúmenes de datos de sensores mediante un message broker, monitorea y analiza el comportamiento de la máquinas, exporta resultados en CSV y gráficos	con Pandas/Matplotlib para análisis post-test. El código fuente y demos no son públicos (propiedad de Siemens).",
   "Langdrill (Stealth startup)":
     "Como desarrollador frontend, trabajé en una plataforma educativa mejorada con IA construida con React+TS en frontend y FastAPI en backend. Incluye acceso por roles para profesores/estudiantes, generación de ejercicios con IA (escritura, lectura, escucha con TTS y conversación con agente de voz/IA), gestión de clases, seguimiento de tareas, analíticas de estudiantes y sistema de plantillas. También estaba conectada a Supabase (PostgreSQL) para autenticación y almacenamiento de datos.",
   "Simple Chat":
@@ -422,7 +422,7 @@ const projectDescriptionsEs: Record<string, string> = {
 //-------------------------------------------------------------------------
 const projectDescriptionsFr: Record<string, string> = {
   "High-Frequency Real Time Monitoring System":
-    "En tant que développeur backend chez Siemens AG, j’ai architecturé, développé, testé et déployé un backend de surveillance a temps réel et haute fréquence, multithread et de niveau production pour un projet conjoint avec RWTH Aachen et Weiss Spindletechnologies. Le système Python ingère de grands volumes de données de capteurs via un message broker, surveille et analyse le comportement des machines, et exporte des résultats en CSV et graphiques avec Pandas/Matplotlib pour analyse post-test. Le code source et les démonstrations sont pas publics (propriété de Siemens).",
+    "Ce un projet conjoint entre RWTH Aachen université, Weiss Spindletechnologies et Siemens. J’ai architecturé, développé, testé et déployé un backend de surveillance a temps réel et haute fréquence, multithread et de niveau production. Le système Python ingère de grands volumes de données de capteurs via un message broker, surveille et analyse le comportement des machines, et exporte des résultats en CSV et graphiques avec Pandas/Matplotlib pour analyse post-test. Le code source et les démonstrations sont pas publics (propriété de Siemens).",
   "Langdrill (Stealth startup)":
     "En tant que développeur frontend, j’ai travaillé sur une plateforme éducative améliorée par IA, construite avec React+TS pour le frontend et FastAPI pour le backend. Elle inclut un accès par rôle pour enseignants/étudiants, génération d’exercices IA (écriture, lecture, écoute avec TTS et conversation avec agent IA/voix), gestion de classes, suivi des devoirs, analyses des étudiants et système de templates. Elle était également connectée à Supabase (PostgreSQL) pour l’authentification et le stockage des données.",
   "Simple Chat":
