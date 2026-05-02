@@ -23,7 +23,7 @@ export const projects_en: Project[] = [
       "Real-time",
       "Pandas",
       "NumPy",
-      "Data analysis",
+      "EDA",
       "Matplotlib",
       "SciPy",
       "Multithreading",
@@ -150,8 +150,7 @@ export const projects_en: Project[] = [
       "scikit-learn", 
       "pandas", 
       "numpy", 
-      "ML", 
-      "Data analysis",
+      "ML",
       "Classifications", 
       "Decision Tree", 
       "Logistic Regression", 
@@ -175,7 +174,7 @@ export const projects_en: Project[] = [
       "Python", 
       "TensorFlow", 
       "Deep Learning", 
-      "Data analysis",
+      "EDA",
       "CNN", 
       "DenseNet121", 
       "Transfer Learning", 
@@ -203,10 +202,10 @@ export const projects_en: Project[] = [
       "TensorFlow", 
       "Keras", 
       "scikit-learn", 
+      "EDA",
       "ML", 
       "DL", 
       "CNN", 
-      "Data analysis",
       "Audio Classifications", 
       "Audio Recognition",
       "MFCC", 
@@ -232,7 +231,7 @@ export const projects_en: Project[] = [
       "scikit-learn", 
       "pandas", 
       "numpy", 
-      "Data analysis",
+      "EDA",
       "ML", 
       "Clustering", 
       "Decision Tree", 
@@ -266,7 +265,7 @@ export const projects_en: Project[] = [
       "BESS", 
       "Energy Management", 
       "Anomaly Detection", 
-      "Data analysis",
+      "EDA",
       "Draw.io"
     ],
     classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Industrial"],
@@ -320,6 +319,28 @@ export const projects_en: Project[] = [
     ],
     classifications: ["Fullstack", "Web", "AI / Data", "Personal", "AR"],
     github: "https://github.com/Rouxxel/atryon_chrome_extension",
+  },
+  {
+    title: "Drone battery performance prediction system",
+    image: "/images/drone_battery_prfmnce/drone_battery.png",
+    description:
+      "Early-stage research project focused on predicting and optimizing drone battery performance in cold environments. The system is set to combine a hybrid physics + ML approach: telemetry data is transformed through a feature engineering pipeline (thermal, electrical and motion signals), then fed into an LSTM-based time-series model to forecast voltage sag, temperature dynamics among others. Since it is still in the EDA stage, no repository is available at the moment.",
+    tags: [
+      "Python", 
+      "TensorFlow", 
+      "scikit-learn", 
+      "EDA",
+      "ML",
+      "Performance prediction", 
+      "torch",
+      "pandas", 
+      "numpy", 
+      "matplotlib"
+    ],
+    classifications: ["AI / Data", "MLOps", "Hackathon", "Research", "Industrial", "Military"],
+    //github: "https://github.com/Rouxxel/drone_battery_performance_prediction",
+    //demo: "",
+    //live_demo:"",
   },
   {
     title: "CorpuScan",
@@ -411,6 +432,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Juego 2D estilo arcade en Unity/C# con movimiento en 8 direcciones, escalado dinámico de dificultad y sistema de buffs/debuffs. Incluye dos tipos de enemigos (asteroides, cometas), varios power-ups (escudo, aumento/reducción de velocidad), persistencia de puntuación con serialización JSON y sistema de audio integral con sprites creados desde cero.",
   "Atryon Chrome Extension":
     "Extensión de Chrome como probador virtual: permite seleccionar una prenda desde la página o mediante arrastrar y soltar, subir una selfie y generar un resultado de prueba virtual con IA. Tiene interfaz en panel lateral con content script para 'seleccionar desde la página'; backend FastAPI que ejecuta llamados API de FLUX de Black Forest Labs para composición multi-imagen (MIC), con endpoints de sondeo y descarga. Incluye endpoints extra para futuras funciones de Text-To-Image (TTI) e Image Edit With Mask (IDWM).",
+  "Drone battery performance prediction system":
+    "Proyecto de investigación en etapa temprana enfocado en predecir y optimizar el rendimiento de baterías de drones en entornos fríos. El sistema esta pensado para combinar un enfoque híbrido de física + ML: los datos de telemetría se transforman mediante un pipeline de ingeniería de características (señales térmicas, eléctricas y de movimiento) y luego se introducen en un modelo de series temporales basado en LSTM para predecir la caída de voltaje, la dinámica de la temperatura, entre otros. Dado que aún se encuentra en la etapa de EDA, no hay un repositorio disponible por el momento.",
   "CorpuScan":
     "Colaboré en un proyecto para el Big Berlin Hack: CorpuScan convierte documentos financieros densos en breves briefings ejecutivos en video. Usuarios suben un PDF, pegan una URL o una query; el pipeline multi-agente (Gemini 2.5 Pro) extrae los datos financieros clave, redacta un guion de 4 escenas, genera la narración con ElevenLabs TTS, renderiza gráficos en movimiento con la API de Hera en paralelo y ensambla todo en un MP4 reproducible con ffmpeg.",
   "Personal portfolio website":
@@ -445,6 +468,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "Jeu arcade 2D Unity/C# avec mouvement sur 8 directions, scaling dynamique de la difficulté et système de buffs/debuffs. Comprend deux types d’ennemis (astéroïdes, comètes), plusieurs power-ups (bouclier, augmentation/diminution de vitesse), persistance du score via sérialisation JSON et système audio complet avec sprites faits maison.",
   "Atryon Chrome Extension":
     "Extension Chrome de try-on virtuel : permet de sélectionner un vêtement depuis la page ou par glisser-déposer, ajouter un selfie et obtenir un résultat IA. UI en panneau latéral avec content script pour « sélectionner depuis la page » ; backend FastAPI exécutant l’API FLUX de Black Forest Labs pour composition multi-images (MIC), avec endpoints de polling et téléchargement. Endpoints supplémentaires pour futures fonctionnalités Text-To-Image (TTI) et Image Edit With Mask (IDWM).",
+  "Drone battery performance prediction system":
+    "Projet de recherche à un stade précoce axé sur la prédiction et l’optimisation des performances des batteries de drones dans des environnements froids. Le système est conçu pour combiner une approche hybride physique + ML: les données de télémétrie sont transformées via un pipeline d’ingénierie des caractéristiques (signaux thermiques, électriques et de mouvement), puis injectées dans un modèle de séries temporelles basé sur LSTM afin de prédire la chute de tension, la dynamique thermique, entre autres. Étant encore au stade de l’EDA, aucun dépôt n’est disponible pour le moment.",
   "CorpuScan":
     "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête ; un pipeline multi-agents (Gemini 2.5 Pro) extrait les données financières clés, rédige un script en 4 scènes, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera en parallèle, et assemble le tout en un MP4 lisible avec ffmpeg.",
   "Personal portfolio website":
