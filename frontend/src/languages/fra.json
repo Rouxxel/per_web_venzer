@@ -97,6 +97,41 @@
                     "prefix_txt": "Certains icônes proviennent de ",
                     "link": "https://www.flaticon.com/"
                 }
+            },
+            {
+                "icon_provider": {
+                    "name": "Becris",
+                    "prefix_txt": "Icône de Deep learning par ",
+                    "link": "https://www.flaticon.com/free-icon/deep-learning_2103832?term=deep+learning&page=1&position=6&origin=tag&related_id=2103832"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "justicon",
+                    "prefix_txt": "Icône de Thèse par ",
+                    "link": "https://www.flaticon.com/free-icon/graduation_2997279?term=thesis&page=1&position=10&origin=search&related_id=2997279"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "Unknown",
+                    "prefix_txt": "Icône de Drone par ",
+                    "link": "https://www.flaticon.com/"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "Freepik",
+                    "prefix_txt": "Icône de Machine Learning par ",
+                    "link": "https://www.flaticon.com/free-icon/machine-learning_9716586"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "AbtoCreative",
+                    "prefix_txt": "Icône de Foudre par ",
+                    "link": "https://www.flaticon.com/free-icon/lightning_8650972"
+                }
             }
         ]
     }
