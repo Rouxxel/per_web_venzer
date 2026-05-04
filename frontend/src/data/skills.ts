@@ -53,6 +53,14 @@ export const skillSections: SkillSection[] = [
     ],
   },
   {
+    section: "infrastructure",
+    skills: [
+      "Docker", 
+      "CI/CD", 
+      "Oracle/VMs"
+    ],
+  },
+  {
     section: "team",
     skills: [
       "Git / GitHub", 
@@ -63,11 +71,17 @@ export const skillSections: SkillSection[] = [
     ],
   },
   {
-    section: "infrastructure",
+    section: "providers",
     skills: [
-      "Docker", 
-      "CI/CD", 
-      "Oracle/VMs"
+      "Render", 
+      "Vercel", 
+      "Railway", 
+      "Supabase", 
+      "RunPod", 
+      "AWS", 
+      "Google Cloud",
+      "Black forest API",
+      "Lyceum"
     ],
   },
   {
@@ -83,20 +97,6 @@ export const skillSections: SkillSection[] = [
       "scikit-learn",
       "Keras",
       "TensorFlow",
-    ],
-  },
-  {
-    section: "providers",
-    skills: [
-      "Render", 
-      "Vercel", 
-      "Railway", 
-      "Supabase", 
-      "RunPod", 
-      "AWS", 
-      "Google Cloud",
-      "Black forest API",
-      "Lyceum"
     ],
   }
 ];
