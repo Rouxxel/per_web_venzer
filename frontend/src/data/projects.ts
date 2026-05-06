@@ -110,7 +110,7 @@ export const projects_en: Project[] = [
     ],
     classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Gaming"],
     github: "https://github.com/Rouxxel/rift_rewind_hckthn_frontnd",
-    demo: "https://youtu.be/2k_Bq4mH-ZM",
+    demo: "https://youtu.be/9y8Wq2M8i0E",
     live_demo: "https://rift-rewind-hckthn-frontnd.vercel.app",
   },
   {
