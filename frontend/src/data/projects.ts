@@ -138,7 +138,7 @@ export const projects_en: Project[] = [
     ],
     classifications: ["Fullstack", "Web", "Database", "AI / Data", "Hackathon"],
     github: "https://github.com/peres84/TuneTools",
-    demo: "https://vimeo.com/1143501418?fl=pl&fe=vl",
+    demo: "https://youtu.be/MqDOA6DquCQ",
   },
   {
     title: "Bachelor Thesis (Machine Learning)",
