@@ -371,7 +371,7 @@ export const projects_en: Project[] = [
     ],
     classifications: ["Fullstack", "Web", "AI / Data", "Hackathon"],
     github: "https://github.com/peres84/corpuscan",
-    demo: "https://youtu.be/U5_TvHi1b0w",
+    demo: "https://youtu.be/-YFkeoVrajU",
   },
   {
     title: "Personal portfolio website",
