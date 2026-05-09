@@ -270,7 +270,7 @@ export const projects_en: Project[] = [
     ],
     classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Industrial"],
     github: "https://github.com/Rouxxel/maxxwatt_hackathon",
-    demo: "https://www.loom.com/share/cc96c4b830e947ff919d3910525a2384?sid=8c8c50da-bc06-47db-bb79-8650f1cb143f",
+    demo: "https://www.youtube.com/watch?v=sgxkg72gOhw",
   },
   {
     title: "Nothingness 2D arcade game",
