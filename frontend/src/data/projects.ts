@@ -324,23 +324,30 @@ export const projects_en: Project[] = [
     title: "Drone battery performance prediction system",
     image: "/images/drone_battery_prfmnce/drone_battery.png",
     description:
-      "Early-stage research project focused on predicting and optimizing drone battery performance in cold environments. The system is set to combine a hybrid physics + ML approach: telemetry data is transformed through a feature engineering pipeline (thermal, electrical and motion signals), then fed into an LSTM-based time-series model to forecast voltage sag, temperature dynamics among others. Since it is still in the EDA stage, no repository is available at the moment.",
+      "Hybrid physics + ML system for predicting and optimizing drone battery performance in cold environments. A 4-layer architecture: a feature engineering pipeline extracts 22 time-series features (thermal, electrical, motion) from raw telemetry; a PyTorch LSTM network forecasts next-step voltage and battery temperature using a sliding window; an Equivalent Circuit Model + lumped thermal simulator provides a physics baseline that the ML layer corrects residually; and a rule-based controller triggers current limiting and thermodynamic preheating based on predictions. Verified with a Hypothesis property-based test suite covering physics, model states, data transforms and controller boundaries.",
     tags: [
-      "Python", 
-      "TensorFlow", 
-      "scikit-learn", 
+      "Python",
+      "PyTorch",
+      "LSTM",
+      "scikit-learn",
+      "TensorFlow",
       "EDA",
       "ML",
-      "Performance prediction", 
-      "torch",
-      "pandas", 
-      "numpy", 
-      "matplotlib"
+      "Deep Learning",
+      "Time-Series",
+      "Physics Simulation",
+      "Hybrid Model",
+      "Feature Engineering",
+      "Performance Prediction",
+      "Hypothesis",
+      "Property-Based Testing",
+      "pandas",
+      "numpy",
+      "matplotlib",
+      "SciPy",
     ],
     classifications: ["AI / Data", "MLOps", "Hackathon", "Research", "Industrial", "Military"],
     github: "https://github.com/Rouxxel/drone_battery_performance_prediction",
-    //demo: "",
-    //live_demo:"",
   },
   {
     title: "CorpuScan",
@@ -433,7 +440,7 @@ const projectDescriptionsEs: Record<string, string> = {
   "Atryon Chrome Extension":
     "Extensión de Chrome como probador virtual: permite seleccionar una prenda desde la página o mediante arrastrar y soltar, subir una selfie y generar un resultado de prueba virtual con IA. Tiene interfaz en panel lateral con content script para 'seleccionar desde la página'; backend FastAPI que ejecuta llamados API de FLUX de Black Forest Labs para composición multi-imagen (MIC), con endpoints de sondeo y descarga. Incluye endpoints extra para futuras funciones de Text-To-Image (TTI) e Image Edit With Mask (IDWM).",
   "Drone battery performance prediction system":
-    "Proyecto de investigación en etapa temprana enfocado en predecir y optimizar el rendimiento de baterías de drones en entornos fríos. El sistema esta pensado para combinar un enfoque híbrido de física + ML: los datos de telemetría se transforman mediante un pipeline de ingeniería de características (señales térmicas, eléctricas y de movimiento) y luego se introducen en un modelo de series temporales basado en LSTM para predecir la caída de voltaje, la dinámica de la temperatura, entre otros. Dado que aún se encuentra en la etapa de EDA, no hay un repositorio disponible por el momento.",
+    "Sistema híbrido de física + ML para predecir y optimizar el rendimiento de baterías de drones en entornos fríos. Arquitectura de 4 capas: un pipeline de ingeniería de características extrae 22 features de series temporales (térmicas, eléctricas, de movimiento) de la telemetría bruta; una red LSTM en PyTorch predice el voltaje y la temperatura de la batería en el siguiente paso usando una ventana deslizante; un Modelo de Circuito Equivalente + simulador térmico proporciona una línea base física que la capa ML corrige de forma residual; y un controlador basado en reglas activa la limitación de corriente y el precalentamiento termodinámico según las predicciones. Verificado con una suite de tests de propiedades con Hypothesis que cubre física, estados del modelo, transformaciones de datos y límites del controlador.",
   "CorpuScan":
     "Colaboré en un proyecto para el Big Berlin Hack: CorpuScan convierte documentos financieros densos en breves briefings ejecutivos en video. Usuarios suben un PDF, pegan una URL o una query; el pipeline multi-agente (Gemini 2.5 Pro) extrae los datos financieros clave, redacta un guion de 4 escenas, genera la narración con ElevenLabs TTS, renderiza gráficos en movimiento con la API de Hera en paralelo y ensambla todo en un MP4 reproducible con ffmpeg.",
   "Personal portfolio website":
@@ -459,7 +466,7 @@ const projectDescriptionsFr: Record<string, string> = {
   "Emotional Detection DL model":
     "Projet de deep learning pour détecter 7 émotions à partir d’images faciales en niveaux de gris, utilisant transfer learning (DenseNet121) et un CNN personnalisé, avec CLI, interface webcam pour tests en direct, dataset FER de Kaggle, et optimisation optionnelle TFLite/TensorRT/ONNX.",
   "Drone sound detection ML models":
-    "Projet ML pour détecter et classifier le profil sonore de drones, hélicoptères et sons de fond en utilisant CNN (Tiny et Robust) et ML traditionnel (Random Forest, SVM, XGBoost, Gradient Boosting) avec caractéristiques MFCC ; cas d’usage cible : intégrer le système comme accessoire sur un gilet pare-balles pour détection omnidirectionnelle de drones et alertes préventives pour les soldats sur le terrain.",
+    "Projet ML pour détecter et classifier le profil sonore de drones, hélicoptères et sons de fond en utilisant CNN (Tiny et Robust) et ML traditionnel (Random Forest, SVM, XGBoost, Gradient Boosting) avec caractéristiques MFCC; cas d’usage cible : intégrer le système comme accessoire sur un gilet pare-balles pour détection omnidirectionnelle de drones et alertes préventives pour les soldats sur le terrain.",
   "Machine Learning Models":
     "Portfolio de projets ML : classifications (Iris, cancer du sein, Titanic, diabète avec Decision Tree, Logistic Regression, KNN, Random Forest, SVM), régressions (profits d’entreprise) et clustering (segmentation clients avec K-Means et Hierarchical), utilisant des notebooks Python, scikit-learn et autres librairies associées.",
   "MaxxWatt Energy Management Platform":
@@ -467,13 +474,13 @@ const projectDescriptionsFr: Record<string, string> = {
   "Nothingness 2D arcade game":
     "Jeu arcade 2D Unity/C# avec mouvement sur 8 directions, scaling dynamique de la difficulté et système de buffs/debuffs. Comprend deux types d’ennemis (astéroïdes, comètes), plusieurs power-ups (bouclier, augmentation/diminution de vitesse), persistance du score via sérialisation JSON et système audio complet avec sprites faits maison.",
   "Atryon Chrome Extension":
-    "Extension Chrome de try-on virtuel : permet de sélectionner un vêtement depuis la page ou par glisser-déposer, ajouter un selfie et obtenir un résultat IA. UI en panneau latéral avec content script pour « sélectionner depuis la page » ; backend FastAPI exécutant l’API FLUX de Black Forest Labs pour composition multi-images (MIC), avec endpoints de polling et téléchargement. Endpoints supplémentaires pour futures fonctionnalités Text-To-Image (TTI) et Image Edit With Mask (IDWM).",
+    "Extension Chrome de try-on virtuel : permet de sélectionner un vêtement depuis la page ou par glisser-déposer, ajouter un selfie et obtenir un résultat IA. UI en panneau latéral avec content script pour « sélectionner depuis la page »; backend FastAPI exécutant l’API FLUX de Black Forest Labs pour composition multi-images (MIC), avec endpoints de polling et téléchargement. Endpoints supplémentaires pour futures fonctionnalités Text-To-Image (TTI) et Image Edit With Mask (IDWM).",
   "Drone battery performance prediction system":
-    "Projet de recherche à un stade précoce axé sur la prédiction et l’optimisation des performances des batteries de drones dans des environnements froids. Le système est conçu pour combiner une approche hybride physique + ML: les données de télémétrie sont transformées via un pipeline d’ingénierie des caractéristiques (signaux thermiques, électriques et de mouvement), puis injectées dans un modèle de séries temporelles basé sur LSTM afin de prédire la chute de tension, la dynamique thermique, entre autres. Étant encore au stade de l’EDA, aucun dépôt n’est disponible pour le moment.",
+    "Système hybride physique + ML pour prédire et optimiser les performances des batteries de drones dans des environnements froids. Architecture en 4 couches : un pipeline d’ingénierie des caractéristiques extrait 22 features de séries temporelles (thermiques, électriques, de mouvement) depuis la télémétrie brute ; un réseau LSTM PyTorch prédit la tension et la température de la batterie à l’étape suivante via une fenêtre glissante ; un Modèle de Circuit Équivalent + simulateur thermique fournit une baseline physique que la couche ML corrige de façon résiduelle ; et un contrôleur à base de règles déclenche la limitation de courant et le préchauffage thermodynamique selon les prédictions. Vérifié avec une suite de tests de propriétés Hypothesis couvrant la physique, les états du modèle, les transformations de données et les limites du contrôleur.",
   "CorpuScan":
-    "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête ; un pipeline multi-agents (Gemini 2.5 Pro) extrait les données financières clés, rédige un script en 4 scènes, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera en parallèle, et assemble le tout en un MP4 lisible avec ffmpeg.",
+    "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête; un pipeline multi-agents (Gemini 2.5 Pro) extrait les données financières clés, rédige un script en 4 scènes, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera en parallèle, et assemble le tout en un MP4 lisible avec ffmpeg.",
   "Personal portfolio website":
-    "Le site que vous consultez actuellement : portfolio responsive construit avec React + TypeScript (Vite), Tailwind CSS et shadcn/ui (Radix UI). Utilise Framer Motion, React Router, TanStack Query et formulaires avec React Hook Form + Zod ; testé avec Vitest/React Testing Library, linté avec ESLint et déployé sur Vercel avec audits de sécurité GitHub Actions. Prise en charge multilingue incluse.",
+    "Le site que vous consultez actuellement : portfolio responsive construit avec React + TypeScript (Vite), Tailwind CSS et shadcn/ui (Radix UI). Utilise Framer Motion, React Router, TanStack Query et formulaires avec React Hook Form + Zod; testé avec Vitest/React Testing Library, linté avec ESLint et déployé sur Vercel avec audits de sécurité GitHub Actions. Prise en charge multilingue incluse.",
 };
 
 //-------------------------------------------------------------------------
