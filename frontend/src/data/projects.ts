@@ -338,7 +338,7 @@ export const projects_en: Project[] = [
       "matplotlib"
     ],
     classifications: ["AI / Data", "MLOps", "Hackathon", "Research", "Industrial", "Military"],
-    //github: "https://github.com/Rouxxel/drone_battery_performance_prediction",
+    github: "https://github.com/Rouxxel/drone_battery_performance_prediction",
     //demo: "",
     //live_demo:"",
   },
