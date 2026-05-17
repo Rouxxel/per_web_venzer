@@ -14,7 +14,7 @@ export const experience_en: ExperienceEntry[] = [
     company: "Langdrill (Stealth Startup)",
     location: "Berlin, Germany",
     link: "https://www.langdrill.com/",
-    period: "06.2025 — 07.2025",
+    period: "06.2025 — 08.2025",
     description:
       "Designed low and high-fidelity wireframes on Figma and implemented them in a React + TypeScript frontend that connected to a deployed (on Render) Python-based FastAPI backend. Maintained a component based architecture and clean integration with the REST API services to support concurrent users and AI features.",
     type: "work",
