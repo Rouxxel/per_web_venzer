@@ -407,6 +407,7 @@ export const projects_en: Project[] = [
       "Interactive UI"
     ],
     classifications: ["Frontend","Personal", "Tooling","Dev Tools", "Customization"],
+    live_demo: "https://marketplace.visualstudio.com/items?itemName=Rouxxel.companion-sonion",
     github: "https://github.com/Rouxxel/companion_sonion",
   },
   {
