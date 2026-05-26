@@ -10,6 +10,7 @@ export const DOMAIN_TECH_OPTIONS = [
   "Backend",
   "Frontend",
   "Fullstack",
+  "Standalone",
   "Mobile",
   "Database",
   "Web",
@@ -23,7 +24,8 @@ export const CONTEXT_OPTIONS = [
   "Personal",
   "University",
   "Hackathon",
-  "Research",
+  "Research/Experimental",
+  "Tooling",
 ] as const;
 
 export const INDUSTRY_THEME_OPTIONS = [
@@ -32,6 +34,8 @@ export const INDUSTRY_THEME_OPTIONS = [
   "Industrial",
   "AR",
   "Military",
+  "Dev Tools",
+  "Customization",
 ] as const;
 
 /** Runtime UI metadata for filter controls (default English). */
@@ -72,7 +76,8 @@ export const CONTEXT_OPTIONS_ES = [
   "Personal",
   "Universidad",
   "Hackatón",
-  "Investigación",
+  "Investigación/Experimental",
+  "Herramientas",
 ] as const;
 
 /** Spanish display labels mapped by index to canonical INDUSTRY_THEME_OPTIONS values. */
@@ -82,6 +87,8 @@ export const INDUSTRY_THEME_OPTIONS_ES = [
   "Industrial",
   "RA",
   "Militar",
+  "Herramientas de desarrollo",
+  "Customización",
 ] as const;
 
 //-------------------------------------------------------------------------
@@ -114,7 +121,8 @@ export const CONTEXT_OPTIONS_FR = [
   "Personelle",
   "Université",
   "Hackathon",
-  "Recherche",
+  "Recherche/Expérimental",
+  "Outils",
 ] as const;
 
 /** French display labels mapped by index to canonical INDUSTRY_THEME_OPTIONS values. */
@@ -124,6 +132,8 @@ export const INDUSTRY_THEME_OPTIONS_FR = [
   "Industrielle",
   "RA",
   "Militaire",
+  "Dev outils",
+  "Customisation",
 ] as const;
 
 //-------------------------------------------------------------------------

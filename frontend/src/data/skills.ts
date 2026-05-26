@@ -26,7 +26,9 @@ export const skillSections: SkillSection[] = [
       "Tailwind CSS", 
       "Flutter", 
       "Unity", 
-      "FastAPI"
+      "FastAPI",
+      "Flask",
+      ".NET"
     ],
   },
   {

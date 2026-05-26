@@ -162,7 +162,7 @@ export const projects_en: Project[] = [
       "seaborn", 
       "Data science"
     ],
-    classifications: ["AI / Data", "MLOps", "University", "Research"],
+    classifications: ["AI / Data", "Research/Experimental", "MLOps", "University"],
     github: "https://github.com/Rouxxel/thesis-bachelor",
   },
   {
@@ -189,7 +189,7 @@ export const projects_en: Project[] = [
       "Docker", 
       "pytest"
     ],
-    classifications: ["AI / Data", "MLOps", "University", "Research"],
+    classifications: ["AI / Data", "Research/Experimental", "MLOps", "University"],
     github: "https://github.com/Rouxxel/Emotion_detection_DL_model_from_images",
   },
   {
@@ -218,7 +218,7 @@ export const projects_en: Project[] = [
       "numpy", 
       "matplotlib"
     ],
-    classifications: ["AI / Data", "MLOps", "Hackathon", "Military", "Research"],
+    classifications: ["AI / Data", "MLOps", "Hackathon", "Military", "Research/Experimental"],
     github: "https://github.com/Rouxxel/drone_sound_profile_detection",
   },
   {
@@ -245,7 +245,7 @@ export const projects_en: Project[] = [
       "matplotlib", 
       "seaborn"
     ],
-    classifications: ["AI / Data", "MLOps", "University", "Research"],
+    classifications: ["AI / Data", "MLOps", "University", "Research/Experimental"],
     github: "https://github.com/Rouxxel/ai_general",
   },
   {
@@ -346,7 +346,7 @@ export const projects_en: Project[] = [
       "matplotlib",
       "SciPy",
     ],
-    classifications: ["AI / Data", "MLOps", "Hackathon", "Research", "Industrial", "Military"],
+    classifications: ["AI / Data", "MLOps", "Hackathon", "Research/Experimental", "Industrial", "Military"],
     github: "https://github.com/Rouxxel/drone_battery_performance_prediction",
   },
   {
