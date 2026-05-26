@@ -384,7 +384,7 @@ export const projects_en: Project[] = [
     title: "Companion Sonion - VSCode extension",
     image: "/images/companion_sonion/logo_companion.png",
     description:
-      "Simple VSCode extension to adds animated 'companion' entities into a panel. Users can spawn multiple GIF/PNG/WebM companions, drag and resize them freely and customize the one they want to render. It supports persistent state across sessions and profile saving/loading. I just wanted to have fun",
+      "Simple VSCode extension to adds animated 'companion' entities into a panel. Users can spawn multiple GIF/PNG/WebM companions, drag and resize them freely and customize the one they want to render. It supports persistent state across sessions and profile saving/loading. I just wanted to have fun, might add more things",
     tags: [
       "TypeScript",
       "VS Code Extension",
