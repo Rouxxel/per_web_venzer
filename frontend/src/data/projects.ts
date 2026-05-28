@@ -13,7 +13,7 @@ export interface Project {
 
 export const projects_en: Project[] = [
   {
-    title: "High-Frequency Real Time Monitoring System",
+    title: "Siemens - High-Frequency Real Time Monitoring System",
     image: "/images/siemens/siemens_logo.png",
     description:
       "This is a joint project between RWTH Aachen university, Weiss spindletechnologies and Siemens; I architected, developed, tested and deployed a production-grade, multi-threaded real-time high-frequency monitoring backend system. The Python-based system ingests high-volume sensor data via a message broker (MQTT), monitors and analyzes machine runtime behavior and exports CSV outputs and Pandas/Matplotlib visualizations for further analysis. Source code and demos are not public (Siemens proprietary).",
@@ -67,7 +67,7 @@ export const projects_en: Project[] = [
     live_demo: "https://langdrill.vercel.app",
   },
   {
-    title: "Simple Chat",
+    title: "Simple Chat - AI-powered chatbot app",
     image: "/images/simple_chat/ic_launcher.png",
     description:
       "AI-powered chatbot app built with a Flutter mobile client and Python-based FastAPI backend deployed on Render, using Gemini 2.5 Flash API and Supabase for user authentication, persistent chat history and user preferences and log in. The app is designed to be a way for users to converse with an AI chatbot with a personality of their choosing and maintain somewhat lasting conversation with it, although context and longterm memory remains a problem.",
@@ -90,7 +90,7 @@ export const projects_en: Project[] = [
     github: "https://github.com/Rouxxel/simple-chat",
   },
   {
-    title: "Rift Rewind",
+    title: "Rift Rewind - LOL coaching platform",
     image: "/images/rift_rewind/logo_helmet.png",
     description:
       "League of Legends coaching dashboard with a React+TS frontend and FastAPI backend that interfaces with the Riot Games API for match history, champion data and performance analytics. The webapp features a selection of pages for the user to go into detail about their match history, heroes sinergy, predictions among other things, always with a floating bubble to open a chatbot assistant that contains the context of the current page they are so they can obtain more precise insights.",
@@ -350,7 +350,7 @@ export const projects_en: Project[] = [
     github: "https://github.com/Rouxxel/drone_battery_performance_prediction",
   },
   {
-    title: "CorpuScan",
+    title: "CorpuScan - Financial document summarization",
     image: "/images/corpus_scan/logo.png",
     description:
       "Collaborated on a Big Berlin Hack project: CorpuScan turns dense financial documents into short executive video briefings. Users upload a PDF, paste a URL, or type a query; a multi-agent pipeline (Gemini 2.5 Pro) extracts key financials, writes a 4-scene script, generates voiceover via ElevenLabs TTS, renders motion graphics with the Hera API in parallel, and stitches everything into a playable MP4 with ffmpeg.",
@@ -374,6 +374,8 @@ export const projects_en: Project[] = [
       "REST API",
       "Docker",
       "Vercel",
+      "Business",
+      "Finance",
       "Railway",
     ],
     classifications: ["Fullstack", "Web", "AI / Data", "Hackathon"],
@@ -445,13 +447,13 @@ export const projects_en: Project[] = [
 //------------------------SPANISH DESCRIPTIONS-----------------------------
 //-------------------------------------------------------------------------
 const projectDescriptionsEs: Record<string, string> = {
-  "High-Frequency Real Time Monitoring System":
+  "Siemens - High-Frequency Real Time Monitoring System":
     "Este es un proyecto conjunto entre la universidad RWTH Aachen, Weiss spindletechnologies y Siemens. Yo arquitecté, desarrollé, probé y desplegué un backend de monitoreo en tiempo real y alta frecuencia, multihilo y de nivel productivo para un proyecto conjunto con RWTH Aachen y Weiss Spindletechnologies. El sistema en Python admite grandes volúmenes de datos de sensores mediante un message broker, monitorea y analiza el comportamiento de la máquinas, exporta resultados en CSV y gráficos	con Pandas/Matplotlib para análisis post-test. El código fuente y demos no son públicos (propiedad de Siemens).",
   "Langdrill (Stealth startup)":
     "Como desarrollador frontend, trabajé en una plataforma educativa mejorada con IA construida con React+TS en frontend y FastAPI en backend. Incluye acceso por roles para profesores/estudiantes, generación de ejercicios con IA (escritura, lectura, escucha con TTS y conversación con agente de voz/IA), gestión de clases, seguimiento de tareas, analíticas de estudiantes y sistema de plantillas. También estaba conectada a Supabase (PostgreSQL) para autenticación y almacenamiento de datos.",
-  "Simple Chat":
+  "Simple Chat - AI-powered chatbot app":
     "Aplicación de chatbot que implementa una API de IA y fue construida con cliente móvil Flutter y backend FastAPI en Python desplegado en Render, usando la API Gemini 2.5 Flash y Supabase para autenticación, historial persistente y preferencias de usuario. La app está diseñada para conversar con un chatbot con personalidad configurable y mantener conversaciones más duraderas, aunque el contexto y la memoria a largo plazo siguen siendo un reto.",
-  "Rift Rewind":
+  "Rift Rewind - LOL coaching platform":
     "Dashboard de coaching para League of Legends con frontend en React+TS y backend en FastAPI que se integra con la API de Riot Games para historial de partidas, datos de campeones y analíticas de rendimiento. La web ofrece varias páginas para profundizar en historial, sinergias y predicciones, además de una burbuja flotante para abrir un asistente conversacional con contexto de la página actual y obtener insights más precisos.",
   "TuneTools":
     "Pipeline que convierte contexto diario (noticias, clima, calendario) en canciones personalizadas: un LLM genera especificaciones y letras, el modelo YuE sintetiza audio en RunPod y la API de Gemini crea el arte del álbum para entregar una canción al usuario. El frontend está desplegado en Vercel, el backend en Railway, conectado a Supabase para autenticación y almacenamiento de audios/arte generados.",
@@ -471,7 +473,7 @@ const projectDescriptionsEs: Record<string, string> = {
     "Extensión de Chrome como probador virtual: permite seleccionar una prenda desde la página o mediante arrastrar y soltar, subir una selfie y generar un resultado de prueba virtual con IA. Tiene interfaz en panel lateral con content script para 'seleccionar desde la página'; backend FastAPI que ejecuta llamados API de FLUX de Black Forest Labs para composición multi-imagen (MIC), con endpoints de sondeo y descarga. Incluye endpoints extra para futuras funciones de Text-To-Image (TTI) e Image Edit With Mask (IDWM).",
   "Drone battery performance prediction system":
     "Sistema híbrido de física + ML para predecir y optimizar el rendimiento de baterías de drones en entornos fríos. Arquitectura de 4 capas: un pipeline de ingeniería de características extrae 22 features de series temporales (térmicas, eléctricas, de movimiento) de la telemetría bruta; una red LSTM en PyTorch predice el voltaje y la temperatura de la batería en el siguiente paso usando una ventana deslizante; un Modelo de Circuito Equivalente + simulador térmico proporciona una línea base física que la capa ML corrige de forma residual; y un controlador basado en reglas activa la limitación de corriente y el precalentamiento termodinámico según las predicciones. Verificado con una suite de tests de propiedades con Hypothesis que cubre física, estados del modelo, transformaciones de datos y límites del controlador.",
-  "CorpuScan":
+  "CorpuScan - Financial document summarization":
     "Colaboré en un proyecto para el Big Berlin Hack: CorpuScan convierte documentos financieros densos en breves briefings ejecutivos en video. Usuarios suben un PDF, pegan una URL o una query; el pipeline multi-agente (Gemini 2.5 Pro) extrae los datos financieros clave, redacta un guion de 4 escenas, genera la narración con ElevenLabs TTS, renderiza gráficos en movimiento con la API de Hera en paralelo y ensambla todo en un MP4 reproducible con ffmpeg.",
   "Companion Sonion VSCode extension":
     "Extensión simple de VSCode que agrega entidades 'companion' animadas en un panel. Usuarios pueden generar múltiples compañeros en formato GIF/PNG/WebM, arrastrarlos y redimensionarlos, también personalizar el que quieran renderizar. Posee estado persistente entre sesiones y guardado/carga de perfiles. Solo quería divertirme",
@@ -483,13 +485,13 @@ const projectDescriptionsEs: Record<string, string> = {
 //------------------------FRENCH DESCRIPTIONS------------------------------
 //-------------------------------------------------------------------------
 const projectDescriptionsFr: Record<string, string> = {
-  "High-Frequency Real Time Monitoring System":
+  "Siemens - High-Frequency Real Time Monitoring System":
     "Ce un projet conjoint entre RWTH Aachen université, Weiss Spindletechnologies et Siemens. J’ai architecturé, développé, testé et déployé un backend de surveillance a temps réel et haute fréquence, multithread et de niveau production. Le système Python ingère de grands volumes de données de capteurs via un message broker, surveille et analyse le comportement des machines, et exporte des résultats en CSV et graphiques avec Pandas/Matplotlib pour analyse post-test. Le code source et les démonstrations sont pas publics (propriété de Siemens).",
   "Langdrill (Stealth startup)":
     "En tant que développeur frontend, j’ai travaillé sur une plateforme éducative améliorée par IA, construite avec React+TS pour le frontend et FastAPI pour le backend. Elle inclut un accès par rôle pour enseignants/étudiants, génération d’exercices IA (écriture, lecture, écoute avec TTS et conversation avec agent IA/voix), gestion de classes, suivi des devoirs, analyses des étudiants et système de templates. Elle était également connectée à Supabase (PostgreSQL) pour l’authentification et le stockage des données.",
-  "Simple Chat":
+  "Simple Chat - AI-powered chatbot app":
     "Application de chatbot alimentée par une API IA, construite avec un client mobile Flutter et un backend FastAPI en Python déployé sur Render, utilisant l’API Gemini 2.5 Flash et Supabase pour l’authentification, l’historique persistant et les préférences utilisateur. L’application permet de converser avec un chatbot à personnalité configurable et de maintenir des conversations relativement longues, bien que le contexte et la mémoire à long terme restent un défi.",
-  "Rift Rewind":
+  "Rift Rewind - LOL coaching platform":
     "Tableau de bord de coaching pour League of Legends avec frontend en React+TS et backend FastAPI intégré à l’API Riot Games pour l’historique des matchs, les données des champions et les analyses de performance. Le site propose plusieurs pages pour explorer l’historique, les synergies et les prédictions, avec une bulle flottante ouvrant un assistant conversationnel contextualisé pour obtenir des insights précis.",
   "TuneTools":
     "Pipeline transformant le contexte quotidien (actualités, météo, calendrier) en chansons personnalisées : un LLM génère les spécifications et les paroles, le modèle YuE synthétise l’audio sur RunPod, et l’API Gemini crée la pochette de l’album pour livrer la chanson à l’utilisateur. Le frontend est déployé sur Vercel, le backend sur Railway, connecté à Supabase pour l’authentification et le stockage des fichiers audio et images générés.",
@@ -509,7 +511,7 @@ const projectDescriptionsFr: Record<string, string> = {
     "Extension Chrome de try-on virtuel : permet de sélectionner un vêtement depuis la page ou par glisser-déposer, ajouter un selfie et obtenir un résultat IA. UI en panneau latéral avec content script pour « sélectionner depuis la page »; backend FastAPI exécutant l’API FLUX de Black Forest Labs pour composition multi-images (MIC), avec endpoints de polling et téléchargement. Endpoints supplémentaires pour futures fonctionnalités Text-To-Image (TTI) et Image Edit With Mask (IDWM).",
   "Drone battery performance prediction system":
     "Système hybride physique + ML pour prédire et optimiser les performances des batteries de drones dans des environnements froids. Architecture en 4 couches : un pipeline d’ingénierie des caractéristiques extrait 22 features de séries temporelles (thermiques, électriques, de mouvement) depuis la télémétrie brute ; un réseau LSTM PyTorch prédit la tension et la température de la batterie à l’étape suivante via une fenêtre glissante ; un Modèle de Circuit Équivalent + simulateur thermique fournit une baseline physique que la couche ML corrige de façon résiduelle ; et un contrôleur à base de règles déclenche la limitation de courant et le préchauffage thermodynamique selon les prédictions. Vérifié avec une suite de tests de propriétés Hypothesis couvrant la physique, les états du modèle, les transformations de données et les limites du contrôleur.",
-  "CorpuScan":
+  "CorpuScan - Financial document summarization":
     "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête; un pipeline multi-agents (Gemini 2.5 Pro) extrait les données financières clés, rédige un script en 4 scènes, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera en parallèle, et assemble le tout en un MP4 lisible avec ffmpeg.",
   "Companion Sonion VSCode extension":
     "Extension VSCode simple qui ajoute des entités 'companion' animées dans un panneau. Users peuvent générer plusieurs compagnons au format GIF/PNG/WebM, les faire glisser et les redimensionner, ainsi que personnaliser celui qu'ils souhaitent rendre. Il dispose d'un état persistant entre les sessions et de la sauvegarde/chargement de profils. Je voulais juste m'amuser",
