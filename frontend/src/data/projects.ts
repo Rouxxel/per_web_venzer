@@ -33,7 +33,7 @@ export const projects_en: Project[] = [
       "CI/CD",
       "Industrial",
     ],
-    classifications: ["Backend", "Professional", "Industrial"],
+    classifications: ["Backend", "Professional", "Industrial", "Standalone", "Research/Experimental"],
   },
   {
     title: "Langdrill (Stealth startup)",
@@ -162,7 +162,7 @@ export const projects_en: Project[] = [
       "seaborn", 
       "Data science"
     ],
-    classifications: ["AI / Data", "Research/Experimental", "MLOps", "University"],
+    classifications: ["AI / Data", "Research/Experimental", "MLOps", "University", "Personal"],
     github: "https://github.com/Rouxxel/thesis-bachelor",
   },
   {
@@ -378,7 +378,7 @@ export const projects_en: Project[] = [
       "Finance",
       "Railway",
     ],
-    classifications: ["Fullstack", "Web", "AI / Data", "Hackathon"],
+    classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Finance"],
     github: "https://github.com/peres84/corpuscan",
     demo: "https://youtu.be/-YFkeoVrajU",
   },
