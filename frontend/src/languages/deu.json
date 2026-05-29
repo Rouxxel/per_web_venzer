@@ -17,18 +17,18 @@
         "about_section": {
             "section_title": "Über mich",
             "bio_intro_txts": [
-                "Software engineer based in Germany with a strong academic foundation and hands-on industry experience building backend, frontend and fullstack systems connected to databases and AI implementation/integration.",
+                "Software Entwickler based in Germany with a strong academic foundation and hands-on industry experience building backend, frontend and fullstack systems connected to databases and AI implementation/integration.",
                 "Completed a Software Engineering B.Sc. degree at the University of Europe for Applied Sciences (Potsdam Campus), where I learned extensively about languages like Python, Java, C/C++, JavaScript and SQL across AI (ML and DL), web, mobile, backend and frontend projects, applying OOP design, parallel programming and Agile development practices like Scrum and SQA. My final thesis was focused on a comparative study between 4 Machine learning models to determine which of them is the best suited for predicting Diabetes on patients before obvious symptoms arise and for easy integration."
             ],
-            "tech_stack_title": "Technologies I Worked With",
+            "tech_stack_title": "Ich habe mit diese techonologies gearbeitet:",
             "tech_subsections": {
                 "program_langs": {
                     "section":"languages",
-                    "title":"Programming languages"
+                    "title":"Programierensprachen"
                 },
                 "frameworks_libs": {
                     "section":"frameworks",
-                    "title":"Frameworks & libraries"
+                    "title":"Frameworks & Bibliotheken"
                 },
                 "proto_design": {
                     "section":"prototyping",
@@ -36,7 +36,7 @@
                 },
                 "dbs": {
                     "section":"database",
-                    "title":"Databases"
+                    "title":"Datenbanken"
                 },
                 "apis_integr": {
                     "section":"integration",
@@ -44,11 +44,11 @@
                 },
                 "team_dev_pract": {
                     "section":"team",
-                    "title":"Team & development practices"
+                    "title":"Team & Entwicklungspraktiken"
                 },
                 "devops_infrastr": {
                     "section":"infrastructure",
-                    "title":"DevOps & infrastructure"
+                    "title":"DevOps & infrastruktur"
                 },
                 "ai_data": {
                     "section":"ai",
@@ -56,12 +56,12 @@
                 },
                 "service_prov": {
                     "section":"providers",
-                    "title":"Service providers"
+                    "title":"Dienstleister"
                 }
             }
         },
         "projects_section": {
-            "section_title": "Projects",
+            "section_title": "Projekte",
             "filters":{
                 "filter_explanation_txt": "Showing projects that match ALL selected filters (or all projects when every dropdown is None).",
                 "clear_filters_btn": "Clear filters",
@@ -89,13 +89,48 @@
         }
     },
     "footer": {
-        "copyright_txt": "© 2026 Sebastian Russo. All rights reserved.",
+        "copyright_txt": "© 2026 Sebastian Russo. Alles Rechte vorbehalten.",
         "mentions": [
             {
                 "icon_provider": {
                     "name": "Flaticon",
-                    "prefix_txt": "Some icons by ",
+                    "prefix_txt": "Jede ikone wurde von ",
                     "link": "https://www.flaticon.com/"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "Becris",
+                    "prefix_txt": "Deep learning wurde von ",
+                    "link": "https://www.flaticon.com/free-icon/deep-learning_2103832?term=deep+learning&page=1&position=6&origin=tag&related_id=2103832"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "justicon",
+                    "prefix_txt": "Thesis wurde von ",
+                    "link": "https://www.flaticon.com/free-icon/graduation_2997279?term=thesis&page=1&position=10&origin=search&related_id=2997279"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "Unknown",
+                    "prefix_txt": "Drone wurde von ",
+                    "link": "https://www.flaticon.com/"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "Freepik",
+                    "prefix_txt": "Machine Learning wurde von ",
+                    "link": "https://www.flaticon.com/free-icon/machine-learning_9716586"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "AbtoCreative",
+                    "prefix_txt": "Lightning wurde von ",
+                    "link": "https://www.flaticon.com/free-icon/lightning_8650972"
                 }
             }
         ]
