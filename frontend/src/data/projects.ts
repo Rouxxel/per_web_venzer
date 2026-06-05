@@ -413,6 +413,35 @@ export const projects_en: Project[] = [
     github: "https://github.com/Rouxxel/companion_sonion",
   },
   {
+    title: "Ranting Chant - Housing middleman platform",
+    image: "/images/ranting_chant/frut_logo.png",
+    description:
+      "Full-stack property ops platform with a Frutiger Aero design. Tenants report housing and maintenance issues through natural-language chat with optional voice input; Google Gemini classifies requests by type, urgency, sentiment and escalation. Managers and owners use role-based dashboards to filter, approve and resolve requests, coordinate vendors and trigger email/SMS notifications via Resend and Twilio; possesses ElevenLabs and Gradium powering transcription and text-to-speech.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "TanStack Router",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Radix UI",
+      "Python",
+      "FastAPI",
+      "Gemini API",
+      "Generative AI",
+      "ElevenLabs",
+      "Twilio",
+      "REST API",
+      "PostgreSQL",
+      "MCP",
+      "Docker",
+      "Render",
+      "Property Management",
+    ],
+    classifications: ["Fullstack", "Web", "Database", "Hackathon", "AI / Data"],
+    github: "https://github.com/Rouxxel/ranting_chant",
+  },
+  {
     title: "Personal portfolio website",
     image: "/images/logo.png",
     description:
@@ -436,7 +465,8 @@ export const projects_en: Project[] = [
       "Vercel", 
       "Responsive Design", 
       "UX/UI Design", 
-      "HTML5"],
+      "HTML5"
+    ],
     classifications: ["Frontend", "Web", "Personal"],
     live_demo: "https://per-web-venzer.vercel.app",
     github: "https://github.com/Rouxxel/per_web_venzer",
@@ -477,6 +507,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Colaboré en un proyecto para el Big Berlin Hack: CorpuScan convierte documentos financieros densos en breves briefings ejecutivos en video. Usuarios suben un PDF, pegan una URL o una query; el pipeline multi-agente (Gemini 2.5 Pro) extrae los datos financieros clave, redacta un guion de 4 escenas, genera la narración con ElevenLabs TTS, renderiza gráficos en movimiento con la API de Hera en paralelo y ensambla todo en un MP4 reproducible con ffmpeg.",
   "Companion Sonion VSCode extension":
     "Extensión simple de VSCode que agrega entidades 'companion' animadas en un panel. Usuarios pueden generar múltiples compañeros en formato GIF/PNG/WebM, arrastrarlos y redimensionarlos, también personalizar el que quieran renderizar. Posee estado persistente entre sesiones y guardado/carga de perfiles. Solo quería divertirme",
+  "Ranting Chant - Housing middleman platform":
+    "Plataforma full-stack de operaciones inmobiliarias con diseño Frutiger Aero. Los inquilinos reportan incidencias de vivienda y mantenimiento mediante chat en lenguaje natural con entrada de voz opcional; Google Gemini clasifica solicitudes por tipo, urgencia, sentimiento y escalamiento. Gerentes y propietarios usan dashboards por rol para filtrar, aprobar y resolver solicitudes, coordinar proveedores y enviar notificaciones por email/SMS con Resend y Twilio; posee transcripción y text-to-speech de ElevenLabs y Gradium.",
   "Personal portfolio website":
     "El sitio web en el que estás ahora: portafolio responsivo construido con React + TypeScript (Vite), Tailwind CSS y shadcn/ui (Radix UI). Usa animaciones con Framer Motion, React Router, TanStack Query y formularios con React Hook Form + Zod; probado con Vitest/React Testing Library, linting con ESLint y desplegado en Vercel con auditorías de seguridad en GitHub Actions. Tiene soporte para varios lenguajes",
 };
@@ -515,6 +547,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête; un pipeline multi-agents (Gemini 2.5 Pro) extrait les données financières clés, rédige un script en 4 scènes, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera en parallèle, et assemble le tout en un MP4 lisible avec ffmpeg.",
   "Companion Sonion VSCode extension":
     "Extension VSCode simple qui ajoute des entités 'companion' animées dans un panneau. Users peuvent générer plusieurs compagnons au format GIF/PNG/WebM, les faire glisser et les redimensionner, ainsi que personnaliser celui qu'ils souhaitent rendre. Il dispose d'un état persistant entre les sessions et de la sauvegarde/chargement de profils. Je voulais juste m'amuser",
+  "Ranting Chant - Housing middleman platform":
+    "Plateforme full-stack d'opérations immobilières avec un design Frutiger Aero. Les locataires signalent des problèmes de logement et de maintenance via un chat en langage naturel avec saisie vocale optionnelle ; Google Gemini classe les demandes par type, urgence, sentiment et escalade. Gestionnaires et propriétaires utilisent des tableaux de bord par rôle pour filtrer, approuver et résoudre les demandes, coordonner les prestataires et déclencher des notifications email/SMS via Resend et Twilio, avec transcription et synthèse vocale ElevenLabs et Gradium.",
   "Personal portfolio website":
     "Le site que vous consultez actuellement : portfolio responsive construit avec React + TypeScript (Vite), Tailwind CSS et shadcn/ui (Radix UI). Utilise Framer Motion, React Router, TanStack Query et formulaires avec React Hook Form + Zod; testé avec Vitest/React Testing Library, linté avec ESLint et déployé sur Vercel avec audits de sécurité GitHub Actions. Prise en charge multilingue incluse.",
 };
