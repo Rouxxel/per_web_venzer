@@ -68,7 +68,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "Simple Chat - AI-powered chatbot app",
-    image: "/images/simple_chat/ic_launcher.png",
+    image: "/images/simple_chat/ic_launcher.jpeg",
     description:
       "AI-powered chatbot app built with a Flutter mobile client and Python-based FastAPI backend deployed on Render, using Gemini 2.5 Flash API and Supabase for user authentication, persistent chat history and user preferences and log in. The app is designed to be a way for users to converse with an AI chatbot with a personality of their choosing and maintain somewhat lasting conversation with it, although context and longterm memory remains a problem.",
     tags: [
@@ -91,7 +91,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "Rift Rewind - LOL coaching platform",
-    image: "/images/rift_rewind/logo_helmet.png",
+    image: "/images/rift_rewind/logo_helmet.jpeg",
     description:
       "League of Legends coaching dashboard with a React+TS frontend and FastAPI backend that interfaces with the Riot Games API for match history, champion data and performance analytics. The webapp features a selection of pages for the user to go into detail about their match history, heroes sinergy, predictions among other things, always with a floating bubble to open a chatbot assistant that contains the context of the current page they are so they can obtain more precise insights.",
     tags: [
@@ -115,7 +115,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "TuneTools",
-    image: "/images/tune_tools/logo-disk.png",
+    image: "/images/tune_tools/logo-disk.jpeg",
     description:
       "Pipeline that turns daily context (news, weather, calendar) into personalized songs: an LLM generates music specs and lyrics, the YuE model synthesizes audio on RunPod and Gemini API creates album artwork to end up with a song for the user. Frontend is deployed on Vercel, Backed on Railway and it is connected to a Supabase database for user authentication, data collection and output (audio and artwork) preservation.",
     tags: [
@@ -274,7 +274,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "Nothingness 2D arcade game",
-    image: "/images/nothingness/deepspace.png",
+    image: "/images/nothingness/deepspace.jpeg",
     description:
       "Unity/C# 2D space shooter with 8-directional movement, dynamic difficulty scaling and a buff/debuff system. Features two enemy types (asteroids, comet), several power-ups (shield, speed boost/reduction), persistent high score tracking with JSON serialization, and comprehensive audio system with custom sprites made from scratch.",
     tags: [
@@ -297,7 +297,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "Atryon Chrome Extension",
-    image: "/images/atryon_extension/logo.png",
+    image: "/images/atryon_extension/logo.jpeg",
     description:
       "Chrome extension for virtual try-on: pick a garment from the page or by drag-and-drop, add your photo and get an AI-generated try-on result. Side panel UI with content script for \"select from page\"; FastAPI backend that performs calls to the Black Forest Labs API for their FLUX model for multi-image composition (MIC), with polling and download endpoints. Extra endpoints for future projects feat Text-To-Image (TTI) and Image Edit With Mask (IDWM) generation.",
     tags: [
@@ -351,7 +351,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "CorpuScan - Financial document summarization",
-    image: "/images/corpus_scan/logo.png",
+    image: "/images/corpus_scan/logo.jpeg",
     description:
       "Collaborated on a Big Berlin Hack project: CorpuScan turns dense financial documents into short executive video briefings. Users upload a PDF, paste a URL, or type a query; a multi-agent pipeline (Gemini 2.5 Pro) extracts key financials, writes a 4-scene script, generates voiceover via ElevenLabs TTS, renders motion graphics with the Hera API in parallel, and stitches everything into a playable MP4 with ffmpeg.",
     tags: [
@@ -414,7 +414,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "Ranting Chant - Housing middleman platform",
-    image: "/images/ranting_chant/frut_logo.png",
+    image: "/images/ranting_chant/frut_logo.jpeg",
     description:
       "Full-stack property ops platform with a Frutiger Aero design. Tenants report housing and maintenance issues through natural-language chat with optional voice input; Google Gemini classifies requests by type, urgency, sentiment and escalation. Managers and owners use role-based dashboards to filter, approve and resolve requests, coordinate vendors and trigger email/SMS notifications via Resend and Twilio; possesses ElevenLabs and Gradium powering transcription and text-to-speech.",
     tags: [
@@ -443,7 +443,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "Personal portfolio website",
-    image: "/images/logo.png",
+    image: "/images/logo.jpeg",
     description:
       "The website you are currently on: a responsive portfolio built with React + TypeScript (Vite), Tailwind CSS, and shadcn/ui (Radix UI). Uses Framer Motion animations, React Router, TanStack Query, and forms with React Hook Form + Zod; tested with Vitest/React Testing Library, linted with ESLint, and deployed on Vercel with GitHub Actions security auditing. Supports multiple languages.",
     tags: [
