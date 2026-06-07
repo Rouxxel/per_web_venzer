@@ -12,7 +12,7 @@ import TypewriterText, { CHAR_DELAY } from "@/components/TypewriterText";
 // To add more: just append entries to this array, e.g.:
 // { src: "/images/portray_2.png", alt: "photo name" }
 const PORTRAIT_IMAGES = [
-  { src: "/images/portray_alt.png", alt: "Sebastian Russo" },
+  { src: "/images/myself/portray_alt.jpeg", alt: "Sebastian Russo" },
 ];
 
 //Conctact values
