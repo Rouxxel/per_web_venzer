@@ -66,7 +66,7 @@ const Navbar = () => {
           onClick={() => handleClick("#hero")}
           className="flex items-center gap-2 text-xl font-bold font-heading tracking-tight text-foreground hover:text-primary transition-colors min-w-0"
         >
-          <img src="/images/logo.png" alt="" className="h-8 w-8 rounded-full object-cover" />
+          <img src="/images/tab_logo.jpeg" alt="" className="h-8 w-8 rounded-full object-cover" />
           <span className="truncate hidden [@media(min-width:354px)]:inline">{language.logo_text}</span>
         </button>
 
