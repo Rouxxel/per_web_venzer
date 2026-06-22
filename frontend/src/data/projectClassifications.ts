@@ -15,6 +15,7 @@ export const DOMAIN_TECH_OPTIONS = [
   "Database",
   "Web",
   "MLOps",
+  "MCP",
   "AI / Data",
   "AR",
 ] as const;
@@ -171,14 +172,14 @@ export const NONE_FILTER_VALUE = "__none__" as const;
 
 /** Returns localized filter labels/options while preserving canonical classification values. */
 export const getProjectFilterLocalization = (languageCode: string) => {
-    //if (languageCode === "languagecodehere") {
-    //  return {
-    //    labels: PROJECT_FILTER_LABELS_language,
-    //    domainOptions: DOMAIN_TECH_OPTIONS_language,
-    //    contextOptions: CONTEXT_OPTIONS_language,
-    //    industryOptions: INDUSTRY_THEME_OPTIONS_language,
-    //  } as const;
-    //}
+  //if (languageCode === "languagecodehere") {
+  //  return {
+  //    labels: PROJECT_FILTER_LABELS_language,
+  //    domainOptions: DOMAIN_TECH_OPTIONS_language,
+  //    contextOptions: CONTEXT_OPTIONS_language,
+  //    industryOptions: INDUSTRY_THEME_OPTIONS_language,
+  //  } as const;
+  //}
   if (languageCode === "fr") {
     return {
       labels: PROJECT_FILTER_LABELS_FR,
