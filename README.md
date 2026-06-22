@@ -1,12 +1,11 @@
 # Personal Portfolio Website
 
 A modern, responsive portfolio website showcasing my software engineering projects, professional experience, and technical skills. Built with React, TypeScript, and Tailwind CSS, featuring smooth animations and a clean, professional design.
-
-🌐 **Live Demo**: [View Portfolio](...)
+ **Live Demo**: [View Portfolio](...)
 
 ---
 
-## ✨ Features
+## Features
 
 - **Responsive Design**: Fully responsive layout optimized for desktop, tablet, and mobile devices
 - **Modern UI/UX**: Clean, professional interface with smooth animations using Framer Motion
@@ -18,7 +17,7 @@ A modern, responsive portfolio website showcasing my software engineering projec
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Framework**: React 18 with TypeScript
@@ -38,7 +37,7 @@ A modern, responsive portfolio website showcasing my software engineering projec
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 per_web_venzer/
@@ -85,7 +84,7 @@ per_web_venzer/
 
 ---
 
-## 🎯 Featured Projects
+## Featured Projects
 
 ### AI & Machine Learning
 - **Langdrill**: AI-enhanced educational platform with React TypeScript frontend and Python FastAPI backend
@@ -104,7 +103,7 @@ per_web_venzer/
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -146,7 +145,7 @@ per_web_venzer/
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
 ```bash
 npm run dev          # Start development server with hot reload
@@ -160,7 +159,7 @@ npm run test:watch   # Run tests in watch mode
 
 ---
 
-## 🎨 Customization
+## Customization
 
 ### Updating Content
 
@@ -178,7 +177,7 @@ npm run test:watch   # Run tests in watch mode
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 
@@ -197,7 +196,7 @@ The project can be deployed to any static hosting service:
 
 ---
 
-## 💼 Professional Background
+## Professional Background
 
 ### Experience
 - **UX/UI and Frontend Developer** at Langdrill (Stealth Startup) — 06.2025 to 07.2025
@@ -216,19 +215,15 @@ The project can be deployed to any static hosting service:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📧 Contact
+## Contact
 
 Feel free to reach out for collaborations, opportunities, or just to connect!
 
 - **GitHub**: [Rouxxel](https://github.com/Rouxxel)
 - **Portfolio**: [View Live Site](https://your-domain.com)
-
----
-
-**Built with ❤️ using React, TypeScript, and Tailwind CSS**
