@@ -1,5 +1,5 @@
 {
-    "language":"Español",
+    "language": "Español",
     "logo_text": "Portafolio personal",
     "nav_bar": {
         "about": "Sobre mí",
@@ -23,46 +23,46 @@
             "tech_stack_title": "Tecnologías con las que he trabajado",
             "tech_subsections": {
                 "program_langs": {
-                    "section":"languages",
-                    "title":"Lenguajes de programación"
+                    "section": "languages",
+                    "title": "Lenguajes de programación"
                 },
                 "frameworks_libs": {
-                    "section":"frameworks",
-                    "title":"Frameworks y librerías"
+                    "section": "frameworks",
+                    "title": "Frameworks y librerías"
                 },
                 "proto_design": {
-                    "section":"prototyping",
-                    "title":"Prototipado y diseño"
+                    "section": "prototyping",
+                    "title": "Prototipado y diseño"
                 },
                 "dbs": {
-                    "section":"database",
-                    "title":"Bases de datos"
+                    "section": "database",
+                    "title": "Bases de datos"
                 },
                 "apis_integr": {
-                    "section":"integration",
-                    "title":"APIs e integración"
+                    "section": "integration",
+                    "title": "APIs e integración"
                 },
                 "team_dev_pract": {
-                    "section":"team",
-                    "title":"Trabajo en equipo y prácticas de desarrollo"
+                    "section": "team",
+                    "title": "Trabajo en equipo y prácticas de desarrollo"
                 },
                 "devops_infrastr": {
-                    "section":"infrastructure",
-                    "title":"DevOps e infraestructura"
+                    "section": "infrastructure",
+                    "title": "DevOps e infraestructura"
                 },
                 "ai_data": {
-                    "section":"ai",
-                    "title":"IA y datos"
+                    "section": "ai",
+                    "title": "IA y datos"
                 },
                 "service_prov": {
-                    "section":"providers",
-                    "title":"Proveedores de servicios"
+                    "section": "providers",
+                    "title": "Proveedores de servicios"
                 }
             }
         },
         "projects_section": {
             "section_title": "Proyectos",
-            "filters":{
+            "filters": {
                 "filter_explanation_txt": "Muestra proyectos que coinciden con TODOS los filtros seleccionados (o todos los proyectos cuando cada filtro está en Ninguno).",
                 "clear_filters_btn": "Limpiar filtros",
                 "no_projects_txt": "Ningún proyecto coincide con estos filtros. Prueba limpiar los filtros o elegir opciones diferentes."
@@ -70,7 +70,7 @@
             "projects_entries": {
                 "not_here": "Consulta frontend/src/data/project.ts para ver la lista completa de proyectos."
             },
-            "project_specifics":{
+            "project_specifics": {
                 "display_description_btn": "Mostrar descripción",
                 "live_demo_btn": "Demo vivo",
                 "showcase_btn": "Video"
@@ -131,6 +131,13 @@
                     "name": "AbtoCreative",
                     "prefix_txt": "Ícono de Rayo por ",
                     "link": "https://www.flaticon.com/free-icon/lightning_8650972"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "yoyonpujiono",
+                    "prefix_txt": "Ícono de Lenguajes de programación por ",
+                    "link": "https://www.flaticon.com/free-icon/web-programming_10185856?term=programming+languages&related_id=10185856"
                 }
             }
         ]

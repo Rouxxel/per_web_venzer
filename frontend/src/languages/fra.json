@@ -1,5 +1,5 @@
 {
-    "language":"Français",
+    "language": "Français",
     "logo_text": "Mon Portfolio",
     "nav_bar": {
         "about": "À propos moi",
@@ -131,6 +131,13 @@
                     "name": "AbtoCreative",
                     "prefix_txt": "Icône de Foudre par ",
                     "link": "https://www.flaticon.com/free-icon/lightning_8650972"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "yoyonpujiono",
+                    "prefix_txt": "Icône de langage de programmation par ",
+                    "link": "https://www.flaticon.com/free-icon/web-programming_10185856?term=programming+languages&related_id=10185856"
                 }
             }
         ]

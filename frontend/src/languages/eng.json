@@ -1,5 +1,5 @@
 {
-    "language":"English",
+    "language": "English",
     "logo_text": "Personal portfolio",
     "nav_bar": {
         "about": "About",
@@ -23,46 +23,46 @@
             "tech_stack_title": "Technologies I Worked With",
             "tech_subsections": {
                 "program_langs": {
-                    "section":"languages",
-                    "title":"Programming languages"
+                    "section": "languages",
+                    "title": "Programming languages"
                 },
                 "frameworks_libs": {
-                    "section":"frameworks",
-                    "title":"Frameworks & libraries"
+                    "section": "frameworks",
+                    "title": "Frameworks & libraries"
                 },
                 "proto_design": {
-                    "section":"prototyping",
-                    "title":"Prototyping & design"
+                    "section": "prototyping",
+                    "title": "Prototyping & design"
                 },
                 "dbs": {
-                    "section":"database",
-                    "title":"Databases"
+                    "section": "database",
+                    "title": "Databases"
                 },
                 "apis_integr": {
-                    "section":"integration",
-                    "title":"APIs & integration"
+                    "section": "integration",
+                    "title": "APIs & integration"
                 },
                 "team_dev_pract": {
-                    "section":"team",
-                    "title":"Team & development practices"
+                    "section": "team",
+                    "title": "Team & development practices"
                 },
                 "devops_infrastr": {
-                    "section":"infrastructure",
-                    "title":"DevOps & infrastructure"
+                    "section": "infrastructure",
+                    "title": "DevOps & infrastructure"
                 },
                 "ai_data": {
-                    "section":"ai",
-                    "title":"AI & data"
+                    "section": "ai",
+                    "title": "AI & data"
                 },
                 "service_prov": {
-                    "section":"providers",
-                    "title":"Service providers"
+                    "section": "providers",
+                    "title": "Service providers"
                 }
             }
         },
         "projects_section": {
             "section_title": "Projects",
-            "filters":{
+            "filters": {
                 "filter_explanation_txt": "Showing projects that match ALL selected filters (or all projects when every dropdown is None).",
                 "clear_filters_btn": "Clear filters",
                 "no_projects_txt": "No projects match these filters. Try clearing filters or choosing different options."
@@ -70,7 +70,7 @@
             "projects_entries": {
                 "not_here": "See frontend/src/data/project.ts for the full list of projects."
             },
-            "project_specifics":{
+            "project_specifics": {
                 "display_description_btn": "Display description",
                 "live_demo_btn": "Live demo",
                 "showcase_btn": "Showcase"
@@ -131,6 +131,13 @@
                     "name": "AbtoCreative",
                     "prefix_txt": "Lightning icon by ",
                     "link": "https://www.flaticon.com/free-icon/lightning_8650972"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "yoyonpujiono",
+                    "prefix_txt": "Programming languages icon by ",
+                    "link": "https://www.flaticon.com/free-icon/web-programming_10185856?term=programming+languages&related_id=10185856"
                 }
             }
         ]

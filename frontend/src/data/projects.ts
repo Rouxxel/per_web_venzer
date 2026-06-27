@@ -251,6 +251,29 @@ export const projects_en: Project[] = [
     github: "https://github.com/Rouxxel/ai_general",
   },
   {
+    title: "Reusable code repository",
+    image: "/images/python-various/web_programming.png",
+    description:
+      "Originally a python-only repository with a handful of terminal games written on scripts; nowadays I use it to store any kind of code snippet from any language that I have used that could be reused in future projects. There are utils, terminal games, games with UI, examples of API calls, UI components and even full deployable backend templates (RESTful, GraphQL and WebSocket). It is in constant growth because with each project I always end up extracting something that might be useful in the future",
+    tags: [
+      "Python",
+      "C#",
+      "Java",
+      "Typescript",
+      "React",
+      "Tailwind CSS",
+      "Nginx",
+      "Linux",
+      "Docker",
+      "API integration",
+      "Chrome extensions",
+      "UI components",
+      "Backend templates",
+    ],
+    classifications: ["Backend", "Tooling", "Personal", "Dev Tools", "Customization"],
+    github: "https://github.com/Rouxxel/python-various",
+  },
+  {
     title: "MaxxWatt Energy Management Platform",
     image: "/images/maxxwatt/lightning.png",
     description:
@@ -332,6 +355,30 @@ export const projects_en: Project[] = [
     ],
     classifications: ["Fullstack", "Personal", "Gaming", "Standalone"],
     github: "https://github.com/Rouxxel/Nothingness",
+  },
+  {
+    title: "Pongilike - 2D Pong Game",
+    image: "/images/pongilike/pingpongballart.png",
+    description:
+      "Unity/C# classic two-player Pong arcade game built with Unity's 2D physics system. Features physics-based ball movement with randomized direction and velocity control, collision detection for paddles and walls, an automatic scoring system with real-time UI updates and point notifications, pause/resume game flow control, and a comprehensive audio system with sound effects for hits, bounces, and scoring. All sprites and graphics were hand-drawn from scratch.",
+    tags: [
+      "Unity",
+      "C#",
+      "2D Game",
+      "Game Development",
+      "Unity 2D Physics",
+      "JSON",
+      "Singleton Pattern",
+      "Component Pattern",
+      "Audio System",
+      "Multiplayer",
+      "Collision Detection",
+      "Sprite painting",
+      "Animation",
+      "Game design",
+    ],
+    classifications: ["Fullstack", "Personal", "Gaming", "Standalone"],
+    github: "https://github.com/Rouxxel/Pongilike",
   },
   {
     title: "Atryon Chrome Extension",
@@ -533,12 +580,16 @@ const projectDescriptionsEs: Record<string, string> = {
     "Proyecto de ML para detectar y clasificar el perfil sonoro de drones, helicópteros y audio de fondo usando CNN (Tiny y Robust) y ML tradicional (Random Forest, SVM, XGBoost, Gradient Boosting) con características MFCC; el caso de uso objetivo es integrarlo como accesorio en el chaleco antibalas para detección omnidireccional de drones y alerta preventiva para los soldados en el campo.",
   "Machine Learning Models":
     "Recopilación de proyectos de ML: clasificaciones (Iris, cáncer de mama, Titanic, diabetes con Decision Tree, Logistic Regression, KNN, Random Forest y SVM), regresión (beneficio empresarial) y clustering (segmentación de clientes con K-Means y Hierarchical), usando notebooks en Python, scikit-learn y otras librerías relacionadas.",
+  "Reusable code repository":
+    "Originalmente un repositorio de Python con algunos juegos en terminal en scripts; Hoy en día lo uso para almacenar cualquier tipo de snippet de código de cualquier lenguaje que haya usado y que podría ser reutilizado en futuros proyectos. Hay utils, juegos de terminal, juegos con UI, ejemplos de llamadas a APIs, componentes de UI e incluso plantillas de backend completas y desplegables (RESTful, GraphQL y WebSocket). Está en constante crecimiento porque con cada proyecto siempre termino extrayendo algo que podría ser útil en el futuro.",
   "MaxxWatt Energy Management Platform":
     "Proyecto presentado en Berlin Energy Hackathon 2025: plataforma de monitoreo y gestión BESS con analíticas en tiempo real, detección de anomalías y pronóstico energético para baterias Li-Ion usadas en sistemas de Paneles Solares para manejo y almacenamiento de energía. La arquitectura del sistema y diseño de componentes se modelaron en Draw.io. Backend FastAPI con streaming SSE y dashboard en React (Vite, shadcn-ui, Tailwind).",
   "MAXergy - Your green planer":
     "Planificador de mejoras energéticas del hogar con IA para hogares. Cuenta con un frontend móvil en TanStack Start y un backend en FastAPI con integración de la API Gemini para asesoramiento personalizado. Impulsado por un pipeline de modelado de energía residencial de nivel de producción que simula perfiles de carga BDEW H0, calefacción por grados-día, dimensionamiento fotovoltaico y financiamiento de anualidades en 6 escenarios de mejora. Destaca una investigación rigurosa en la que se evaluaron cuatro modelos de previsión de precios (Constante, Tendencia, ETS, SARIMA) frente a los índices de precios de Destatis (2019-2025).",
   "Nothingness - 2D arcade game":
     "Juego 2D estilo arcade en Unity/C# con movimiento en 8 direcciones, escalado dinámico de dificultad y sistema de buffs/debuffs. Incluye dos tipos de enemigos (asteroides y nave enemigas), varios power-ups y power-downns (escudo, aumento/reducción de velocidad), persistencia de puntuación con serialización JSON y sistema de audio integral con sprites creados desde cero usando software para pixel art.",
+  "Pongilike - 2D Pong Game":
+    "Juego clásico de Pong para dos jugadores en Unity/C# con físicas 2D. Incluye movimiento de pelotas controlado por física (dirección y velocidad aleatorias), colisión con paletas y paredes, sistema automático de puntuación con notificaciones, control de flujo de pausa/reanudar y sistema de sonido con efectos para golpes, rebotes y puntuación. Todos los gráficos y sprites fueron dibujados a mano desde cero.",
   "Atryon Chrome Extension":
     "Extensión de Chrome como probador virtual: permite seleccionar una prenda desde la página o mediante arrastrar y soltar, subir una selfie y generar un resultado de prueba virtual con IA. Tiene interfaz en panel lateral con content script para 'seleccionar desde la página'; backend FastAPI que ejecuta llamados API de FLUX de Black Forest Labs para composición multi-imagen (MIC), con endpoints de sondeo y descarga. Incluye endpoints extra para futuras funciones de Text-To-Image (TTI) e Image Edit With Mask (IDWM).",
   "Drone battery performance prediction system":
@@ -575,12 +626,16 @@ const projectDescriptionsFr: Record<string, string> = {
     "Projet ML pour détecter et classifier le profil sonore de drones, hélicoptères et sons de fond en utilisant CNN (Tiny et Robust) et ML traditionnel (Random Forest, SVM, XGBoost, Gradient Boosting) avec caractéristiques MFCC; cas d’usage cible : intégrer le système comme accessoire sur un gilet pare-balles pour détection omnidirectionnelle de drones et alertes préventives pour les soldats sur le terrain.",
   "Machine Learning Models":
     "Portfolio de projets ML : classifications (Iris, cancer du sein, Titanic, diabète avec Decision Tree, Logistic Regression, KNN, Random Forest, SVM), régressions (profits d’entreprise) et clustering (segmentation clients avec K-Means et Hierarchical), utilisant des notebooks Python, scikit-learn et autres librairies associées.",
+  "Reusable code repository":
+    "À l’origine un repo de code Python avec quelques jeux de terminal écrits dans des scripts; Aujourd’hui je l’utilise pour stocker tout type de snippet de code de n’importe quel langage que j’ai utilisé et qui pourrait être réutilisé dans de futurs projets. Il contient des utils, des jeux de terminal, des jeux avec UI, des exemples d’appels API, des composants UI et même des templates backend complets et déployables (RESTful, GraphQL et WebSocket). Il est en constante évolution car à chaque projet j’y extrais toujours quelque chose qui pourrait être utile à l’avenir.",
   "MaxxWatt Energy Management Platform":
     "Projet présenté au Berlin Energy Hackathon 2025 : plateforme de monitoring et gestion BESS avec analytics temps réel, détection d’anomalies et prévisions énergétiques pour batteries Li-Ion utilisées dans des systèmes de panneaux solaires. Architecture système et design des composants modélisés sur Draw.io. Backend FastAPI avec streaming SSE et dashboard React (Vite, shadcn-ui, Tailwind).",
   "MAXergy - Your green planer":
     "Planificateur de rénovation énergétique résidentielle alimenté par l'IA pour les ménages. Comprend un frontend mobile sous TanStack Start et un backend FastAPI intégré à l'API Gemini pour des conseils personnalisés. Propulsé par un pipeline de modélisation énergétique résidentielle de niveau production qui simule les profils de charge BDEW H0, le chauffage par degrés-jours, le dimensionnement photovoltaïque et le financement par annuités à travers 6 scénarios d'évolution. Met en valeur une recherche rigoureuse où quatre modèles de prévision des prix (Constant, Tendance, ETS, SARIMA) ont été testés par rapport aux indices de Destatis (2019-2025).",
   "Nothingness - 2D arcade game":
     "Jeu arcade 2D Unity/C# avec mouvement sur 8 directions, scaling dynamique de la difficulté et système de buffs/debuffs. Comprend deux types d’ennemis (astéroïdes et vaisseau spatial ennemi), plusieurs power-ups et power-downs (bouclier, augmentation/diminution de vitesse, augmentation/diminution de la vie), persistance du meilleur score via sérialisation JSON et système audio complet avec sprites faits maison avec pixel art software.",
+  "Pongilike - 2D Pong Game":
+    "Jeu de Pong classique à deux joueurs créé avec Unity/C# et son système de physique 2D. Inclut un mouvement de balle contrôlé par la physique avec direction et vitesse aléatoires, détection de collision avec les palettes et les murs, système de score automatique avec mises à jour UI en temps réel et notifications de points, contrôle de flux pour pause/relance, et un système audio complet avec effets sonores pour les impacts, les rebonds et le score. Tous les graphiques et sprites ont été dessinés à la main.",
   "Atryon Chrome Extension":
     "Extension Chrome de try-on virtuel : permet de sélectionner un vêtement depuis la page ou par glisser-déposer, ajouter un selfie et obtenir un résultat IA. UI en panneau latéral avec content script pour « sélectionner depuis la page »; backend FastAPI exécutant l’API FLUX de Black Forest Labs pour composition multi-images (MIC), avec endpoints de polling et téléchargement. Endpoints supplémentaires pour futures fonctionnalités Text-To-Image (TTI) et Image Edit With Mask (IDWM).",
   "Drone battery performance prediction system":
