@@ -143,6 +143,33 @@ export const projects_en: Project[] = [
     demo: "https://youtu.be/93G2gHTA_DU",
   },
   {
+    title: "Fintech CheckAI",
+    image: "/images/fintech_checkai/logo.jpg",
+    description:
+      "Fact-checking platform that verifies claims made in YouTube videos against official company quarterly reports with immutable versioned storage. Built with React+TS frontend and FastAPI backend, it uses Tower.dev + Apache Iceberg for document storage, RunPod for OCR/audio transcription, and LangChain + OpenAI for AI-powered analysis with credibility scoring and follow-up chat capabilities.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "FastAPI",
+      "Python",
+      "OpenAI API",
+      "LangChain",
+      "Tower.dev",
+      "Apache Iceberg",
+      "RunPod",
+      "Generative AI",
+      "REST API",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Docker",
+      "ImageKit",
+      "yt-dlp"
+    ],
+    classifications: ["Fullstack", "Web", "Finance/Fintech", "AI / Data", "Hackathon"],
+    github: "https://github.com/peresramirez/FintechCheckAI",
+  },
+  {
     title: "Bachelor Thesis (Machine Learning)",
     image: "/images/thesis/graduation.png",
     description:
@@ -436,7 +463,7 @@ export const projects_en: Project[] = [
       "Finance",
       "Railway",
     ],
-    classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Finance"],
+    classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Finance/Fintech"],
     github: "https://github.com/peres84/corpuscan",
     demo: "https://youtu.be/-YFkeoVrajU",
   },
@@ -572,6 +599,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Dashboard de coaching para League of Legends con frontend en React+TS y backend en FastAPI que se integra con la API de Riot Games para historial de partidas, datos de campeones y analíticas de rendimiento. La web ofrece varias páginas para profundizar en historial, sinergias y predicciones, además de una burbuja flotante para abrir un asistente conversacional con contexto de la página actual y obtener insights más precisos.",
   "TuneTools":
     "Pipeline que convierte contexto diario (noticias, clima, calendario) en canciones personalizadas: un LLM genera especificaciones y letras, el modelo YuE sintetiza audio en RunPod y la API de Gemini crea el arte del álbum para entregar una canción al usuario. El frontend está desplegado en Vercel, el backend en Railway, conectado a Supabase para autenticación y almacenamiento de audios/arte generados.",
+  "Fintech CheckAI":
+    "Plataforma de verificación de hechos que verifica las afirmaciones realizadas en videos de YouTube contra informes trimestrales oficiales de empresas con almacenamiento versionado inmutable. Construida con frontend React+TS y backend FastAPI, utiliza Tower.dev + Apache Iceberg para almacenamiento de documentos, RunPod para OCR/transcripción de audio, y LangChain + OpenAI para análisis potenciado por IA con puntuación de credibilidad y capacidades de chat de seguimiento.",  
   "Bachelor Thesis (Machine Learning)":
     "Estudio comparativo de modelos de clasificación de ML para detección temprana de diabetes en indicadores de salud BRFSS 2015: pipeline modular en Python con Decision Tree, Logistic Regression, Random Forest y SVM, además de EDA, remuestreo SMOTE, configuración JSON y logging centralizado de resultados.",
   "Emotional Detection DL model":
@@ -618,6 +647,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "Tableau de bord de coaching pour League of Legends avec frontend en React+TS et backend FastAPI intégré à l’API Riot Games pour l’historique des matchs, les données des champions et les analyses de performance. Le site propose plusieurs pages pour explorer l’historique, les synergies et les prédictions, avec une bulle flottante ouvrant un assistant conversationnel contextualisé pour obtenir des insights précis.",
   "TuneTools":
     "Pipeline transformant le contexte quotidien (actualités, météo, calendrier) en chansons personnalisées : un LLM génère les spécifications et les paroles, le modèle YuE synthétise l’audio sur RunPod, et l’API Gemini crée la pochette de l’album pour livrer la chanson à l’utilisateur. Le frontend est déployé sur Vercel, le backend sur Railway, connecté à Supabase pour l’authentification et le stockage des fichiers audio et images générés.",
+  "Fintech CheckAI":
+    "Plateforme de vérification des faits qui vérifie les affirmations faites dans les vidéos YouTube par rapport aux rapports trimestriels officiels des entreprises avec un stockage versionné immuable. Construite avec un frontend React+TS et un backend FastAPI, elle utilise Tower.dev + Apache Iceberg pour le stockage de documents, RunPod pour l'OCR/transcription audio, et LangChain + OpenAI pour l'analyse alimentée par l'IA avec notation de crédibilité et capacités de chat de suivi.",
   "Bachelor Thesis (Machine Learning)":
     "Étude comparative de modèles de classification ML pour la détection précoce du diabète sur les indicateurs de santé BRFSS 2015 : pipeline Python modulaire avec Decision Tree, Logistic Regression, Random Forest et SVM, plus EDA, suréchantillonnage SMOTE, configuration JSON et journalisation centralisée des résultats.",
   "Emotional Detection DL model":

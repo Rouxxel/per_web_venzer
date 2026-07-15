@@ -33,7 +33,7 @@ export const INDUSTRY_THEME_OPTIONS = [
   "Gaming",
   "Educational",
   "Industrial",
-  "Finance",
+  "Finance/Fintech",
   "AR",
   "Military",
   "Dev Tools",
