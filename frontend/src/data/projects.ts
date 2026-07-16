@@ -435,6 +435,38 @@ export const projects_en: Project[] = [
     github: "https://github.com/Rouxxel/atryon_chrome_extension",
   },
   {
+    title: "Prod Watch - Inventory and cashier system",
+    image: "/images/prod_watch/logo_downscaled.jpg",
+    description:
+      "Multi-tenant SaaS inventory and point-of-sale system for businesses with one or more warehouses. Built with React 19 + TanStack Start frontend and Spring Boot 3 + Java 17 backend, it features stock movements (IN/OUT/TRANSFER/ADJUSTMENT), cashier with multi-warehouse cart, transaction history, audit log and ecosystem-based multi-tenancy with RBAC. Uses Supabase PostgreSQL with Flyway migrations and Supabase Auth for JWT authentication.",
+    tags: [
+      "React",
+      "TypeScript",
+      "TanStack Start",
+      "TanStack Router",
+      "TanStack Query",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Java",
+      "Spring Boot",
+      "JPA",
+      "Flyway",
+      "PostgreSQL",
+      "Supabase",
+      "REST API",
+      "JWT",
+      "Multi-tenancy",
+      "RBAC",
+      "Docker",
+      "Vercel",
+      "Render"
+    ],
+    classifications: ["Fullstack", "Database", "Web", "Personal", "Industrial", "Finance/Fintech"],
+    github: "https://github.com/Rouxxel/Prod_Watcher",
+    //demo: "",
+    //live_demo: ""
+  },
+  {
     title: "CorpuScan - Financial document summarization",
     image: "/images/corpus_scan/logo.jpeg",
     description:

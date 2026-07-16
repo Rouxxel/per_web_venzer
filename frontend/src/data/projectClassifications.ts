@@ -35,6 +35,7 @@ export const INDUSTRY_THEME_OPTIONS = [
   "Military",
   "Dev Tools",
   "Customization",
+  "Logistics/Supply Chain"
 ] as const;
 
 /** Runtime UI metadata for filter controls (default English). */
@@ -91,6 +92,7 @@ export const INDUSTRY_THEME_OPTIONS_ES = [
   "Militar",
   "Herramientas de desarrollo",
   "Customización",
+  "Logística/Cadena de Suministros"
 ] as const;
 
 //-------------------------------------------------------------------------
@@ -139,6 +141,7 @@ export const INDUSTRY_THEME_OPTIONS_FR = [
   "Militaire",
   "Dev outils",
   "Customisation",
+  "Logistique/Chaîne d'approvisionnement"
 ] as const;
 
 //-------------------------------------------------------------------------
