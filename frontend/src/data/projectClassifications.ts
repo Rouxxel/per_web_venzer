@@ -1,6 +1,3 @@
-//-------------------------------------------------------------------------
-//---------------------------------ENGLISH---------------------------------
-//-------------------------------------------------------------------------
 /**
  * Canonical three-layer classification vocabulary for portfolio projects.
  * Domain / Technical, Context / Origin, and Industry / Theme share no duplicate
@@ -64,10 +61,12 @@ export const DOMAIN_TECH_OPTIONS_ES = [
   "Backend",
   "Frontend",
   "Fullstack",
+  "Autónoma",
   "Móvil",
   "Base de datos",
   "Web",
   "MLOps",
+  "MCP",
   "IA / Datos",
   "RA",
 ] as const;
@@ -87,6 +86,7 @@ export const INDUSTRY_THEME_OPTIONS_ES = [
   "Videojuegos",
   "Educación",
   "Industrial",
+  "Finanzas/Fintech",
   "RA",
   "Militar",
   "Herramientas de desarrollo",
@@ -109,10 +109,12 @@ export const DOMAIN_TECH_OPTIONS_FR = [
   "Backend",
   "Frontend",
   "Fullstack",
+  "Autonome",
   "Mobile",
   "Base de données",
   "Web",
   "MLOps",
+  "MCP",
   "IA / Données",
   "RA"
 ] as const;
@@ -132,6 +134,7 @@ export const INDUSTRY_THEME_OPTIONS_FR = [
   "Jeux vidéo",
   "Éducation",
   "Industrielle",
+  "Finances/Fintech",
   "RA",
   "Militaire",
   "Dev outils",
