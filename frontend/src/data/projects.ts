@@ -144,7 +144,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "Fintech CheckAI",
-    image: "/images/fintech_checkai/logo.jpg",
+    image: "/images/fintech_checkai/opt_logo.jpg",
     description:
       "Fact-checking platform that verifies claims made in YouTube videos against official company quarterly reports with immutable versioned storage. Built with React+TS frontend and FastAPI backend, it uses Tower.dev + Apache Iceberg for document storage, RunPod for OCR/audio transcription, and LangChain + OpenAI for AI-powered analysis with credibility scoring and follow-up chat capabilities.",
     tags: [
