@@ -279,7 +279,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "Reusable code repository",
-    image: "/images/python-various/web_programming.png",
+    image: "/images/python-various/web_programming_background.jpg",
     description:
       "Originally a python-only repository with a handful of terminal games written on scripts; nowadays I use it to store any kind of code snippet from any language that I have used that could be reused in future projects. There are utils, terminal games, games with UI, examples of API calls, UI components and even full deployable backend templates (RESTful, GraphQL and WebSocket). It is in constant growth because with each project I always end up extracting something that might be useful in the future",
     tags: [
