@@ -41,6 +41,9 @@ export const experience_en: ExperienceEntry[] = [
   },
 ];
 
+//-------------------------------------------------------------------------
+//------------------------SPANISH VERSION---------------------------------- 
+//-------------------------------------------------------------------------
 export const experience_es: ExperienceEntry[] = [
   {
     title: "Desarrollador UX/UI y Frontend (React + TS)",
@@ -74,6 +77,9 @@ export const experience_es: ExperienceEntry[] = [
   },
 ];
 
+//-------------------------------------------------------------------------
+//-------------------------FRENCH VERSION---------------------------------- 
+//-------------------------------------------------------------------------
 export const experience_fr: ExperienceEntry[] = [
   {
     title: "Développeur UX/UI et Frontend (React + TS)",
