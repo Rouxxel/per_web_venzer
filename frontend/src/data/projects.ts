@@ -433,6 +433,7 @@ export const projects_en: Project[] = [
     ],
     classifications: ["Fullstack", "Web", "AI / Data", "Personal", "AR"],
     github: "https://github.com/Rouxxel/atryon_chrome_extension",
+    demo:"https://youtu.be/chbujM2-rrA",
   },
   {
     title: "Prod Watch - Inventory and cashier system",
