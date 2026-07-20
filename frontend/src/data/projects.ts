@@ -470,7 +470,7 @@ export const projects_en: Project[] = [
     title: "CorpuScan - Financial document summarization",
     image: "/images/corpus_scan/logo.jpeg",
     description:
-      "Collaborated on a Big Berlin Hack project: CorpuScan turns dense financial documents into short executive video briefings. Users upload a PDF, paste a URL, or type a query; a multi-agent pipeline (Gemini 2.5 Pro) extracts key financials, writes a 4-scene script, generates voiceover via ElevenLabs TTS, renders motion graphics with the Hera API in parallel, and stitches everything into a playable MP4 with ffmpeg.",
+      "Collaborated on a Big Berlin Hack project: CorpuScan turns dense financial documents into short executive video briefings and provides AI-powered audit investigation. Users upload a PDF, paste a URL, or type a query for video generation; or upload financial documents (CSV, TXT, XLSX, PDF, DOCX) for fraud investigation. The multi-agent pipeline (Gemini 2.5 Pro, OpenAI) extracts key financials, writes scripts, generates voiceover via ElevenLabs TTS, renders motion graphics with Hera API, and performs DFS-based document graph analysis with cross-file discrepancy detection and evidence-backed findings.",
     tags: [
       "React",
       "TypeScript",
@@ -481,13 +481,18 @@ export const projects_en: Project[] = [
       "Python",
       "FastAPI",
       "Gemini API",
+      "OpenAI API",
       "Generative AI",
       "ElevenLabs",
       "Hera API",
       "Tavily",
+      "Cognee",
       "ffmpeg",
       "LLM",
       "Multi-agent",
+      "Document Graph",
+      "Fraud Detection",
+      "Audit Investigation",
       "REST API",
       "Docker",
       "Vercel",
@@ -497,7 +502,7 @@ export const projects_en: Project[] = [
     ],
     classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Finance/Fintech"],
     github: "https://github.com/peres84/corpuscan",
-    demo: "https://youtu.be/-YFkeoVrajU",
+    demo: "https://youtu.be/tFiiEdAA90Q",
   },
   {
     title: "Companion Sonion - VSCode extension",
@@ -656,7 +661,7 @@ const projectDescriptionsEs: Record<string, string> = {
   "Drone battery performance prediction system":
     "Sistema híbrido de física + ML para predecir y optimizar el rendimiento de baterías de drones en entornos fríos. Arquitectura de 4 capas: un pipeline de ingeniería de características extrae 22 features de series temporales (térmicas, eléctricas, de movimiento) de la telemetría bruta; una red LSTM en PyTorch predice el voltaje y la temperatura de la batería en el siguiente paso usando una ventana deslizante; un Modelo de Circuito Equivalente + simulador térmico proporciona una línea base física que la capa ML corrige de forma residual; y un controlador basado en reglas activa la limitación de corriente y el precalentamiento termodinámico según las predicciones. Verificado con una suite de tests de propiedades con Hypothesis que cubre física, estados del modelo, transformaciones de datos y límites del controlador.",
   "CorpuScan - Financial document summarization":
-    "Colaboré en un proyecto para el Big Berlin Hack: CorpuScan convierte documentos financieros densos en breves briefings ejecutivos en video. Usuarios suben un PDF, pegan una URL o una query; el pipeline multi-agente (Gemini 2.5 Pro) extrae los datos financieros clave, redacta un guion de 4 escenas, genera la narración con ElevenLabs TTS, renderiza gráficos en movimiento con la API de Hera en paralelo y ensambla todo en un MP4 reproducible con ffmpeg.",
+    "Colaboré en un proyecto para el Big Berlin Hack: CorpuScan convierte documentos financieros densos en breves briefings ejecutivos en video y proporciona investigación de auditoría potenciada por IA. Los usuarios suben un PDF, pegan una URL o escriben una query para generación de video; o suben documentos financieros (CSV, TXT, XLSX, PDF, DOCX) para investigación de fraude. El pipeline multi-agente (Gemini 2.5 Pro, OpenAI) extrae datos financieros clave, redacta guiones, genera narración con ElevenLabs TTS, renderiza gráficos en movimiento con Hera API, y realiza análisis de grafos de documentos basado en DFS con detección de discrepancias entre archivos y hallazgos respaldados por evidencia.",
   "Companion Sonion - VSCode extension":
     "Extensión simple de VSCode que agrega entidades 'companion' animadas en un panel. Usuarios pueden generar múltiples compañeros en formato GIF/PNG/WebM, arrastrarlos y redimensionarlos, también personalizar el que quieran renderizar. Posee estado persistente entre sesiones y guardado/carga de perfiles. Solo quería divertirme",
   "Ranting Chant - Housing middleman platform":
@@ -704,7 +709,7 @@ const projectDescriptionsFr: Record<string, string> = {
   "Drone battery performance prediction system":
     "Système hybride physique + ML pour prédire et optimiser les performances des batteries de drones dans des environnements froids. Architecture en 4 couches : un pipeline d’ingénierie des caractéristiques extrait 22 features de séries temporelles (thermiques, électriques, de mouvement) depuis la télémétrie brute ; un réseau LSTM PyTorch prédit la tension et la température de la batterie à l’étape suivante via une fenêtre glissante ; un Modèle de Circuit Équivalent + simulateur thermique fournit une baseline physique que la couche ML corrige de façon résiduelle ; et un contrôleur à base de règles déclenche la limitation de courant et le préchauffage thermodynamique selon les prédictions. Vérifié avec une suite de tests de propriétés Hypothesis couvrant la physique, les états du modèle, les transformations de données et les limites du contrôleur.",
   "CorpuScan - Financial document summarization":
-    "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête; un pipeline multi-agents (Gemini 2.5 Pro) extrait les données financières clés, rédige un script en 4 scènes, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera en parallèle, et assemble le tout en un MP4 lisible avec ffmpeg.",
+    "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif et fournit une investigation d'audit alimentée par l'IA. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête pour la génération de vidéo; ou téléchargent des documents financiers (CSV, TXT, XLSX, PDF, DOCX) pour l'investigation de fraude. Le pipeline multi-agents (Gemini 2.5 Pro, OpenAI) extrait les données financières clés, rédige des scripts, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera, et effectue une analyse de graphes de documents basée sur DFS avec détection de discrepancies inter-fichiers et résultats soutenus par des preuves.",
   "Companion Sonion - VSCode extension":
     "Extension VSCode simple qui ajoute des entités 'companion' animées dans un panneau. Users peuvent générer plusieurs compagnons au format GIF/PNG/WebM, les faire glisser et les redimensionner, ainsi que personnaliser celui qu'ils souhaitent rendre. Il dispose d'un état persistant entre les sessions et de la sauvegarde/chargement de profils. Je voulais juste m'amuser",
   "Ranting Chant - Housing middleman platform":
