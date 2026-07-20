@@ -509,24 +509,27 @@ export const projects_en: Project[] = [
     title: "Companion Sonion - VSCode extension",
     image: "/images/companion_sonion/logo_companion.png",
     description:
-      "Simple VSCode extension to adds animated 'companion' entities into a panel. Users can spawn multiple GIF/PNG/WebM companions, drag and resize them freely and customize the one they want to render. It supports persistent state across sessions and profile saving/loading. I just wanted to have fun, might add more things",
+      "VS Code extension and standalone Electron desktop app that brings animated companions into your workspace. The VS Code extension offers Panel and Explorer render modes with drag-and-drop movement, mouse wheel resize, custom assets (GIF/PNG/WebM), profile save/load, import/export, and persistent state. The standalone app provides transparent frameless windows that stay on top of other applications with system tray integration, keyboard shortcuts, and asset caching. Built for fun and customization.",
     tags: [
       "TypeScript",
       "VS Code Extension",
+      "Electron",
       "Node.js",
-      "Electron (VS Code runtime)",
-      "React (UI panel)",
+      "React",
       "Vite",
       "Tailwind CSS",
       "Framer Motion",
+      "Vanilla JS",
       "UX/UI Design",
       "Animation",
       "Developer Tools",
       "Productivity",
       "Customization",
-      "Interactive UI"
+      "Interactive UI",
+      "Desktop App",
+      "System Tray"
     ],
-    classifications: ["Frontend", "Personal", "Tooling", "Dev Tools", "Customization"],
+    classifications: ["Frontend", "Personal", "Tooling", "Dev Tools", "Customization", "Standalone"],
     live_demo: "https://marketplace.visualstudio.com/items?itemName=Rouxxel.companion-sonion",
     github: "https://github.com/Rouxxel/companion_sonion",
   },
@@ -664,7 +667,7 @@ const projectDescriptionsEs: Record<string, string> = {
   "CorpuScan - Financial document summarization":
     "Colaboré en un proyecto para el Big Berlin Hack: CorpuScan convierte documentos financieros densos en breves briefings ejecutivos en video y proporciona investigación de auditoría potenciada por IA. Los usuarios suben un PDF, pegan una URL o escriben una query para generación de video; o suben documentos financieros (CSV, TXT, XLSX, PDF, DOCX) para investigación de fraude. El pipeline multi-agente (Gemini 2.5 Pro, OpenAI) extrae datos financieros clave, redacta guiones, genera narración con ElevenLabs TTS, renderiza gráficos en movimiento con Hera API, y realiza análisis de grafos de documentos basado en DFS con detección de discrepancias entre archivos y hallazgos respaldados por evidencia.",
   "Companion Sonion - VSCode extension":
-    "Extensión simple de VSCode que agrega entidades 'companion' animadas en un panel. Usuarios pueden generar múltiples compañeros en formato GIF/PNG/WebM, arrastrarlos y redimensionarlos, también personalizar el que quieran renderizar. Posee estado persistente entre sesiones y guardado/carga de perfiles. Solo quería divertirme",
+    "Extensión de VS Code y aplicación de escritorio Electron independiente que añade compañeros animados a tu espacio de trabajo. La extensión de VS Code ofrece modos de renderizado Panel y Explorer con movimiento arrastrar-y-soltar, redimensionamiento con rueda del ratón, activos personalizados (GIF/PNG/WebM), guardar/cargar perfiles, importar/exportar y estado persistente. La aplicación independiente proporciona ventanas sin marco transparentes que se mantienen encima de otras aplicaciones con integración a la bandeja del sistema, atajos de teclado y caché de activos. Creado por diversión y personalización.",
   "Ranting Chant - Housing middleman platform":
     "Plataforma full-stack de operaciones inmobiliarias con diseño Frutiger Aero. Los inquilinos reportan incidencias de vivienda y mantenimiento mediante chat en lenguaje natural con entrada de voz opcional; Google Gemini clasifica solicitudes por tipo, urgencia, sentimiento y escalamiento. Gerentes y propietarios usan dashboards por rol para filtrar, aprobar y resolver solicitudes, coordinar proveedores y enviar notificaciones por email/SMS con Resend y Twilio; posee transcripción y text-to-speech de ElevenLabs y Gradium. Incorpora un esquema de base de datos PostgreSQL listo para producción con relaciones normalizadas (unidades, historial de estados/asignaciones), políticas de seguridad a nivel de fila (RLS) y mapeo de cuentas de usuario para la integración con Supabase Auth.",
   "Personal portfolio website":
@@ -712,7 +715,7 @@ const projectDescriptionsFr: Record<string, string> = {
   "CorpuScan - Financial document summarization":
     "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif et fournit une investigation d'audit alimentée par l'IA. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête pour la génération de vidéo; ou téléchargent des documents financiers (CSV, TXT, XLSX, PDF, DOCX) pour l'investigation de fraude. Le pipeline multi-agents (Gemini 2.5 Pro, OpenAI) extrait les données financières clés, rédige des scripts, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera, et effectue une analyse de graphes de documents basée sur DFS avec détection de discrepancies inter-fichiers et résultats soutenus par des preuves.",
   "Companion Sonion - VSCode extension":
-    "Extension VSCode simple qui ajoute des entités 'companion' animées dans un panneau. Users peuvent générer plusieurs compagnons au format GIF/PNG/WebM, les faire glisser et les redimensionner, ainsi que personnaliser celui qu'ils souhaitent rendre. Il dispose d'un état persistant entre les sessions et de la sauvegarde/chargement de profils. Je voulais juste m'amuser",
+    "Extension VS Code et application de bureau Electron autonome qui ajoute des compagnons animés à votre espace de travail. L'extension VS Code offre des modes de rendu Panel et Explorer avec mouvement glisser-déposer, redimensionnement à la molette, actifs personnalisés (GIF/PNG/WebM), sauvegarde/chargement de profils, import/export et état persistant. L'application autonome fournit des fenêtres transparentes sans cadre qui restent au-dessus des autres applications avec intégration à la barre d'état système, raccourcis clavier et cache d'actifs. Créé pour le plaisir et la personnalisation.",
   "Ranting Chant - Housing middleman platform":
     "Plateforme full-stack d'opérations immobilières avec un design Frutiger Aero. Les locataires signalent des problèmes de logement et de maintenance via un chat en langage naturel avec saisie vocale optionnelle ; Google Gemini classe les demandes par type, urgence, sentiment et escalade. Gestionnaires et propriétaires utilisent des tableaux de bord par rôle pour filtrer, approuver et résoudre les demandes, coordonner les prestataires et déclencher des notifications email/SMS via Resend et Twilio, avec transcription et synthèse vocale ElevenLabs et Gradium. Intègre un schéma de base de données PostgreSQL prêt pour la production avec des relations normalisées (unités, historique des statuts/affectations), des politiques de sécurité au niveau des lignes (RLS) et un mappage des comptes utilisateurs pour l'intégration de Supabase Auth.",
   "Personal portfolio website":
