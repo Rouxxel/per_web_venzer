@@ -592,6 +592,7 @@ export const projects_en: Project[] = [
     ],
     classifications: ["Fullstack", "Web", "Database", "Hackathon", "AI / Data", "MCP"],
     github: "https://github.com/Rouxxel/ranting_chant",
+    demo: "https://youtu.be/IO3J0MM25KE",
     live_demo: "https://ranting-chant.vercel.app/",
   },
   {
