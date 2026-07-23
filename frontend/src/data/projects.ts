@@ -465,7 +465,7 @@ export const projects_en: Project[] = [
     classifications: ["Fullstack", "Database", "Web", "Personal", "Industrial", "Finance/Fintech"],
     github: "https://github.com/Rouxxel/Prod_Watcher",
     //demo: "",
-    //live_demo: ""
+    live_demo: "https://prod-watcher.vercel.app/"
   },
   {
     title: "CorpuScan - Financial document summarization",
