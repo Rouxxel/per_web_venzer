@@ -301,6 +301,41 @@ export const projects_en: Project[] = [
     github: "https://github.com/Rouxxel/python-various",
   },
   {
+    title: "HelpVenz - Aid for Venezuela",
+    image: "/images/helpvenz/logo.jpg",
+    description:
+      "Humanitarian aid coordination platform for Venezuela after the June 2026 earthquake. Mobile-first, Spanish-first platform that works with weak connection: unified feed for needs (rescue, water, medicine) and offers, person registry (missing/safe/deceased) searchable by name/age/zone, shelter offers/requests, affected buildings reporting with damage level and rescue priority, map view with clustering, and live dashboard. Features 'Brújula' AI assistant (LangChain ReAct over MiniMax M3) that queries HelpVenz database and web (Tavily) with live tool usage display. No registration required, real-time updates via Supabase Realtime, bilingual (ES/EN), Web Push notifications, and PWA. Built with Next.js 16 frontend, FastAPI backend, Supabase PostgreSQL (RLS for public reads, backend writes for security), and deployed on Vercel + FastAPI Cloud.",
+    tags: [
+      "Next.js",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "FastAPI",
+      "Python",
+      "Supabase",
+      "PostgreSQL",
+      "Realtime",
+      "Row Level Security",
+      "MapLibre GL",
+      "PWA",
+      "MiniMax M3",
+      "LangChain",
+      "Tavily",
+      "AI Assistant",
+      "React",
+      "Rate Limiting",
+      "CORS",
+      "Cloudflare Turnstile",
+      "Vercel",
+      "FastAPI Cloud",
+      "Disaster Response",
+      "i18n"
+    ],
+    classifications: ["Fullstack", "Personal","Database","Web","Humanitarian"],
+    github: "https://github.com/peresramirez/helpvenz",
+    live_demo: "https://helpvenz.vercel.app/",
+  },
+  {
     title: "MaxxWatt Energy Management Platform",
     image: "/images/maxxwatt/lightning.png",
     description:
@@ -653,6 +688,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Recopilación de proyectos de ML: clasificaciones (Iris, cáncer de mama, Titanic, diabetes con Decision Tree, Logistic Regression, KNN, Random Forest y SVM), regresión (beneficio empresarial) y clustering (segmentación de clientes con K-Means y Hierarchical), usando notebooks en Python, scikit-learn y otras librerías relacionadas.",
   "Reusable code repository":
     "Originalmente un repositorio de Python con algunos juegos en terminal en scripts; Hoy en día lo uso para almacenar cualquier tipo de snippet de código de cualquier lenguaje que haya usado y que podría ser reutilizado en futuros proyectos. Hay utils, juegos de terminal, juegos con UI, ejemplos de llamadas a APIs, componentes de UI e incluso plantillas de backend completas y desplegables (RESTful, GraphQL y WebSocket). Está en constante crecimiento porque con cada proyecto siempre termino extrayendo algo que podría ser útil en el futuro.",
+  "HelpVenz - Aid for Venezuela":
+    "Plataforma de coordinación de ayuda humanitaria para Venezuela tras el terremoto de junio de 2026. Plataforma móvil-primero, español-primero que funciona con conexión débil: feed unificado de necesidades (rescate, agua, medicinas) y ofertas, registro de personas (desaparecidas/a salvo/fallecidas) buscable por nombre/edad/zona, ofertas/solicitudes de refugio, reporte de edificios afectados con nivel de daño y prioridad de rescate, vista de mapa con clustering y dashboard en vivo. Incluye asistente de IA 'Brújula' (LangChain ReAct sobre MiniMax M3) que consulta la base de datos de HelpVenz y la web (Tavily) con visualización en vivo del uso de herramientas. Sin registro requerido, actualizaciones en tiempo real vía Supabase Realtime, bilingüe (ES/EN), notificaciones Web Push y PWA. Construido con frontend Next.js 16, backend FastAPI, Supabase PostgreSQL (RLS para lecturas públicas, escrituras vía backend para seguridad) y desplegado en Vercel + FastAPI Cloud.",
   "MaxxWatt Energy Management Platform":
     "Proyecto presentado en Berlin Energy Hackathon 2025: plataforma de monitoreo y gestión BESS con analíticas en tiempo real, detección de anomalías y pronóstico energético para baterias Li-Ion usadas en sistemas de Paneles Solares para manejo y almacenamiento de energía. La arquitectura del sistema y diseño de componentes se modelaron en Draw.io. Backend FastAPI con streaming SSE y dashboard en React (Vite, shadcn-ui, Tailwind).",
   "MAXergy - Your green planer":
@@ -701,6 +738,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "Portfolio de projets ML : classifications (Iris, cancer du sein, Titanic, diabète avec Decision Tree, Logistic Regression, KNN, Random Forest, SVM), régressions (profits d’entreprise) et clustering (segmentation clients avec K-Means et Hierarchical), utilisant des notebooks Python, scikit-learn et autres librairies associées.",
   "Reusable code repository":
     "À l’origine un repo de code Python avec quelques jeux de terminal écrits dans des scripts; Aujourd’hui je l’utilise pour stocker tout type de snippet de code de n’importe quel langage que j’ai utilisé et qui pourrait être réutilisé dans de futurs projets. Il contient des utils, des jeux de terminal, des jeux avec UI, des exemples d’appels API, des composants UI et même des templates backend complets et déployables (RESTful, GraphQL et WebSocket). Il est en constante évolution car à chaque projet j’y extrais toujours quelque chose qui pourrait être utile à l’avenir.",
+  "HelpVenz - Aid for Venezuela":
+    "Plateforme de coordination d'aide humanitaire pour le Venezuela après le séisme de juin 2026. Plateforme mobile-first, espagnol-first qui fonctionne avec connexion faible : feed unifié de besoins (secours, eau, médicaments) et offres, registre de personnes (disparues/saines/décédées) searchable par nom/âge/zone, offres/demandes de refuge, signalement de bâtiments affectés avec niveau de dégâts et priorité de secours, vue de carte avec clustering et dashboard en temps réel. Inclut assistant IA 'Brújula' (LangChain ReAct sur MiniMax M3) qui interroge la base de données HelpVenz et le web (Tavily) avec visualisation en temps réel de l'utilisation des outils. Sans inscription requise, mises à jour en temps réel via Supabase Realtime, bilingue (ES/EN), notifications Web Push et PWA. Construit avec frontend Next.js 16, backend FastAPI, Supabase PostgreSQL (RLS pour lectures publiques, écritures via backend pour sécurité) et déployé sur Vercel + FastAPI Cloud.",
   "MaxxWatt Energy Management Platform":
     "Projet présenté au Berlin Energy Hackathon 2025 : plateforme de monitoring et gestion BESS avec analytics temps réel, détection d’anomalies et prévisions énergétiques pour batteries Li-Ion utilisées dans des systèmes de panneaux solaires. Architecture système et design des composants modélisés sur Draw.io. Backend FastAPI avec streaming SSE et dashboard React (Vite, shadcn-ui, Tailwind).",
   "MAXergy - Your green planer":
