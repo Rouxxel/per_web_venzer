@@ -10,7 +10,7 @@ import {
   type ProjectClassification,
 } from "@/data/projectClassifications";
 import { SiGithub } from "@icons-pack/react-simple-icons";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -248,7 +248,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      <ExternalLink className="h-4 w-4" />
+                      <Play className="h-4 w-4" />
                       <span className="text-sm font-medium font-accent">{language.sections.projects_section.project_specifics.showcase_btn}</span>
                     </a>
                   )}
