@@ -23,6 +23,7 @@ export const CONTEXT_OPTIONS = [
   "University",
   "Hackathon",
   "Research/Experimental",
+  "Humanitarian",
   "Tooling",
 ] as const;
 
@@ -33,6 +34,7 @@ export const INDUSTRY_THEME_OPTIONS = [
   "Finance/Fintech",
   "AR",
   "Military",
+  "Disaster Relieve",
   "Dev Tools",
   "Customization",
   "Logistics/Supply Chain"
@@ -79,6 +81,7 @@ export const CONTEXT_OPTIONS_ES = [
   "Universidad",
   "Hackatón",
   "Investigación/Experimental",
+  "Humanitaria",
   "Herramientas",
 ] as const;
 
@@ -90,6 +93,7 @@ export const INDUSTRY_THEME_OPTIONS_ES = [
   "Finanzas/Fintech",
   "RA",
   "Militar",
+  "Alivio de desastres",
   "Herramientas de desarrollo",
   "Customización",
   "Logística/Cadena de Suministros"
@@ -128,6 +132,7 @@ export const CONTEXT_OPTIONS_FR = [
   "Université",
   "Hackathon",
   "Recherche/Expérimental",
+  "Humanitaire",
   "Outils",
 ] as const;
 
@@ -139,6 +144,7 @@ export const INDUSTRY_THEME_OPTIONS_FR = [
   "Finances/Fintech",
   "RA",
   "Militaire",
+  "Alleviation de catastrophe",
   "Dev outils",
   "Customisation",
   "Logistique/Chaîne d'approvisionnement"
