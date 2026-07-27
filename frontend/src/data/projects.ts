@@ -322,7 +322,6 @@ export const projects_en: Project[] = [
       "LangChain",
       "Tavily",
       "AI Assistant",
-      "React",
       "Rate Limiting",
       "CORS",
       "Cloudflare Turnstile",
