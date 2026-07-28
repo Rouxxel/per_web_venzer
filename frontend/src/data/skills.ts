@@ -88,7 +88,8 @@ export const skillSections: SkillSection[] = [
       "Elevenlabs",
       "Kaggle",
       "Tavily",
-      "Heras"
+      "Heras",
+      "Redis"
     ],
   },
   {
