@@ -49,6 +49,7 @@ export const projects_en: Project[] = [
       "Python",
       "FastAPI",
       "OpenAI API",
+      "Redis",
       "Supabase",
       "PostgreSQL",
       "shadcn/ui",
