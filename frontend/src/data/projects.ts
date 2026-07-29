@@ -107,6 +107,7 @@ export const projects_en: Project[] = [
       "Context-aware chatbot",
       "REST API",
       "Docker",
+      "Redis",
       "AWS",
       "Render",
       "Vercel"
@@ -490,6 +491,7 @@ export const projects_en: Project[] = [
       "PostgreSQL",
       "Supabase",
       "REST API",
+      "Redis",
       "JWT",
       "Multi-tenancy",
       "RBAC",
