@@ -14,6 +14,7 @@ export const DOMAIN_TECH_OPTIONS = [
   "MLOps",
   "MCP",
   "AI / Data",
+  "Privacy",
   "AR",
 ] as const;
 
@@ -37,6 +38,7 @@ export const INDUSTRY_THEME_OPTIONS = [
   "Disaster Relieve",
   "Dev Tools",
   "Customization",
+  "Government",
   "Logistics/Supply Chain"
 ] as const;
 
@@ -71,6 +73,7 @@ export const DOMAIN_TECH_OPTIONS_ES = [
   "MLOps",
   "MCP",
   "IA / Datos",
+  "Privacidad",
   "RA",
 ] as const;
 
@@ -96,6 +99,7 @@ export const INDUSTRY_THEME_OPTIONS_ES = [
   "Alivio de desastres",
   "Herramientas de desarrollo",
   "Customización",
+  "Gobierno",
   "Logística/Cadena de Suministros"
 ] as const;
 
@@ -122,6 +126,7 @@ export const DOMAIN_TECH_OPTIONS_FR = [
   "MLOps",
   "MCP",
   "IA / Données",
+  "Confidentialité",
   "RA"
 ] as const;
 
@@ -147,6 +152,7 @@ export const INDUSTRY_THEME_OPTIONS_FR = [
   "Alleviation de catastrophe",
   "Dev outils",
   "Customisation",
+  "Gouvernement",
   "Logistique/Chaîne d'approvisionnement"
 ] as const;
 

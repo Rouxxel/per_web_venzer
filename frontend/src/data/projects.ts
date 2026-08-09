@@ -633,6 +633,25 @@ export const projects_en: Project[] = [
     live_demo: "https://ranting-chant.vercel.app/",
   },
   {
+    title: "VERTIAS protocol - PPAVI",
+    image: "/images/veritas_ppavi/initial_logo.png",
+    description:
+      "A system meant to meet the purpose of ID verification without saving government data anywhere. In America, the UK and soon Europe, there has been a push for ID verification laws under the pretense of protecting kids, however people dont like the idea of submitting their personal information, therefore this project is a system that allows users to verify their age without uploading their information. Fundamentally, the system would generate a private and public key (like async encryption) and a unique HMAC (to avoid redundancy) deterministically based on the users ID once and then to verify their age will simply have to provide their private key to compare it to a database of public ones and if there is a match then the 'truth' center will confirm it",
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Rust",
+      "C#",
+      "ASP NET",
+      ".NET",
+    ],
+    classifications: ["Fullstack", "Web", "Personal", "Privacy", "Government"],
+    //live_demo: "",
+    //demo: "",
+  },
+  {
     title: "Personal portfolio website",
     image: "/images/logo.jpeg",
     description:
@@ -712,6 +731,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Extensión de VS Code y aplicación de escritorio Electron independiente que añade compañeros animados a tu espacio de trabajo. La extensión de VS Code ofrece modos de renderizado Panel y Explorer con movimiento arrastrar-y-soltar, redimensionamiento con rueda del ratón, activos personalizados (GIF/PNG/WebM), guardar/cargar perfiles, importar/exportar y estado persistente. La aplicación independiente proporciona ventanas sin marco transparentes que se mantienen encima de otras aplicaciones con integración a la bandeja del sistema, atajos de teclado y caché de activos. Creado por diversión y personalización.",
   "Ranting Chant - Housing middleman platform":
     "Plataforma full-stack de operaciones inmobiliarias con diseño Frutiger Aero. Los inquilinos reportan incidencias de vivienda y mantenimiento mediante chat en lenguaje natural con entrada de voz opcional; Google Gemini clasifica solicitudes por tipo, urgencia, sentimiento y escalamiento. Gerentes y propietarios usan dashboards por rol para filtrar, aprobar y resolver solicitudes, coordinar proveedores y enviar notificaciones por email/SMS con Resend y Twilio; posee transcripción y text-to-speech de ElevenLabs y Gradium. Incorpora un esquema de base de datos PostgreSQL listo para producción con relaciones normalizadas (unidades, historial de estados/asignaciones), políticas de seguridad a nivel de fila (RLS) y mapeo de cuentas de usuario para la integración con Supabase Auth.",
+  "VERTIAS protocol - PPAVI":
+    "Sistema diseñado para cumplir el propósito de verificación de ID sin guardar datos gubernamentales en ningún lugar. En América, el Reino Unido y pronto Europa, ha habido un impulso por leyes de verificación de ID bajo el pretexto de proteger a los niños, sin embargo a las personas no les gusta la idea de enviar su información personal, por lo tanto este proyecto es un sistema que permite a los usuarios verificar su edad sin subir su información. Fundamentalmente, el sistema generaría una clave privada y pública (como encriptación asincrónica) y un HMAC único (para evitar redundancia) de forma determinística basado en el ID del usuario una vez, y luego para verificar su edad simplemente tendría que proporcionar su clave privada para compararla con una base de datos de claves públicas y si hay una coincidencia entonces el centro de 'verdad' lo confirmará.",
   "Personal portfolio website":
     "El sitio web en el que estás ahora: portafolio responsivo construido con React + TypeScript (Vite), Tailwind CSS y shadcn/ui (Radix UI). Usa animaciones con Framer Motion, React Router, TanStack Query y formularios con React Hook Form + Zod; probado con Vitest/React Testing Library, linting con ESLint y desplegado en Vercel con auditorías de seguridad en GitHub Actions. Tiene soporte para varios lenguajes",
 };
@@ -764,6 +785,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "Extension VS Code et application de bureau Electron autonome qui ajoute des compagnons animés à votre espace de travail. L'extension VS Code offre des modes de rendu Panel et Explorer avec mouvement glisser-déposer, redimensionnement à la molette, actifs personnalisés (GIF/PNG/WebM), sauvegarde/chargement de profils, import/export et état persistant. L'application autonome fournit des fenêtres transparentes sans cadre qui restent au-dessus des autres applications avec intégration à la barre d'état système, raccourcis clavier et cache d'actifs. Créé pour le plaisir et la personnalisation.",
   "Ranting Chant - Housing middleman platform":
     "Plateforme full-stack d'opérations immobilières avec un design Frutiger Aero. Les locataires signalent des problèmes de logement et de maintenance via un chat en langage naturel avec saisie vocale optionnelle ; Google Gemini classe les demandes par type, urgence, sentiment et escalade. Gestionnaires et propriétaires utilisent des tableaux de bord par rôle pour filtrer, approuver et résoudre les demandes, coordonner les prestataires et déclencher des notifications email/SMS via Resend et Twilio, avec transcription et synthèse vocale ElevenLabs et Gradium. Intègre un schéma de base de données PostgreSQL prêt pour la production avec des relations normalisées (unités, historique des statuts/affectations), des politiques de sécurité au niveau des lignes (RLS) et un mappage des comptes utilisateurs pour l'intégration de Supabase Auth.",
+  "VERTIAS protocol - PPAVI":
+    "Système conçu pour répondre à l'objectif de vérification d'ID sans enregistrer de données gouvernementales nulle part. En Amérique, au Royaume-Uni et bientôt en Europe, il y a eu une poussée pour les lois de vérification d'ID sous le prétexte de protéger les enfants, cependant les gens n'aiment pas l'idée de soumettre leurs informations personnelles, donc ce projet est un système qui permet aux utilisateurs de vérifier leur âge sans télécharger leurs informations. Fondamentalement, le système générerait une clé privée et publique (comme le chiffrement asynchrone) et un HMAC unique (pour éviter la redondance) de manière déterministe basée sur l'ID de l'utilisateur une fois, puis pour vérifier leur âge il suffirait de fournir leur clé privée pour la comparer à une base de données de clés publiques et s'il y a une correspondance alors le centre de 'vérité' le confirmera.",
   "Personal portfolio website":
     "Le site que vous consultez actuellement : portfolio responsive construit avec React + TypeScript (Vite), Tailwind CSS et shadcn/ui (Radix UI). Utilise Framer Motion, React Router, TanStack Query et formulaires avec React Hook Form + Zod; testé avec Vitest/React Testing Library, linté avec ESLint et déployé sur Vercel avec audits de sécurité GitHub Actions. Prise en charge multilingue incluse.",
 };
