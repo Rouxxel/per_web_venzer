@@ -1,0 +1,13 @@
+{
+  "name": "Portfolio Owner",
+  "title": "Software Engineer",
+  "url": "https://per-web-venzer.vercel.app/",
+  "github": "https://github.com/Rouxxel",
+  "cv": "/pdfs/CVRng.pdf",
+  "sections": {
+    "about": "#about",
+    "projects": "#projects",
+    "experience": "#experience",
+    "contact": "#contact"
+  }
+}

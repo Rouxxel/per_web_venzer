@@ -1,3 +1,4 @@
+# Traditional search engines
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +11,34 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# AI crawlers - explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Default for all other bots
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: /sitemap.xml

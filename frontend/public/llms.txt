@@ -1,0 +1,37 @@
+# llms.txt - Machine-readable index for AI agents and crawlers
+# This file provides structured information about this portfolio for AI systems
+
+## Site Information
+title: Personal Portfolio Website
+url: https://per-web-venzer.vercel.app/
+description: A modern, responsive portfolio website showcasing software engineering projects, professional experience, and technical skills.
+
+## Key Resources
+portfolio_json: /data/portfolio.json
+cv: /pdfs/CVRng.pdf
+github: https://github.com/Rouxxel
+
+## Site Sections
+about: #about
+projects: #projects
+experience: #experience
+contact: #contact
+
+## Technology Stack
+- React 18 with TypeScript
+- Vite build tool
+- Tailwind CSS
+- shadcn/ui components
+- Framer Motion animations
+- React Router v6
+
+## Content Scope
+This portfolio contains:
+- 15+ software engineering projects
+- Professional work experience
+- Technical skills across multiple domains
+- Educational background
+- Contact information
+
+## Permissions
+This site welcomes AI crawlers and automated agents. All content is publicly available for indexing and analysis.
