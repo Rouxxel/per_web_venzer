@@ -634,7 +634,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "VERTIAS protocol - PPAVI",
-    image: "/images/veritas_ppavi/initial_logo.png",
+    image: "/images/veritas_ppavi/logo.png",
     description:
       "A system meant to meet the purpose of ID verification without saving government data anywhere. In America, the UK and soon Europe, there has been a push for ID verification laws under the pretense of protecting kids, however people dont like the idea of submitting their personal information, therefore this project is a system that allows users to verify their age without uploading their information. Fundamentally, the system would generate a private and public key (like async encryption) and a unique HMAC (to avoid redundancy) deterministically based on the users ID once and then to verify their age will simply have to provide their private key to compare it to a database of public ones and if there is a match then the 'truth' center will confirm it",
     tags: [
