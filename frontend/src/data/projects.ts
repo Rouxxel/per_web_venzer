@@ -299,7 +299,7 @@ export const projects_en: Project[] = [
       "UI components",
       "Backend templates",
     ],
-    classifications: ["Backend", "Tooling", "Personal", "Dev Tools", "Customization"],
+    classifications: ["Backend", "Tooling", "Personal", "Dev Tools"],
     github: "https://github.com/Rouxxel/python-various",
   },
   {
@@ -332,7 +332,7 @@ export const projects_en: Project[] = [
       "Disaster Response",
       "i18n"
     ],
-    classifications: ["Fullstack", "Personal","Database","Web","Humanitarian"],
+    classifications: ["Fullstack", "Personal","Database","Web","Humanitarian","Disaster Relieve"],
     github: "https://github.com/peresramirez/helpvenz",
     live_demo: "https://helpvenz.vercel.app/",
   },
@@ -475,7 +475,7 @@ export const projects_en: Project[] = [
     title: "Prod Watch - Inventory and cashier system",
     image: "/images/prod_watch/logo_downscaled.jpg",
     description:
-      "Multi-tenant SaaS inventory and point-of-sale system for businesses with one or more warehouses. Built with React 19 + TanStack Start frontend and Spring Boot 3 + Java 17 backend, it features stock movements (IN/OUT/TRANSFER/ADJUSTMENT), cashier with multi-warehouse cart, transaction history, audit log and ecosystem-based multi-tenancy with RBAC. Uses Supabase PostgreSQL with Flyway migrations and Supabase Auth for JWT authentication.",
+      "Multi-tenant SaaS inventory and point-of-sale system for businesses with one or more warehouses. Built with React 19 + TanStack Start frontend and Spring Boot 3 + Java 17 backend, it features stock movements (/IN /OUT /TRANSFER /ADJUSTMENT), cashier with multi-warehouse cart, transaction history, audit log and ecosystem-based multi-tenancy with RBAC. Uses Supabase PostgreSQL with Flyway migrations and Supabase Auth for JWT authentication.",
     tags: [
       "React",
       "TypeScript",
@@ -499,7 +499,7 @@ export const projects_en: Project[] = [
       "Vercel",
       "Render"
     ],
-    classifications: ["Fullstack", "Database", "Web", "Personal", "Industrial", "Finance/Fintech"],
+    classifications: ["Fullstack", "Database", "Web", "Personal", "Industrial", "Finance/Fintech", "Logistics/Supply Chain"],
     github: "https://github.com/Rouxxel/Prod_Watcher",
     //demo: "",
     live_demo: "https://prod-watcher.vercel.app/"
@@ -566,7 +566,7 @@ export const projects_en: Project[] = [
       "Desktop App",
       "System Tray"
     ],
-    classifications: ["Frontend", "Personal", "Tooling", "Dev Tools", "Customization", "Standalone"],
+    classifications: ["Frontend", "Personal", "Tooling", "Dev Tools", "Standalone"],
     live_demo: "https://marketplace.visualstudio.com/items?itemName=Rouxxel.companion-sonion",
     github: "https://github.com/Rouxxel/companion_sonion",
   },
@@ -722,7 +722,7 @@ const projectDescriptionsEs: Record<string, string> = {
   "Atryon Chrome Extension":
     "Extensión de Chrome como probador virtual: permite seleccionar una prenda desde la página o mediante arrastrar y soltar, subir una selfie y generar un resultado de prueba virtual con IA. Tiene interfaz en panel lateral con content script para 'seleccionar desde la página'; backend FastAPI que ejecuta llamados API de FLUX de Black Forest Labs para composición multi-imagen (MIC), con endpoints de sondeo y descarga. Incluye endpoints extra para futuras funciones de Text-To-Image (TTI) e Image Edit With Mask (IDWM).",
   "Prod Watch - Inventory and cashier system":
-    "Sistema SaaS multi-arrendatario de inventario y punto de venta para empresas con uno o más almacenes. Construido con frontend React 19 + TanStack Start y backend Spring Boot 3 + Java 17, cuenta con movimientos de stock (ENTRADA/SALIDA/TRANSFERENCIA/AJUSTE), cajero con carrito multi-almacén, historial de transacciones, log de auditoría y multi-tenancy basado en ecosistema con RBAC. Usa Supabase PostgreSQL con migraciones Flyway y Supabase Auth para autenticación JWT.",
+    "Sistema SaaS multi-arrendatario de inventario y punto de venta para empresas con uno o más almacenes. Construido con frontend React 19 + TanStack Start y backend Spring Boot 3 + Java 17, cuenta con movimientos de stock (/ENTRADA /SALIDA /TRANSFERENCIA /AJUSTE), cajero con carrito multi-almacén, historial de transacciones, log de auditoría y multi-tenancy basado en ecosistema con RBAC. Usa Supabase PostgreSQL con migraciones Flyway y Supabase Auth para autenticación JWT.",
   "Drone battery performance prediction system":
     "Sistema híbrido de física + ML para predecir y optimizar el rendimiento de baterías de drones en entornos fríos. Arquitectura de 4 capas: un pipeline de ingeniería de características extrae 22 features de series temporales (térmicas, eléctricas, de movimiento) de la telemetría bruta; una red LSTM en PyTorch predice el voltaje y la temperatura de la batería en el siguiente paso usando una ventana deslizante; un Modelo de Circuito Equivalente + simulador térmico proporciona una línea base física que la capa ML corrige de forma residual; y un controlador basado en reglas activa la limitación de corriente y el precalentamiento termodinámico según las predicciones. Verificado con una suite de tests de propiedades con Hypothesis que cubre física, estados del modelo, transformaciones de datos y límites del controlador.",
   "CorpuScan - Financial document summarization":
@@ -776,7 +776,7 @@ const projectDescriptionsFr: Record<string, string> = {
   "Atryon Chrome Extension":
     "Extension Chrome de try-on virtuel : permet de sélectionner un vêtement depuis la page ou par glisser-déposer, ajouter un selfie et obtenir un résultat IA. UI en panneau latéral avec content script pour « sélectionner depuis la page »; backend FastAPI exécutant l’API FLUX de Black Forest Labs pour composition multi-images (MIC), avec endpoints de polling et téléchargement. Endpoints supplémentaires pour futures fonctionnalités Text-To-Image (TTI) et Image Edit With Mask (IDWM).",
   "Prod Watch - Inventory and cashier system":
-    "Système SaaS multi-tenancy d'inventaire et de point de vente pour entreprises avec un ou plusieurs entrepôts. Construit avec frontend React 19 + TanStack Start et backend Spring Boot 3 + Java 17, il comporte des mouvements de stock (ENTRÉE/SORTIE/TRANSFERT/AJUSTEMENT), caisse avec panier multi-entrepôt, historique de transactions, log d'audit et multi-tenancy basé sur écosystème avec RBAC. Utilise Supabase PostgreSQL avec migrations Flyway et Supabase Auth pour authentification JWT.",  
+    "Système SaaS multi-tenancy d'inventaire et de point de vente pour entreprises avec un ou plusieurs entrepôts. Construit avec frontend React 19 + TanStack Start et backend Spring Boot 3 + Java 17, il comporte des mouvements de stock (/ENTRÉE /SORTIE /TRANSFERT /AJUSTEMENT), caisse avec panier multi-entrepôt, historique de transactions, log d'audit et multi-tenancy basé sur écosystème avec RBAC. Utilise Supabase PostgreSQL avec migrations Flyway et Supabase Auth pour authentification JWT.",  
   "Drone battery performance prediction system":
     "Système hybride physique + ML pour prédire et optimiser les performances des batteries de drones dans des environnements froids. Architecture en 4 couches : un pipeline d’ingénierie des caractéristiques extrait 22 features de séries temporelles (thermiques, électriques, de mouvement) depuis la télémétrie brute ; un réseau LSTM PyTorch prédit la tension et la température de la batterie à l’étape suivante via une fenêtre glissante ; un Modèle de Circuit Équivalent + simulateur thermique fournit une baseline physique que la couche ML corrige de façon résiduelle ; et un contrôleur à base de règles déclenche la limitation de courant et le préchauffage thermodynamique selon les prédictions. Vérifié avec une suite de tests de propriétés Hypothesis couvrant la physique, les états du modèle, les transformations de données et les limites du contrôleur.",
   "CorpuScan - Financial document summarization":

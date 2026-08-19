@@ -37,7 +37,6 @@ export const INDUSTRY_THEME_OPTIONS = [
   "Military",
   "Disaster Relieve",
   "Dev Tools",
-  "Customization",
   "Government",
   "Logistics/Supply Chain"
 ] as const;
@@ -98,7 +97,6 @@ export const INDUSTRY_THEME_OPTIONS_ES = [
   "Militar",
   "Alivio de desastres",
   "Herramientas de desarrollo",
-  "Customización",
   "Gobierno",
   "Logística/Cadena de Suministros"
 ] as const;
@@ -151,7 +149,6 @@ export const INDUSTRY_THEME_OPTIONS_FR = [
   "Militaire",
   "Alleviation de catastrophe",
   "Dev outils",
-  "Customisation",
   "Gouvernement",
   "Logistique/Chaîne d'approvisionnement"
 ] as const;
