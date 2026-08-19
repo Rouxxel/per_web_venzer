@@ -177,6 +177,27 @@ npm run test:watch   # Run tests in watch mode
 
 ---
 
+## Security & CI
+
+This project includes security hardening and CI/CD workflows for a static portfolio site:
+
+### Security Controls
+- **Transport security**: HTTPS with HSTS, CSP, and security headers
+- **Supply chain security**: Dependabot for automated dependency updates
+- **Secret scanning**: Gitleaks and npm audit in CI/CD pipeline
+- **Code quality**: ESLint, testing, and build verification
+
+### CI/CD Workflows
+- **Frontend workflow**: Lint, test, and build on PR/push to main (path-filtered)
+- **Security workflow**: Weekly secret scanning and dependency auditing
+- **Required checks**: Quality gates prevent merging without passing CI
+
+### Status Badges
+- Frontend CI: [![Frontend CI](https://github.com/Rouxxel/per_web_venzer/actions/workflows/frontend.yml/badge.svg)](https://github.com/Rouxxel/per_web_venzer/actions/workflows/frontend.yml)
+- Security Audit: [![Security Audit](https://github.com/Rouxxel/per_web_venzer/actions/workflows/security.yml/badge.svg)](https://github.com/Rouxxel/per_web_venzer/actions/workflows/security.yml)
+
+---
+
 ## Deployment
 
 ### Vercel (Recommended)
