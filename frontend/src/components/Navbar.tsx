@@ -13,7 +13,11 @@ import {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    const saved = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return saved === "dark" || (!saved && prefersDark);
+  });
   const [scrolled, setScrolled] = useState(false);
   const { language, currentLanguageCode, setLanguage, getLanguageOptions } = useLanguage();
 
@@ -25,12 +29,8 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const dark = saved === "dark" || (!saved && prefersDark);
-    setIsDark(dark);
-    document.documentElement.classList.toggle("dark", dark);
-  }, []);
+    document.documentElement.classList.toggle("dark", isDark);
+  }, [isDark]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
