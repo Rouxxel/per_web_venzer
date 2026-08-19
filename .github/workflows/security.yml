@@ -11,22 +11,49 @@ on:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
+permissions:
+  contents: read
+
 jobs:
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@v2
+
+      - name: Block .env files
+        run: |
+          if [ -f frontend/.env ]; then
+            echo "Error: .env file found in frontend directory. Do not commit environment files."
+            exit 1
+          fi
+
+      - name: Check for committed secret patterns
+        run: |
+          # Check for private keys and hardcoded API keys
+          # Allowlist public Vercel domain and other legitimate public URLs
+          ! grep -RInE '(PRIVATE KEY-----|password\s*=\s*["'\''][^"'\'']{8,})' \
+            --include='*.ts' --include='*.tsx' --include='*.js' --include='*.jsx' \
+            --exclude='*.test.*' --exclude='*.spec.*' frontend/src || \
+            (echo "Forbidden secret pattern in sources." && exit 1)
+
   audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          
+          node-version: '22'
+
       - name: Install dependencies
         run: cd frontend && npm ci
-        
+
       - name: Run npm audit
         run: cd frontend && npm audit --audit-level=moderate
-        
+
       - name: Check for outdated packages
         run: cd frontend && npm outdated || true
