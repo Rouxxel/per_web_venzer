@@ -63,7 +63,7 @@ export const projects_en: Project[] = [
       "Render",
       "Vercel"
     ],
-    classifications: ["Frontend", "Database", "Web", "AI / Data", "Professional", "Educational"],
+    classifications: ["Frontend", "Database", "Web", "AI/Data", "Professional", "Educational"],
     github: "https://github.com/Rouxxel/langdrill",
     live_demo: "https://langdrill.vercel.app",
   },
@@ -87,7 +87,7 @@ export const projects_en: Project[] = [
       "Docker",
       "Android Studio"
     ],
-    classifications: ["Fullstack", "Mobile", "Database", "AI / Data", "Personal"],
+    classifications: ["Fullstack", "Mobile", "Database", "AI/Data", "Personal"],
     github: "https://github.com/Rouxxel/simple-chat",
   },
   {
@@ -112,7 +112,7 @@ export const projects_en: Project[] = [
       "Render",
       "Vercel"
     ],
-    classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Gaming"],
+    classifications: ["Fullstack", "Web", "AI/Data", "Hackathon", "Gaming"],
     github: "https://github.com/Rouxxel/rift_rewind_hckthn_frontnd",
     demo: "https://youtu.be/9y8Wq2M8i0E",
     live_demo: "https://rift-rewind-hckthn-frontnd.vercel.app",
@@ -140,7 +140,7 @@ export const projects_en: Project[] = [
       "Railway",
       "Google Auth"
     ],
-    classifications: ["Fullstack", "Web", "Database", "AI / Data", "Hackathon"],
+    classifications: ["Fullstack", "Web", "Database", "AI/Data", "Hackathon"],
     github: "https://github.com/peres84/TuneTools",
     demo: "https://youtu.be/93G2gHTA_DU",
   },
@@ -168,7 +168,7 @@ export const projects_en: Project[] = [
       "ImageKit",
       "yt-dlp"
     ],
-    classifications: ["Fullstack", "Web", "Finance/Fintech", "AI / Data", "Hackathon"],
+    classifications: ["Fullstack", "Web", "Finance/Fintech", "AI/Data", "Hackathon"],
     github: "https://github.com/peresramirez/FintechCheckAI",
   },
   {
@@ -193,7 +193,7 @@ export const projects_en: Project[] = [
       "seaborn",
       "Data science"
     ],
-    classifications: ["AI / Data", "Research/Experimental", "MLOps", "University", "Personal"],
+    classifications: ["AI/Data", "Research/Experimental", "MLOps", "University", "Personal"],
     github: "https://github.com/Rouxxel/thesis-bachelor",
   },
   {
@@ -220,7 +220,7 @@ export const projects_en: Project[] = [
       "Docker",
       "pytest"
     ],
-    classifications: ["AI / Data", "Research/Experimental", "MLOps", "University"],
+    classifications: ["AI/Data", "Research/Experimental", "MLOps", "University"],
     github: "https://github.com/Rouxxel/Emotion_detection_DL_model_from_images",
   },
   {
@@ -249,7 +249,7 @@ export const projects_en: Project[] = [
       "numpy",
       "matplotlib"
     ],
-    classifications: ["AI / Data", "MLOps", "Hackathon", "Military", "Research/Experimental"],
+    classifications: ["AI/Data", "MLOps", "Hackathon", "Military", "Research/Experimental"],
     github: "https://github.com/Rouxxel/drone_sound_profile_detection",
   },
   {
@@ -276,7 +276,7 @@ export const projects_en: Project[] = [
       "matplotlib",
       "seaborn"
     ],
-    classifications: ["AI / Data", "MLOps", "University", "Research/Experimental"],
+    classifications: ["AI/Data", "MLOps", "University", "Research/Experimental"],
     github: "https://github.com/Rouxxel/ai_general",
   },
   {
@@ -361,7 +361,7 @@ export const projects_en: Project[] = [
       "Draw.io",
       "Software Architecture"
     ],
-    classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Industrial"],
+    classifications: ["Fullstack", "Web", "AI/Data", "Hackathon", "Industrial"],
     github: "https://github.com/Rouxxel/maxxwatt_hackathon",
     demo: "https://www.youtube.com/watch?v=sgxkg72gOhw",
   },
@@ -389,7 +389,7 @@ export const projects_en: Project[] = [
       "Energy Management/Planning",
       "Solar PV",
     ],
-    classifications: ["Fullstack", "Web", "Mobile", "AI / Data", "Hackathon", "Research/Experimental"],
+    classifications: ["Fullstack", "Web", "Mobile", "AI/Data", "Hackathon", "Research/Experimental"],
     github: "https://github.com/Rouxxel/MAXergy",
     demo: "https://youtu.be/33z1vDMA3CQ",
   },
@@ -467,7 +467,7 @@ export const projects_en: Project[] = [
       "Text-To-Image (TTI)",
       "Chrome APIs"
     ],
-    classifications: ["Fullstack", "Web", "AI / Data", "Personal", "AR"],
+    classifications: ["Fullstack", "Web", "AI/Data", "Personal", "AR"],
     github: "https://github.com/Rouxxel/atryon_chrome_extension",
     demo:"https://youtu.be/chbujM2-rrA",
   },
@@ -538,7 +538,7 @@ export const projects_en: Project[] = [
       "Finance",
       "Railway",
     ],
-    classifications: ["Fullstack", "Web", "AI / Data", "Hackathon", "Finance/Fintech"],
+    classifications: ["Fullstack", "Web", "AI/Data", "Hackathon", "Finance/Fintech"],
     github: "https://github.com/peres84/corpuscan",
     demo: "https://youtu.be/tFiiEdAA90Q",
   },
@@ -571,6 +571,31 @@ export const projects_en: Project[] = [
     github: "https://github.com/Rouxxel/companion_sonion",
   },
   {
+    title: "Cogmerge - Collab tool",
+    image: "/images/cogmerge/cogmerge.svg",
+    description:
+      "Cogmerge preserves the 'why' behind code decisions across a team - rejected alternatives, deliberate omissions, and load-bearing constraints that vanish when an agent conversation closes. Unlike Git, which indexes what exists, it indexes reasoning by code surface (path:symbol) via Cognee and Qdrant. SEAL captures intent from finished branches through agent subagents; CHECK retrieves matching records before merges and blocks contradictions with the original author's rationale. Zero-dependency Python stdlib install into any repo, works with Claude Code, Cursor, and Codex via agent skills and AGENTS.md - no CLI daemon, no MCP server. Optional Slack slash command for querying team memory without leaving chat.",
+    tags: [
+      "Python",
+      "Cognee",
+      "Qdrant",
+      "Knowledge Graph",
+      "Vector Search",
+      "Agent Skills",
+      "Claude Code",
+      "Cursor",
+      "Codex",
+      "Git",
+      "Slack",
+      "OpenAI API",
+      "Shell",
+    ],
+    classifications: ["AI/Data", "Backend", "Standalone", "Tooling", "Hackathon", "Dev Tools"],
+    //live_demo: "",
+    //demo: "",
+    github: "https://github.com/peresramirez/Cogmerge",
+  },
+  {
     title: "Drone battery performance prediction system",
     image: "/images/drone_battery_prfmnce/drone_battery.png",
     description:
@@ -596,7 +621,7 @@ export const projects_en: Project[] = [
       "matplotlib",
       "SciPy",
     ],
-    classifications: ["AI / Data", "MLOps", "Hackathon", "Research/Experimental", "Industrial", "Military"],
+    classifications: ["AI/Data", "MLOps", "Hackathon", "Research/Experimental", "Industrial", "Military"],
     github: "https://github.com/Rouxxel/drone_battery_performance_prediction",
   },
   {
@@ -627,7 +652,7 @@ export const projects_en: Project[] = [
       "Render",
       "Property Management",
     ],
-    classifications: ["Fullstack", "Web", "Database", "Hackathon", "AI / Data", "MCP"],
+    classifications: ["Fullstack", "Web", "Database", "Hackathon", "AI/Data", "MCP"],
     github: "https://github.com/Rouxxel/ranting_chant",
     demo: "https://youtu.be/IO3J0MM25KE",
     live_demo: "https://ranting-chant.vercel.app/",
@@ -741,6 +766,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Colaboré en un proyecto para el Big Berlin Hack: CorpuScan convierte documentos financieros densos en breves briefings ejecutivos en video y proporciona investigación de auditoría potenciada por IA. Los usuarios suben un PDF, pegan una URL o escriben una query para generación de video; o suben documentos financieros (CSV, TXT, XLSX, PDF, DOCX) para investigación de fraude. El pipeline multi-agente (Gemini 2.5 Pro, OpenAI) extrae datos financieros clave, redacta guiones, genera narración con ElevenLabs TTS, renderiza gráficos en movimiento con Hera API, y realiza análisis de grafos de documentos basado en DFS con detección de discrepancias entre archivos y hallazgos respaldados por evidencia.",
   "Companion Sonion - VSCode extension":
     "Extensión de VS Code y aplicación de escritorio Electron independiente que añade compañeros animados a tu espacio de trabajo. La extensión de VS Code ofrece modos de renderizado Panel y Explorer con movimiento arrastrar-y-soltar, redimensionamiento con rueda del ratón, activos personalizados (GIF/PNG/WebM), guardar/cargar perfiles, importar/exportar y estado persistente. La aplicación independiente proporciona ventanas sin marco transparentes que se mantienen encima de otras aplicaciones con integración a la bandeja del sistema, atajos de teclado y caché de activos. Creado por diversión y personalización.",
+  "Cogmerge - Collab tool":
+    "Cogmerge preserva el 'por qué' detrás de las decisiones de código en un equipo - alternativas rechazadas, omisiones deliberadas y restricciones críticas que desaparecen cuando se cierra una conversación con el agente. A diferencia de Git, que indexa lo que existe, indexa el razonamiento por superficie de código (ruta:símbolo) vía Cognee y Qdrant. SEAL captura la intención de ramas terminadas mediante subagentes; CHECK recupera registros coincidentes antes de los merges y bloquea contradicciones con el razonamiento original del autor. Instalación con Python stdlib sin dependencias en cualquier repo, compatible con Claude Code, Cursor y Codex mediante agent skills y AGENTS.md - sin daemon CLI ni servidor MCP. Comando slash opcional en Slack para consultar la memoria del equipo sin salir del chat.",
   "Ranting Chant - Housing middleman platform":
     "Plataforma full-stack de operaciones inmobiliarias con diseño Frutiger Aero. Los inquilinos reportan incidencias de vivienda y mantenimiento mediante chat en lenguaje natural con entrada de voz opcional; Google Gemini clasifica solicitudes por tipo, urgencia, sentimiento y escalamiento. Gerentes y propietarios usan dashboards por rol para filtrar, aprobar y resolver solicitudes, coordinar proveedores y enviar notificaciones por email/SMS con Resend y Twilio; posee transcripción y text-to-speech de ElevenLabs y Gradium. Incorpora un esquema de base de datos PostgreSQL listo para producción con relaciones normalizadas (unidades, historial de estados/asignaciones), políticas de seguridad a nivel de fila (RLS) y mapeo de cuentas de usuario para la integración con Supabase Auth.",
   "VERTIAS protocol - PPAVI":
@@ -795,6 +822,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif et fournit une investigation d'audit alimentée par l'IA. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête pour la génération de vidéo; ou téléchargent des documents financiers (CSV, TXT, XLSX, PDF, DOCX) pour l'investigation de fraude. Le pipeline multi-agents (Gemini 2.5 Pro, OpenAI) extrait les données financières clés, rédige des scripts, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera, et effectue une analyse de graphes de documents basée sur DFS avec détection de discrepancies inter-fichiers et résultats soutenus par des preuves.",
   "Companion Sonion - VSCode extension":
     "Extension VS Code et application de bureau Electron autonome qui ajoute des compagnons animés à votre espace de travail. L'extension VS Code offre des modes de rendu Panel et Explorer avec mouvement glisser-déposer, redimensionnement à la molette, actifs personnalisés (GIF/PNG/WebM), sauvegarde/chargement de profils, import/export et état persistant. L'application autonome fournit des fenêtres transparentes sans cadre qui restent au-dessus des autres applications avec intégration à la barre d'état système, raccourcis clavier et cache d'actifs. Créé pour le plaisir et la personnalisation.",
+  "Cogmerge - Collab tool":
+    "Cogmerge préserve le « pourquoi » des décisions de code au sein d'une équipe - alternatives rejetées, omissions délibérées et contraintes critiques qui disparaissent quand une conversation agent se ferme. Contrairement à Git, qui indexe ce qui existe, il indexe le raisonnement par surface de code (chemin:symbole) via Cognee et Qdrant. SEAL capture l'intention des branches terminées via des sous-agents ; CHECK récupère les enregistrements correspondants avant les merges et bloque les contradictions avec le raisonnement original de l'auteur. Installation Python stdlib sans dépendances dans n'importe quel repo, compatible avec Claude Code, Cursor et Codex via agent skills et AGENTS.md - pas de daemon CLI ni de serveur MCP. Commande slash Slack optionnelle pour interroger la mémoire d'équipe sans quitter le chat.",
   "Ranting Chant - Housing middleman platform":
     "Plateforme full-stack d'opérations immobilières avec un design Frutiger Aero. Les locataires signalent des problèmes de logement et de maintenance via un chat en langage naturel avec saisie vocale optionnelle ; Google Gemini classe les demandes par type, urgence, sentiment et escalade. Gestionnaires et propriétaires utilisent des tableaux de bord par rôle pour filtrer, approuver et résoudre les demandes, coordonner les prestataires et déclencher des notifications email/SMS via Resend et Twilio, avec transcription et synthèse vocale ElevenLabs et Gradium. Intègre un schéma de base de données PostgreSQL prêt pour la production avec des relations normalisées (unités, historique des statuts/affectations), des politiques de sécurité au niveau des lignes (RLS) et un mappage des comptes utilisateurs pour l'intégration de Supabase Auth.",
   "VERTIAS protocol - PPAVI":

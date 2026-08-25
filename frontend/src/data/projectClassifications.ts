@@ -13,7 +13,7 @@ export const DOMAIN_TECH_OPTIONS = [
   "Web",
   "MLOps",
   "MCP",
-  "AI / Data",
+  "AI/Data",
   "Privacy",
   "AR",
 ] as const;
