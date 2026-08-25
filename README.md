@@ -1,16 +1,16 @@
 # Personal Portfolio Website
 
-A modern, responsive portfolio website showcasing my software engineering projects, professional experience, and technical skills. Built with React, TypeScript, and Tailwind CSS, featuring smooth animations and a clean, professional design.
+A modern, responsive portfolio website showcasing my software engineering projects, professional experience and technical skills. Built with React, TypeScript and Tailwind CSS, featuring smooth animations and a clean, professional design.
  **Live Demo**: [View Portfolio](...)
 
 ---
 
 ## Features
 
-- **Responsive Design**: Fully responsive layout optimized for desktop, tablet, and mobile devices
+- **Responsive Design**: Fully responsive layout optimized for desktop, tablet and mobile devices
 - **Modern UI/UX**: Clean, professional interface with smooth animations using Framer Motion
-- **Project Showcase**: Comprehensive portfolio of 10+ projects spanning AI/ML, web development, and game development
-- **Interactive Sections**: Hero, About, Projects, Experience, and Contact sections with smooth scrolling
+- **Project Showcase**: Comprehensive portfolio of 10+ projects spanning AI/ML, web development and game development
+- **Interactive Sections**: Hero, About, Projects, Experience and Contact sections with smooth scrolling
 - **Component Library**: Built with shadcn/ui and Radix UI primitives for accessible, customizable components
 - **Performance Optimized**: Fast loading times with Vite build tool and optimized assets
 - **Type-Safe**: Full TypeScript implementation for robust code quality
@@ -182,13 +182,13 @@ npm run test:watch   # Run tests in watch mode
 This project includes security hardening and CI/CD workflows for a static portfolio site:
 
 ### Security Controls
-- **Transport security**: HTTPS with HSTS, CSP, and security headers
+- **Transport security**: HTTPS with HSTS, CSP and security headers
 - **Supply chain security**: Dependabot for automated dependency updates
 - **Secret scanning**: Gitleaks and npm audit in CI/CD pipeline
-- **Code quality**: ESLint, testing, and build verification
+- **Code quality**: ESLint, testing and build verification
 
 ### CI/CD Workflows
-- **Frontend workflow**: Lint, test, and build on PR/push to main (path-filtered)
+- **Frontend workflow**: Lint, test and build on PR/push to main (path-filtered)
 - **Security workflow**: Weekly secret scanning and dependency auditing
 - **Required checks**: Quality gates prevent merging without passing CI
 

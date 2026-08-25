@@ -1,6 +1,6 @@
 /**
  * Canonical three-layer classification vocabulary for portfolio projects.
- * Domain / Technical, Context / Origin, and Industry / Theme share no duplicate
+ * Domain / Technical, Context / Origin and Industry / Theme share no duplicate
  * option labels except "Industrial" (appears in both Context and Industry lists for filtering).
  */
 export const DOMAIN_TECH_OPTIONS = [

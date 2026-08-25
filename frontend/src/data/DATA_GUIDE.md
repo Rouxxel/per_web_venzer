@@ -84,7 +84,7 @@ interface ExperienceEntry {
 ```
 
 2. Add the **same entry translated** to `experience_es` and `experience_fr` at the same array position.  
-   Keep `link`, `period`, and `type` identical — only translate `title`, `company` (if needed), `location`, and `description`.
+   Keep `link`, `period` and `type` identical — only translate `title`, `company` (if needed), `location` and `description`.
 
 3. If you only speak English and don't want to translate right now, copy the English object verbatim into the other arrays — it will fall back gracefully.
 
@@ -199,7 +199,7 @@ Insert it at the position you want it to appear in the grid (top = first card).
   title: "My New Project",
   image: "/images/my-project/image.png",
   description:
-    "One or two sentences describing what the project does, the tech used, and your role.",
+    "One or two sentences describing what the project does, the tech used and your role.",
   tags: [
     "React",
     "TypeScript",

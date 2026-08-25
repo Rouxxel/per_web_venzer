@@ -148,7 +148,7 @@ export const projects_en: Project[] = [
     title: "Fintech CheckAI",
     image: "/images/fintech_checkai/opt_logo.jpg",
     description:
-      "Fact-checking platform that verifies claims made in YouTube videos against official company quarterly reports with immutable versioned storage. Built with React+TS frontend and FastAPI backend, it uses Tower.dev + Apache Iceberg for document storage, RunPod for OCR/audio transcription, and LangChain + OpenAI for AI-powered analysis with credibility scoring and follow-up chat capabilities.",
+      "Fact-checking platform that verifies claims made in YouTube videos against official company quarterly reports with immutable versioned storage. Built with React+TS frontend and FastAPI backend, it uses Tower.dev + Apache Iceberg for document storage, RunPod for OCR/audio transcription and LangChain + OpenAI for AI-powered analysis with credibility scoring and follow-up chat capabilities.",
     tags: [
       "React",
       "TypeScript",
@@ -175,7 +175,7 @@ export const projects_en: Project[] = [
     title: "Bachelor Thesis (Machine Learning)",
     image: "/images/thesis/graduation.png",
     description:
-      "Comparative study of ML classification models for early diabetes detection on BRFSS 2015 health indicators: modular Python pipeline with Decision Tree, Logistic Regression, Random Forest, and SVM, plus EDA, SMOTE resampling, JSON config and centralized logging and results.",
+      "Comparative study of ML classification models for early diabetes detection on BRFSS 2015 health indicators: modular Python pipeline with Decision Tree, Logistic Regression, Random Forest and SVM, plus EDA, SMOTE resampling, JSON config and centralized logging and results.",
     tags: [
       "Python",
       "scikit-learn",
@@ -200,7 +200,7 @@ export const projects_en: Project[] = [
     title: "Emotional Detection DL model",
     image: "/images/deep_learning/deep_learning.png",
     description:
-      "Deep learning project for detecting 7 emotions from grayscale face images using transfer learning (DenseNet121) and a custom CNN, with CLI, webcam UI so it is possible to test the trained model live with their own faces, FER dataset from Kaggle, and optional TFLite/TensorRT/ONNX optimization.",
+      "Deep learning project for detecting 7 emotions from grayscale face images using transfer learning (DenseNet121) and a custom CNN, with CLI, webcam UI so it is possible to test the trained model live with their own faces, FER dataset from Kaggle and optional TFLite/TensorRT/ONNX optimization.",
     tags: [
       "Python",
       "TensorFlow",
@@ -256,7 +256,7 @@ export const projects_en: Project[] = [
     title: "Machine Learning Models",
     image: "/images/ml_various/ml_various.png",
     description:
-      "Compilation of ML projects: classifications (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit), and clustering (customer segmentation with K-Means and Hierarchical), using Python notebooks, scikist/-learn and other related libraries.",
+      "Compilation of ML projects: classifications (Iris, breast cancer, Titanic, diabetes with Decision Tree, Logistic Regression, KNN, Random Forest, SVM), regression (company profit) clustering (customer segmentation with K-Means and Hierarchical), using Python notebooks, scikist/-learn and other related libraries.",
     tags: [
       "Python",
       "scikit-learn",
@@ -306,7 +306,7 @@ export const projects_en: Project[] = [
     title: "HelpVenz - Aid for Venezuela",
     image: "/images/helpvenz/logo.jpg",
     description:
-      "Humanitarian aid coordination platform for Venezuela after the June 2026 earthquake. Mobile-first, Spanish-first platform that works with weak connection: unified feed for needs (rescue, water, medicine) and offers, person registry (missing/safe/deceased) searchable by name/age/zone, shelter offers/requests, affected buildings reporting with damage level and rescue priority, map view with clustering, and live dashboard. Features 'Brújula' AI assistant (LangChain ReAct over MiniMax M3) that queries HelpVenz database and web (Tavily) with live tool usage display. No registration required, real-time updates via Supabase Realtime, bilingual (ES/EN), Web Push notifications, and PWA. Built with Next.js 16 frontend, FastAPI backend, Supabase PostgreSQL (RLS for public reads, backend writes for security), and deployed on Vercel + FastAPI Cloud.",
+      "Humanitarian aid coordination platform for Venezuela after the June 2026 earthquake. Mobile-first, Spanish-first platform that works with weak connection: unified feed for needs (rescue, water, medicine) and offers, person registry (missing/safe/deceased) searchable by name/age/zone, shelter offers/requests, affected buildings reporting with damage level and rescue priority, map view with clustering and live dashboard. Features 'Brújula' AI assistant (LangChain ReAct over MiniMax M3) that queries HelpVenz database and web (Tavily) with live tool usage display. No registration required, real-time updates via Supabase Realtime, bilingual (ES/EN), Web Push notifications and PWA. Built with Next.js 16 frontend, FastAPI backend, Supabase PostgreSQL (RLS for public reads, backend writes for security) and deployed on Vercel + FastAPI Cloud.",
     tags: [
       "Next.js",
       "React 19",
@@ -369,7 +369,7 @@ export const projects_en: Project[] = [
     title: "MAXergy - Your green planer",
     image: "/images/maxergy/logo_bckgrnd_512.jpg",
     description:
-      "AI-powered home energy upgrade planner for households. Features a mobile-first TanStack Start frontend and a FastAPI backend with Gemini API integration for personalized advice. Powered by a production-grade residential energy modeling pipeline that simulates BDEW H0 load profiles, degree-day heating, PV sizing, and annuity financing across 6 upgrade scenarios. Highlights rigorous research where four price forecasting models (Constant, Trend, ETS, SARIMA) were backtested against Destatis indices (2019–2025)",
+      "AI-powered home energy upgrade planner for households. Features a mobile-first TanStack Start frontend and a FastAPI backend with Gemini API integration for personalized advice. Powered by a production-grade residential energy modeling pipeline that simulates BDEW H0 load profiles, degree-day heating, PV sizing and annuity financing across 6 upgrade scenarios. Highlights rigorous research where four price forecasting models (Constant, Trend, ETS, SARIMA) were backtested against Destatis indices (2019–2025)",
     tags: [
       "Python",
       "FastAPI",
@@ -397,7 +397,7 @@ export const projects_en: Project[] = [
     title: "Nothingness - 2D arcade game",
     image: "/images/nothingness/deepspace.jpeg",
     description:
-      "Unity/C# 2D Arcade space shooter with 8-directional movement, dynamic difficulty scaling and a buff/debuff system. Features two enemy types (asteroids and enemy ships), several power-ups and power-downs (shield, speed boost/reduction), persistent high score tracking with JSON serialization, and comprehensive audio system with custom sprites made from scratch using pixel art software.",
+      "Unity/C# 2D Arcade space shooter with 8-directional movement, dynamic difficulty scaling and a buff/debuff system. Features two enemy types (asteroids and enemy ships), several power-ups and power-downs (shield, speed boost/reduction), persistent high score tracking with JSON serialization and comprehensive audio system with custom sprites made from scratch using pixel art software.",
     tags: [
       "Unity",
       "C#",
@@ -423,7 +423,7 @@ export const projects_en: Project[] = [
     title: "Pongilike - 2D Pong Game",
     image: "/images/pongilike/pingpongballart.png",
     description:
-      "Unity/C# classic two-player Pong arcade game built with Unity's 2D physics system. Features physics-based ball movement with randomized direction and velocity control, collision detection for paddles and walls, an automatic scoring system with real-time UI updates and point notifications, pause/resume game flow control, and a comprehensive audio system with sound effects for hits, bounces, and scoring. All sprites and graphics were hand-drawn from scratch.",
+      "Unity/C# classic two-player Pong arcade game built with Unity's 2D physics system. Features physics-based ball movement with randomized direction and velocity control, collision detection for paddles and walls, an automatic scoring system with real-time UI updates and point notifications, pause/resume game flow control and a comprehensive audio system with sound effects for hits, bounces and scoring. All sprites and graphics were hand-drawn from scratch.",
     tags: [
       "Unity",
       "C#",
@@ -508,7 +508,7 @@ export const projects_en: Project[] = [
     title: "CorpuScan - Financial document summarization",
     image: "/images/corpus_scan/logo.jpeg",
     description:
-      "Collaborated on a Big Berlin Hack project: CorpuScan turns dense financial documents into short executive video briefings and provides AI-powered audit investigation. Users upload a PDF, paste a URL, or type a query for video generation; or upload financial documents (CSV, TXT, XLSX, PDF, DOCX) for fraud investigation. The multi-agent pipeline (Gemini 2.5 Pro, OpenAI) extracts key financials, writes scripts, generates voiceover via ElevenLabs TTS, renders motion graphics with Hera API, and performs DFS-based document graph analysis with cross-file discrepancy detection and evidence-backed findings.",
+      "Collaborated on a Big Berlin Hack project: CorpuScan turns dense financial documents into short executive video briefings and provides AI-powered audit investigation. Users upload a PDF, paste a URL, or type a query for video generation; or upload financial documents (CSV, TXT, XLSX, PDF, DOCX) for fraud investigation. The multi-agent pipeline (Gemini 2.5 Pro, OpenAI) extracts key financials, writes scripts, generates voiceover via ElevenLabs TTS, renders motion graphics with Hera API and performs DFS-based document graph analysis with cross-file discrepancy detection and evidence-backed findings.",
     tags: [
       "React",
       "TypeScript",
@@ -546,7 +546,7 @@ export const projects_en: Project[] = [
     title: "Companion Sonion - VSCode extension",
     image: "/images/companion_sonion/logo_companion.png",
     description:
-      "VS Code extension and standalone Electron desktop app that brings animated companions into your workspace. The VS Code extension offers Panel and Explorer render modes with drag-and-drop movement, mouse wheel resize, custom assets (GIF/PNG/WebM), profile save/load, import/export, and persistent state. The standalone app provides transparent frameless windows that stay on top of other applications with system tray integration, keyboard shortcuts, and asset caching. Built for fun and customization.",
+      "VS Code extension and standalone Electron desktop app that brings animated companions into your workspace. The VS Code extension offers Panel and Explorer render modes with drag-and-drop movement, mouse wheel resize, custom assets (GIF/PNG/WebM), profile save/load, import/export and persistent state. The standalone app provides transparent frameless windows that stay on top of other applications with system tray integration, keyboard shortcuts and asset caching. Built for fun and customization.",
     tags: [
       "TypeScript",
       "VS Code Extension",
@@ -574,7 +574,7 @@ export const projects_en: Project[] = [
     title: "Cogmerge - Collab tool",
     image: "/images/cogmerge/cogmerge.svg",
     description:
-      "Cogmerge preserves the 'why' behind code decisions across a team - rejected alternatives, deliberate omissions, and load-bearing constraints that vanish when an agent conversation closes. Unlike Git, which indexes what exists, it indexes reasoning by code surface (path:symbol) via Cognee and Qdrant. SEAL captures intent from finished branches through agent subagents; CHECK retrieves matching records before merges and blocks contradictions with the original author's rationale. Zero-dependency Python stdlib install into any repo, works with Claude Code, Cursor, and Codex via agent skills and AGENTS.md - no CLI daemon, no MCP server. Optional Slack slash command for querying team memory without leaving chat.",
+      "Cogmerge preserves the 'why' behind code decisions across a team - rejected alternatives, deliberate omissions and load-bearing constraints that vanish when an agent conversation closes. Unlike Git, which indexes what exists, it indexes reasoning by code surface (path:symbol) via Cognee and Qdrant. SEAL captures intent from finished branches through agent subagents; CHECK retrieves matching records before merges and blocks contradictions with the original author's rationale. Zero-dependency Python stdlib install into any repo, works with Claude Code, Cursor and Codex via agent skills and AGENTS.md - no CLI daemon, no MCP server. Optional Slack slash command for querying team memory without leaving chat.",
     tags: [
       "Python",
       "Cognee",
@@ -628,7 +628,7 @@ export const projects_en: Project[] = [
     title: "Ranting Chant - Housing middleman platform",
     image: "/images/ranting_chant/frut_logo.jpeg",
     description:
-      "Full-stack property ops platform with a Frutiger Aero design. Tenants report housing and maintenance issues through natural-language chat with optional voice input; Google Gemini classifies requests by type, urgency, sentiment and escalation. Managers and owners use role-based dashboards to filter, approve and resolve requests, coordinate vendors and trigger email/SMS notifications via Resend and Twilio; possesses ElevenLabs and Gradium powering transcription and text-to-speech. Features a production-ready PostgreSQL database schema with normalized tables (units, request status/assignment history), Row Level Security (RLS) policies, and Supabase Auth mapping.",
+      "Full-stack property ops platform with a Frutiger Aero design. Tenants report housing and maintenance issues through natural-language chat with optional voice input; Google Gemini classifies requests by type, urgency, sentiment and escalation. Managers and owners use role-based dashboards to filter, approve and resolve requests, coordinate vendors and trigger email/SMS notifications via Resend and Twilio; possesses ElevenLabs and Gradium powering transcription and text-to-speech. Features a production-ready PostgreSQL database schema with normalized tables (units, request status/assignment history), Row Level Security (RLS) policies and Supabase Auth mapping.",
     tags: [
       "React",
       "TypeScript",
@@ -661,7 +661,7 @@ export const projects_en: Project[] = [
     title: "VERTIAS protocol - PPAVI",
     image: "/images/veritas_ppavi/logo.png",
     description:
-      "Privacy-Preserving Age Verification Infrastructure (PPAVI) - the v1 reference implementation of the VERITAS protocol. Monorepo MVP with a React + TanStack Start frontend (untrusted presentation layer on Cloudflare Workers), an ASP.NET Core 8 public REST API (multipart document intake, orchestration, one-time private-key delivery), a Rust gRPC cryptographic core (Ed25519 keys, issuer-scoped PseudoID, credential signing), and Supabase/PostgreSQL for public credential metadata only. Core privacy invariant: verify identity once, discard the document, retain only cryptographic proof, no PII, OCR output, or private keys stored server-side; the frontend never parses documents or performs crypto. The full registration pipeline is wired and testable end-to-end locally with synthetic documents; real government ID extraction and production HMAC/key custody remain deferred.",
+      "Privacy-Preserving Age Verification Infrastructure (PPAVI) - the v1 reference implementation of the VERITAS protocol. Monorepo MVP with a React + TanStack Start frontend (untrusted presentation layer on Cloudflare Workers), an ASP.NET Core 8 public REST API (multipart document intake, orchestration, one-time private-key delivery), a Rust gRPC cryptographic core (Ed25519 keys, issuer-scoped PseudoID, credential signing) and Supabase/PostgreSQL for public credential metadata only. Core privacy invariant: verify identity once, discard the document, retain only cryptographic proof, no PII, OCR output, or private keys stored server-side; the frontend never parses documents or performs crypto. The full registration pipeline is wired and testable end-to-end locally with synthetic documents; real government ID extraction and production HMAC/key custody remain deferred.",
     tags: [
       "React",
       "TypeScript",
@@ -689,10 +689,35 @@ export const projects_en: Project[] = [
     //github: "",
   },
   {
+    title: "F1 penalty predictor",
+    image: "/images/f1_penalty_predictor/f1ogboost_512e.jpg",
+    description:
+      "Research pipeline for analyzing Formula 1 stewarding decisions through two complementary lenses: a supervised XGBoost model (V1/V2) that learns how FIA stewards actually assign penalty severity and a deterministic normative rules engine encoding one documented interpretation of racing regulations. A dataset pipeline ingests FIA decision PDFs (2019 + 2025), enriches incidents with Ergast and FastF1 telemetry and produces labeled driver-rows for 3-class prediction (no penalty / minor / major). V1 reaches validation macro-F1 0.402 (train 2019, val 2025); the normative engine generates deviation reports where real stewarding diverges from the rule-based baseline (52.6% agreement overall, 79.8% excluding manual-review rows). Includes ablation studies, leakage-safe feature specs and pytest-backed ML tooling — seasons 2020–2024 and held-out test splits remain on the roadmap.",
+    tags: [
+      "Python",
+      "XGBoost",
+      "scikit-learn",
+      "pandas",
+      "Parquet",
+      "FastF1",
+      "Machine Learning",
+      "Classification",
+      "Feature Engineering",
+      "pytest",
+      "PDF Parsing",
+      "Data Pipeline",
+      "Formula 1",
+    ],
+    classifications: ["Personal","AI/Data","MLOps","Research/Experimental","Educational"],
+    //live_demo: "",
+    //demo: "",
+    //github: "",
+  },
+  {
     title: "Personal portfolio website",
     image: "/images/logo.jpeg",
     description:
-      "The website you are currently on: a responsive portfolio built with React + TypeScript (Vite), Tailwind CSS, and shadcn/ui (Radix UI). Uses Framer Motion animations, React Router, TanStack Query, and forms with React Hook Form + Zod; tested with Vitest/React Testing Library, linted with ESLint, and deployed on Vercel with GitHub Actions security auditing. Supports multiple languages.",
+      "The website you are currently on: a responsive portfolio built with React + TypeScript (Vite), Tailwind CSS and shadcn/ui (Radix UI). Uses Framer Motion animations, React Router, TanStack Query and forms with React Hook Form + Zod; tested with Vitest/React Testing Library, linted with ESLint and deployed on Vercel with GitHub Actions security auditing. Supports multiple languages.",
     tags: [
       "React",
       "TypeScript",
@@ -772,6 +797,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Plataforma full-stack de operaciones inmobiliarias con diseño Frutiger Aero. Los inquilinos reportan incidencias de vivienda y mantenimiento mediante chat en lenguaje natural con entrada de voz opcional; Google Gemini clasifica solicitudes por tipo, urgencia, sentimiento y escalamiento. Gerentes y propietarios usan dashboards por rol para filtrar, aprobar y resolver solicitudes, coordinar proveedores y enviar notificaciones por email/SMS con Resend y Twilio; posee transcripción y text-to-speech de ElevenLabs y Gradium. Incorpora un esquema de base de datos PostgreSQL listo para producción con relaciones normalizadas (unidades, historial de estados/asignaciones), políticas de seguridad a nivel de fila (RLS) y mapeo de cuentas de usuario para la integración con Supabase Auth.",
   "VERTIAS protocol - PPAVI":
     "Infraestructura de Verificación de Edad que Preserva la Privacidad (PPAVI) - implementación de referencia v1 del protocolo VERITAS. MVP monorepo con frontend React + TanStack Start (capa de presentación no confiable en Cloudflare Workers), API REST pública ASP.NET Core 8 (ingesta multipart de documentos, orquestación, entrega única de clave privada), núcleo criptográfico Rust gRPC (claves Ed25519, PseudoID con alcance de emisor, firma de credenciales) y Supabase/PostgreSQL solo para metadatos públicos de credenciales. Invariante de privacidad central: verificar la identidad una vez, descartar el documento, conservar solo la prueba criptográfica, sin PII, salida OCR ni claves privadas almacenadas en el servidor; el frontend nunca analiza documentos ni realiza criptografía. El pipeline completo de registro está conectado y es testeable end-to-end localmente con documentos sintéticos; la extracción de IDs gubernamentales reales y la custodia de claves/HMAC de producción quedan pendientes.",
+  "F1 penalty predictor":
+    "Pipeline de investigación para analizar decisiones de los comisarios de Fórmula 1 desde dos enfoques complementarios: un modelo supervisado XGBoost (V1/V2) que aprende cómo los comisarios de la FIA asignan realmente la severidad de las penalizaciones, y un motor de reglas normativas determinista que codifica una interpretación documentada del reglamento. Un pipeline de dataset ingiere PDFs de decisiones de la FIA (2019 + 2025), enriquece incidentes con telemetría de Ergast y FastF1, y produce filas por piloto etiquetadas para predicción de 3 clases (sin penalización / menor / mayor). V1 alcanza macro-F1 de validación 0.402 (entrenamiento 2019, validación 2025); el motor normativo genera informes de desviación donde el arbitraje real diverge de la línea base basada en reglas (52.6% de acuerdo global, 79.8% excluyendo filas de revisión manual). Incluye estudios de ablación, especificaciones de features sin fuga de datos y herramientas ML con pytest — las temporadas 2020–2024 y splits de test reservados siguen en el roadmap.",
   "Personal portfolio website":
     "El sitio web en el que estás ahora: portafolio responsivo construido con React + TypeScript (Vite), Tailwind CSS y shadcn/ui (Radix UI). Usa animaciones con Framer Motion, React Router, TanStack Query y formularios con React Hook Form + Zod; probado con Vitest/React Testing Library, linting con ESLint y desplegado en Vercel con auditorías de seguridad en GitHub Actions. Tiene soporte para varios lenguajes",
 };
@@ -828,6 +855,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "Plateforme full-stack d'opérations immobilières avec un design Frutiger Aero. Les locataires signalent des problèmes de logement et de maintenance via un chat en langage naturel avec saisie vocale optionnelle ; Google Gemini classe les demandes par type, urgence, sentiment et escalade. Gestionnaires et propriétaires utilisent des tableaux de bord par rôle pour filtrer, approuver et résoudre les demandes, coordonner les prestataires et déclencher des notifications email/SMS via Resend et Twilio, avec transcription et synthèse vocale ElevenLabs et Gradium. Intègre un schéma de base de données PostgreSQL prêt pour la production avec des relations normalisées (unités, historique des statuts/affectations), des politiques de sécurité au niveau des lignes (RLS) et un mappage des comptes utilisateurs pour l'intégration de Supabase Auth.",
   "VERTIAS protocol - PPAVI":
     "Infrastructure de Vérification d'Âge Préservant la Confidentialité (PPAVI) - implémentation de référence v1 du protocole VERITAS. MVP monorepo avec frontend React + TanStack Start (couche de présentation non fiable sur Cloudflare Workers), API REST publique ASP.NET Core 8 (prise en charge multipart de documents, orchestration, livraison unique de clé privée), cœur cryptographique Rust gRPC (clés Ed25519, PseudoID à portée émetteur, signature de credentials) et Supabase/PostgreSQL pour les métadonnées publiques uniquement. Invariant de confidentialité central : vérifier l'identité une fois, supprimer le document, ne conserver que la preuve cryptographique, pas de PII, sortie OCR ni clés privées stockées côté serveur ; le frontend n'analyse jamais les documents ni effectue de cryptographie. Le pipeline d'enregistrement complet est câblé et testable end-to-end localement avec des documents synthétiques ; l'extraction d'IDs gouvernementaux réels et la garde de clés/HMAC de production restent à implémenter.",
+  "F1 penalty predictor":
+    "Pipeline de recherche pour analyser les décisions des commissaires de Formule 1 sous deux angles complémentaires : un modèle supervisé XGBoost (V1/V2) qui apprend comment les stewards de la FIA attribuent réellement la sévérité des pénalités, et un moteur de règles normatives déterministe codifiant une interprétation documentée du règlement. Un pipeline de dataset ingère les PDF de décisions FIA (2019 + 2025), enrichit les incidents avec la télémétrie Ergast et FastF1, et produit des lignes par pilote étiquetées pour une prédiction à 3 classes (aucune pénalité / mineure / majeure). V1 atteint un macro-F1 de validation de 0.402 (entraînement 2019, validation 2025) ; le moteur normatif génère des rapports d'écart là où l'arbitrage réel diverge de la baseline basée sur les règles (52.6 % d'accord global, 79.8 % hors lignes en révision manuelle). Comprend des ablations, des spécifications de features sans fuite de données et des outils ML couverts par pytest — saisons 2020–2024 et splits de test retenus restent sur la feuille de route.",
   "Personal portfolio website":
     "Le site que vous consultez actuellement : portfolio responsive construit avec React + TypeScript (Vite), Tailwind CSS et shadcn/ui (Radix UI). Utilise Framer Motion, React Router, TanStack Query et formulaires avec React Hook Form + Zod; testé avec Vitest/React Testing Library, linté avec ESLint et déployé sur Vercel avec audits de sécurité GitHub Actions. Prise en charge multilingue incluse.",
 };
