@@ -636,20 +636,32 @@ export const projects_en: Project[] = [
     title: "VERTIAS protocol - PPAVI",
     image: "/images/veritas_ppavi/logo.png",
     description:
-      "A system meant to meet the purpose of ID verification without saving government data anywhere. In America, the UK and soon Europe, there has been a push for ID verification laws under the pretense of protecting kids, however people dont like the idea of submitting their personal information, therefore this project is a system that allows users to verify their age without uploading their information. Fundamentally, the system would generate a private and public key (like async encryption) and a unique HMAC (to avoid redundancy) deterministically based on the users ID once and then to verify their age will simply have to provide their private key to compare it to a database of public ones and if there is a match then the 'truth' center will confirm it",
+      "Privacy-Preserving Age Verification Infrastructure (PPAVI) - the v1 reference implementation of the VERITAS protocol. Monorepo MVP with a React + TanStack Start frontend (untrusted presentation layer on Cloudflare Workers), an ASP.NET Core 8 public REST API (multipart document intake, orchestration, one-time private-key delivery), a Rust gRPC cryptographic core (Ed25519 keys, issuer-scoped PseudoID, credential signing), and Supabase/PostgreSQL for public credential metadata only. Core privacy invariant: verify identity once, discard the document, retain only cryptographic proof, no PII, OCR output, or private keys stored server-side; the frontend never parses documents or performs crypto. The full registration pipeline is wired and testable end-to-end locally with synthetic documents; real government ID extraction and production HMAC/key custody remain deferred.",
     tags: [
       "React",
       "TypeScript",
+      "TanStack Start",
+      "TanStack Router",
       "Vite",
       "Tailwind CSS",
+      "Cloudflare Workers",
       "Rust",
+      "gRPC",
       "C#",
-      "ASP NET",
+      "ASP.NET Core",
       ".NET",
+      "Supabase",
+      "PostgreSQL",
+      "REST API",
+      "Zod",
+      "Docker",
+      "Vitest",
+      "Playwright",
     ],
     classifications: ["Fullstack", "Web", "Personal", "Privacy", "Government"],
     //live_demo: "",
     //demo: "",
+    //github: "",
   },
   {
     title: "Personal portfolio website",
@@ -732,7 +744,7 @@ const projectDescriptionsEs: Record<string, string> = {
   "Ranting Chant - Housing middleman platform":
     "Plataforma full-stack de operaciones inmobiliarias con diseño Frutiger Aero. Los inquilinos reportan incidencias de vivienda y mantenimiento mediante chat en lenguaje natural con entrada de voz opcional; Google Gemini clasifica solicitudes por tipo, urgencia, sentimiento y escalamiento. Gerentes y propietarios usan dashboards por rol para filtrar, aprobar y resolver solicitudes, coordinar proveedores y enviar notificaciones por email/SMS con Resend y Twilio; posee transcripción y text-to-speech de ElevenLabs y Gradium. Incorpora un esquema de base de datos PostgreSQL listo para producción con relaciones normalizadas (unidades, historial de estados/asignaciones), políticas de seguridad a nivel de fila (RLS) y mapeo de cuentas de usuario para la integración con Supabase Auth.",
   "VERTIAS protocol - PPAVI":
-    "Sistema diseñado para cumplir el propósito de verificación de ID sin guardar datos gubernamentales en ningún lugar. En América, el Reino Unido y pronto Europa, ha habido un impulso por leyes de verificación de ID bajo el pretexto de proteger a los niños, sin embargo a las personas no les gusta la idea de enviar su información personal, por lo tanto este proyecto es un sistema que permite a los usuarios verificar su edad sin subir su información. Fundamentalmente, el sistema generaría una clave privada y pública (como encriptación asincrónica) y un HMAC único (para evitar redundancia) de forma determinística basado en el ID del usuario una vez, y luego para verificar su edad simplemente tendría que proporcionar su clave privada para compararla con una base de datos de claves públicas y si hay una coincidencia entonces el centro de 'verdad' lo confirmará.",
+    "Infraestructura de Verificación de Edad que Preserva la Privacidad (PPAVI) - implementación de referencia v1 del protocolo VERITAS. MVP monorepo con frontend React + TanStack Start (capa de presentación no confiable en Cloudflare Workers), API REST pública ASP.NET Core 8 (ingesta multipart de documentos, orquestación, entrega única de clave privada), núcleo criptográfico Rust gRPC (claves Ed25519, PseudoID con alcance de emisor, firma de credenciales) y Supabase/PostgreSQL solo para metadatos públicos de credenciales. Invariante de privacidad central: verificar la identidad una vez, descartar el documento, conservar solo la prueba criptográfica, sin PII, salida OCR ni claves privadas almacenadas en el servidor; el frontend nunca analiza documentos ni realiza criptografía. El pipeline completo de registro está conectado y es testeable end-to-end localmente con documentos sintéticos; la extracción de IDs gubernamentales reales y la custodia de claves/HMAC de producción quedan pendientes.",
   "Personal portfolio website":
     "El sitio web en el que estás ahora: portafolio responsivo construido con React + TypeScript (Vite), Tailwind CSS y shadcn/ui (Radix UI). Usa animaciones con Framer Motion, React Router, TanStack Query y formularios con React Hook Form + Zod; probado con Vitest/React Testing Library, linting con ESLint y desplegado en Vercel con auditorías de seguridad en GitHub Actions. Tiene soporte para varios lenguajes",
 };
@@ -786,7 +798,7 @@ const projectDescriptionsFr: Record<string, string> = {
   "Ranting Chant - Housing middleman platform":
     "Plateforme full-stack d'opérations immobilières avec un design Frutiger Aero. Les locataires signalent des problèmes de logement et de maintenance via un chat en langage naturel avec saisie vocale optionnelle ; Google Gemini classe les demandes par type, urgence, sentiment et escalade. Gestionnaires et propriétaires utilisent des tableaux de bord par rôle pour filtrer, approuver et résoudre les demandes, coordonner les prestataires et déclencher des notifications email/SMS via Resend et Twilio, avec transcription et synthèse vocale ElevenLabs et Gradium. Intègre un schéma de base de données PostgreSQL prêt pour la production avec des relations normalisées (unités, historique des statuts/affectations), des politiques de sécurité au niveau des lignes (RLS) et un mappage des comptes utilisateurs pour l'intégration de Supabase Auth.",
   "VERTIAS protocol - PPAVI":
-    "Système conçu pour répondre à l'objectif de vérification d'ID sans enregistrer de données gouvernementales nulle part. En Amérique, au Royaume-Uni et bientôt en Europe, il y a eu une poussée pour les lois de vérification d'ID sous le prétexte de protéger les enfants, cependant les gens n'aiment pas l'idée de soumettre leurs informations personnelles, donc ce projet est un système qui permet aux utilisateurs de vérifier leur âge sans télécharger leurs informations. Fondamentalement, le système générerait une clé privée et publique (comme le chiffrement asynchrone) et un HMAC unique (pour éviter la redondance) de manière déterministe basée sur l'ID de l'utilisateur une fois, puis pour vérifier leur âge il suffirait de fournir leur clé privée pour la comparer à une base de données de clés publiques et s'il y a une correspondance alors le centre de 'vérité' le confirmera.",
+    "Infrastructure de Vérification d'Âge Préservant la Confidentialité (PPAVI) - implémentation de référence v1 du protocole VERITAS. MVP monorepo avec frontend React + TanStack Start (couche de présentation non fiable sur Cloudflare Workers), API REST publique ASP.NET Core 8 (prise en charge multipart de documents, orchestration, livraison unique de clé privée), cœur cryptographique Rust gRPC (clés Ed25519, PseudoID à portée émetteur, signature de credentials) et Supabase/PostgreSQL pour les métadonnées publiques uniquement. Invariant de confidentialité central : vérifier l'identité une fois, supprimer le document, ne conserver que la preuve cryptographique, pas de PII, sortie OCR ni clés privées stockées côté serveur ; le frontend n'analyse jamais les documents ni effectue de cryptographie. Le pipeline d'enregistrement complet est câblé et testable end-to-end localement avec des documents synthétiques ; l'extraction d'IDs gouvernementaux réels et la garde de clés/HMAC de production restent à implémenter.",
   "Personal portfolio website":
     "Le site que vous consultez actuellement : portfolio responsive construit avec React + TypeScript (Vite), Tailwind CSS et shadcn/ui (Radix UI). Utilise Framer Motion, React Router, TanStack Query et formulaires avec React Hook Form + Zod; testé avec Vitest/React Testing Library, linté avec ESLint et déployé sur Vercel avec audits de sécurité GitHub Actions. Prise en charge multilingue incluse.",
 };
