@@ -690,7 +690,7 @@ export const projects_en: Project[] = [
   },
   {
     title: "F1 penalty predictor",
-    image: "/images/f1_penalty_predictor/f1ogboost_512e.jpg",
+    image: "/images/f1_penalty_predictor/f1_predictor_512.jpg",
     description:
       "Research pipeline for analyzing Formula 1 stewarding decisions through two complementary lenses: a supervised XGBoost model (V1/V2) that learns how FIA stewards actually assign penalty severity and a deterministic normative rules engine encoding one documented interpretation of racing regulations. A dataset pipeline ingests FIA decision PDFs (2019 + 2025), enriches incidents with Ergast and FastF1 telemetry and produces labeled driver-rows for 3-class prediction (no penalty / minor / major). V1 reaches validation macro-F1 0.402 (train 2019, val 2025); the normative engine generates deviation reports where real stewarding diverges from the rule-based baseline (52.6% agreement overall, 79.8% excluding manual-review rows). Includes ablation studies, leakage-safe feature specs and pytest-backed ML tooling — seasons 2020–2024 and held-out test splits remain on the roadmap.",
     tags: [
