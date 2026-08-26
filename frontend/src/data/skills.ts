@@ -9,13 +9,16 @@ export const skillSections: SkillSection[] = [
     skills: [
       "Python", 
       "Java", 
-      "JavaScript", 
-      "TypeScript", 
       "C/C++", 
+      "JavaScript", 
+      "TypeScript",
+      "HTML5", 
+      "CSS3", 
       "C#", 
       "Dart", 
-      "HTML5", 
-      "CSS3"
+      "Rust",
+      "Shell",
+      "Node.js"
     ],
   },
   {
@@ -23,12 +26,15 @@ export const skillSections: SkillSection[] = [
     skills: [
       "React", 
       "Vite", 
+      "Next.js",
       "Tailwind CSS", 
+      "Tanstack",
+      "Electron",
       "Flutter", 
       "Unity", 
       "FastAPI",
       "Flask",
-      ".NET",
+      "ASP.NET",
       "Flyway"
     ],
   },
@@ -44,7 +50,8 @@ export const skillSections: SkillSection[] = [
     section: "database",
     skills: [
       "PostgreSQL", 
-      "MySQL"
+      "MySQL",
+      "Parquet"
     ],
   },
   {
@@ -52,7 +59,11 @@ export const skillSections: SkillSection[] = [
     skills: [
       "REST API", 
       "GraphQL", 
-      "WebSocket"
+      "WebSocket",
+      "CORS",
+      "JWT",
+      "MCP",
+      "gRPC",
     ],
   },
   {
@@ -60,7 +71,12 @@ export const skillSections: SkillSection[] = [
     skills: [
       "Docker", 
       "CI/CD", 
-      "Oracle/VMs"
+      "Oracle/VMs",
+      "Nginx",
+      "pytest",
+      "Vitest",
+      "Playwright",
+      "ESLint"
     ],
   },
   {
@@ -79,7 +95,8 @@ export const skillSections: SkillSection[] = [
       "Kaggle",
       "Tavily",
       "Heras",
-      "Redis"
+      "Redis",
+      "BFL"
     ],
   },
   {
@@ -95,6 +112,9 @@ export const skillSections: SkillSection[] = [
       "scikit-learn",
       "Keras",
       "TensorFlow",
+      "XGBoost",
+      "PyTorch",
+      "OpenCV",
     ],
   },
   {
@@ -104,7 +124,9 @@ export const skillSections: SkillSection[] = [
       "OOP", 
       "Atlassian (Jira, Confluence)", 
       "Agile/Scrum", 
-      "SQA"
+      "SQA",
+      "Unit Testing",
+      "CI/CD",
     ],
   },
 ];
