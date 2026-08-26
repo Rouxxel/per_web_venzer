@@ -1,5 +1,4 @@
-import { SiGithub } from "@icons-pack/react-simple-icons";
-import { Mail } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 
 const LinkedInIcon = ({ className }: { className?: string }) => (
   <svg role="img" viewBox="0 0 24 24" className={className} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +25,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <SiGithub className="h-4 w-4" />
+              <Github className="h-4 w-4" />
             </a>
             <a
               href="https://www.linkedin.com/in/sebastian-russo-a552602a0"
