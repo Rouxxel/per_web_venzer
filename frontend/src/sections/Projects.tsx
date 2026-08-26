@@ -46,6 +46,10 @@ function filterProjectsBySelections(
   );
 }
 
+/** Matches `lg:grid-cols-3` — stagger resets each row (0, 0.1, 0.2s). */
+const PROJECTS_GRID_COLUMNS = 3;
+const PROJECT_CARD_STAGGER_S = 0.1;
+
 const Projects = () => {
   const { language, currentLanguageCode } = useLanguage();
   const projectsLanguage = language.sections.projects_section;
@@ -176,7 +180,11 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
+                transition={{
+                  duration: 0.5,
+                  delay: (i % PROJECTS_GRID_COLUMNS) * PROJECT_CARD_STAGGER_S,
+                  ease: "easeOut",
+                }}
                 whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.12, ease: "easeOut" } }}
                 className="group rounded-xl border border-border bg-card p-6 flex flex-col transition-shadow hover:shadow-xl"
               >
