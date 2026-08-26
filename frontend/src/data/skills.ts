@@ -28,7 +28,8 @@ export const skillSections: SkillSection[] = [
       "Unity", 
       "FastAPI",
       "Flask",
-      ".NET"
+      ".NET",
+      "Flyway"
     ],
   },
   {
@@ -60,16 +61,6 @@ export const skillSections: SkillSection[] = [
       "Docker", 
       "CI/CD", 
       "Oracle/VMs"
-    ],
-  },
-  {
-    section: "team",
-    skills: [
-      "Git / GitHub", 
-      "OOP", 
-      "Atlassian (Jira, Confluence)", 
-      "Agile/Scrum", 
-      "SQA"
     ],
   },
   {
@@ -105,5 +96,15 @@ export const skillSections: SkillSection[] = [
       "Keras",
       "TensorFlow",
     ],
-  }
+  },
+  {
+    section: "team",
+    skills: [
+      "Git / GitHub", 
+      "OOP", 
+      "Atlassian (Jira, Confluence)", 
+      "Agile/Scrum", 
+      "SQA"
+    ],
+  },
 ];
