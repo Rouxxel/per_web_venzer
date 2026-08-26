@@ -14,6 +14,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
+          style={{ willChange: "transform, opacity" }}
           className="text-primary font-medium mb-4 tracking-wide uppercase text-sm"
         >
           {language.sections.hero_section.greet_txt}
@@ -23,6 +24,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.65, delay: 0.18, ease: "easeOut" }}
+          style={{ willChange: "transform, opacity" }}
           className="text-5xl sm:text-6xl lg:text-7xl font-bold font-heading tracking-tight text-foreground mb-6"
         >
           Sebastian Russo
@@ -32,6 +34,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
+          style={{ willChange: "transform, opacity" }}
           className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
         >
           {language.sections.hero_section.slogan_txt}
@@ -41,6 +44,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.52, ease: "easeOut" }}
+          style={{ willChange: "transform, opacity" }}
           className="flex gap-4 justify-center"
         >
           <button

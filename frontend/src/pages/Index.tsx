@@ -1,17 +1,14 @@
+import { memo } from "react";
+import DeferredSections from "@/components/DeferredSections";
 import Hero from "@/sections/Hero";
-import About from "@/sections/About";
-import Projects from "@/sections/Projects";
-import Experience from "@/sections/Experience";
-import Contact from "@/sections/Contact";
+
+const MemoizedHero = memo(Hero);
 
 const Index = () => {
   return (
     <>
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Contact />
+      <MemoizedHero />
+      <DeferredSections />
     </>
   );
 };
