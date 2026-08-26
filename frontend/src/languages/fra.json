@@ -72,6 +72,7 @@
             },
             "project_specifics": {
                 "display_description_btn": "Afficher la description",
+                "display_tags_btn": "Afficher les tags",
                 "live_demo_btn": "En ligne",
                 "showcase_btn": "Aperçu"
             }
