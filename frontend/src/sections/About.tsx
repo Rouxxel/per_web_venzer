@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { skillSections } from "@/data/skills";
@@ -16,6 +16,10 @@ const PORTRAIT_IMAGES = [
   { src: "/images/myself/portray_2.jpg", alt: "Sebastian Russo" },
   { src: "/images/myself/portray_3.jpg", alt: "Sebastian Russo and company" },
 ];
+
+const PORTRAIT_SLIDE_COUNT = PORTRAIT_IMAGES.length;
+/** Each frame is this share of the film strip (and of the visible viewport). */
+const PORTRAIT_SLIDE_SHARE = 100 / PORTRAIT_SLIDE_COUNT;
 
 //Conctact values
 /*
@@ -70,18 +74,26 @@ const About = () => {
             transition={{ duration: 0.65, ease: "easeOut" }}
             className="relative aspect-square rounded-2xl overflow-hidden shrink-0"
           >
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={photoIndex}
-                src={PORTRAIT_IMAGES[photoIndex].src}
-                alt={PORTRAIT_IMAGES[photoIndex].alt}
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -30 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="w-full h-full object-cover"
-              />
-            </AnimatePresence>
+            <motion.div
+              className="flex h-full"
+              style={{ width: `${PORTRAIT_SLIDE_COUNT * 100}%` }}
+              animate={{ x: `-${photoIndex * PORTRAIT_SLIDE_SHARE}%` }}
+              transition={{ duration: 0.45, ease: [0.45, 0, 0.55, 1] }}
+            >
+              {PORTRAIT_IMAGES.map((image) => (
+                <div
+                  key={image.src}
+                  className="h-full shrink-0"
+                  style={{ width: `${PORTRAIT_SLIDE_SHARE}%` }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ))}
+            </motion.div>
 
             {hasMultiple && (
               <>
