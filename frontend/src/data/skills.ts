@@ -84,7 +84,6 @@ export const skillSections: SkillSection[] = [
       "Google Cloud",
       "Black forest API",
       "Lyceum",
-      "AWS",
       "Elevenlabs",
       "Kaggle",
       "Tavily",
