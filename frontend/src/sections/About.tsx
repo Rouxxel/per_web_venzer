@@ -13,6 +13,8 @@ import TypewriterText, { CHAR_DELAY } from "@/components/TypewriterText";
 // { src: "/images/portray_2.png", alt: "photo name" }
 const PORTRAIT_IMAGES = [
   { src: "/images/myself/portray_alt_s.jpg", alt: "Sebastian Russo" },
+  { src: "/images/myself/portray_2.jpg", alt: "Sebastian Russo" },
+  { src: "/images/myself/portray_3.jpg", alt: "Sebastian Russo and company" },
 ];
 
 //Conctact values
