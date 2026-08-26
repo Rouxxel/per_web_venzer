@@ -49,6 +49,65 @@ function filterProjectsBySelections(
 /** Matches `lg:grid-cols-3` — stagger resets each row (0, 0.1, 0.2s). */
 const PROJECTS_GRID_COLUMNS = 3;
 const PROJECT_CARD_STAGGER_S = 0.1;
+const PROJECT_TAG_STAGGER_S = 0.06;
+
+const projectTagListVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: PROJECT_TAG_STAGGER_S },
+  },
+};
+
+const projectTagItemVariants = {
+  hidden: { opacity: 0, y: 10, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.28, ease: "easeOut" as const },
+  },
+};
+
+type ProjectTagBadgeProps = {
+  label: string;
+  onSelect: () => void;
+};
+
+function ProjectTagBadge({ label, onSelect }: ProjectTagBadgeProps) {
+  return (
+    <motion.div variants={projectTagItemVariants}>
+      <Badge
+        variant="secondary"
+        className="cursor-pointer text-xs font-normal transition-colors hover:bg-secondary/80"
+        onClick={onSelect}
+      >
+        {label}
+      </Badge>
+    </motion.div>
+  );
+}
+
+type AnimatedProjectTagsProps = {
+  tags: string[];
+  animationKey: number;
+  onDismiss: () => void;
+};
+
+function AnimatedProjectTags({ tags, animationKey, onDismiss }: AnimatedProjectTagsProps) {
+  return (
+    <motion.div
+      key={animationKey}
+      className="mb-4 flex flex-wrap gap-1.5"
+      variants={projectTagListVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      {tags.map((tag) => (
+        <ProjectTagBadge key={tag} label={tag} onSelect={onDismiss} />
+      ))}
+    </motion.div>
+  );
+}
 
 const Projects = () => {
   const { language, currentLanguageCode } = useLanguage();
@@ -65,10 +124,27 @@ const Projects = () => {
   /** When true for a title, the full project description is shown; otherwise "Display description". */
   const [descriptionOpenByTitle, setDescriptionOpenByTitle] = useState<Record<string, boolean>>({});
   const [descriptionClickCount, setDescriptionClickCount] = useState<Record<string, number>>({});
+  /** When true for a title, project tags are shown; click any tag to hide them again. */
+  const [tagsOpenByTitle, setTagsOpenByTitle] = useState<Record<string, boolean>>({});
+  const [tagsClickCount, setTagsClickCount] = useState<Record<string, number>>({});
 
   const toggleProjectDescription = (title: string) => {
     setDescriptionOpenByTitle((prev) => ({ ...prev, [title]: !prev[title] }));
     setDescriptionClickCount((prev) => ({ ...prev, [title]: (prev[title] ?? 0) + 1 }));
+  };
+
+  const toggleProjectTags = (title: string) => {
+    setTagsOpenByTitle((prev) => {
+      const opening = !prev[title];
+      if (opening) {
+        setTagsClickCount((counts) => ({ ...counts, [title]: (counts[title] ?? 0) + 1 }));
+      }
+      return { ...prev, [title]: opening };
+    });
+  };
+
+  const closeProjectTags = (title: string) => {
+    setTagsOpenByTitle((prev) => ({ ...prev, [title]: false }));
   };
 
   const filteredProjects = useMemo(
@@ -228,15 +304,24 @@ const Projects = () => {
                   )}
                 </button>
 
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs font-normal">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
+                {tagsOpenByTitle[project.title] ? (
+                  <AnimatedProjectTags
+                    tags={project.tags}
+                    animationKey={tagsClickCount[project.title] ?? 0}
+                    onDismiss={() => closeProjectTags(project.title)}
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => toggleProjectTags(project.title)}
+                    aria-expanded={false}
+                    className="mb-4 w-full text-left text-sm text-primary font-medium underline decoration-primary/60 underline-offset-2 hover:decoration-primary rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  >
+                    {language.sections.projects_section.project_specifics.display_tags_btn}
+                  </button>
+                )}
 
-                <div className="flex flex-wrap items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3 mt-auto">
                   {project.github != null && project.github.trim() !== "" && (
                     <a
                       href={project.github}
