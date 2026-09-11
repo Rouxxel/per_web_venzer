@@ -736,7 +736,7 @@ export const projects_en: Project[] = [
     classifications: ["Personal","AI/Data","MLOps","Research/Experimental","Educational"],
     //live_demo: "",
     //demo: "",
-    //github: "",
+    github: "https://github.com/Rouxxel/f1_penalty_predictor",
   },
   {
     title: "Personal portfolio website",
