@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,9 +46,9 @@ const Navbar = () => {
     localStorage.setItem("theme", next ? "dark" : "light");
   };
 
-  const handleClick = (href: string) => {
-    setIsOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+  const handleNavClick = (href: string, fromMobileMenu = false) => {
+    if (fromMobileMenu) setIsOpen(false);
+    scrollToSection(href, { afterMenuClose: fromMobileMenu });
   };
 
   return (
@@ -63,7 +64,7 @@ const Navbar = () => {
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between gap-3 max-w-5xl">
         <button
-          onClick={() => handleClick("#hero")}
+          onClick={() => handleNavClick("#hero")}
           className="flex items-center gap-2 text-xl font-bold font-heading tracking-tight text-foreground hover:text-primary transition-colors min-w-0"
         >
           <img src="/images/tab_logo.jpeg" alt="" className="h-8 w-8 rounded-full object-cover" />
@@ -75,7 +76,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <button
               key={item.href}
-              onClick={() => handleClick(item.href)}
+              onClick={() => handleNavClick(item.href)}
               className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent"
             >
               {item.label}
@@ -134,7 +135,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <button
                   key={item.href}
-                  onClick={() => handleClick(item.href)}
+                  onClick={() => handleNavClick(item.href, true)}
                   className="text-left px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent"
                 >
                   {item.label}

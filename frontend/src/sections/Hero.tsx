@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { scrollToSection } from "@/lib/scrollToSection";
 import { useLanguage } from "@/languages/language_invoker";
 
 const Hero = () => {
@@ -48,21 +49,13 @@ const Hero = () => {
           className="flex gap-4 justify-center"
         >
           <button
-            onClick={() =>
-              document
-                .querySelector("#projects")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={() => scrollToSection("#projects")}
             className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
           >
             {language.sections.hero_section.view_work_btn}
           </button>
           <button
-            onClick={() =>
-              document
-                .querySelector("#contact")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={() => scrollToSection("#contact")}
             className="px-6 py-3 border border-border text-foreground rounded-lg font-medium hover:bg-accent transition-colors"
           >
             {language.sections.hero_section.get_in_touch_btn}
