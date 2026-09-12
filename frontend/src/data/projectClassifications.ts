@@ -156,11 +156,54 @@ export const INDUSTRY_THEME_OPTIONS_FR = [
 //-------------------------------------------------------------------------
 //---------------------------------GERMAN----------------------------------
 //-------------------------------------------------------------------------
-// Add German labels/options here when ready:
-// - PROJECT_FILTER_LABELS_DE
-// - DOMAIN_TECH_OPTIONS_DE
-// - CONTEXT_OPTIONS_DE
-// - INDUSTRY_THEME_OPTIONS_DE
+/** German labels for filter UI. */
+export const PROJECT_FILTER_LABELS_DE = {
+  defaultOption: "Keine",
+  domainTitle: "Domäne / Technisch",
+  contextTitle: "Kontext / Ursprung",
+  industryTitle: "Branche / Thema",
+} as const;
+
+/** German display labels mapped by index to canonical DOMAIN_TECH_OPTIONS values. */
+export const DOMAIN_TECH_OPTIONS_DE = [
+  "Backend",
+  "Frontend",
+  "Fullstack",
+  "Eigenständig",
+  "Mobil",
+  "Datenbank",
+  "Web",
+  "MLOps",
+  "MCP",
+  "KI / Daten",
+  "Datenschutz",
+  "AR",
+] as const;
+
+/** German display labels mapped by index to canonical CONTEXT_OPTIONS values. */
+export const CONTEXT_OPTIONS_DE = [
+  "Beruflich",
+  "Persönlich",
+  "Universität",
+  "Hackathon",
+  "Forschung/Experimentell",
+  "Humanitär",
+  "Werkzeuge",
+] as const;
+
+/** German display labels mapped by index to canonical INDUSTRY_THEME_OPTIONS values. */
+export const INDUSTRY_THEME_OPTIONS_DE = [
+  "Gaming",
+  "Bildung",
+  "Industrial",
+  "Finanzen/Fintech",
+  "AR",
+  "Militär",
+  "Katastrophenhilfe",
+  "Entwicklertools",
+  "Regierung",
+  "Logistik/Lieferkette",
+] as const;
 
 //-------------------------------------------------------------------------
 //---------------------------------Exports---------------------------------
@@ -209,6 +252,14 @@ export const getProjectFilterLocalization = (languageCode: string) => {
       domainOptions: DOMAIN_TECH_OPTIONS_ES,
       contextOptions: CONTEXT_OPTIONS_ES,
       industryOptions: INDUSTRY_THEME_OPTIONS_ES,
+    } as const;
+  }
+  if (languageCode === "de") {
+    return {
+      labels: PROJECT_FILTER_LABELS_DE,
+      domainOptions: DOMAIN_TECH_OPTIONS_DE,
+      contextOptions: CONTEXT_OPTIONS_DE,
+      industryOptions: INDUSTRY_THEME_OPTIONS_DE,
     } as const;
   }
   return {

@@ -113,9 +113,46 @@ export const experience_fr: ExperienceEntry[] = [
   },
 ];
 
+//-------------------------------------------------------------------------
+//-------------------------GERMAN VERSION----------------------------------
+//-------------------------------------------------------------------------
+export const experience_de: ExperienceEntry[] = [
+  {
+    title: "UX/UI- und Frontend-Entwickler (React + TS)",
+    company: "Langdrill (Stealth Startup)",
+    location: "Berlin, Deutschland",
+    link: "https://www.langdrill.com/",
+    period: "06.2025 — 08.2025",
+    description:
+      "Entwarf Low- und High-Fidelity-Wireframes in Figma und setzte sie in einem React- + TypeScript-Frontend um, das mit einem in Python geschriebenen FastAPI-Backend (bereitgestellt auf Render) verbunden war. Pflegte eine komponentenbasierte Architektur und saubere Integration mit den REST-API-Diensten, um gleichzeitige Nutzer und KI-Funktionen zu unterstützen.",
+    type: "work",
+  },
+  {
+    title: "Backend-Entwickler für Echtzeit-Überwachungssysteme",
+    company: "Siemens AG",
+    location: "München, Deutschland",
+    link: "https://www.siemens.com/",
+    period: "10.2024 — 04.2025",
+    description:
+      "Entwarf, entwickelte, testete, refactorierte und stellte eine produktionsreife Python-Backend-Software zur Verarbeitung hochfrequenter Sensordaten mit Pandas, NumPy, Matplotlib und Multithreading bereit, mit Fokus auf OOP, Performance, Zuverlässigkeit und Wartbarkeit. Docker für Deployment, ein eigener Logger für langfristige Fortschrittsprotokollierung und Debugging, Git-basierte Workflows mit CI/CD-Pipelines, Linting für Codequalität sowie Erstellung und Gestaltung von Systemarchitektur-Diagrammen mit draw.io für Recherche und Planung. Zeugnis auf Anfrage erhältlich.",
+    type: "work",
+  },
+  {
+    title: "B.Sc. Software Engineering",
+    company: "University of Europe for Applied Sciences",
+    location: "Potsdam, Deutschland",
+    link: "https://www.ue-germany.com/",
+    period: "09.2022 — 08.2025",
+    description:
+      "Abschluss mit 180 ECTS, 88,64/100 Notenpunkten (1,7 im deutschen Notensystem) und einer Abschlussarbeit mit Schwerpunkt Machine Learning. Das Studium umfasste Sprachen und Algorithmen (Python, Java, C/C++, JS), OOP, Deployment (Docker, APIs und VMs), Entwicklungspraktiken (CI/CD, Agile, Scrum und SQA), Tools (Jira, Confluence), parallele Programmierung, Datenbanken (SQL), UX/UI-Design (Figma) und Künstliche Intelligenz (ML, DL und Data Science). Bachelorkunde und Notenspiegel auf Anfrage erhältlich.",
+    type: "education",
+  },
+];
+
 /** Returns language-specific experience entries, with English fallback. */
 export const getExperienceByLanguage = (languageCode: string): ExperienceEntry[] => {
   if (languageCode === "fr") return experience_fr;
   if (languageCode === "es") return experience_es;
+  if (languageCode === "de") return experience_de;
   return experience_en;
 };

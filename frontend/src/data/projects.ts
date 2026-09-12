@@ -893,6 +893,62 @@ const projectDescriptionsFr: Record<string, string> = {
 //-------------------------------------------------------------------------
 //------------------------GERMAN DESCRIPTIONS------------------------------
 //-------------------------------------------------------------------------
+const projectDescriptionsDe: Record<string, string> = {
+  "Siemens - High-Frequency Real Time Monitoring System":
+    "Gemeinsames Projekt der RWTH Aachen, Weiss Spindletechnologies und Siemens: Ich habe ein produktionsreifes, multithreaded Backend-System für Echtzeit-Monitoring mit hoher Frequenz konzipiert, entwickelt, getestet und bereitgestellt. Das Python-System verarbeitet große Mengen an Sensordaten über einen Message Broker (MQTT), überwacht und analysiert das Laufzeitverhalten von Maschinen und exportiert CSV-Ausgaben sowie Pandas/Matplotlib-Visualisierungen für weitere Analysen. Quellcode und Demos sind nicht öffentlich (Siemens-Eigentum).",
+  "Langdrill - Educational platform (Stealth startup)":
+    "Als Frontend-Entwickler arbeitete ich an einer KI-gestützten Bildungsplattform mit React+TS-Frontend und Python-basiertem FastAPI-Backend. Sie bietet rollenbasierten Zugang für Lehrkräfte/Studierende, KI-gestützte Aufgabenerstellung (Schreiben, Lesen, Hören mit TTS und Konversation mit KI/Sprachagent), Klassenverwaltung, Aufgabenverfolgung, Studierendenanalysen und ein Templatesystem. Angebunden an eine Supabase-Datenbank (PostgreSQL) für Benutzerauthentifizierung und Datenspeicherung.",
+  "Simple Chat - AI-powered chatbot app":
+    "KI-gestützte Chatbot-App mit Flutter-Mobile-Client und in Python geschriebenem FastAPI-Backend auf Render, unter Nutzung der Gemini-2.5-Flash-API und Supabase für Authentifizierung, persistenten Chatverlauf und Benutzereinstellungen. Die App ermöglicht Gespräche mit einem Chatbot in wählbarer Persönlichkeit und relativ längere Unterhaltungen; Kontext und Langzeitgedächtnis bleiben jedoch eine Herausforderung.",
+  "Envrad - Beware of all of your surroundings":
+    "Datenschutzorientierte Flutter-Android-App, die passiv die nahe drahtlose Umgebung kartiert: gleichzeitiges BLE- und Classic-Bluetooth-Scanning plus Wi-Fi-AP-Erkennung. Sie verfolgt Geräte über die Zeit, glättet RSSI zu qualitativer Nähe, korreliert Identitäten über randomisierte Adressen und bewertet erklärbare Verdachtsmomente mit Anomalie- und Störwarnungen — vollständig on-device (Drift/SQLite, keine Cloud, kein Konto). Geplant sind optional externe Raspberry-Pi-Module über USB-C oder Lightning für breiteres Spektrum und bessere Ergebnisse.",
+  "Lol Coach - Rift Rewind platform for coaching":
+    "League-of-Legends-Coaching-Dashboard mit React+TS-Frontend und FastAPI-Backend, angebunden an die Riot-Games-API für Matchhistorie, Champion-Daten und Performance-Analysen. Die Web-App bietet mehrere Seiten für Matchhistorie, Champion-Synergien, Vorhersagen u. a., stets mit einer schwebenden Blase für einen kontextbewussten Chatbot-Assistenten zur Seite der aktuellen Seite für präzisere Insights.",
+  "TuneTools - Personalized music for your day":
+    "Pipeline, die Tageskontext (Nachrichten, Wetter, Kalender) in personalisierte Songs verwandelt: ein LLM erzeugt Musikspezifikationen und Lyrics, das YuE-Modell synthetisiert Audio auf RunPod und die Gemini-API erstellt Albumcover. Frontend auf Vercel, Backend auf Railway, verbunden mit Supabase für Authentifizierung, Datenerfassung und Speicherung von Audio und Artwork.",
+  "Fintech CheckAI - Financial Fact checker":
+    "Faktenprüfungsplattform, die Behauptungen in YouTube-Videos gegen offizielle Unternehmensquartalsberichte mit unveränderlichem versioniertem Speicher prüft. React+TS-Frontend und FastAPI-Backend; Tower.dev + Apache Iceberg für Dokumentenspeicher, RunPod für OCR/Audio-Transkription sowie LangChain + OpenAI für KI-Analyse mit Glaubwürdigkeitsbewertung und Follow-up-Chat.",
+  "Bachelor Thesis (Machine Learning)":
+    "Vergleichsstudie von ML-Klassifikationsmodellen zur frühen Diabeteserkennung an BRFSS-2015-Gesundheitsindikatoren: modulare Python-Pipeline mit Decision Tree, Logistic Regression, Random Forest und SVM, plus EDA, SMOTE-Resampling, JSON-Konfiguration und zentralisiertem Logging der Ergebnisse.",
+  "Emotional Detection Deep Learning model":
+    "Deep-Learning-Projekt zur Erkennung von 7 Emotionen aus Graustufen-Gesichtsbildern mit Transfer Learning (DenseNet121) und einer eigenen CNN, inkl. CLI, Webcam-UI für Live-Tests, FER-Dataset von Kaggle und optionaler TFLite/TensorRT/ONNX-Optimierung.",
+  "Drone sound detection Machine Learning models":
+    "ML-Projekt zur Erkennung und Klassifikation des Klangprofils von Drohnen, Hubschraubern und Hintergrundaudio mit CNN (Tiny und Robust) und klassischem ML (Random Forest, SVM, XGBoost, Gradient Boosting) sowie MFCC-Features; Ziel: Einbettung als Westen-Add-on für omnidirektionale Drohnenerkennung und präventive Feldwarnung für Soldaten.",
+  "Machine Learning Models repository":
+    "Sammlung von ML-Projekten: Klassifikationen (Iris, Brustkrebs, Titanic, Diabetes mit Decision Tree, Logistic Regression, KNN, Random Forest, SVM), Regression (Unternehmensgewinn), Clustering (Kundensegmentierung mit K-Means und Hierarchical), mit Python-Notebooks, scikit-learn und weiteren Bibliotheken.",
+  "Reusable code snippets in-repository":
+    "Ursprünglich ein Python-only-Repo mit einigen Terminalspielen in Skripten; heute speichere ich darin wiederverwendbare Code-Snippets aus beliebigen Sprachen: Utils, Terminalspiele, Spiele mit UI, API-Beispiele, UI-Komponenten und vollständige deploybare Backend-Templates (RESTful, GraphQL, WebSocket). Ständig im Wachstum, da ich aus jedem Projekt etwas Extrahierbares mitnehme.",
+  "HelpVenz - Logistics and Aid for Venezuela":
+    "Humanitäre Koordinationsplattform für Venezuela nach dem Erdbeben im Juni 2026. Mobile-first, Spanisch-first, schwache Verbindung: einheitlicher Feed für Bedarfe (Rettung, Wasser, Medizin) und Angebote, Personenregister (vermisst/sicher/verstorben) nach Name/Alter/Zone, Unterkunftsangebote/-anfragen, Gebäudemeldungen mit Schadensstufe und Rettungspriorität, Kartenansicht mit Clustering und Live-Dashboard. KI-Assistent „Brújula“ (LangChain ReAct über MiniMax M3) mit Live-Tool-Anzeige; Supabase Realtime, zweisprachig (ES/EN), Web Push und PWA. Next.js-16-Frontend, FastAPI-Backend, Supabase PostgreSQL (RLS), Deployment auf Vercel + FastAPI Cloud.",
+  "MaxxWatt - Energy Management Platform":
+    "Einreichung für den Berlin Energy Hackathon 2025: BESS-Monitoring- und Managementplattform mit Echtzeit-Analysen, Anomalieerkennung und Energieprognose für Li-Ion-Batterien in Solar-Speichersystemen. Systemarchitektur und Komponentendesign in Draw.io. FastAPI-Backend mit SSE-Streaming und React-Dashboard (Vite, shadcn-ui, Tailwind).",
+  "MAXergy app - Your green planer helper":
+    "KI-gestützter Planer für energetische Hausmodernisierung. Mobile-first TanStack-Start-Frontend und FastAPI-Backend mit Gemini-API für personalisierte Beratung. Produktionsnahe Pipeline für Wohnenergiemodellierung: BDEW-H0-Lastprofile, Gradtags-Heizung, PV-Dimensionierung und Annuitätenfinanzierung über 6 Upgrade-Szenarien. Vier Preisprognosemodelle (Constant, Trend, ETS, SARIMA) gegen Destatis-Indizes (2019–2025) backgetestet.",
+  "Nothingness - Unity 2D arcade game":
+    "Unity/C#-2D-Arcade-Weltraum-Shooter mit 8-Richtungs-Bewegung, dynamischer Schwierigkeitsskalierung und Buff/Debuff-System. Zwei Gegnertypen (Asteroiden, feindliche Schiffe), Power-ups und Power-downs (Schild, Tempo), persistente Highscores per JSON und umfassendes Audiosystem mit selbst erstellten Pixel-Art-Sprites.",
+  "Pongilike - 2D multiplayer Pong Game":
+    "Klassisches Zwei-Spieler-Pong in Unity/C# mit 2D-Physik: physikbasierter Ball mit zufälliger Richtung und Geschwindigkeit, Kollision mit Schlägern und Wänden, automatisches Scoring mit UI-Updates, Pause/Fortsetzen und Soundeffekte für Treffer, Abpraller und Punkte. Alle Grafiken handgezeichnet.",
+  "Atryon Chrome Extension - Your virtual try-on":
+    "Chrome-Erweiterung für Virtual Try-On: Kleidungsstück von der Seite wählen oder per Drag-and-Drop, eigenes Foto hinzufügen, KI-Try-on-Ergebnis erhalten. Side-Panel-UI mit Content Script „von Seite auswählen“; FastAPI-Backend mit Black-Forest-Labs-FLUX-API für Multi-Image-Composition (MIC), Polling und Download. Zusätzliche Endpoints für Text-To-Image (TTI) und Image Edit With Mask (IDWM).",
+  "Prod Watch - Inventory and cashier system":
+    "Multi-Tenant-SaaS für Inventar und Kasse mit einem oder mehreren Lagern. React-19- + TanStack-Start-Frontend und Spring-Boot-3- + Java-17-Backend: Bestandsbewegungen (/IN /OUT /TRANSFER /ADJUSTMENT), Kasse mit Multi-Lager-Warenkorb, Transaktionshistorie, Audit-Log und Ökosystem-Multi-Tenancy mit RBAC. Supabase PostgreSQL mit Flyway-Migrationen und Supabase Auth (JWT).",
+  "CorpuScan - Financial document summarization":
+    "Mitwirkung am Big Berlin Hack: CorpuScan wandelt dichte Finanzdokumente in kurze Executive-Video-Briefings um und bietet KI-gestützte Audit-Untersuchung. PDF-Upload, URL oder Query für Video; oder Finanzdokumente (CSV, TXT, XLSX, PDF, DOCX) für Betrugsanalyse. Multi-Agent-Pipeline (Gemini 2.5 Pro, OpenAI) mit ElevenLabs TTS, Hera API Motion Graphics und DFS-Dokumentengraph mit Abweichungserkennung über Dateien.",
+  "Companion Sonion - VSCode extension":
+    "VS-Code-Erweiterung und standalone Electron-Desktop-App mit animierten Begleitern im Arbeitsbereich. Panel- und Explorer-Rendermodi, Drag-and-Drop, Mausrad-Resize, eigene Assets (GIF/PNG/WebM), Profile speichern/laden, Import/Export, persistenter Zustand. Standalone-App: transparente rahmenlose Fenster, Always-on-top, System Tray, Shortcuts und Asset-Cache — für Spaß und Anpassung gebaut.",
+  "Cogmerge - Collaboration developer tool":
+    "Cogmerge bewahrt das „Warum“ hinter Code-Entscheidungen im Team — abgelehnte Alternativen, bewusste Auslassungen und tragende Constraints, die beim Schließen einer Agenten-Konversation verloren gehen. Anders als Git indexiert es Begründungen nach Code-Oberfläche (Pfad:Symbol) via Cognee und Qdrant. SEAL erfasst Intent aus fertigen Branches; CHECK holt passende Einträge vor Merges und blockiert Widersprüche. Stdlib-Python-Installation ohne Abhängigkeiten, Claude Code, Cursor und Codex via Agent Skills und AGENTS.md — kein CLI-Daemon, kein MCP-Server. Optionaler Slack-Slash-Befehl.",
+  "Drone battery performance prediction system":
+    "Hybrides Physik- + ML-System zur Vorhersage und Optimierung von Drohnenbatterien in Kälte. Vier Schichten: Feature-Engineering mit 22 Zeitreihen-Features aus Telemetrie; PyTorch-LSTM für nächsten Spannungs- und Temperatur-Schritt; Equivalent-Circuit-Modell + thermischer Simulator als Physik-Baseline mit residueller ML-Korrektur; regelbasierter Controller für Strombegrenzung und Vorheizen. Verifiziert mit Hypothesis Property-Based Tests.",
+  "Ranting Chant - Housing middleman platform":
+    "Full-Stack-Immobilienplattform im Frutiger-Aero-Design. Mieter melden Wohn- und Wartungsprobleme per natürlichsprachlichem Chat mit optionaler Spracheingabe; Google Gemini klassifiziert nach Typ, Dringlichkeit, Sentiment und Eskalation. Rollenbasierte Dashboards für Manager/Eigentümer; E-Mail/SMS via Resend und Twilio; ElevenLabs und Gradium für Transkription und TTS. Produktionsreifes PostgreSQL-Schema mit normalisierten Tabellen, RLS und Supabase Auth.",
+  "VERTIAS protocol PPAVI - Privacy first":
+    "Privacy-Preserving Age Verification Infrastructure (PPAVI) — v1-Referenzimplementierung des VERITAS-Protokolls. Monorepo-MVP: React + TanStack Start (untrusted presentation layer auf Cloudflare Workers), ASP.NET Core 8 REST-API (Multipart-Dokumentenintake, Orchestrierung, einmalige Private-Key-Auslieferung), Rust-gRPC-Kryptokern (Ed25519, issuer-scoped PseudoID, Credential-Signing), Supabase/PostgreSQL nur für öffentliche Credential-Metadaten. Kern-Invariante: einmal verifizieren, Dokument verwerfen, nur kryptografischen Nachweis behalten — keine PII, OCR oder Private Keys serverseitig; Frontend parst keine Dokumente und führt keine Krypto aus. Registrierungspipeline lokal end-to-end testbar; echte Ausweisextraktion und Produktions-HMAC/Key-Custody ausstehend.",
+  "F1 penalty predictor - Anticipate stewards":
+    "Forschungspipeline zur Analyse von Formel-1-Steward-Entscheidungen: supervisiertes XGBoost-Modell (V1/V2), das FIA-Strafschwere lernt, plus deterministischer normativer Regelengine. Dataset-Pipeline aus FIA-PDFs (2019 + 2025), angereichert mit Ergast- und FastF1-Telemetrie, 3-Klassen-Vorhersage (keine Strafe / minor / major). V1: Validierungs-Macro-F1 0,402 (Train 2019, Val 2025); Abweichungsberichte zur Regel-Baseline (52,6 % Übereinstimmung gesamt, 79,8 % ohne Manual-Review). Ablations, leakage-sichere Features, pytest; Saisons 2020–2024 und Test-Splits auf der Roadmap.",
+  "Personal portfolio website":
+    "Die Website, die Sie gerade sehen: responsives Portfolio mit React + TypeScript (Vite), Tailwind CSS und shadcn/ui (Radix UI). Framer Motion, React Router, TanStack Query, React Hook Form + Zod; Vitest/React Testing Library, ESLint, Deployment auf Vercel mit GitHub-Actions-Sicherheitsaudits. Mehrsprachig.",
+};
 
 //-------------------------------------------------------------------------
 //---------------------------------Exports---------------------------------
@@ -917,10 +973,18 @@ export const projects_es: Project[] = projects_en.map((project) => ({
   classifications: [...project.classifications],
 }));
 
+export const projects_de: Project[] = projects_en.map((project) => ({
+  ...project,
+  description: projectDescriptionsDe[project.title] ?? project.description,
+  tags: [...project.tags],
+  classifications: [...project.classifications],
+}));
+
 /** Returns language-specific projects, with English fallback. */
 export const getProjectsByLanguage = (languageCode: string): Project[] => {
   //if (languageCode === "languagecode") return projects_language;
   if (languageCode === "fr") return projects_fr;
   if (languageCode === "es") return projects_es;
+  if (languageCode === "de") return projects_de;
   return projects_en;
 };
