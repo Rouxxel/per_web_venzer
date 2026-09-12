@@ -133,6 +133,13 @@
                     "prefix_txt": "Lightning wurde von ",
                     "link": "https://www.flaticon.com/free-icon/lightning_8650972"
                 }
+            },
+            {
+                "icon_provider": {
+                    "name": "yoyonpujiono",
+                    "prefix_txt": "Programming languages wurde von ",
+                    "link": "https://www.flaticon.com/free-icon/web-programming_10185856?term=programming+languages&related_id=10185856"
+                }
             }
         ]
     }
