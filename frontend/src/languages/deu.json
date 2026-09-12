@@ -17,8 +17,8 @@
         "about_section": {
             "section_title": "Über mich",
             "bio_intro_txts": [
-                "Software Entwickler based in Germany with a strong academic foundation and hands-on industry experience building backend, frontend and fullstack systems connected to databases and AI implementation/integration.",
-                "Completed a Software Engineering B.Sc. degree at the University of Europe for Applied Sciences (Potsdam Campus), where I learned extensively about languages like Python, Java, C/C++, JavaScript and SQL across AI (ML and DL), web, mobile, backend and frontend projects, applying OOP design, parallel programming and Agile development practices like Scrum and SQA. My final thesis was focused on a comparative study between 4 Machine learning models to determine which of them is the best suited for predicting Diabetes on patients before obvious symptoms arise and for easy integration."
+                "Softwareentwickler mit Sitz in Deutschland, mit einer soliden akademischen Grundlage und praktischer Branchenerfahrung beim Aufbau von Backend-, Frontend- und Full-Stack-Systemen in Verbindung mit Datenbanken sowie der Implementierung und Integration von KI.",
+                "Abschluss eines Bachelorstudiums (B.Sc.) in Software Engineering an der University of Europe for Applied Sciences (Campus Potsdam), wo ich umfassende Kenntnisse in Sprachen wie Python, Java, C/C++, JavaScript und SQL erworben habe – in Projekten aus den Bereichen KI (ML und DL), Web, Mobile, Backend und Frontend – unter Anwendung von OOP-Design, paralleler Programmierung und agilen Entwicklungspraktiken wie Scrum und SQA. Meine Abschlussarbeit war eine vergleichende Studie von vier Machine-Learning-Modellen, um zu bestimmen, welches am besten geeignet ist, Diabetes bei Patienten vor dem Auftreten offensichtlicher Symptome vorherzusagen und sich einfach integrieren lässt."
             ],
             "tech_stack_title": "Ich habe mit diese techonologies gearbeitet:",
             "tech_subsections": {
@@ -63,30 +63,30 @@
         "projects_section": {
             "section_title": "Projekte",
             "filters":{
-                "filter_explanation_txt": "Showing projects that match ALL selected filters (or all projects when every dropdown is None).",
-                "clear_filters_btn": "Clear filters",
-                "no_projects_txt": "No projects match these filters. Try clearing filters or choosing different options."
+                "filter_explanation_txt": "Zeigt Projekte, die ALLEN ausgewählten Filtern entsprechen (oder alle Projekte, wenn jedes Dropdown auf „Keine“ steht).",
+                "clear_filters_btn": "Filter löschen",
+                "no_projects_txt": "Keine Projekte entsprechen diesen Filtern. Versuche, die Filter zu löschen oder andere Optionen zu wählen."
             },
             "projects_entries": {
-                "not_here": "See frontend/src/data/project.ts for the full list of projects."
+                "not_here": "Siehe frontend/src/data/project.ts für die vollständige Projektliste."
             },
             "project_specifics":{
-                "display_description_btn": "Display description",
-                "display_tags_btn": "Display tags",
+                "display_description_btn": "Beschreibung anzeigen",
+                "display_tags_btn": "Tags anzeigen",
                 "live_demo_btn": "Live",
-                "showcase_btn": "Showcase"
+                "showcase_btn": "Demo"
             }
         },
         "experience_section": {
-            "section_title": "Experience/Road",
+            "section_title": "Erfahrung/Werdegang",
             "experience_entries": {
-                "not_here": "See frontend/src/data/experience.ts for the full list of experience entries."
+                "not_here": "Siehe frontend/src/data/experience.ts für die vollständige Liste der Erfahrungseinträge."
             },
-            "download_cv_btn": "Download CV / Resume"
+            "download_cv_btn": "CV / Lebenslauf herunterladen"
         },
         "contact_section": {
-            "contact_title": "Get In Touch",
-            "contact_txt": "I'm always open to new opportunities and interesting conversations. Feel free to reach out!"
+            "contact_title": "Kontakt aufnehmen",
+            "contact_txt": "Ich bin immer offen für neue Möglichkeiten und interessante Gespräche. Melde dich gerne!"
         }
     },
     "footer": {
