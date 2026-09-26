@@ -1,5 +1,6 @@
 import { lazy, Suspense, type ReactNode } from "react";
 import Navbar from "@/components/Navbar";
+import { ProjectFocusProvider } from "@/contexts/ProjectFocusContext";
 import { SectionLoadingProvider, useSectionLoading } from "@/contexts/SectionLoadingContext";
 
 const Footer = lazy(() => import("@/components/Footer"));
@@ -27,7 +28,9 @@ function LayoutContent({ children }: LayoutProps) {
 export default function Layout({ children }: LayoutProps) {
   return (
     <SectionLoadingProvider>
-      <LayoutContent>{children}</LayoutContent>
+      <ProjectFocusProvider>
+        <LayoutContent>{children}</LayoutContent>
+      </ProjectFocusProvider>
     </SectionLoadingProvider>
   );
 }

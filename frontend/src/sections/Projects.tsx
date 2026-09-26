@@ -1,4 +1,6 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useProjectFocus } from "@/contexts/ProjectFocusContext";
+import { getProjectCardId } from "@/lib/projectCardId";
 import { motion } from "framer-motion";
 import { getProjectsByLanguage, type Project } from "@/data/projects";
 import {
@@ -109,8 +111,14 @@ function AnimatedProjectTags({ tags, animationKey, onDismiss }: AnimatedProjectT
   );
 }
 
+const NAVBAR_OFFSET_PX = 80;
+const PROJECT_FOCUS_SCROLL_DELAY_MS = 400;
+const PROJECT_CARD_POLL_MS = 50;
+const PROJECT_CARD_POLL_MAX = 40;
+
 const Projects = () => {
   const { language, currentLanguageCode } = useLanguage();
+  const { focusRequest, clearFocusRequest } = useProjectFocus();
   const projectsLanguage = language.sections.projects_section;
   const projects = useMemo(() => getProjectsByLanguage(currentLanguageCode), [currentLanguageCode]);
   const filterUi = useMemo(
@@ -162,6 +170,51 @@ const Projects = () => {
     domainFilter !== NONE_FILTER_VALUE ||
     contextFilter !== NONE_FILTER_VALUE ||
     industryFilter !== NONE_FILTER_VALUE;
+
+  useEffect(() => {
+    if (!focusRequest) return;
+
+    const { projectTitle } = focusRequest;
+    const cardId = getProjectCardId(projectTitle);
+
+    setDomainFilter(NONE_FILTER_VALUE);
+    setContextFilter(NONE_FILTER_VALUE);
+    setIndustryFilter(NONE_FILTER_VALUE);
+
+    let attempts = 0;
+
+    const revealAndScrollToCard = () => {
+      const card = document.getElementById(cardId);
+      if (card) {
+        setDescriptionOpenByTitle((prev) => ({ ...prev, [projectTitle]: true }));
+        setDescriptionClickCount((prev) => ({
+          ...prev,
+          [projectTitle]: (prev[projectTitle] ?? 0) + 1,
+        }));
+        setTagsOpenByTitle((prev) => ({ ...prev, [projectTitle]: true }));
+        setTagsClickCount((prev) => ({
+          ...prev,
+          [projectTitle]: (prev[projectTitle] ?? 0) + 1,
+        }));
+
+        const top =
+          card.getBoundingClientRect().top + window.scrollY - NAVBAR_OFFSET_PX;
+        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+        clearFocusRequest();
+        return;
+      }
+
+      attempts += 1;
+      if (attempts < PROJECT_CARD_POLL_MAX) {
+        window.setTimeout(revealAndScrollToCard, PROJECT_CARD_POLL_MS);
+      } else {
+        clearFocusRequest();
+      }
+    };
+
+    const timer = window.setTimeout(revealAndScrollToCard, PROJECT_FOCUS_SCROLL_DELAY_MS);
+    return () => window.clearTimeout(timer);
+  }, [focusRequest, clearFocusRequest]);
 
   return (
     <section id="projects" className="py-24 bg-muted/70">
@@ -253,6 +306,7 @@ const Projects = () => {
             {filteredProjects.map((project, i) => (
               <motion.div
                 key={project.title}
+                id={getProjectCardId(project.title)}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
