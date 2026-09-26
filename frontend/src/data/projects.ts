@@ -104,7 +104,7 @@ export const projects_en: Project[] = [
       "Railway",
       "Render",
     ],
-    classifications: ["Fullstack", "Database", "Web", "AI/Data", "Professional"],
+    classifications: ["Fullstack", "Database", "Web", "AI/Data", "Professional", "AR"],
     //github: "",
     //live_demo: "https://beeing.com",
     //demo: "https://youtu.be/",
