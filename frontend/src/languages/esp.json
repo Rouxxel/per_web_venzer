@@ -83,7 +83,20 @@
                 "not_here": "Consulta frontend/src/data/experience.ts para ver la lista completa de entradas de experiencia."
             },
             "download_cv_btn": "Descargar CV / Currículum",
-            "go_to_project_btn": "Ir al proyecto"
+            "go_to_project_btn": "Ir al proyecto",
+            "cv_download_options": {
+                "option_label": "Descargar versión {format} en {language}",
+                "formats": {
+                    "Rng": "estilo de dos columnas",
+                    "ame": "estilo americano"
+                },
+                "languages": {
+                    "en": "inglés",
+                    "de": "alemán",
+                    "es": "español",
+                    "fr": "francés"
+                }
+            }
         },
         "contact_section": {
             "contact_title": "Contáctame",

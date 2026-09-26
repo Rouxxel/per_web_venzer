@@ -83,7 +83,20 @@
                 "not_here": "See frontend/src/data/experience.ts for the full list of experience entries."
             },
             "download_cv_btn": "Download CV / Resume",
-            "go_to_project_btn": "Go to project"
+            "go_to_project_btn": "Go to project",
+            "cv_download_options": {
+                "option_label": "Download {format} {language} version",
+                "formats": {
+                    "Rng": "2-column style",
+                    "ame": "American style"
+                },
+                "languages": {
+                    "en": "English",
+                    "de": "German",
+                    "es": "Spanish",
+                    "fr": "French"
+                }
+            }
         },
         "contact_section": {
             "contact_title": "Get In Touch",

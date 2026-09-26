@@ -83,7 +83,20 @@
                 "not_here": "Siehe frontend/src/data/experience.ts für die vollständige Liste der Erfahrungseinträge."
             },
             "download_cv_btn": "CV / Lebenslauf herunterladen",
-            "go_to_project_btn": "Zum Projekt"
+            "go_to_project_btn": "Zum Projekt",
+            "cv_download_options": {
+                "option_label": "{format}-Version ({language}) herunterladen",
+                "formats": {
+                    "Rng": "Zweispaltiger Stil",
+                    "ame": "Amerikanischstil"
+                },
+                "languages": {
+                    "en": "Englisch",
+                    "de": "Deutsch",
+                    "es": "Spanisch",
+                    "fr": "Französisch"
+                }
+            }
         },
         "contact_section": {
             "contact_title": "Kontakt aufnehmen",
