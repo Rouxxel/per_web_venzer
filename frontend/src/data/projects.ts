@@ -68,6 +68,48 @@ export const projects_en: Project[] = [
     live_demo: "https://langdrill.vercel.app",
   },
   {
+    title: "Beeing - The higher version of you",
+    image: "/images/beeing/beeing_logo.png",
+    description:
+      "AI-powered sound-healing platform for personalized affirmations and guided meditation: users configure mode, mood, voice and optional soundscape; an LLM writes the script, multi-provider TTS synthesizes audio and playback layers in breathing guidance, ambient soundscapes and post-session wellness check-ins. Monorepo with Next.js 16/React 19/TypeScript frontend (FlowController session flow) and FastAPI/Python backend (Pydantic v2) orchestrating Gemini/OpenRouter generation, ElevenLabs/Soniqo/Deepgram/GPT Audio TTS, ElevenLabs STT and voice cloning, with Supabase/PostgreSQL auth (deferred anonymous sessions, email/password, Google OAuth, session claiming) and Storage for voices and soundscapes. Separate internal analytics dashboard (React/Vite + FastAPI) tracks users, sessions, AI/TTS/STT costs, wellness, voice input, soundscapes and infrastructure. Tested with pytest, Vitest and Playwright; CI/CD and security via GitHub Actions; deployed on Vercel, Railway and Render.",
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Python",
+      "FastAPI",
+      "Pydantic",
+      "Generative AI",
+      "Gemini API",
+      "OpenRouter",
+      "ElevenLabs",
+      "Deepgram",
+      "OpenAI API",
+      "TTS",
+      "STT",
+      "Supabase",
+      "PostgreSQL",
+      "OAuth",
+      "REST API",
+      "JWT",
+      "Vite",
+      "pytest",
+      "Vitest",
+      "Playwright",
+      "GitHub Actions",
+      "CI/CD",
+      "Vercel",
+      "Railway",
+      "Render",
+    ],
+    classifications: ["Fullstack", "Database", "Web", "AI/Data", "Professional"],
+    //github: "",
+    //live_demo: "https://beeing.com",
+    //demo: "https://youtu.be/",
+  },
+  {
     title: "Simple Chat - AI-powered chatbot app",
     image: "/images/simple_chat/ic_launcher.jpeg",
     description:
@@ -778,6 +820,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Este es un proyecto conjunto entre la universidad RWTH Aachen, Weiss spindletechnologies y Siemens. Yo arquitecté, desarrollé, probé y desplegué un backend de monitoreo en tiempo real y alta frecuencia, multihilo y de nivel productivo para un proyecto conjunto con RWTH Aachen y Weiss Spindletechnologies. El sistema en Python admite grandes volúmenes de datos de sensores mediante un message broker, monitorea y analiza el comportamiento de la máquinas, exporta resultados en CSV y gráficos	con Pandas/Matplotlib para análisis post-test. El código fuente y demos no son públicos (propiedad de Siemens).",
   "Langdrill - Educational platform (Stealth startup)":
     "Como desarrollador frontend, trabajé en una plataforma educativa mejorada con IA construida con React+TS en frontend y FastAPI en backend. Incluye acceso por roles para profesores/estudiantes, generación de ejercicios con IA (escritura, lectura, escucha con TTS y conversación con agente de voz/IA), gestión de clases, seguimiento de tareas, analíticas de estudiantes y sistema de plantillas. También estaba conectada a Supabase (PostgreSQL) para autenticación y almacenamiento de datos.",
+  "Beeing - The higher version of you":
+    "Plataforma de sound healing con IA para afirmaciones personalizadas y meditación guiada: el usuario configura modo, estado de ánimo, voz y paisaje sonoro opcional; un LLM genera el guion, TTS multi-proveedor sintetiza el audio y la reproducción combina guía de respiración, ambientes y check-ins de bienestar post-sesión. Monorepo con frontend Next.js 16/React 19/TypeScript (flujo de sesión con FlowController) y backend FastAPI/Python (Pydantic v2) que orquesta generación Gemini/OpenRouter, TTS ElevenLabs/Soniqo/Deepgram/GPT Audio, STT ElevenLabs y clonación de voz, con Supabase/PostgreSQL (sesiones anónimas diferidas, email/contraseña, Google OAuth, reclamación de sesiones) y Storage para voces y soundscapes. Panel interno de analíticas (React/Vite + FastAPI) para usuarios, sesiones, costes IA/TTS/STT, bienestar, entrada de voz, soundscapes e infraestructura. Pruebas con pytest, Vitest y Playwright; CI/CD y seguridad con GitHub Actions; despliegue en Vercel, Railway y Render.",
   "Simple Chat - AI-powered chatbot app":
     "Aplicación de chatbot que implementa una API de IA y fue construida con cliente móvil Flutter y backend FastAPI en Python desplegado en Render, usando la API Gemini 2.5 Flash y Supabase para autenticación, historial persistente y preferencias de usuario. La app está diseñada para conversar con un chatbot con personalidad configurable y mantener conversaciones más duraderas, aunque el contexto y la memoria a largo plazo siguen siendo un reto.",
   "Envrad - Beware of all of your surroundings":
@@ -838,6 +882,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "Ce un projet conjoint entre RWTH Aachen université, Weiss Spindletechnologies et Siemens. J’ai architecturé, développé, testé et déployé un backend de surveillance a temps réel et haute fréquence, multithread et de niveau production. Le système Python ingère de grands volumes de données de capteurs via un message broker, surveille et analyse le comportement des machines, et exporte des résultats en CSV et graphiques avec Pandas/Matplotlib pour analyse post-test. Le code source et les démonstrations sont pas publics (propriété de Siemens).",
   "Langdrill - Educational platform (Stealth startup)":
     "En tant que développeur frontend, j’ai travaillé sur une plateforme éducative améliorée par IA, construite avec React+TS pour le frontend et FastAPI pour le backend. Elle inclut un accès par rôle pour enseignants/étudiants, génération d’exercices IA (écriture, lecture, écoute avec TTS et conversation avec agent IA/voix), gestion de classes, suivi des devoirs, analyses des étudiants et système de templates. Elle était également connectée à Supabase (PostgreSQL) pour l’authentification et le stockage des données.",
+  "Beeing - The higher version of you":
+    "Plateforme de sound healing alimentée par l’IA pour affirmations personnalisées et méditation guidée : l’utilisateur configure mode, ressenti, voix et soundscape optionnel ; un LLM génère le script, un TTS multi-fournisseurs synthétise l’audio et la lecture combine guidance respiratoire, ambiances et check-ins bien-être post-session. Monorepo avec frontend Next.js 16/React 19/TypeScript (parcours FlowController) et backend FastAPI/Python (Pydantic v2) orchestrant Gemini/OpenRouter, TTS ElevenLabs/Soniqo/Deepgram/GPT Audio, STT ElevenLabs et clonage vocal, avec Supabase/PostgreSQL (sessions anonymes différées, email/mot de passe, Google OAuth, revendication de session) et Storage pour voix et soundscapes. Tableau de bord analytique interne (React/Vite + FastAPI) pour utilisateurs, sessions, coûts IA/TTS/STT, bien-être, saisie vocale, soundscapes et infrastructure. Tests pytest, Vitest et Playwright ; CI/CD et sécurité via GitHub Actions ; déploiement sur Vercel, Railway et Render.",
   "Simple Chat - AI-powered chatbot app":
     "Application de chatbot alimentée par une API IA, construite avec un client mobile Flutter et un backend FastAPI en Python déployé sur Render, utilisant l’API Gemini 2.5 Flash et Supabase pour l’authentification, l’historique persistant et les préférences utilisateur. L’application permet de converser avec un chatbot à personnalité configurable et de maintenir des conversations relativement longues, bien que le contexte et la mémoire à long terme restent un défi.",
   "Envrad - Beware of all of your surroundings":
@@ -898,6 +944,8 @@ const projectDescriptionsDe: Record<string, string> = {
     "Gemeinsames Projekt der RWTH Aachen, Weiss Spindletechnologies und Siemens: Ich habe ein produktionsreifes, multithreaded Backend-System für Echtzeit-Monitoring mit hoher Frequenz konzipiert, entwickelt, getestet und bereitgestellt. Das Python-System verarbeitet große Mengen an Sensordaten über einen Message Broker (MQTT), überwacht und analysiert das Laufzeitverhalten von Maschinen und exportiert CSV-Ausgaben sowie Pandas/Matplotlib-Visualisierungen für weitere Analysen. Quellcode und Demos sind nicht öffentlich (Siemens-Eigentum).",
   "Langdrill - Educational platform (Stealth startup)":
     "Als Frontend-Entwickler arbeitete ich an einer KI-gestützten Bildungsplattform mit React+TS-Frontend und Python-basiertem FastAPI-Backend. Sie bietet rollenbasierten Zugang für Lehrkräfte/Studierende, KI-gestützte Aufgabenerstellung (Schreiben, Lesen, Hören mit TTS und Konversation mit KI/Sprachagent), Klassenverwaltung, Aufgabenverfolgung, Studierendenanalysen und ein Templatesystem. Angebunden an eine Supabase-Datenbank (PostgreSQL) für Benutzerauthentifizierung und Datenspeicherung.",
+  "Beeing - The higher version of you":
+    "KI-gestützte Sound-Healing-Plattform für personalisierte Affirmationen und geführte Meditation: Nutzer wählen Modus, Stimmung, Stimme und optionales Soundscape; ein LLM erzeugt das Skript, Multi-Provider-TTS synthetisiert Audio, Playback kombiniert Atemführung, Klanglandschaften und Wellness-Check-ins nach der Session. Monorepo mit Next.js-16/React-19/TypeScript-Frontend (FlowController-Sessionflow) und FastAPI/Python-Backend (Pydantic v2) für Gemini/OpenRouter-Generierung, TTS (ElevenLabs, Soniqo, Deepgram, GPT Audio), ElevenLabs-STT und Voice Cloning, Supabase/PostgreSQL (verzögerte anonyme Sessions, E-Mail/Passwort, Google OAuth, Session Claiming) und Storage für Stimmen und Soundscapes. Separates internes Analytics-Dashboard (React/Vite + FastAPI) für Nutzer, Sessions, KI/TTS/STT-Kosten, Wellness, Spracheingabe, Soundscapes und Infrastruktur. Tests mit pytest, Vitest und Playwright; CI/CD und Security via GitHub Actions; Deployment auf Vercel, Railway und Render.",
   "Simple Chat - AI-powered chatbot app":
     "KI-gestützte Chatbot-App mit Flutter-Mobile-Client und in Python geschriebenem FastAPI-Backend auf Render, unter Nutzung der Gemini-2.5-Flash-API und Supabase für Authentifizierung, persistenten Chatverlauf und Benutzereinstellungen. Die App ermöglicht Gespräche mit einem Chatbot in wählbarer Persönlichkeit und relativ längere Unterhaltungen; Kontext und Langzeitgedächtnis bleiben jedoch eine Herausforderung.",
   "Envrad - Beware of all of your surroundings":
