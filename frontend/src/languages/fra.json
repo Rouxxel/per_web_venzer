@@ -82,7 +82,8 @@
             "experience_entries": {
                 "not_here": "Consultez frontend/src/data/experience.ts pour la liste complète des expériences."
             },
-            "download_cv_btn": "Télécharger mon CV"
+            "download_cv_btn": "Télécharger mon CV",
+            "go_to_project_btn": "Voir le projet"
         },
         "contact_section": {
             "contact_title": "Contactez-moi",
