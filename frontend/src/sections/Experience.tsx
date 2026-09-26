@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useProjectFocus } from "@/contexts/ProjectFocusContext";
 import { getExperienceByLanguage } from "@/data/experience";
 import { Briefcase, GraduationCap, Download } from "lucide-react";
 import SectionInner from "@/components/SectionInner";
@@ -7,6 +8,7 @@ import TypewriterText from "@/components/TypewriterText";
 
 const Experience = () => {
   const { language, currentLanguageCode } = useLanguage();
+  const { focusProject } = useProjectFocus();
   const experienceEntries = getExperienceByLanguage(currentLanguageCode);
 
   return (
@@ -70,6 +72,15 @@ const Experience = () => {
                   className="text-sm text-muted-foreground leading-relaxed"
                   initialDelay={0.3 + i * 0.15}
                 />
+                {entry.relatedProjectTitle ? (
+                  <button
+                    type="button"
+                    onClick={() => focusProject(entry.relatedProjectTitle!)}
+                    className="mt-3 text-sm font-medium text-primary underline decoration-primary/60 underline-offset-2 hover:decoration-primary rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  >
+                    {language.sections.experience_section.go_to_project_btn}
+                  </button>
+                ) : null}
               </motion.div>
             ))}
           </div>
