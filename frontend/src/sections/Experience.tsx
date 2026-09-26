@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useProjectFocus } from "@/contexts/ProjectFocusContext";
 import { getExperienceByLanguage } from "@/data/experience";
-import { Briefcase, GraduationCap, Download } from "lucide-react";
+import CvDownloadMenu from "@/components/CvDownloadMenu";
+import { Briefcase, GraduationCap } from "lucide-react";
 import SectionInner from "@/components/SectionInner";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/languages/language_invoker";
@@ -99,16 +100,7 @@ const Experience = () => {
           transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
           className="mt-12 w-full"
         >
-          <a
-            href="/pdfs/CVRng.pdf"
-            download
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium border border-border rounded-lg text-foreground hover:bg-accent transition-colors"
-          >
-            <Download className="h-4 w-4 shrink-0" />
-            <span>{language.sections.experience_section.download_cv_btn}</span>
-          </a>
+          <CvDownloadMenu />
         </motion.div>
       </SectionInner>
     </section>
