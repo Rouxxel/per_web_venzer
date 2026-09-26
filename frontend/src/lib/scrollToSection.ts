@@ -1,3 +1,5 @@
+import { animateScrollToY } from "@/lib/smoothScroll";
+
 const NAVBAR_OFFSET_PX = 80;
 const MENU_CLOSE_MS = 320;
 const SECTION_POLL_MS = 50;
@@ -7,10 +9,7 @@ function scrollToElement(element: HTMLElement) {
   const top =
     element.getBoundingClientRect().top + window.scrollY - NAVBAR_OFFSET_PX;
 
-  window.scrollTo({
-    top: Math.max(0, top),
-    behavior: "smooth",
-  });
+  void animateScrollToY(Math.max(0, top));
 }
 
 /**
