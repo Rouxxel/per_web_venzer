@@ -3,6 +3,7 @@ import { useProjectFocus } from "@/contexts/ProjectFocusContext";
 import { getExperienceByLanguage } from "@/data/experience";
 import { Briefcase, GraduationCap, Download } from "lucide-react";
 import SectionInner from "@/components/SectionInner";
+import { cn } from "@/lib/utils";
 import { useLanguage } from "@/languages/language_invoker";
 import TypewriterText from "@/components/TypewriterText";
 
@@ -51,7 +52,12 @@ const Experience = () => {
                   {entry.period}
                 </p>
                 <h3 className="text-lg font-semibold font-subtitle text-foreground">{entry.title}</h3>
-                <p className="text-sm text-muted-foreground mb-2">
+                <p
+                  className={cn(
+                    "text-sm text-muted-foreground",
+                    !entry.relatedProjectTitle && "mb-3",
+                  )}
+                >
                   {entry.link != null && entry.link.trim() !== "" ? (
                     <a
                       href={entry.link}
@@ -67,20 +73,20 @@ const Experience = () => {
                   )}
                   ; {entry.location}
                 </p>
+                {entry.relatedProjectTitle ? (
+                  <button
+                    type="button"
+                    onClick={() => focusProject(entry.relatedProjectTitle!)}
+                    className="mt-1.5 mb-3 block text-sm font-medium text-primary underline decoration-primary/60 underline-offset-2 hover:decoration-primary rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  >
+                    {language.sections.experience_section.go_to_project_btn}
+                  </button>
+                ) : null}
                 <TypewriterText
                   text={entry.description}
                   className="text-sm text-muted-foreground leading-relaxed"
                   initialDelay={0.3 + i * 0.15}
                 />
-                {entry.relatedProjectTitle ? (
-                  <button
-                    type="button"
-                    onClick={() => focusProject(entry.relatedProjectTitle!)}
-                    className="mt-3 text-sm font-medium text-primary underline decoration-primary/60 underline-offset-2 hover:decoration-primary rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                  >
-                    {language.sections.experience_section.go_to_project_btn}
-                  </button>
-                ) : null}
               </motion.div>
             ))}
           </div>

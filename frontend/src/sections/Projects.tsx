@@ -1,6 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useProjectFocus } from "@/contexts/ProjectFocusContext";
 import { getProjectCardId } from "@/lib/projectCardId";
+import { sleep, smoothScrollToElement, waitForElementById, waitForLayout } from "@/lib/smoothScroll";
+import { estimateTypewriterDurationMs } from "@/components/TypewriterText";
 import { motion } from "framer-motion";
 import { getProjectsByLanguage, type Project } from "@/data/projects";
 import {
@@ -9,6 +11,7 @@ import {
   INDUSTRY_THEME_OPTIONS,
   getProjectFilterLocalization,
   NONE_FILTER_VALUE,
+  pickFocusFiltersFromClassifications,
   type ProjectClassification,
 } from "@/data/projectClassifications";
 import { ExternalLink, Github, Play } from "lucide-react";
@@ -111,14 +114,11 @@ function AnimatedProjectTags({ tags, animationKey, onDismiss }: AnimatedProjectT
   );
 }
 
-const NAVBAR_OFFSET_PX = 80;
-const PROJECT_FOCUS_SCROLL_DELAY_MS = 400;
-const PROJECT_CARD_POLL_MS = 50;
-const PROJECT_CARD_POLL_MAX = 40;
+const PROJECT_FOCUS_PAUSE_MS = 400;
 
 const Projects = () => {
   const { language, currentLanguageCode } = useLanguage();
-  const { focusRequest, clearFocusRequest } = useProjectFocus();
+  const { focusRequest, clearFocusRequest, awaitProjectsSectionScroll } = useProjectFocus();
   const projectsLanguage = language.sections.projects_section;
   const projects = useMemo(() => getProjectsByLanguage(currentLanguageCode), [currentLanguageCode]);
   const filterUi = useMemo(
@@ -135,6 +135,21 @@ const Projects = () => {
   /** When true for a title, project tags are shown; click any tag to hide them again. */
   const [tagsOpenByTitle, setTagsOpenByTitle] = useState<Record<string, boolean>>({});
   const [tagsClickCount, setTagsClickCount] = useState<Record<string, number>>({});
+  /** Brief pulse on the card targeted from Experience → Go to project. */
+  const [spotlightProjectTitle, setSpotlightProjectTitle] = useState<string | null>(null);
+  /** Resolves when the focused card's typewriter finishes (see focus sequence). */
+  const focusTypingWaitRef = useRef<{
+    projectTitle: string | null;
+    resolve: (() => void) | null;
+  }>({ projectTitle: null, resolve: null });
+
+  const onFocusTypewriterComplete = useCallback((title: string) => {
+    const wait = focusTypingWaitRef.current;
+    if (wait.projectTitle === title && wait.resolve) {
+      wait.resolve();
+      focusTypingWaitRef.current = { projectTitle: null, resolve: null };
+    }
+  }, []);
 
   const toggleProjectDescription = (title: string) => {
     setDescriptionOpenByTitle((prev) => ({ ...prev, [title]: !prev[title] }));
@@ -176,45 +191,89 @@ const Projects = () => {
 
     const { projectTitle } = focusRequest;
     const cardId = getProjectCardId(projectTitle);
+    const project = projects.find((p) => p.title === projectTitle);
 
-    setDomainFilter(NONE_FILTER_VALUE);
-    setContextFilter(NONE_FILTER_VALUE);
-    setIndustryFilter(NONE_FILTER_VALUE);
+    let cancelled = false;
 
-    let attempts = 0;
+    const runFocusSequence = async () => {
+      setSpotlightProjectTitle(null);
+      if (project?.classifications?.length) {
+        const { domain, context, industry } = pickFocusFiltersFromClassifications(
+          project.classifications,
+        );
+        setDomainFilter(domain);
+        setContextFilter(context);
+        setIndustryFilter(industry);
+      } else {
+        setDomainFilter(NONE_FILTER_VALUE);
+        setContextFilter(NONE_FILTER_VALUE);
+        setIndustryFilter(NONE_FILTER_VALUE);
+      }
+      setDescriptionOpenByTitle((prev) => ({ ...prev, [projectTitle]: false }));
+      setTagsOpenByTitle((prev) => ({ ...prev, [projectTitle]: false }));
 
-    const revealAndScrollToCard = () => {
-      const card = document.getElementById(cardId);
-      if (card) {
-        setDescriptionOpenByTitle((prev) => ({ ...prev, [projectTitle]: true }));
-        setDescriptionClickCount((prev) => ({
-          ...prev,
-          [projectTitle]: (prev[projectTitle] ?? 0) + 1,
-        }));
-        setTagsOpenByTitle((prev) => ({ ...prev, [projectTitle]: true }));
-        setTagsClickCount((prev) => ({
-          ...prev,
-          [projectTitle]: (prev[projectTitle] ?? 0) + 1,
-        }));
+      await waitForLayout();
+      if (cancelled) return;
 
-        const top =
-          card.getBoundingClientRect().top + window.scrollY - NAVBAR_OFFSET_PX;
-        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+      await awaitProjectsSectionScroll();
+      if (cancelled) {
+        clearFocusRequest();
+        return;
+      }
+      await sleep(PROJECT_FOCUS_PAUSE_MS);
+
+      const card = await waitForElementById(cardId);
+      if (!card || cancelled) {
         clearFocusRequest();
         return;
       }
 
-      attempts += 1;
-      if (attempts < PROJECT_CARD_POLL_MAX) {
-        window.setTimeout(revealAndScrollToCard, PROJECT_CARD_POLL_MS);
+      await smoothScrollToElement(card);
+      if (cancelled) return;
+      setSpotlightProjectTitle(projectTitle);
+      await sleep(PROJECT_FOCUS_PAUSE_MS);
+
+      setDescriptionOpenByTitle((prev) => ({ ...prev, [projectTitle]: true }));
+      setDescriptionClickCount((prev) => ({
+        ...prev,
+        [projectTitle]: (prev[projectTitle] ?? 0) + 1,
+      }));
+
+      if (project?.description) {
+        await new Promise<void>((resolvePromise) => {
+          const finishTypingWait = () => {
+            if (focusTypingWaitRef.current.projectTitle !== projectTitle) return;
+            focusTypingWaitRef.current = { projectTitle: null, resolve: null };
+            resolvePromise();
+          };
+          focusTypingWaitRef.current = { projectTitle, resolve: finishTypingWait };
+          const fallbackMs = estimateTypewriterDurationMs(project.description) + 800;
+          window.setTimeout(finishTypingWait, fallbackMs);
+        });
       } else {
-        clearFocusRequest();
+        await sleep(400);
       }
+      if (cancelled) return;
+
+      setTagsOpenByTitle((prev) => ({ ...prev, [projectTitle]: true }));
+      setTagsClickCount((prev) => ({
+        ...prev,
+        [projectTitle]: (prev[projectTitle] ?? 0) + 1,
+      }));
+
+      clearFocusRequest();
+      window.setTimeout(() => {
+        setSpotlightProjectTitle((current) => (current === projectTitle ? null : current));
+      }, 4500);
     };
 
-    const timer = window.setTimeout(revealAndScrollToCard, PROJECT_FOCUS_SCROLL_DELAY_MS);
-    return () => window.clearTimeout(timer);
-  }, [focusRequest, clearFocusRequest]);
+    void runFocusSequence();
+
+    return () => {
+      cancelled = true;
+      focusTypingWaitRef.current = { projectTitle: null, resolve: null };
+    };
+  }, [focusRequest, projects, clearFocusRequest, awaitProjectsSectionScroll]);
 
   return (
     <section id="projects" className="py-24 bg-muted/70">
@@ -316,7 +375,10 @@ const Projects = () => {
                   ease: "easeOut",
                 }}
                 whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.12, ease: "easeOut" } }}
-                className="group rounded-xl border border-border bg-card p-6 flex flex-col transition-shadow hover:shadow-xl"
+                className={cn(
+                  "group rounded-xl border border-border bg-card p-6 flex flex-col transition-shadow hover:shadow-xl",
+                  spotlightProjectTitle === project.title && "project-card-spotlight",
+                )}
               >
                 {/* Project image or placeholder */}
                 <div className="rounded-lg bg-muted mb-4 overflow-hidden h-40 sm:h-52 md:aspect-square md:h-auto">
@@ -352,6 +414,7 @@ const Projects = () => {
                       key={`${project.title}-${descriptionClickCount[project.title] ?? 0}`}
                       text={project.description}
                       tag="span"
+                      onComplete={() => onFocusTypewriterComplete(project.title)}
                     />
                   ) : (
                     language.sections.projects_section.project_specifics.display_description_btn
