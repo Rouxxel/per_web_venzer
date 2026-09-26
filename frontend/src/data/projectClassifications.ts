@@ -228,6 +228,42 @@ export const ALL_CLASSIFICATIONS: ProjectClassification[] = Array.from(
 
 export const NONE_FILTER_VALUE = "__none__" as const;
 
+export type ProjectFocusFilters = {
+  domain: string;
+  context: string;
+  industry: string;
+};
+
+const DOMAIN_TECH_SET = new Set<string>(DOMAIN_TECH_OPTIONS);
+const CONTEXT_SET = new Set<string>(CONTEXT_OPTIONS);
+const INDUSTRY_THEME_SET = new Set<string>(INDUSTRY_THEME_OPTIONS);
+
+/**
+ * Picks one filter per layer from a project's classifications (first match in list order).
+ * e.g. Beeing → Fullstack, Professional, AR.
+ */
+export function pickFocusFiltersFromClassifications(
+  classifications: ProjectClassification[],
+): ProjectFocusFilters {
+  let domain = NONE_FILTER_VALUE;
+  let context = NONE_FILTER_VALUE;
+  let industry = NONE_FILTER_VALUE;
+
+  for (const value of classifications) {
+    if (domain === NONE_FILTER_VALUE && DOMAIN_TECH_SET.has(value)) {
+      domain = value;
+    }
+    if (context === NONE_FILTER_VALUE && CONTEXT_SET.has(value)) {
+      context = value;
+    }
+    if (industry === NONE_FILTER_VALUE && INDUSTRY_THEME_SET.has(value)) {
+      industry = value;
+    }
+  }
+
+  return { domain, context, industry };
+}
+
 /** Returns localized filter labels/options while preserving canonical classification values. */
 export const getProjectFilterLocalization = (languageCode: string) => {
   //if (languageCode === "languagecodehere") {
