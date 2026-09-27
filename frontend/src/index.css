@@ -148,4 +148,28 @@
   .project-card-spotlight {
     animation: project-card-spotlight 0.85s ease-in-out 5;
   }
+
+  .themed-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.45) hsl(var(--muted));
+  }
+
+  .themed-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .themed-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 9999px;
+  }
+
+  .themed-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.4);
+    border-radius: 9999px;
+    border: 2px solid hsl(var(--muted));
+  }
+
+  .themed-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.65);
+  }
 }
