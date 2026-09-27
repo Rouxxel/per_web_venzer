@@ -320,6 +320,32 @@ export const projects_en: Project[] = [
     github: "https://github.com/Rouxxel/drone_sound_profile_detection",
   },
   {
+    title: "FFAO - Fluid Flow Around an Object ML models",
+    image: "/images/FFAO/around_object.png",
+    description:
+      "Research codebase for 2D incompressible flow around a cylinder: a reproducible pipeline from staged CFD datasets (Zenodo Re ≈ 100 and optional LBM generation) through Zarr/HDF5 import, CFD validation figures, and ML predictors that treat velocity, pressure, and vorticity as physical fields-not generic images. Hydra-driven Stage 1 runs import → validation → baseline eval → CNN training with optional ConvLSTM rollout and FNO experiments via `main.py` and the `ffaoml` package (FlowDataset, physics helpers, checkpoints, metrics).",
+    tags: [
+      "Python",
+      "PyTorch",
+      "CFD",
+      "Fluid dynamics",
+      "Hydra",
+      "Zarr",
+      "HDF5",
+      "CNN",
+      "ConvLSTM",
+      "FNO",
+      "MLOps",
+      "Zenodo",
+      "Navier-Stokes",
+      "Physics-informed ML",
+      "pytest",
+      "GitHub Actions",
+    ],
+    classifications: ["AI/Data", "MLOps", "Personal", "Research/Experimental"],
+    github: "https://github.com/Rouxxel/FFAO_ML_project",
+  },
+  {
     title: "Machine Learning Models repository",
     image: "/images/ml_various/ml_various.png",
     description:
@@ -838,6 +864,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Proyecto de deep learning para detectar 7 emociones a partir de imágenes faciales en escala de grises usando transfer learning (DenseNet121) y una CNN personalizada, con CLI, interfaz de webcam para pruebas en vivo, dataset FER de Kaggle y optimización opcional con TFLite/TensorRT/ONNX.",
   "Drone sound detection Machine Learning models":
     "Proyecto de ML para detectar y clasificar el perfil sonoro de drones, helicópteros y audio de fondo usando CNN (Tiny y Robust) y ML tradicional (Random Forest, SVM, XGBoost, Gradient Boosting) con características MFCC; el caso de uso objetivo es integrarlo como accesorio en el chaleco antibalas para detección omnidireccional de drones y alerta preventiva para los soldados en el campo.",
+  "FFAO - Fluid Flow Around an Object ML models":
+    "Repositorio de investigación para flujo 2D incompresible alrededor de un cilindro: pipeline reproducible desde conjuntos de datos CFD por etapas (Zenodo Re ≈ 100 y generación LBM opcional) pasando por importación Zarr/HDF5, figuras de validación CFD y predictores ML que tratan velocidad, presión y vorticidad como campos físicos, no como imágenes genéricas. La Etapa 1 con Hydra ejecuta importación → validación → evaluación baseline → entrenamiento CNN, con ConvLSTM opcional para rollout y experimentos FNO vía `main.py` y el paquete `ffaoml` (FlowDataset, utilidades de física, checkpoints y métricas).",
   "Machine Learning Models repository":
     "Recopilación de proyectos de ML: clasificaciones (Iris, cáncer de mama, Titanic, diabetes con Decision Tree, Logistic Regression, KNN, Random Forest y SVM), regresión (beneficio empresarial) y clustering (segmentación de clientes con K-Means y Hierarchical), usando notebooks en Python, scikit-learn y otras librerías relacionadas.",
   "Reusable code snippets in-repository":
@@ -900,6 +928,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "Projet de deep learning pour détecter 7 émotions à partir d’images faciales en niveaux de gris, utilisant transfer learning (DenseNet121) et un CNN personnalisé, avec CLI, interface webcam pour tests en direct, dataset FER de Kaggle, et optimisation optionnelle TFLite/TensorRT/ONNX.",
   "Drone sound detection Machine Learning models":
     "Projet ML pour détecter et classifier le profil sonore de drones, hélicoptères et sons de fond en utilisant CNN (Tiny et Robust) et ML traditionnel (Random Forest, SVM, XGBoost, Gradient Boosting) avec caractéristiques MFCC; cas d’usage cible : intégrer le système comme accessoire sur un gilet pare-balles pour détection omnidirectionnelle de drones et alertes préventives pour les soldats sur le terrain.",
+  "FFAO - Fluid Flow Around an Object ML models":
+    "Codebase de recherche pour l’écoulement 2D incompressible autour d’un cylindre : pipeline reproductible depuis des jeux de données CFD par étapes (Zenodo Re ≈ 100 et génération LBM optionnelle), import Zarr/HDF5, figures de validation CFD et prédicteurs ML qui traitent vitesse, pression et vorticité comme champs physiques plutôt que comme images génériques. L’étape 1 pilotée par Hydra enchaîne import → validation → évaluation de référence → entraînement CNN, avec ConvLSTM optionnel pour le rollout et expériences FNO via `main.py` et le package `ffaoml` (FlowDataset, aides physique, checkpoints, métriques).",
   "Machine Learning Models repository":
     "Portfolio de projets ML : classifications (Iris, cancer du sein, Titanic, diabète avec Decision Tree, Logistic Regression, KNN, Random Forest, SVM), régressions (profits d’entreprise) et clustering (segmentation clients avec K-Means et Hierarchical), utilisant des notebooks Python, scikit-learn et autres librairies associées.",
   "Reusable code snippets in-repository":
@@ -949,7 +979,7 @@ const projectDescriptionsDe: Record<string, string> = {
   "Simple Chat - AI-powered chatbot app":
     "KI-gestützte Chatbot-App mit Flutter-Mobile-Client und in Python geschriebenem FastAPI-Backend auf Render, unter Nutzung der Gemini-2.5-Flash-API und Supabase für Authentifizierung, persistenten Chatverlauf und Benutzereinstellungen. Die App ermöglicht Gespräche mit einem Chatbot in wählbarer Persönlichkeit und relativ längere Unterhaltungen; Kontext und Langzeitgedächtnis bleiben jedoch eine Herausforderung.",
   "Envrad - Beware of all of your surroundings":
-    "Datenschutzorientierte Flutter-Android-App, die passiv die nahe drahtlose Umgebung kartiert: gleichzeitiges BLE- und Classic-Bluetooth-Scanning plus Wi-Fi-AP-Erkennung. Sie verfolgt Geräte über die Zeit, glättet RSSI zu qualitativer Nähe, korreliert Identitäten über randomisierte Adressen und bewertet erklärbare Verdachtsmomente mit Anomalie- und Störwarnungen — vollständig on-device (Drift/SQLite, keine Cloud, kein Konto). Geplant sind optional externe Raspberry-Pi-Module über USB-C oder Lightning für breiteres Spektrum und bessere Ergebnisse.",
+    "Datenschutzorientierte Flutter-Android-App, die passiv die nahe drahtlose Umgebung kartiert: gleichzeitiges BLE- und Classic-Bluetooth-Scanning plus Wi-Fi-AP-Erkennung. Sie verfolgt Geräte über die Zeit, glättet RSSI zu qualitativer Nähe, korreliert Identitäten über randomisierte Adressen und bewertet erklärbare Verdachtsmomente mit Anomalie- und Störwarnungen - vollständig on-device (Drift/SQLite, keine Cloud, kein Konto). Geplant sind optional externe Raspberry-Pi-Module über USB-C oder Lightning für breiteres Spektrum und bessere Ergebnisse.",
   "Lol Coach - Rift Rewind platform for coaching":
     "League-of-Legends-Coaching-Dashboard mit React+TS-Frontend und FastAPI-Backend, angebunden an die Riot-Games-API für Matchhistorie, Champion-Daten und Performance-Analysen. Die Web-App bietet mehrere Seiten für Matchhistorie, Champion-Synergien, Vorhersagen u. a., stets mit einer schwebenden Blase für einen kontextbewussten Chatbot-Assistenten zur Seite der aktuellen Seite für präzisere Insights.",
   "TuneTools - Personalized music for your day":
@@ -962,6 +992,8 @@ const projectDescriptionsDe: Record<string, string> = {
     "Deep-Learning-Projekt zur Erkennung von 7 Emotionen aus Graustufen-Gesichtsbildern mit Transfer Learning (DenseNet121) und einer eigenen CNN, inkl. CLI, Webcam-UI für Live-Tests, FER-Dataset von Kaggle und optionaler TFLite/TensorRT/ONNX-Optimierung.",
   "Drone sound detection Machine Learning models":
     "ML-Projekt zur Erkennung und Klassifikation des Klangprofils von Drohnen, Hubschraubern und Hintergrundaudio mit CNN (Tiny und Robust) und klassischem ML (Random Forest, SVM, XGBoost, Gradient Boosting) sowie MFCC-Features; Ziel: Einbettung als Westen-Add-on für omnidirektionale Drohnenerkennung und präventive Feldwarnung für Soldaten.",
+  "FFAO - Fluid Flow Around an Object ML models":
+    "Forschungs-Codebase für 2D-inkompressible Strömung um einen Zylinder: reproduzierbare Pipeline von gestaffelten CFD-Datensätzen (Zenodo Re ≈ 100, optional LBM-Generierung) über Zarr/HDF5-Import und CFD-Validierungsplots bis zu ML-Modellen, die Geschwindigkeit, Druck und Wirbelstärke als physikalische Felder behandeln - nicht als generische Bilder. Hydra-gesteuerte Stufe 1: Import → Validierung → Baseline-Eval → CNN-Training, optional ConvLSTM-Rollout und FNO-Experimente über `main.py` und das Paket `ffaoml` (FlowDataset, Physik-Helfer, Checkpoints, Metriken).",
   "Machine Learning Models repository":
     "Sammlung von ML-Projekten: Klassifikationen (Iris, Brustkrebs, Titanic, Diabetes mit Decision Tree, Logistic Regression, KNN, Random Forest, SVM), Regression (Unternehmensgewinn), Clustering (Kundensegmentierung mit K-Means und Hierarchical), mit Python-Notebooks, scikit-learn und weiteren Bibliotheken.",
   "Reusable code snippets in-repository":
@@ -983,15 +1015,15 @@ const projectDescriptionsDe: Record<string, string> = {
   "CorpuScan - Financial document summarization":
     "Mitwirkung am Big Berlin Hack: CorpuScan wandelt dichte Finanzdokumente in kurze Executive-Video-Briefings um und bietet KI-gestützte Audit-Untersuchung. PDF-Upload, URL oder Query für Video; oder Finanzdokumente (CSV, TXT, XLSX, PDF, DOCX) für Betrugsanalyse. Multi-Agent-Pipeline (Gemini 2.5 Pro, OpenAI) mit ElevenLabs TTS, Hera API Motion Graphics und DFS-Dokumentengraph mit Abweichungserkennung über Dateien.",
   "Companion Sonion - VSCode extension":
-    "VS-Code-Erweiterung und standalone Electron-Desktop-App mit animierten Begleitern im Arbeitsbereich. Panel- und Explorer-Rendermodi, Drag-and-Drop, Mausrad-Resize, eigene Assets (GIF/PNG/WebM), Profile speichern/laden, Import/Export, persistenter Zustand. Standalone-App: transparente rahmenlose Fenster, Always-on-top, System Tray, Shortcuts und Asset-Cache — für Spaß und Anpassung gebaut.",
+    "VS-Code-Erweiterung und standalone Electron-Desktop-App mit animierten Begleitern im Arbeitsbereich. Panel- und Explorer-Rendermodi, Drag-and-Drop, Mausrad-Resize, eigene Assets (GIF/PNG/WebM), Profile speichern/laden, Import/Export, persistenter Zustand. Standalone-App: transparente rahmenlose Fenster, Always-on-top, System Tray, Shortcuts und Asset-Cache - für Spaß und Anpassung gebaut.",
   "Cogmerge - Collaboration developer tool":
-    "Cogmerge bewahrt das „Warum“ hinter Code-Entscheidungen im Team — abgelehnte Alternativen, bewusste Auslassungen und tragende Constraints, die beim Schließen einer Agenten-Konversation verloren gehen. Anders als Git indexiert es Begründungen nach Code-Oberfläche (Pfad:Symbol) via Cognee und Qdrant. SEAL erfasst Intent aus fertigen Branches; CHECK holt passende Einträge vor Merges und blockiert Widersprüche. Stdlib-Python-Installation ohne Abhängigkeiten, Claude Code, Cursor und Codex via Agent Skills und AGENTS.md — kein CLI-Daemon, kein MCP-Server. Optionaler Slack-Slash-Befehl.",
+    "Cogmerge bewahrt das „Warum“ hinter Code-Entscheidungen im Team - abgelehnte Alternativen, bewusste Auslassungen und tragende Constraints, die beim Schließen einer Agenten-Konversation verloren gehen. Anders als Git indexiert es Begründungen nach Code-Oberfläche (Pfad:Symbol) via Cognee und Qdrant. SEAL erfasst Intent aus fertigen Branches; CHECK holt passende Einträge vor Merges und blockiert Widersprüche. Stdlib-Python-Installation ohne Abhängigkeiten, Claude Code, Cursor und Codex via Agent Skills und AGENTS.md - kein CLI-Daemon, kein MCP-Server. Optionaler Slack-Slash-Befehl.",
   "Drone battery performance prediction system":
     "Hybrides Physik- + ML-System zur Vorhersage und Optimierung von Drohnenbatterien in Kälte. Vier Schichten: Feature-Engineering mit 22 Zeitreihen-Features aus Telemetrie; PyTorch-LSTM für nächsten Spannungs- und Temperatur-Schritt; Equivalent-Circuit-Modell + thermischer Simulator als Physik-Baseline mit residueller ML-Korrektur; regelbasierter Controller für Strombegrenzung und Vorheizen. Verifiziert mit Hypothesis Property-Based Tests.",
   "Ranting Chant - Housing middleman platform":
     "Full-Stack-Immobilienplattform im Frutiger-Aero-Design. Mieter melden Wohn- und Wartungsprobleme per natürlichsprachlichem Chat mit optionaler Spracheingabe; Google Gemini klassifiziert nach Typ, Dringlichkeit, Sentiment und Eskalation. Rollenbasierte Dashboards für Manager/Eigentümer; E-Mail/SMS via Resend und Twilio; ElevenLabs und Gradium für Transkription und TTS. Produktionsreifes PostgreSQL-Schema mit normalisierten Tabellen, RLS und Supabase Auth.",
   "VERITAS protocol PPAVI - Privacy first":
-    "Privacy-Preserving Age Verification Infrastructure (PPAVI) — v1-Referenzimplementierung des VERITAS-Protokolls. Monorepo-MVP: React + TanStack Start (untrusted presentation layer auf Cloudflare Workers), ASP.NET Core 8 REST-API (Multipart-Dokumentenintake, Orchestrierung, einmalige Private-Key-Auslieferung), Rust-gRPC-Kryptokern (Ed25519, issuer-scoped PseudoID, Credential-Signing), Supabase/PostgreSQL nur für öffentliche Credential-Metadaten. Kern-Invariante: einmal verifizieren, Dokument verwerfen, nur kryptografischen Nachweis behalten — keine PII, OCR oder Private Keys serverseitig; Frontend parst keine Dokumente und führt keine Krypto aus. Registrierungspipeline lokal end-to-end testbar; echte Ausweisextraktion und Produktions-HMAC/Key-Custody ausstehend.",
+    "Privacy-Preserving Age Verification Infrastructure (PPAVI) - v1-Referenzimplementierung des VERITAS-Protokolls. Monorepo-MVP: React + TanStack Start (untrusted presentation layer auf Cloudflare Workers), ASP.NET Core 8 REST-API (Multipart-Dokumentenintake, Orchestrierung, einmalige Private-Key-Auslieferung), Rust-gRPC-Kryptokern (Ed25519, issuer-scoped PseudoID, Credential-Signing), Supabase/PostgreSQL nur für öffentliche Credential-Metadaten. Kern-Invariante: einmal verifizieren, Dokument verwerfen, nur kryptografischen Nachweis behalten - keine PII, OCR oder Private Keys serverseitig; Frontend parst keine Dokumente und führt keine Krypto aus. Registrierungspipeline lokal end-to-end testbar; echte Ausweisextraktion und Produktions-HMAC/Key-Custody ausstehend.",
   "F1 penalty predictor - Anticipate stewards":
     "Forschungspipeline zur Analyse von Formel-1-Steward-Entscheidungen: supervisiertes XGBoost-Modell (V1/V2), das FIA-Strafschwere lernt, plus deterministischer normativer Regelengine. Dataset-Pipeline aus FIA-PDFs (2019 + 2025), angereichert mit Ergast- und FastF1-Telemetrie, 3-Klassen-Vorhersage (keine Strafe / minor / major). V1: Validierungs-Macro-F1 0,402 (Train 2019, Val 2025); Abweichungsberichte zur Regel-Baseline (52,6 % Übereinstimmung gesamt, 79,8 % ohne Manual-Review). Ablations, leakage-sichere Features, pytest; Saisons 2020–2024 und Test-Splits auf der Roadmap.",
   "Personal portfolio website":
