@@ -14,7 +14,8 @@ import {
   pickFocusFiltersFromClassifications,
   type ProjectClassification,
 } from "@/data/projectClassifications";
-import { ExternalLink, Github, Play } from "lucide-react";
+import ProjectDetailDialog from "@/components/ProjectDetailDialog";
+import { ExternalLink, Github, Maximize2, Play, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -137,6 +138,7 @@ const Projects = () => {
   const [tagsClickCount, setTagsClickCount] = useState<Record<string, number>>({});
   /** Brief pulse on the card targeted from Experience → Go to project. */
   const [spotlightProjectTitle, setSpotlightProjectTitle] = useState<string | null>(null);
+  const [expandedProject, setExpandedProject] = useState<Project | null>(null);
   /** Resolves when the focused card's typewriter finishes (see focus sequence). */
   const focusTypingWaitRef = useRef<{
     projectTitle: string | null;
@@ -376,10 +378,33 @@ const Projects = () => {
                 }}
                 whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.12, ease: "easeOut" } }}
                 className={cn(
-                  "group rounded-xl border border-border bg-card p-6 flex flex-col transition-shadow hover:shadow-xl",
+                  "group relative rounded-xl border border-border bg-card p-6 flex flex-col transition-shadow hover:shadow-xl",
                   spotlightProjectTitle === project.title && "project-card-spotlight",
                 )}
               >
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  className="absolute right-3 top-3 z-10 h-8 w-8 bg-card/80 backdrop-blur-sm hover:bg-accent"
+                  aria-label={
+                    expandedProject?.title === project.title
+                      ? language.sections.projects_section.project_specifics.close_project_btn
+                      : language.sections.projects_section.project_specifics.expand_project_btn
+                  }
+                  onClick={() =>
+                    expandedProject?.title === project.title
+                      ? setExpandedProject(null)
+                      : setExpandedProject(project)
+                  }
+                >
+                  {expandedProject?.title === project.title ? (
+                    <X className="h-4 w-4" />
+                  ) : (
+                    <Maximize2 className="h-4 w-4" />
+                  )}
+                </Button>
+
                 {/* Project image or placeholder */}
                 <div className="rounded-lg bg-muted mb-4 overflow-hidden h-40 sm:h-52 md:aspect-square md:h-auto">
                   {project.image ? (
@@ -488,6 +513,17 @@ const Projects = () => {
             ))}
           </div>
         )}
+
+        <ProjectDetailDialog
+          project={expandedProject}
+          open={expandedProject != null}
+          onClose={() => setExpandedProject(null)}
+          linkLabels={{
+            github: "GitHub",
+            showcase: language.sections.projects_section.project_specifics.showcase_btn,
+            liveDemo: language.sections.projects_section.project_specifics.live_demo_btn,
+          }}
+        />
       </SectionInner>
     </section>
   );
