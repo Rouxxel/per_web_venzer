@@ -74,7 +74,9 @@
                 "display_description_btn": "Beschreibung anzeigen",
                 "display_tags_btn": "Tags anzeigen",
                 "live_demo_btn": "Live",
-                "showcase_btn": "Demo"
+                "showcase_btn": "Demo",
+                "expand_project_btn": "Projektdetails öffnen",
+                "close_project_btn": "Projektdetails schließen"
             }
         },
         "experience_section": {
