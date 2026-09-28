@@ -119,14 +119,14 @@
                 "icon_provider": {
                     "name": "Becris",
                     "prefix_txt": "Deep learning icon by ",
-                    "link": "https://www.flaticon.com/free-icon/deep-learning_2103832?term=deep+learning&page=1&position=6&origin=tag&related_id=2103832"
+                    "link": "https://www.flaticon.com/free-icon/deep-learning_2103832"
                 }
             },
             {
                 "icon_provider": {
                     "name": "justicon",
                     "prefix_txt": "Thesis icon by ",
-                    "link": "https://www.flaticon.com/free-icon/graduation_2997279?term=thesis&page=1&position=10&origin=search&related_id=2997279"
+                    "link": "https://www.flaticon.com/free-icon/graduation_2997279"
                 }
             },
             {
@@ -154,7 +154,14 @@
                 "icon_provider": {
                     "name": "yoyonpujiono",
                     "prefix_txt": "Programming languages icon by ",
-                    "link": "https://www.flaticon.com/free-icon/web-programming_10185856?term=programming+languages&related_id=10185856"
+                    "link": "https://www.flaticon.com/free-icon/web-programming_10185856"
+                }
+            },
+            {
+                "icon_provider": {
+                    "name": "Magnific",
+                    "prefix_txt": "Fluid through obstacles icon by ",
+                    "link": "https://www.flaticon.com/free-icon/obstacle_7830930"
                 }
             }
         ]
