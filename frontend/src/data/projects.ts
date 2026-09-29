@@ -664,6 +664,28 @@ export const projects_en: Project[] = [
     github: "https://github.com/Rouxxel/companion_sonion",
   },
   {
+    title: "Monitor bar - Your resource device monitoring tool",
+    image: "/images/mb/Monitor_b_logo_256.jpg",
+    description:
+      "Cross-platform monitor-bar monorepo (Windows shipping first): lightweight MonitorBar desktop app in WPF/.NET 10 with MVVM and dependency injection across App, Core, UI, Platform, and Infrastructure layers. A dockable edge bar and tray UI poll CPU, memory, GPU/VRAM, disk, network, and battery via Win32 APIs and performance counters (no third-party sensors in v1), reserving screen space with the appbar API. Settings cover themes (including custom colors), multi-monitor placement, overlay opacity, start with Windows, and diagnostics; 98 automated tests and GitHub Actions CI on windows-latest. Linux and iOS ports are planned.",
+    tags: [
+      "C#",
+      ".NET",
+      "WPF",
+      "MVVM",
+      "Dependency Injection",
+      "Win32",
+      "Windows Desktop",
+      "System monitoring",
+      "Performance counters",
+      "xUnit",
+      "GitHub Actions",
+      "Tray app",
+    ],
+    classifications: ["Personal", "Tooling", "Dev Tools", "Standalone"],
+    github: "https://github.com/Rouxxel/MB_native",
+  },
+  {
     title: "Cogmerge - Collaboration developer tool",
     image: "/images/cogmerge/cogmerge.svg",
     description:
@@ -890,6 +912,8 @@ const projectDescriptionsEs: Record<string, string> = {
     "Colaboré en un proyecto para el Big Berlin Hack: CorpuScan convierte documentos financieros densos en breves briefings ejecutivos en video y proporciona investigación de auditoría potenciada por IA. Los usuarios suben un PDF, pegan una URL o escriben una query para generación de video; o suben documentos financieros (CSV, TXT, XLSX, PDF, DOCX) para investigación de fraude. El pipeline multi-agente (Gemini 2.5 Pro, OpenAI) extrae datos financieros clave, redacta guiones, genera narración con ElevenLabs TTS, renderiza gráficos en movimiento con Hera API, y realiza análisis de grafos de documentos basado en DFS con detección de discrepancias entre archivos y hallazgos respaldados por evidencia.",
   "Companion Sonion - VSCode extension":
     "Extensión de VS Code y aplicación de escritorio Electron independiente que añade compañeros animados a tu espacio de trabajo. La extensión de VS Code ofrece modos de renderizado Panel y Explorer con movimiento arrastrar-y-soltar, redimensionamiento con rueda del ratón, activos personalizados (GIF/PNG/WebM), guardar/cargar perfiles, importar/exportar y estado persistente. La aplicación independiente proporciona ventanas sin marco transparentes que se mantienen encima de otras aplicaciones con integración a la bandeja del sistema, atajos de teclado y caché de activos. Creado por diversión y personalización.",
+  "Monitor bar - Your resource device monitoring tool":
+    "Monorepo de barra de monitorización multiplataforma (Windows primero): app de escritorio MonitorBar ligera en WPF/.NET 10 con MVVM e inyección de dependencias en capas App, Core, UI, Platform e Infrastructure. Barra acoplable a los bordes y bandeja del sistema que consulta CPU, memoria, GPU/VRAM, disco, red y batería con APIs Win32 y contadores de rendimiento (sin sensores de terceros en v1), reservando espacio con la API appbar. Ajustes de temas (colores personalizados), varios monitores, opacidad, inicio con Windows y diagnósticos; 98 tests automatizados y CI en GitHub Actions (windows-latest). Puertos Linux e iOS planificados.",
   "Cogmerge - Collaboration developer tool":
     "Cogmerge preserva el 'por qué' detrás de las decisiones de código en un equipo - alternativas rechazadas, omisiones deliberadas y restricciones críticas que desaparecen cuando se cierra una conversación con el agente. A diferencia de Git, que indexa lo que existe, indexa el razonamiento por superficie de código (ruta:símbolo) vía Cognee y Qdrant. SEAL captura la intención de ramas terminadas mediante subagentes; CHECK recupera registros coincidentes antes de los merges y bloquea contradicciones con el razonamiento original del autor. Instalación con Python stdlib sin dependencias en cualquier repo, compatible con Claude Code, Cursor y Codex mediante agent skills y AGENTS.md - sin daemon CLI ni servidor MCP. Comando slash opcional en Slack para consultar la memoria del equipo sin salir del chat.",
   "Ranting Chant - Housing middleman platform":
@@ -954,6 +978,8 @@ const projectDescriptionsFr: Record<string, string> = {
     "J'ai collaboré à un projet pour le Big Berlin Hack: CorpuScan transforme des documents financiers denses en courtes vidéos de briefing exécutif et fournit une investigation d'audit alimentée par l'IA. Les utilisateurs téléchargent un PDF, collent une URL ou saisissent une requête pour la génération de vidéo; ou téléchargent des documents financiers (CSV, TXT, XLSX, PDF, DOCX) pour l'investigation de fraude. Le pipeline multi-agents (Gemini 2.5 Pro, OpenAI) extrait les données financières clés, rédige des scripts, génère la narration via ElevenLabs TTS, rend les motion graphics avec l'API Hera, et effectue une analyse de graphes de documents basée sur DFS avec détection de discrepancies inter-fichiers et résultats soutenus par des preuves.",
   "Companion Sonion - VSCode extension":
     "Extension VS Code et application de bureau Electron autonome qui ajoute des compagnons animés à votre espace de travail. L'extension VS Code offre des modes de rendu Panel et Explorer avec mouvement glisser-déposer, redimensionnement à la molette, actifs personnalisés (GIF/PNG/WebM), sauvegarde/chargement de profils, import/export et état persistant. L'application autonome fournit des fenêtres transparentes sans cadre qui restent au-dessus des autres applications avec intégration à la barre d'état système, raccourcis clavier et cache d'actifs. Créé pour le plaisir et la personnalisation.",
+  "Monitor bar - Your resource device monitoring tool":
+    "Monorepo de barre de monitoring multiplateforme (Windows en premier) : application bureau MonitorBar légère en WPF/.NET 10 avec MVVM et injection de dépendances (App, Core, UI, Platform, Infrastructure). Barre ancrable sur les bords et icône de zone de notification pour CPU, mémoire, GPU/VRAM, disque, réseau et batterie via Win32 et compteurs de performance (pas de capteurs tiers en v1), réservation d’écran via l’API appbar. Réglages : thèmes, couleurs personnalisées, multi-écrans, opacité, démarrage avec Windows, diagnostics ; 98 tests automatisés et CI GitHub Actions (windows-latest). Ports Linux et iOS prévus.",
   "Cogmerge - Collaboration developer tool":
     "Cogmerge préserve le « pourquoi » des décisions de code au sein d'une équipe - alternatives rejetées, omissions délibérées et contraintes critiques qui disparaissent quand une conversation agent se ferme. Contrairement à Git, qui indexe ce qui existe, il indexe le raisonnement par surface de code (chemin:symbole) via Cognee et Qdrant. SEAL capture l'intention des branches terminées via des sous-agents ; CHECK récupère les enregistrements correspondants avant les merges et bloque les contradictions avec le raisonnement original de l'auteur. Installation Python stdlib sans dépendances dans n'importe quel repo, compatible avec Claude Code, Cursor et Codex via agent skills et AGENTS.md - pas de daemon CLI ni de serveur MCP. Commande slash Slack optionnelle pour interroger la mémoire d'équipe sans quitter le chat.",
   "Ranting Chant - Housing middleman platform":
@@ -1016,6 +1042,8 @@ const projectDescriptionsDe: Record<string, string> = {
     "Mitwirkung am Big Berlin Hack: CorpuScan wandelt dichte Finanzdokumente in kurze Executive-Video-Briefings um und bietet KI-gestützte Audit-Untersuchung. PDF-Upload, URL oder Query für Video; oder Finanzdokumente (CSV, TXT, XLSX, PDF, DOCX) für Betrugsanalyse. Multi-Agent-Pipeline (Gemini 2.5 Pro, OpenAI) mit ElevenLabs TTS, Hera API Motion Graphics und DFS-Dokumentengraph mit Abweichungserkennung über Dateien.",
   "Companion Sonion - VSCode extension":
     "VS-Code-Erweiterung und standalone Electron-Desktop-App mit animierten Begleitern im Arbeitsbereich. Panel- und Explorer-Rendermodi, Drag-and-Drop, Mausrad-Resize, eigene Assets (GIF/PNG/WebM), Profile speichern/laden, Import/Export, persistenter Zustand. Standalone-App: transparente rahmenlose Fenster, Always-on-top, System Tray, Shortcuts und Asset-Cache - für Spaß und Anpassung gebaut.",
+  "Monitor bar - Your resource device monitoring tool":
+    "Cross-Platform-Monitor-Bar-Monorepo (Windows zuerst): leichte MonitorBar-Desktop-App in WPF/.NET 10 mit MVVM und Dependency Injection über App-, Core-, UI-, Platform- und Infrastructure-Schichten. Andockbare Rand-Leiste und Tray-UI für CPU, Speicher, GPU/VRAM, Disk, Netzwerk und Akku per Win32 und Performance Counters (keine Drittanbieter-Sensoren in v1), Bildschirmreservierung via AppBar-API. Einstellungen für Themes, eigene Farben, Multi-Monitor, Overlay-Deckkraft, Autostart und Diagnose; 98 automatisierte Tests und GitHub-Actions-CI auf windows-latest. Linux- und iOS-Ports geplant.",
   "Cogmerge - Collaboration developer tool":
     "Cogmerge bewahrt das „Warum“ hinter Code-Entscheidungen im Team - abgelehnte Alternativen, bewusste Auslassungen und tragende Constraints, die beim Schließen einer Agenten-Konversation verloren gehen. Anders als Git indexiert es Begründungen nach Code-Oberfläche (Pfad:Symbol) via Cognee und Qdrant. SEAL erfasst Intent aus fertigen Branches; CHECK holt passende Einträge vor Merges und blockiert Widersprüche. Stdlib-Python-Installation ohne Abhängigkeiten, Claude Code, Cursor und Codex via Agent Skills und AGENTS.md - kein CLI-Daemon, kein MCP-Server. Optionaler Slack-Slash-Befehl.",
   "Drone battery performance prediction system":
