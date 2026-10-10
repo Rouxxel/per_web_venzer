@@ -662,6 +662,7 @@ export const projects_en: Project[] = [
     classifications: ["Frontend", "Personal", "Tooling", "Dev Tools", "Standalone"],
     live_demo: "https://marketplace.visualstudio.com/items?itemName=Rouxxel.companion-sonion",
     github: "https://github.com/Rouxxel/companion_sonion",
+    demo: "https://youtu.be/dRxlxQuYZBY",
   },
   {
     title: "Monitor bar - Your resource device monitoring tool",
