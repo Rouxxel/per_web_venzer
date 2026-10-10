@@ -155,7 +155,7 @@ export const projects_en: Project[] = [
     ],
     classifications: ["Fullstack", "Mobile", "Privacy", "Personal", "Research/Experimental", "Standalone"],
     //github: "https://github.com/Rouxxel/simple-chat",
-    //demo: "https://youtu.be/",
+    demo: "https://youtu.be/7YgX1BYZkmo",
   },
   {
     title: "Lol Coach - Rift Rewind platform for coaching",
