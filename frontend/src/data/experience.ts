@@ -33,7 +33,7 @@ export const experience_en: ExperienceEntry[] = [
     title: "UX/UI and Frontend developer (React + TS)",
     company: "Langdrill (Startup)",
     location: "Berlin, Germany",
-    link: "https://www.langdrill.com/",
+    link: "https://langdrill.vercel.app/",
     period: "05.2025 — 08.2025",
     description:
       "Developed the React/TypeScript frontend for an AI-enhanced educational platform, building responsive and reusable interfaces for core user workflows. Designed UI/UX concepts, wireframes, prototypes and high-fidelity interfaces in Figma, translating product requirements into functional frontend experiences. Designed and wired the frontend to REST APIs, integrating backend services for dynamic content, user interactions and application state. Implemented a component-based frontend architecture with reusable and maintainable React components.",
@@ -81,7 +81,7 @@ export const experience_es: ExperienceEntry[] = [
     title: "Desarrollador UX/UI y Frontend (React + TS)",
     company: "Langdrill (Startup)",
     location: "Berlín, Alemania",
-    link: "https://www.langdrill.com/",
+    link: "https://langdrill.vercel.app/",
     period: "05.2025 — 08.2025",
     description:
       "Desarrollé el frontend React/TypeScript de una plataforma educativa mejorada con IA, construyendo interfaces responsivas y reutilizables para los flujos principales. Diseñé conceptos UI/UX, wireframes, prototipos e interfaces de alta fidelidad en Figma, traduciendo requisitos de producto en experiencias frontend funcionales. Conecté el frontend a APIs REST, integrando servicios backend para contenido dinámico, interacciones de usuario y estado de la aplicación. Implementé una arquitectura frontend basada en componentes con React reutilizable y mantenible.",
@@ -129,7 +129,7 @@ export const experience_fr: ExperienceEntry[] = [
     title: "Développeur UX/UI et Frontend (React + TS)",
     company: "Langdrill (Startup)",
     location: "Berlin, Allemagne",
-    link: "https://www.langdrill.com/",
+    link: "https://langdrill.vercel.app/",
     period: "05.2025 — 08.2025",
     description:
       "Développement du frontend React/TypeScript d’une plateforme éducative enrichie par l’IA, avec interfaces responsives et réutilisables pour les parcours utilisateur clés. Conception UI/UX, wireframes, prototypes et maquettes haute fidélité sur Figma, traduction des exigences produit en expériences frontend. Connexion du frontend aux API REST pour contenu dynamique, interactions et état applicatif. Architecture frontend basée sur des composants React réutilisables et maintenables.",
@@ -177,7 +177,7 @@ export const experience_de: ExperienceEntry[] = [
     title: "UX/UI- und Frontend-Entwickler (React + TS)",
     company: "Langdrill (Startup)",
     location: "Berlin, Deutschland",
-    link: "https://www.langdrill.com/",
+    link: "https://langdrill.vercel.app/",
     period: "05.2025 — 08.2025",
     description:
       "Entwicklung des React/TypeScript-Frontends einer KI-gestützten Bildungsplattform mit responsiven, wiederverwendbaren Oberflächen für zentrale Nutzerflows. UI/UX-Konzepte, Wireframes, Prototypen und High-Fidelity-Interfaces in Figma; Umsetzung von Produktanforderungen in funktionale Frontend-Erlebnisse. Anbindung an REST-APIs für dynamische Inhalte, Interaktionen und Anwendungszustand. Komponentenbasierte Frontend-Architektur mit wartbaren React-Komponenten.",
