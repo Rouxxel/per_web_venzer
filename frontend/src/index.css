@@ -112,7 +112,7 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: var(--font-sans), system-ui, sans-serif;
+    @apply font-sans;
     /* Hide scrollbar (Firefox, legacy Edge) */
     scrollbar-width: none;
     -ms-overflow-style: none;
