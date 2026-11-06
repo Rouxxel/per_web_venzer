@@ -14,8 +14,11 @@ import { Button } from "@/components/ui/button";
 
 /** Matches navbar offset used for section scroll. */
 const NAVBAR_HEIGHT_PX = 80;
-/** Fraction of the available (below-navbar) viewport height the dialog occupies. */
-const DIALOG_HEIGHT_RATIO = 0.9;
+/**
+ * Fraction of the available (below-navbar) viewport height the dialog occupies.
+ * Set as a CSS variable so it can differ per breakpoint (mobile 95%, sm+ 96%).
+ */
+const DIALOG_HEIGHT_RATIO_CLASSES = "[--dialog-h:0.95] sm:[--dialog-h:0.96]";
 /** Dialog header (title row) height, subtracted to size the scrollable body. */
 const DIALOG_HEADER_REM = 3.25;
 
@@ -51,8 +54,8 @@ const ProjectDetailDialog = ({ project, open, onClose, linkLabels }: ProjectDeta
   // 100dvh tracks the *visible* viewport on mobile (URL bar shown/hidden); 100vh does not,
   // which is what pushed the dialog's bottom edge off-screen.
   const availableHeight = `calc(100dvh - ${NAVBAR_HEIGHT_PX}px)`;
-  const panelHeight = `calc(${availableHeight} * ${DIALOG_HEIGHT_RATIO})`;
-  const panelTop = `calc(${NAVBAR_HEIGHT_PX}px + ${availableHeight} * ${(1 - DIALOG_HEIGHT_RATIO) / 2})`;
+  const panelHeight = `calc(${availableHeight} * var(--dialog-h))`;
+  const panelTop = `calc(${NAVBAR_HEIGHT_PX}px + ${availableHeight} * (1 - var(--dialog-h)) / 2)`;
   const panelBodyMaxHeight = `calc(${panelHeight} - ${DIALOG_HEADER_REM}rem)`;
 
   return (
@@ -64,7 +67,8 @@ const ProjectDetailDialog = ({ project, open, onClose, linkLabels }: ProjectDeta
         <DialogPrimitive.Content
           className={cn(
             "fixed z-40 flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2xl outline-none",
-            "left-1/2 w-[95vw] -translate-x-1/2 sm:w-[85vw]",
+            "left-1/2 w-[95vw] -translate-x-1/2 sm:w-[90vw]",
+            DIALOG_HEIGHT_RATIO_CLASSES,
             "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
           )}
           style={{ top: panelTop, height: panelHeight, maxHeight: panelHeight }}
