@@ -245,9 +245,9 @@ const INDUSTRY_THEME_SET = new Set<string>(INDUSTRY_THEME_OPTIONS);
 export function pickFocusFiltersFromClassifications(
   classifications: ProjectClassification[],
 ): ProjectFocusFilters {
-  let domain = NONE_FILTER_VALUE;
-  let context = NONE_FILTER_VALUE;
-  let industry = NONE_FILTER_VALUE;
+  let domain: string = NONE_FILTER_VALUE;
+  let context: string = NONE_FILTER_VALUE;
+  let industry: string = NONE_FILTER_VALUE;
 
   for (const value of classifications) {
     if (domain === NONE_FILTER_VALUE && DOMAIN_TECH_SET.has(value)) {
