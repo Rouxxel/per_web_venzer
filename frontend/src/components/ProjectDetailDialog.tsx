@@ -9,11 +9,15 @@ import type { Project } from "@/data/projects";
 import { cn } from "@/lib/utils";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { ExternalLink, Github, Play, X } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, type CSSProperties } from "react";
 import { Button } from "@/components/ui/button";
 
 /** Matches navbar offset used for section scroll. */
 const NAVBAR_HEIGHT_PX = 80;
+/** Fraction of the available (below-navbar) viewport height the dialog occupies. */
+const DIALOG_HEIGHT_RATIO = 0.9;
+/** Dialog header (title row) height, subtracted to size the scrollable body. */
+const DIALOG_HEADER_REM = 3.25;
 
 type ProjectDetailDialogProps = {
   project: Project | null;
@@ -44,7 +48,12 @@ const ProjectDetailDialog = ({ project, open, onClose, linkLabels }: ProjectDeta
 
   if (!project) return null;
 
-  const panelBodyMaxHeight = `calc((100vh - ${NAVBAR_HEIGHT_PX}px) * 0.85 - 3.25rem)`;
+  // 100dvh tracks the *visible* viewport on mobile (URL bar shown/hidden); 100vh does not,
+  // which is what pushed the dialog's bottom edge off-screen.
+  const availableHeight = `calc(100dvh - ${NAVBAR_HEIGHT_PX}px)`;
+  const panelHeight = `calc(${availableHeight} * ${DIALOG_HEIGHT_RATIO})`;
+  const panelTop = `calc(${NAVBAR_HEIGHT_PX}px + ${availableHeight} * ${(1 - DIALOG_HEIGHT_RATIO) / 2})`;
+  const panelBodyMaxHeight = `calc(${panelHeight} - ${DIALOG_HEADER_REM}rem)`;
 
   return (
     <Dialog open={open} onOpenChange={(next) => !next && onClose()}>
@@ -55,12 +64,10 @@ const ProjectDetailDialog = ({ project, open, onClose, linkLabels }: ProjectDeta
         <DialogPrimitive.Content
           className={cn(
             "fixed z-40 flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2xl outline-none",
-            "left-1/2 w-[85vw] -translate-x-1/2",
-            "top-[calc(80px+(100vh-80px)*0.075)]",
-            "h-[calc((100vh-80px)*0.85)] max-h-[calc((100vh-80px)*0.85)]",
+            "left-1/2 w-[95vw] -translate-x-1/2 sm:w-[85vw]",
             "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
           )}
-          style={{ maxHeight: `calc((100vh - ${NAVBAR_HEIGHT_PX}px) * 0.85)` }}
+          style={{ top: panelTop, height: panelHeight, maxHeight: panelHeight }}
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           <div className="flex shrink-0 items-start justify-between gap-3 border-b border-border px-4 py-3 sm:px-5">
@@ -87,7 +94,8 @@ const ProjectDetailDialog = ({ project, open, onClose, linkLabels }: ProjectDeta
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="max-h-[min(36vh,calc((100vh-80px)*0.85-8rem))] w-full object-contain lg:max-h-[calc((100vh-80px)*0.85-8rem)]"
+                    className="w-full object-contain max-h-[min(36dvh,var(--image-max-h))] lg:max-h-[var(--image-max-h)]"
+                    style={{ "--image-max-h": `calc(${panelHeight} - 8rem)` } as CSSProperties}
                   />
                 ) : (
                   <div className="flex min-h-[10rem] w-full items-center justify-center text-sm text-muted-foreground/50">
