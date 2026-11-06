@@ -76,7 +76,9 @@
                 "live_demo_btn": "En vivo",
                 "showcase_btn": "Video",
                 "expand_project_btn": "Ampliar detalles del proyecto",
-                "close_project_btn": "Cerrar detalles del proyecto"
+                "close_project_btn": "Cerrar detalles del proyecto",
+                "show_video_btn": "Ver video",
+                "show_image_btn": "Ver imagen"
             }
         },
         "experience_section": {
