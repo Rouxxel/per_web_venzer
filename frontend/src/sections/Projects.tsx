@@ -523,6 +523,10 @@ const Projects = () => {
             showcase: language.sections.projects_section.project_specifics.showcase_btn,
             liveDemo: language.sections.projects_section.project_specifics.live_demo_btn,
           }}
+          mediaLabels={{
+            showVideo: language.sections.projects_section.project_specifics.show_video_btn,
+            showImage: language.sections.projects_section.project_specifics.show_image_btn,
+          }}
         />
       </SectionInner>
     </section>

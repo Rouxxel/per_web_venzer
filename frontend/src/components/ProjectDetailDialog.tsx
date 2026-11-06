@@ -8,8 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import type { Project } from "@/data/projects";
 import { cn } from "@/lib/utils";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { ExternalLink, Github, Play, X } from "lucide-react";
-import { useEffect, type CSSProperties } from "react";
+import { ExternalLink, Github, ImageIcon, Play, X } from "lucide-react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { Button } from "@/components/ui/button";
 
 /** Matches navbar offset used for section scroll. */
@@ -31,6 +31,10 @@ type ProjectDetailDialogProps = {
     showcase: string;
     liveDemo: string;
   };
+  mediaLabels: {
+    showVideo: string;
+    showImage: string;
+  };
 };
 
 function hasExternalLinks(project: Project): boolean {
@@ -40,16 +44,57 @@ function hasExternalLinks(project: Project): boolean {
   return false;
 }
 
-const ProjectDetailDialog = ({ project, open, onClose, linkLabels }: ProjectDetailDialogProps) => {
+/**
+ * Converts a YouTube watch/short/share URL into a privacy-enhanced embed URL.
+ * Returns null for non-YouTube links (e.g. Vimeo) so the toggle is hidden.
+ */
+function getYouTubeEmbedUrl(url: string | undefined): string | null {
+  if (!url) return null;
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return null;
+  }
+  const host = parsed.hostname.replace(/^www\.|^m\./, "");
+  let id: string | null = null;
+  if (host === "youtu.be") {
+    id = parsed.pathname.slice(1).split("/")[0];
+  } else if (host === "youtube.com" || host === "youtube-nocookie.com") {
+    const segments = parsed.pathname.split("/").filter(Boolean);
+    if (segments[0] === "watch") id = parsed.searchParams.get("v");
+    else if (segments[0] === "embed" || segments[0] === "shorts" || segments[0] === "live") id = segments[1] ?? null;
+  }
+  if (!id || !/^[\w-]{11}$/.test(id)) return null;
+  return `https://www.youtube-nocookie.com/embed/${id}?rel=0`;
+}
+
+const ProjectDetailDialog = ({ project, open, onClose, linkLabels, mediaLabels }: ProjectDetailDialogProps) => {
+  // Title of the project currently showing its video; keyed by title so switching
+  // projects automatically falls back to the image without an effect.
+  const [videoProjectTitle, setVideoProjectTitle] = useState<string | null>(null);
+
+  const handleClose = () => {
+    setVideoProjectTitle(null);
+    onClose();
+  };
+
   useEffect(() => {
     if (!open) return;
     const header = document.querySelector("header");
-    const onHeaderClick = () => onClose();
+    const onHeaderClick = () => handleClose();
     header?.addEventListener("click", onHeaderClick);
     return () => header?.removeEventListener("click", onHeaderClick);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, onClose]);
 
   if (!project) return null;
+
+  const embedUrl = getYouTubeEmbedUrl(project.demo);
+  const showVideo = videoProjectTitle === project.title;
+  const canToggleMedia = embedUrl != null && Boolean(project.image);
+  const isVideoVisible = embedUrl != null && (showVideo || !project.image);
+  const toggleMedia = () => setVideoProjectTitle(showVideo ? null : project.title);
 
   // 100dvh tracks the *visible* viewport on mobile (URL bar shown/hidden); 100vh does not,
   // which is what pushed the dialog's bottom edge off-screen.
@@ -59,7 +104,7 @@ const ProjectDetailDialog = ({ project, open, onClose, linkLabels }: ProjectDeta
   const panelBodyMaxHeight = `calc(${panelHeight} - ${DIALOG_HEADER_REM}rem)`;
 
   return (
-    <Dialog open={open} onOpenChange={(next) => !next && onClose()}>
+    <Dialog open={open} onOpenChange={(next) => !next && handleClose()}>
       <DialogPortal>
         <DialogPrimitive.Overlay
           className="fixed left-0 right-0 bottom-0 top-[80px] z-40 bg-black/70 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"
@@ -91,20 +136,44 @@ const ProjectDetailDialog = ({ project, open, onClose, linkLabels }: ProjectDeta
               style={{ maxHeight: panelBodyMaxHeight }}
             >
               <div
-                className="flex w-full items-center justify-center rounded-lg bg-muted p-3"
-                style={{ maxHeight: panelBodyMaxHeight }}
+                className="flex w-full flex-col items-center justify-center gap-2 rounded-lg bg-muted p-3 [--media-max-h:min(36dvh,calc(var(--panel-h)-10rem))] lg:[--media-max-h:calc(var(--panel-h)-10rem)]"
+                style={{ maxHeight: panelBodyMaxHeight, "--panel-h": panelHeight } as CSSProperties}
               >
-                {project.image ? (
+                {isVideoVisible ? (
+                  <div className="relative aspect-video w-full max-w-[calc(var(--media-max-h)*16/9)] overflow-hidden rounded-md bg-black">
+                    <iframe
+                      src={embedUrl}
+                      title={project.title}
+                      className="absolute inset-0 h-full w-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+                ) : project.image ? (
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full object-contain max-h-[min(36dvh,var(--image-max-h))] lg:max-h-[var(--image-max-h)]"
-                    style={{ "--image-max-h": `calc(${panelHeight} - 8rem)` } as CSSProperties}
+                    className="w-full object-contain max-h-[var(--media-max-h)]"
                   />
                 ) : (
                   <div className="flex min-h-[10rem] w-full items-center justify-center text-sm text-muted-foreground/50">
                     No image
                   </div>
+                )}
+
+                {canToggleMedia && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="shrink-0 gap-2"
+                    onClick={toggleMedia}
+                    aria-pressed={showVideo}
+                  >
+                    {showVideo ? <ImageIcon className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+                    <span className="font-accent">{showVideo ? mediaLabels.showImage : mediaLabels.showVideo}</span>
+                  </Button>
                 )}
               </div>
             </div>
