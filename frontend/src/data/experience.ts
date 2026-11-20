@@ -22,7 +22,7 @@ export const experience_en: ExperienceEntry[] = [
     title: "Fullstack developer",
     company: "Beeing",
     location: "Berlin, Germany",
-    period: "04.2026 — Present",
+    period: "04.2026 — 11.2026",
     //link: "https://www.beeing.com/",
     description:
       "Took ownership of an AI-powered wellness platform and led refactoring, extension and ongoing development across frontend, backend, database, AI integrations and deployment infrastructure. Developed and maintained a Next.js/React/TypeScript frontend and FastAPI/Python backend. Integrated and orchestrated multiple AI and audio providers, including Google Gemini, OpenRouter, ElevenLabs and Deepgram for LLM generation, TTS, STT and voice cloning. Implemented Supabase/PostgreSQL data, authentication and storage infrastructure, including sessions, session claiming, email/password authentication, Google OAuth and persistent session history. Built an internal analytics and operations dashboard from scratch using React/Vite and FastAPI, providing metrics on users, sessions, AI generation, TTS providers, speech engines, costs, wellness, voice input, soundscapes and infrastructure. Integrated external APIs and infrastructure services including Vercel, Railway, Render, Supabase and ElevenLabs. Established and maintained CI/CD and security workflows using GitHub Actions, automated testing, dependency and security checks, secret scanning and deployment pipelines. Developed automated testing across the stack using pytest, Vitest and Playwright, covering backend services, frontend functionality and end-to-end user flows.",
