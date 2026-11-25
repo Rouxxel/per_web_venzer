@@ -713,7 +713,7 @@ export const projects_en: Project[] = [
       "Tray app",
     ],
     classifications: ["Personal", "Tooling", "Dev Tools", "Standalone"],
-    github: "https://github.com/Rouxxel/MB_native",
+    //github: "https://github.com/Rouxxel/MB_native",
   },
   {
     title: "Cogmerge - Collaboration developer tool",
